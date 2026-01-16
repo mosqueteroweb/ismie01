@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Legislativo: FP Informática y Comunicaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- 
+        Paleta: "Brilliant Blues & Energetic Orange"
+    -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+            height: 300px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .custom-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+            color: #475569;
+            padding: 0.25rem 0;
+        }
+
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            background-color: #cbd5e1;
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+        /* Estilos para enlaces legales */
+        .legal-link {
+            @apply text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 block text-xs mb-1;
+        }
+
+        .update-badge {
+            @apply inline-block bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded ml-2 border border-green-200;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-800 tracking-tight">FP <span
+                    class="text-orange-500">INFO</span>GRAFÍA</h1>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#marco" class="hover:text-blue-600">Legal</a>
+                <a href="#basico" class="hover:text-blue-600">G. Básico</a>
+                <a href="#smr" class="hover:text-blue-600">G. Medio</a>
+                <a href="#superior" class="hover:text-blue-600">G. Superior</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <p class="text-orange-300 font-bold tracking-wider uppercase mb-2">Familia Profesional: Informática y
+                Comunicaciones</p>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Marco Normativo y Curricular</h2>
+            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                Guía visual actualizada a la LO 3/2022 y los nuevos Decretos de Madrid (2024/2025) para FP Básica, Media
+                y Superior.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-6">
+                <div
+                    class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10 min-w-[160px] flex flex-col items-center">
+                    <svg class="w-8 h-8 text-blue-300 mb-2 opacity-80" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
+                        </path>
+                    </svg>
+                    <p class="text-4xl font-black text-white">FP</p>
+                    <p class="text-xs font-bold text-blue-300 uppercase mt-1">Dual por Ley</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-orange-500/30 min-w-[160px] flex flex-col items-center">
+                    <svg class="w-8 h-8 text-orange-400 mb-2 opacity-80" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <p class="text-4xl font-black text-orange-400">FFE</p>
+                    <p class="text-sm text-blue-200 block">Fase Empresa</p>
+                    <p class="text-xs text-blue-300 block font-medium mt-1">Desde 1º Curso</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10 min-w-[160px] flex flex-col items-center">
+                    <svg class="w-8 h-8 text-blue-300 mb-2 opacity-80" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                        </path>
+                    </svg>
+                    <p class="text-4xl font-black text-white">3</p>
+                    <p class="text-xs font-bold text-blue-300 uppercase mt-1">Niveles (B/M/S)</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10 min-w-[160px] flex flex-col items-center">
+                    <svg class="w-8 h-8 text-blue-300 mb-2 opacity-80" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path
+                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+                        </path>
+                    </svg>
+                    <p class="text-4xl font-black text-white">GRADO</p>
+                    <p class="text-4xl font-black text-white mt-1">D</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+
+        <!-- Marco Legal General -->
+        <section id="marco" class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            <div class="lg:col-span-1">
+                <h3 class="text-3xl font-bold text-slate-900 mb-6 leading-tight">El Marco Jurídico: <br><span
+                        class="text-blue-600">Jerarquía Normativa</span></h3>
+                <p class="text-slate-600 leading-relaxed mb-6">La <strong>Ley Orgánica 3/2022</strong> establece que
+                    toda la FP es Dual. La Comunidad de Madrid ha actualizado sus currículos mediante los Decretos
+                    102/2024, 103/2024 y 9/2025.</p>
+            </div>
+            <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-8 bg-blue-600 text-white border-none shadow-xl shadow-blue-200/50">
+                    <div class="flex justify-between items-start">
+                        <p class="text-xs font-black uppercase tracking-tighter opacity-80 mb-2">Estado</p>
+                        <svg class="w-6 h-6 text-blue-300 opacity-60" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 italic">Ley Orgánica 3/2022</h4>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li>● Ordenación e Integración de la FP</li>
+                        <li>● Carácter Dual obligatorio</li>
+                        <li>● Flexibilidad Curricular</li>
+                    </ul>
+                </div>
+                <div class="card p-8 bg-white border-slate-200 shadow-xl shadow-slate-200/50">
+                    <div class="flex justify-between items-start">
+                        <p class="text-xs font-black uppercase tracking-tighter text-orange-500 mb-2">Comunidad de
+                            Madrid</p>
+                        <svg class="w-6 h-6 text-orange-400 opacity-60" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-slate-900 italic">Actualización 2024/25</h4>
+                    <ul class="space-y-3 text-sm text-slate-600 font-medium">
+                        <li>● <a href="https://urldefense.com/v3/__https://www.bocm.es/boletin/CM_Orden_BOCM/2024/11/15/BOCM-20241115-1.PDF__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoBhJ9Wc4$" target="_blank" class="hover:text-blue-600 underline text-orange-600">Decreto
+                                102/2024</a> (Grado Medio)</li>
+                        <li>● <a href="https://urldefense.com/v3/__https://www.bocm.es/boletin/CM_Orden_BOCM/2024/11/15/BOCM-20241115-2.PDF__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoP04fjpc$" target="_blank" class="hover:text-blue-600 underline text-orange-600">Decreto
+                                103/2024</a> (Grado Superior)</li>
+                        <li>● <a href="https://urldefense.com/v3/__https://www.bocm.es/eli/es-md/d/2025/03/26/9/con__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDojtdkgJk$" target="_blank" class="hover:text-blue-600 underline text-orange-600">Decreto 9/2025</a> (Grado Básico)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRADO BÁSICO -->
+        <section id="basico">
+            <div class="mb-8 border-b border-gray-200 pb-4">
+                <span class="text-green-600 font-black text-sm uppercase tracking-widest">Nivel 1</span>
+                <h3 class="text-4xl font-black text-slate-900 tracking-tighter mt-2">Grado Básico: Acceso y Fundamentos
+                </h3>
+                <p class="text-slate-500 mt-2">Título Profesional Básico. Permite acceso directo a Grado Medio.</p>
+            </div>
+
+            <!-- TARJETA LEGAL BÁSICO (ACTUALIZADA) -->
+            <div class="mb-8">
+                <details
+                    class="group bg-green-50 rounded-xl border border-green-200 overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-4 hover:bg-green-100 text-green-900 font-bold select-none">
+                        <span class="flex items-center gap-3">
+                            <span class="text-xl">⚖️</span> Normativa y Legislación (Grado Básico)
+                        </span>
+                        <span class="group-open:rotate-180 transition-transform text-green-700">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white border-t border-green-200 text-sm">
+                        <div class="mb-4 pb-4 border-b border-slate-100">
+                            <strong class="text-slate-900 block mb-2">Marco General:</strong>
+                            <a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/lo/2022/03/31/3__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoY1hjLlc$" target="_blank" class="legal-link">Ley
+                                Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación
+                                Profesional</a>
+                            <a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/rd/2014/02/28/127__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDojO7oL4I$" target="_blank" class="legal-link">Real Decreto 127/2014, de 28 de febrero (Título Base)</a>
+                        </div>
+                        <div>
+                            <strong class="text-slate-900 block mb-2">Comunidad de Madrid (Vigente):</strong>
+                            <div class="flex items-start">
+                                <a href="https://urldefense.com/v3/__https://www.bocm.es/eli/es-md/d/2025/03/26/9/con__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDojtdkgJk$" target="_blank" class="text-orange-600 hover:underline font-bold">Decreto 9/2025, de 26 de marzo</a>
+                                <span class="update-badge">NUEVO</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1 pl-4 border-l-2 border-orange-200">
+                                Establece los nuevos planes de estudios para veinticinco títulos de Grado Básico,
+                                consolidando la oferta formativa del nivel 1.
+                            </p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- IFCB01: Informática y Comunicaciones -->
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 bg-green-700 text-white rounded-2xl shadow-lg relative overflow-hidden">
+                        <svg class="absolute right-4 bottom-4 w-16 h-16 text-white opacity-10" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <h4 class="text-2xl font-black italic relative z-10">IFCB01</h4>
+                        <p class="text-[10px] font-bold opacity-70 uppercase relative z-10">Informática y Comunicaciones
+                        </p>
+                    </div>
+                    <details
+                        class="group bg-white rounded-2xl border border-slate-200 overflow-hidden open:ring-2 open:ring-green-700 transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer p-4 bg-slate-50 text-slate-900 font-black text-sm hover:bg-slate-50">
+                            MÓDULOS (1º y 2º) <span>▼</span>
+                        </summary>
+                        <div class="p-4 bg-white grid grid-cols-1 gap-4">
+                            <div class="bg-green-50 border border-green-100 rounded-lg p-3">
+                                <p
+                                    class="text-green-800 font-black text-[10px] uppercase mb-2 border-b border-green-200 pb-1">
+                                    1º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Montaje y mant. de sistemas</li>
+                                    <li>Operaciones auxiliares</li>
+                                    <li>Ciencias Aplicadas I</li>
+                                    <li>Comunicación y Sociedad I</li>
+                                    <li>Inglés / Tutoría</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                                <p
+                                    class="text-orange-800 font-black text-[10px] uppercase mb-2 border-b border-orange-200 pb-1">
+                                    2º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Instalación y mant. redes</li>
+                                    <li>Ciencias Aplicadas II</li>
+                                    <li>Comunicación y Sociedad II</li>
+                                    <li>O.A. montaje componentes</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- IFCB02: Informática de Oficina -->
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 bg-green-600 text-white rounded-2xl shadow-lg relative overflow-hidden">
+                        <svg class="absolute right-4 bottom-4 w-16 h-16 text-white opacity-10" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        <h4 class="text-2xl font-black italic relative z-10">IFCB02</h4>
+                        <p class="text-[10px] font-bold opacity-70 uppercase relative z-10">Informática de Oficina</p>
+                    </div>
+                    <details
+                        class="group bg-white rounded-2xl border border-slate-200 overflow-hidden open:ring-2 open:ring-green-600 transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer p-4 bg-slate-50 text-slate-900 font-black text-sm hover:bg-slate-50">
+                            MÓDULOS (1º y 2º) <span>▼</span>
+                        </summary>
+                        <div class="p-4 bg-white grid grid-cols-1 gap-4">
+                            <div class="bg-green-50 border border-green-100 rounded-lg p-3">
+                                <p
+                                    class="text-green-800 font-black text-[10px] uppercase mb-2 border-b border-green-200 pb-1">
+                                    1º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Ofimática y archivo</li>
+                                    <li>Montaje y mant. sistemas</li>
+                                    <li>Ciencias Aplicadas I</li>
+                                    <li>Comunicación y Sociedad I</li>
+                                    <li>Inglés / Tutoría</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                                <p
+                                    class="text-orange-800 font-black text-[10px] uppercase mb-2 border-b border-orange-200 pb-1">
+                                    2º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Instalación redes datos</li>
+                                    <li>Op. aux. configuración</li>
+                                    <li>Ciencias Aplicadas II</li>
+                                    <li>Comunicación y Sociedad II</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GRADO MEDIO -->
+        <section id="smr">
+            <div class="mb-8 border-b border-gray-200 pb-4">
+                <span class="text-blue-600 font-black text-sm uppercase tracking-widest">Nivel 2 - Grado Medio</span>
+                <h3 class="text-4xl font-black text-slate-900 tracking-tighter mt-2">SMR: Sistemas Microinformáticos y
+                    Redes</h3>
+            </div>
+
+            <!-- TARJETA LEGAL SMR (ACTUALIZADA) -->
+            <div class="mb-8">
+                <details
+                    class="group bg-blue-50 rounded-xl border border-blue-200 overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-4 hover:bg-blue-100 text-blue-900 font-bold select-none">
+                        <span class="flex items-center gap-3">
+                            <span class="text-xl">⚖️</span> Normativa Reguladora SMR
+                        </span>
+                        <span class="group-open:rotate-180 transition-transform text-blue-700">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white border-t border-blue-200 text-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <strong class="text-slate-900 block mb-2">Marco General:</strong>
+                                <a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/lo/2022/03/31/3__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoY1hjLlc$" target="_blank" class="legal-link">Ley Orgánica 3/2022, de 31 de marzo (FP Dual)</a>
+                                <a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/rd/2007/12/14/1691__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoK8sXjf4$" target="_blank" class="legal-link">Real Decreto 1691/2007 (Título SMR)</a>
+                            </div>
+                            <div>
+                                <strong class="text-slate-900 block mb-2">Comunidad de Madrid:</strong>
+                                <span class="text-slate-500 block text-xs mb-1">Decreto 10/2009 (Currículo
+                                    original)</span>
+                                <div class="flex items-start mt-2">
+                                    <a href="https://urldefense.com/v3/__https://www.bocm.es/boletin/CM_Orden_BOCM/2024/11/15/BOCM-20241115-1.PDF__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoBhJ9Wc4$" target="_blank" class="text-blue-600 hover:underline font-bold">Decreto
+                                        102/2024, de 13 de noviembre</a>
+                                    <span class="update-badge">MODIFICA</span>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-1 pl-4 border-l-2 border-blue-200">
+                                    Modifica el plan de estudios reestructurando la carga horaria para nuevos módulos
+                                    transversales y adaptando la FFE.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="card p-0 overflow-hidden">
+                        <div class="p-6 bg-blue-600 text-white relative overflow-hidden">
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-20 h-20 text-white opacity-10"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
+                                </path>
+                            </svg>
+                            <h4 class="text-2xl font-black italic relative z-10">SMR</h4>
+                            <p class="text-[10px] font-bold opacity-70 uppercase relative z-10">Técnico en Sistemas y
+                                Redes</p>
+                        </div>
+                        <details class="group bg-white overflow-hidden open:ring-2 open:ring-blue-600 transition-all">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer p-4 bg-slate-50 text-slate-900 font-black text-sm hover:bg-slate-50">
+                                VER MÓDULOS (1º y 2º) <span>▼</span>
+                            </summary>
+                            <div class="p-4 bg-white grid grid-cols-1 gap-4">
+                                <div class="bg-blue-50 border border-blue-100 rounded-lg p-3">
+                                    <p
+                                        class="text-blue-800 font-black text-[10px] uppercase mb-2 border-b border-blue-200 pb-1">
+                                        1º Curso</p>
+                                    <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                        <li>Montaje y mantenimiento</li>
+                                        <li>Sistemas op. monopuesto</li>
+                                        <li>Redes locales</li>
+                                        <li>Aplicaciones ofimáticas</li>
+                                        <li>Itinerario Personal I</li>
+                                        <li>Digitalización Aplicada</li>
+                                        <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                                    <p
+                                        class="text-orange-800 font-black text-[10px] uppercase mb-2 border-b border-orange-200 pb-1">
+                                        2º Curso</p>
+                                    <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                        <li>Sistemas op. en red</li>
+                                        <li>Seguridad informática</li>
+                                        <li>Servicios en red</li>
+                                        <li>Aplicaciones web</li>
+                                        <li>Itinerario Personal II</li>
+                                        <li>Sostenibilidad Aplicada</li>
+                                        <li class="text-blue-600">Inglés Profesional</li>
+                                        <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 card p-8 flex flex-col items-center">
+                    <div class="flex flex-col md:flex-row items-center gap-8 w-full">
+                        <div class="chart-container"><canvas id="smrChart"></canvas></div>
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 w-full md:w-64">
+                            <h5 class="text-[10px] font-black text-slate-400 uppercase mb-4 border-b pb-2">Clave de
+                                Horas</h5>
+                            <div class="space-y-4">
+                                <div class="custom-legend-item">
+                                    <div class="legend-color bg-[#1e40af]"></div>
+                                    <span class="font-bold">Módulos Aula <br><small
+                                            class="text-slate-400">(1200h)</small></span>
+                                </div>
+                                <div class="custom-legend-item">
+                                    <div class="legend-color bg-[#3b82f6]"></div>
+                                    <span class="font-bold">Transversales <br><small
+                                            class="text-slate-400">(300h)</small></span>
+                                </div>
+                                <div class="custom-legend-item">
+                                    <div class="legend-color bg-[#f97316]"></div>
+                                    <span class="font-bold text-orange-600">Fase Empresa FFE <br><small
+                                            class="text-orange-400 font-medium">(500h)</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRADO SUPERIOR -->
+        <section id="superior">
+            <div class="mb-8 border-b border-gray-200 pb-4">
+                <span class="text-orange-600 font-black text-sm uppercase tracking-widest">Nivel 3 - Grado
+                    Superior</span>
+                <h3 class="text-4xl font-black text-slate-900 tracking-tighter mt-2">Ciclos de Especialización (DAM,
+                    DAW, ASIR)</h3>
+            </div>
+
+            <!-- TARJETA LEGAL SUPERIOR (ACTUALIZADA) -->
+            <div class="mb-8">
+                <details
+                    class="group bg-orange-50 rounded-xl border border-orange-200 overflow-hidden transition-all duration-300">
+                    <summary
+                        class="flex justify-between items-center cursor-pointer p-4 hover:bg-orange-100 text-orange-900 font-bold select-none">
+                        <span class="flex items-center gap-3">
+                            <span class="text-xl">⚖️</span> Normativa Reguladora (ASIR, DAM, DAW)
+                        </span>
+                        <span class="group-open:rotate-180 transition-transform text-orange-700">▼</span>
+                    </summary>
+                    <div class="p-6 bg-white border-t border-orange-200 text-sm">
+                        <div class="mb-6 pb-4 border-b border-slate-100">
+                            <strong class="text-slate-900 block mb-2">Legislación Común:</strong>
+                            <a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/lo/2022/03/31/3__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoY1hjLlc$" target="_blank" class="legal-link">Ley
+                                Orgánica 3/2022, de 31 de marzo (FP Dual)</a>
+                            <div class="flex items-start mt-2">
+                                <a href="https://urldefense.com/v3/__https://www.bocm.es/boletin/CM_Orden_BOCM/2024/11/15/BOCM-20241115-2.PDF__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoP04fjpc$" target="_blank" class="text-orange-600 hover:underline font-bold">Decreto 103/2024,
+                                    de 13 de noviembre (Madrid)</a>
+                                <span class="update-badge">MODIFICA TODOS</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1 pl-4 border-l-2 border-orange-200">
+                                Reestructura la carga horaria de ASIR, DAM y DAW para dar cabida a nuevos módulos
+                                transversales y adaptar la FFE.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- ASIR Laws -->
+                            <div>
+                                <strong class="text-blue-800 block mb-2 border-b pb-1">ASIR</strong>
+                                <ul class="space-y-1">
+                                    <li><a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/rd/2009/10/30/1629__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDox_jXE4A$" target="_blank" class="legal-link">RD 1629/2009 (Estado)</a></li>
+                                    <li><span class="text-slate-500 text-xs">Decreto 12/2010 (Orig.)</span></li>
+                                </ul>
+                            </div>
+                            <!-- DAM Laws -->
+                            <div>
+                                <strong class="text-slate-800 block mb-2 border-b pb-1">DAM</strong>
+                                <ul class="space-y-1">
+                                    <li><a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/rd/2010/04/16/450__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoCc7Ny68$" target="_blank" class="legal-link">RD 450/2010 (Estado)</a></li>
+                                    <li><span class="text-slate-500 text-xs">Decreto 9/2011 (Orig.)</span></li>
+                                </ul>
+                            </div>
+                            <!-- DAW Laws -->
+                            <div>
+                                <strong class="text-orange-800 block mb-2 border-b pb-1">DAW</strong>
+                                <ul class="space-y-1">
+                                    <li><a href="https://urldefense.com/v3/__https://www.boe.es/eli/es/rd/2010/05/20/686__;!!D9dNQwwGXtA!Vhmgdnoml7n17sACi8btxTMYT959XEtpxhsKyiNbByA5Acyea7ASC1AOTRcPEQCwAtfLkPaVjsfBhE3i6bsVMTDoU2a5bdU$" target="_blank" class="legal-link">RD 686/2010 (Estado)</a></li>
+                                    <li><span class="text-slate-500 text-xs">Decreto 11/2011 (Orig.)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- ASIR -->
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 bg-blue-900 text-white rounded-2xl shadow-lg relative overflow-hidden">
+                        <svg class="absolute right-4 bottom-4 w-16 h-16 text-white opacity-10" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                            </path>
+                        </svg>
+                        <h4 class="text-2xl font-black italic relative z-10">ASIR</h4>
+                        <p class="text-[10px] font-bold opacity-70 uppercase relative z-10">Administración de Sistemas
+                        </p>
+                    </div>
+                    <details
+                        class="group bg-white rounded-2xl border border-slate-200 overflow-hidden open:ring-2 open:ring-blue-900 transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer p-4 bg-slate-50 text-slate-900 font-black text-sm hover:bg-slate-50">
+                            MÓDULOS (1º y 2º) <span>▼</span>
+                        </summary>
+                        <div class="p-4 bg-white grid grid-cols-1 gap-4">
+                            <div class="bg-blue-50 border border-blue-100 rounded-lg p-3">
+                                <p
+                                    class="text-blue-800 font-black text-[10px] uppercase mb-2 border-b border-blue-200 pb-1">
+                                    1º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Planificación y admin de redes</li>
+                                    <li>Implantación de S.O.</li>
+                                    <li>Gestión de bases de datos</li>
+                                    <li>Lenguajes de marcas</li>
+                                    <li>Fundamentos Hardware</li>
+                                    <li>Itinerario Personal I / Digitalización</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                                <p
+                                    class="text-orange-800 font-black text-[10px] uppercase mb-2 border-b border-orange-200 pb-1">
+                                    2º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Admin de S.O.</li>
+                                    <li>Servicios de red e internet</li>
+                                    <li>Seguridad y alta disponibilidad</li>
+                                    <li>Administración de GBD</li>
+                                    <li>Implantación Apps Web</li>
+                                    <li>Itinerario II / Sostenibilidad</li>
+                                    <li class="text-blue-600">Inglés Profesional</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- DAM -->
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 bg-slate-800 text-white rounded-2xl shadow-lg relative overflow-hidden">
+                        <svg class="absolute right-4 bottom-4 w-16 h-16 text-white opacity-10" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <h4 class="text-2xl font-black italic relative z-10">DAM</h4>
+                        <p class="text-[10px] font-bold opacity-70 uppercase relative z-10">Desarrollo Multiplataforma
+                        </p>
+                    </div>
+                    <details
+                        class="group bg-white rounded-2xl border border-slate-200 overflow-hidden open:ring-2 open:ring-slate-800 transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer p-4 bg-slate-50 text-slate-900 font-black text-sm hover:bg-slate-50">
+                            MÓDULOS (1º y 2º) <span>▼</span>
+                        </summary>
+                        <div class="p-4 bg-white grid grid-cols-1 gap-4">
+                            <div class="bg-blue-50 border border-blue-100 rounded-lg p-3">
+                                <p
+                                    class="text-blue-800 font-black text-[10px] uppercase mb-2 border-b border-blue-200 pb-1">
+                                    1º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Sistemas informáticos</li>
+                                    <li>Bases de datos</li>
+                                    <li>Programación</li>
+                                    <li>Entornos de desarrollo</li>
+                                    <li>Lenguajes de marcas</li>
+                                    <li>Itinerario I / Digitalización</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                                <p
+                                    class="text-orange-800 font-black text-[10px] uppercase mb-2 border-b border-orange-200 pb-1">
+                                    2º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Acceso a datos</li>
+                                    <li>Desarrollo de interfaces</li>
+                                    <li>Prog. multimedia y disp. móviles</li>
+                                    <li>Prog. de servicios y procesos</li>
+                                    <li>Sistemas de gestión empresarial</li>
+                                    <li>Itinerario II / Sostenibilidad</li>
+                                    <li class="text-blue-600">Inglés Profesional</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- DAW -->
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 bg-orange-600 text-white rounded-2xl shadow-lg relative overflow-hidden">
+                        <svg class="absolute right-4 bottom-4 w-16 h-16 text-white opacity-10" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                            </path>
+                        </svg>
+                        <h4 class="text-2xl font-black italic relative z-10">DAW</h4>
+                        <p class="text-[10px] font-bold opacity-70 uppercase relative z-10">Desarrollo Aplicaciones Web
+                        </p>
+                    </div>
+                    <details
+                        class="group bg-white rounded-2xl border border-slate-200 overflow-hidden open:ring-2 open:ring-orange-600 transition-all">
+                        <summary
+                            class="flex justify-between items-center cursor-pointer p-4 bg-slate-50 text-slate-900 font-black text-sm hover:bg-slate-50">
+                            MÓDULOS (1º y 2º) <span>▼</span>
+                        </summary>
+                        <div class="p-4 bg-white grid grid-cols-1 gap-4">
+                            <div class="bg-blue-50 border border-blue-100 rounded-lg p-3">
+                                <p
+                                    class="text-blue-800 font-black text-[10px] uppercase mb-2 border-b border-blue-200 pb-1">
+                                    1º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Sistemas informáticos</li>
+                                    <li>Bases de datos</li>
+                                    <li>Programación</li>
+                                    <li>Entornos de desarrollo</li>
+                                    <li>Lenguajes de marcas</li>
+                                    <li>Itinerario I / Digitalización</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-100 rounded-lg p-3">
+                                <p
+                                    class="text-orange-800 font-black text-[10px] uppercase mb-2 border-b border-orange-200 pb-1">
+                                    2º Curso</p>
+                                <ul class="text-xs font-bold text-slate-600 space-y-1.5 list-disc pl-4">
+                                    <li>Desarrollo web entorno cliente</li>
+                                    <li>Desarrollo web entorno servidor</li>
+                                    <li>Despliegue de apps web</li>
+                                    <li>Diseño de interfaces web</li>
+                                    <li>Itinerario II / Sostenibilidad</li>
+                                    <li class="text-blue-600">Inglés Profesional</li>
+                                    <li class="text-orange-600">Fase Empresa (FFE)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const tooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function (tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                },
+                legend: { display: false }
+            }
+        };
+
+        function wrapLabel(str) {
+            const limit = 16;
+            if (str.length <= limit) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= limit) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        window.onload = function () {
+            const ctxSMR = document.getElementById('smrChart').getContext('2d');
+            new Chart(ctxSMR, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Módulos de Centro', 'Módulos Transversales', 'Fase Empresa FFE'].map(wrapLabel),
+                    datasets: [{
+                        data: [1200, 300, 500],
+                        backgroundColor: ['#1e40af', '#3b82f6', '#f97316'],
+                        borderWidth: 0,
+                        hoverOffset: 15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%',
+                    ...tooltipConfig
+                }
+            });
+        };
+    </script>
+
+</body>
+
+</html>
