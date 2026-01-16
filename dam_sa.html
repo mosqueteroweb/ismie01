@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sostenibilidad Aplicada (DAM) - Módulo 1708</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-orange-500">DAM</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso DAM</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Sostenibilidad Aplicada</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 1708. Criterios de sostenibilidad y protección ambiental en el sector productivo.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">3</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-orange-400">1708</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">30</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">2</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el RD 450/2010.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 1</span>
+                            <span>Identifica los aspectos ambientales, sociales y de gobernanza (ASG) relativos a la sostenibilidad teniendo en cuenta el concepto de desarrollo sostenible y los marcos internacionales que contribuyen a su consecución. Criterios de evaluación:</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha descrito el concepto de sostenibilidad, estableciendo los marcos internacionales asociados al desarrollo sostenible.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado los asuntos ambientales, sociales y de gobernanza que influyen en el desarrollo sostenible de las organizaciones empresariales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han relacionado los Objetivos de Desarrollo Sostenible (ODS) con su importancia para la consecución de la Agenda 2030.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha analizado la importancia de identificar los aspectos ASG más relevantes para los grupos de interés de las organizaciones relacionándolos con los riesgos y oportunidades que suponen para la propia organización.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han identificado los principales estándares de métricas para la evaluación del desempeño en sostenibilidad y su papel en la rendición de cuentas que marca la legislación vigente y las futuras regulaciones en desarrollo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha descrito la inversión socialmente responsable y el papel de los analistas, inversores, agencias e índices de sostenibilidad en el fomento de la sostenibilidad.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 2</span>
+                            <span>Caracteriza los retos ambientales y sociales a los que se enfrenta la sociedad, describiendo los impactos sobre las personas y los sectores productivos y proponiendo acciones para minimizarlos. Criterios de evaluación:</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los principales retos ambientales y sociales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han relacionado los retos ambientales y sociales con el desarrollo de la actividad económica.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha analizado el efecto de los impactos ambientales y sociales sobre las personas y los sectores productivos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han identificado las medidas y acciones encaminadas a minimizar los impactos ambientales y sociales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha analizado la importancia de establecer alianzas y trabajar de manera transversal y coordinada para abordar con éxito los retos ambientales y sociales.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 3</span>
+                            <span>Establece la aplicación de criterios de sostenibilidad en el desempeño profesional y personal, identificando los elementos necesarios. Criterios de evaluación:</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los ODS más relevantes para la actividad profesional que realiza.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han analizado los riesgos y oportunidades que representan los ODS.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han identificado las acciones necesarias para atender algunos de los retos ambientales y sociales desde la actividad profesional y el entorno personal.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 4</span>
+                            <span>Propón productos y servicios responsables teniendo en cuenta los principios de la economía circular. Criterios de evaluación:</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha caracterizado el modelo de producción y consumo actual.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado los principios de la economía verde y circular.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han contrastado los beneficios de la economía verde y circular frente al modelo clásico de producción.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han aplicado principios de ecodiseño.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha analizado el ciclo de vida del producto.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 5</span>
+                            <span>Realiza actividades sostenibles minimizando el impacto de las mismas en el medio ambiente. Criterios de evaluación:</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha caracterizado el modelo de producción y consumo actual.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado los principios de la economía verde y circular.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han contrastado los beneficios de la economía verde y circular frente al modelo clásico de producción.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha evaluado el impacto de las actividades personales y profesionales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han aplicado principios de ecodiseño.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han aplicado estrategias sostenibles.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha analizado el ciclo de vida del producto.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han identificado los procesos de producción y los criterios de sostenibilidad aplicados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha aplicado la normativa ambiental.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 6</span>
+                            <span>Analiza un plan de sostenibilidad de una empresa del sector, identificando sus grupos de interés, los aspectos ASG materiales y justificando acciones para su gestión y medición. Criterios de evaluación:</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los principales grupos de interés de la empresa.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han analizado los aspectos ASG materiales, las expectativas de los grupos de interés y la importancia de los aspectos ASG en relación con los objetivos empresariales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han definido acciones encaminadas a minimizar los impactos negativos y aprovechar las oportunidades que plantean los principales aspectos ASG identificados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han determinado las métricas de evaluación del desempeño de la empresa de acuerdo con los estándares de sostenibilidad más ampliamente utilizados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha elaborado un informe de sostenibilidad con el plan y los indicadores propuestos.</li>
+
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>&copy; 2024 - FP Informática y Comunicaciones</p>
+            <p class="mt-2">Basado en el Real Decreto 450/2010</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a Datos (DAM) - Módulo 0486</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-orange-500">DAM</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso DAM</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Acceso a Datos</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0486. Gestión de la persistencia de datos, mapeo objeto-relacional (ORM) y bases de datos nativas.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">9</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-orange-400">0486</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">80</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">5</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el RD 450/2010.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 1</span>
+                            <span>Desarrolla aplicaciones que gestionan información almacenada en ficheros identificando el campo de aplicación de los mismos y utilizando clases específicas.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	 Se han utilizado clases para la gestión de ficheros y directorios.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	 Se han valorado las ventajas y los inconvenientes de las distintas formas de acceso.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han utilizado clases para recuperar información almacenada en un fichero XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han utilizado clases para almacenar información en un fichero XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han utilizado clases para convertir a otro formato información contenida en un fichero XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han previsto y gestionado las excepciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han probado y documentado las aplicaciones desarrolladas.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 2</span>
+                            <span>Desarrolla aplicaciones que gestionan información almacenada en bases de datos relacionales identificando y utilizando mecanismos de conexión.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han valorado las ventajas e inconvenientes de utilizar conectores.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han utilizado gestores de bases de datos embebidos e independientes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se utilizado el conector idóneo en la aplicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha establecido la conexión.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se ha definido la estructura de la base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han desarrollado aplicaciones que modifican el contenido de la base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han definido los objetos destinados a almacenar el resultado de las consultas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han desarrollado aplicaciones que efectúan consultas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han eliminado los objetos una vez finalizada su función.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j)	Se han gestionado las transacciones.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 3</span>
+                            <span>Gestiona la persistencia de los datos identificando herramientas de mapeo objeto relacional (ORM) y desarrollando aplicaciones que las utilizan.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se ha instalado la herramienta ORM.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se ha configurado la herramienta ORM.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han definido los ficheros de mapeo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han aplicado mecanismos de persistencia a los objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han desarrollado aplicaciones que modifican y recuperan objetos persistentes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han desarrollado aplicaciones que realizan consultas usando el lenguaje SQL.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han gestionado las transacciones.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 4</span>
+                            <span>Desarrolla aplicaciones que gestionan la información almacenada en bases de datos objeto relacionales y orientadas a objetos valorando sus características y utilizando los mecanismos de acceso incorporados.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado las ventajas e inconvenientes de las bases de datos que almacenan objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han establecido y cerrado conexiones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se ha gestionado la persistencia de objetos simples.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha gestionado la persistencia de objetos estructurados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han desarrollado aplicaciones que realizan consultas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han modificado los objetos almacenados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han gestionado las transacciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han probado y documentado las aplicaciones desarrolladas.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 5</span>
+                            <span>Desarrolla aplicaciones que gestionan la información almacenada en bases de datos nativas XML evaluando y utilizando clases específicas.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han valorado las ventajas e inconvenientes de utilizar una base de datos nativa XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se ha instalado el gestor de base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se ha configurado el gestor de base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha establecido la conexión con la base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han desarrollado aplicaciones que efectúan consultas sobre el contenido de la base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han añadido y eliminado colecciones de la base de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han desarrollado aplicaciones para añadir, modificar y eliminar documentos XML de la base de datos.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 6</span>
+                            <span>Programa componentes de acceso a datos identificando las características que debe poseer un componente y utilizando herramientas de desarrollo.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han valorado las ventajas e inconvenientes de utilizar programación orientada a componentes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han identificado herramientas de desarrollo de componentes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han programado componentes que gestionan información almacenada en ficheros.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han programado componentes que gestionan mediante conectores información almacenada en bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han programado componentes que gestionan información usando mapeo objeto relacional.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han programado componentes que gestionan información almacenada en bases de datos objeto relacionales y orientadas a objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han programado componentes que gestionan información almacenada en una base de datos nativa XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han probado y documentado los componentes desarrollados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han integrado los componentes desarrollados en aplicaciones.</li>
+
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Contenidos Generales</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Manejo de Ficheros.</li>
+<li>Clases asociadas a las operaciones de gestión de ficheros y directorios: creación, borrado, copia, movimiento, entre otras.</li>
+<li>Formas de acceso a un fichero.</li>
+<li>Clases para gestión de flujos de datos desde/hacia ficheros.</li>
+<li>Trabajo con ficheros XML: Analizadores sintácticos (parser) y vinculación (binding).</li>
+<li>Excepciones: detección y tratamiento.</li>
+<li>Manejo de Conectores.</li>
+<li>El desfase objeto-relacional.</li>
+<li>Protocolos de acceso a bases de datos. Conectores.</li>
+<li>Ejecución de sentencias de descripción de datos.</li>
+<li>Ejecución de sentencias de modificación de datos.</li>
+<li>Ejecución de consultas.</li>
+<li>Herramientas de mapeo objeto relacional (ORM).</li>
+<li>Concepto de mapeo objeto relacional.</li>
+<li>Características de las herramientas ORM. Herramientas ORM más utilizadas.</li>
+<li>Instalación de una herramienta ORM.</li>
+<li>Estructura de un fichero de mapeo. Elementos, propiedades.</li>
+<li>Clases persistentes.</li>
+<li>Sesiones; estados de un objeto.</li>
+<li>Carga, almacenamiento y modificación de objetos.</li>
+<li>Consultas SQL.</li>
+<li>Bases de datos objeto relacionales y orientadas a objetos.</li>
+<li>Características de las bases de datos objeto-relacionales.</li>
+<li>Gestión de objetos con SQL; ANSI SQL 1999.</li>
+<li>Acceso a las funciones del gestor desde el lenguaje de programación.</li>
+<li>Características de las bases de datos orientadas a objetos.</li>
+<li>Tipos de datos: tipos básicos y tipos estructurados.</li>
+<li>El interfaz de programación de aplicaciones de la base de datos.</li>
+<li>Bases de datos XML.</li>
+<li>Bases de datos nativas XML.</li>
+<li>Estrategias de almacenamiento.</li>
+<li>Establecimiento y cierre de conexiones.</li>
+<li>Colecciones y documentos.</li>
+<li>Creación y borrado de colecciones; clases y métodos.</li>
+<li>Añadir, modificar y eliminar documentos; clases y métodos.</li>
+<li>Realización de consultas; clases y métodos.</li>
+<li>Tratamiento de excepciones.</li>
+<li>Programación de componentes de acceso a datos.</li>
+<li>Concepto de componente; características.</li>
+<li>Propiedades y atributos.</li>
+<li>Eventos; asociación de acciones a eventos.</li>
+<li>Persistencia del componente.</li>
+<li>Herramientas para desarrollo de componentes no visuales.</li>
+<li>Empaquetado de componentes.</li>
+
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>&copy; 2024 - FP Informática y Comunicaciones</p>
+            <p class="mt-2">Basado en el Real Decreto 450/2010</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

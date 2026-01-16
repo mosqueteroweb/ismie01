@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación (DAM) - Módulo 0485</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-orange-500">DAM</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso DAM</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Programación</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0485. Fundamentos de programación, estructuras de datos, programación orientada a objetos y buenas prácticas.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">14</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-orange-400">0485</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">135</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">8</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el RD 450/2010.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 1</span>
+                            <span>Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado los bloques que componen la estructura de un programa informático.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han creado proyectos de desarrollo de aplicaciones</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han utilizado entornos integrados de desarrollo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se ha modificado el código de un programa para crear y utilizar variables.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han creado y utilizado constantes y literales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han introducido comentarios en el código.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 2</span>
+                            <span>Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado los fundamentos de la programación orientada a objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han escrito programas simples.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han instanciado objetos a partir de clases predefinidas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han utilizado métodos y propiedades de los objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han escrito llamadas a métodos estáticos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han utilizado parámetros en la llamada a métodos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han incorporado y utilizado librerías de objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han utilizado constructores.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 3</span>
+                            <span>Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se ha escrito y probado código que haga uso de estructuras de selección.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han utilizado estructuras de repetición.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han reconocido las posibilidades de las sentencias de salto.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha escrito código utilizando control de excepciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han creado programas ejecutables utilizando diferentes estructuras de control.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han probado y depurado los programas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se ha comentado y documentado el código.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 4</span>
+                            <span>Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han definido clases.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han definido propiedades y métodos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han creado constructores.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han definido y utilizado clases heredadas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han creado y utilizado métodos estáticos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han definido y utilizado interfaces.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j)	Se han creado y utilizado conjuntos y librerías de clases.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 5</span>
+                            <span>Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se ha utilizado la consola para realizar operaciones de entrada y salida de información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han aplicado formatos en la visualización de la información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han utilizado ficheros para almacenar y recuperar información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han utilizado las herramientas del entorno de desarrollo para crear interfaces gráficos de usuario simples.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han programado controladores de eventos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 6</span>
+                            <span>Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han escrito programas que utilicen arrays.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han utilizado listas para almacenar y procesar información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han utilizado iteradores para recorrer los elementos de las listas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han reconocido las características y ventajas de cada una de la colecciones de datos disponibles.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han creado clases y métodos genéricos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han identificado las clases relacionadas con el tratamiento de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han realizado programas que realicen manipulaciones sobre documentos XML.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 7</span>
+                            <span>Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado los conceptos de herencia, superclase y subclase.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se ha reconocido la incidencia de los constructores en la herencia.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han creado clases heredadas que sobrescriban la implementación de métodos de la superclase.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han diseñado y aplicado jerarquías de clases.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han probado y depurado las jerarquías de clases.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han realizado programas que implementen y utilicen jerarquías de clases.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se ha comentado y documentado el código.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 8</span>
+                            <span>Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado las características de las bases de datos orientadas a objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se ha analizado su aplicación en el desarrollo de aplicaciones mediante lenguajes orientados a objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han instalado sistemas gestores de bases de datos orientados a objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han clasificado y analizado los distintos métodos soportados por los sistemas gestores para la gestión de la información almacenada.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han creado bases de datos y las estructuras necesarias para el almacenamiento de objetos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han programado aplicaciones que almacenen objetos en las bases de datos creadas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han realizado programas para recuperar, actualizar y eliminar objetos de las bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han realizado programas para almacenar y gestionar tipos de datos estructurados, compuestos y relacionados.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 9</span>
+                            <span>Gestiona información almacenada en bases de datos relacionales manteniendo la integridad y consistencia de los datos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado las características y métodos de acceso a sistemas gestores de bases de datos relacionales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han programado conexiones con bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se ha escrito código para almacenar información en bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han creado programas para recuperar y mostrar información almacenada en bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han efectuado borrados y modificaciones sobre la información almacenada.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han creado aplicaciones que ejecuten consultas sobre bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han creado aplicaciones para posibilitar la gestión de información presente en bases de datos relacionales.</li>
+
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Identificación de los elementos de un programa informático</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Estructura y bloques fundamentales.</li>
+<li>Variables.</li>
+<li>Tipos de datos.</li>
+<li>Literales.</li>
+<li>Constantes.</li>
+<li>Operadores y expresiones.</li>
+<li>Conversiones de tipo.</li>
+<li>Comentarios.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Utilización de objetos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Características de los objetos.</li>
+<li>Instanciación de objetos.</li>
+<li>Utilización de métodos.</li>
+<li>Utilización de propiedades.</li>
+<li>Utilización de métodos estáticos.</li>
+<li>Constructores.</li>
+<li>Destrucción de objetos y liberación de memoria.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Uso de estructuras de control</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Estructuras de selección.</li>
+<li>Estructuras de repetición.</li>
+<li>Estructuras de salto.</li>
+<li>Control de excepciones.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Desarrollo de clases</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Concepto de clase.</li>
+<li>Estructura y miembros de una clase.</li>
+<li>Creación de atributos.</li>
+<li>Creación de métodos.</li>
+<li>Creación de constructores.</li>
+<li>Utilización de clases y objetos.</li>
+<li>Utilización de clases heredadas.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Lectura y escritura de información</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Tipos de flujos. Flujos de bytes y de caracteres.</li>
+<li>Clases relativas a flujos.</li>
+<li>Utilización de flujos.</li>
+<li>Entrada desde teclado.</li>
+<li>Salida a pantalla.</li>
+<li>Ficheros de datos. Registros.</li>
+<li>Apertura y cierre de ficheros. Modos de acceso.</li>
+<li>Escritura y lectura de información en ficheros.</li>
+<li>Utilización de los sistemas de ficheros.</li>
+<li>Creación y eliminación de ficheros y directorios.</li>
+<li>Interfaces.</li>
+<li>Concepto de evento.</li>
+<li>Creación de controladores de eventos.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Aplicación de las estructuras de almacenamiento</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Estructuras.</li>
+<li>Creación de arrays.</li>
+<li>Arrays multidimensionales.</li>
+<li>Cadenas de caracteres.</li>
+<li>Listas.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Utilización avanzada de clases</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Composición de clases.</li>
+<li>Herencia.</li>
+<li>Superclases y subclases.</li>
+<li>Clases y métodos abstractos y finales.</li>
+<li>Sobreescritura de métodos.</li>
+<li>Constructores y herencia.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Mantenimiento de la persistencia de los objetos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Bases de datos orientadas a objetos.</li>
+<li>Características de las bases de datos orientadas a objetos.</li>
+<li>Instalación del gestor de bases de datos.</li>
+<li>Creación de bases de datos.</li>
+<li>Mecanismos de consulta.</li>
+<li>El lenguaje de consultas: sintaxis, expresiones, operadores.</li>
+<li>Recuperación, modificación y borrado de información.</li>
+<li>Tipos de datos objeto; atributos y métodos.</li>
+<li>Tipos de datos colección.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Gestión de bases de datos relacionales</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Establecimiento de conexiones.</li>
+<li>Recuperación de información.</li>
+<li>Manipulación de la información.</li>
+<li>Ejecución de consultas sobre la base de datos.</li>
+
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>&copy; 2024 - FP Informática y Comunicaciones</p>
+            <p class="mt-2">Basado en el Real Decreto 450/2010</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

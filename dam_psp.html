@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog. de Servicios y Procesos (DAM) - Módulo 0490</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-orange-500">DAM</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso DAM</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Prog. de Servicios y Procesos</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0490. Programación concurrente, programación de red y servicios telemáticos.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">5</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-orange-400">0490</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">40</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">3</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el RD 450/2010.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 1</span>
+                            <span>Desarrolla aplicaciones compuestas por varios procesos reconociendo y aplicando principios de programación paralela.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han reconocido las características de la programación concurrente y sus ámbitos de aplicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han identificado las diferencias entre programación paralela y programación distribuida, sus ventajas e inconvenientes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han analizado las características de los procesos y de su ejecución por el sistema operativo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han caracterizado los hilos de ejecución y descrito su relación con los procesos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han utilizado clases para programar aplicaciones que crean subprocesos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han utilizado mecanismos para sincronizar y obtener el valor devuelto por los subprocesos iniciados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han desarrollado aplicaciones que gestionen y utilicen procesos para la ejecución de varias tareas en paralelo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han depurado y documentado las aplicaciones desarrolladas.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 2</span>
+                            <span>Desarrolla aplicaciones compuestas por varios hilos de ejecución analizando y aplicando librerías específicas del lenguaje de programación.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado situaciones en las que resulte útil la utilización de varios hilos en un programa.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han reconocido los mecanismos para crear, iniciar y finalizar hilos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han programado aplicaciones que implementen varios hilos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han identificado los posibles estados de ejecución de un hilo y programado aplicaciones que los gestionen.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han utilizado mecanismos para compartir información entre varios hilos de un mismo proceso.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han desarrollado programas formados por varios hilos sincronizados mediante técnicas específicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se ha establecido y controlado la prioridad de cada uno de los hilos de ejecución.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han depurado y documentado los programas desarrollados.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 3</span>
+                            <span>Programa mecanismos de comunicación en red empleando sockets y analizando el escenario de ejecución.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado escenarios que precisan establecer comunicación en red entre varias aplicaciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han identificado los roles de cliente y de servidor y sus funciones asociadas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han reconocido librerías y mecanismos del lenguaje de programación que permiten programar aplicaciones en red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha analizado el concepto de socket, sus tipos y características.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han utilizado sockets para programar una aplicación cliente que se comunique con un servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se ha desarrollado una aplicación servidor en red y verificado su funcionamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han desarrollado aplicaciones que utilizan sockets para intercambiar información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han utilizado hilos para implementar los procedimientos de las aplicaciones relativos a la comunicación en red.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 4</span>
+                            <span>Desarrolla aplicaciones que ofrecen servicios en red, utilizando librerías de clases y aplicando criterios de eficiencia y disponibilidad.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han analizado librerías que permitan implementar protocolos estándar de comunicación en red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han programado clientes de protocolos estándar de comunicaciones y verificado su funcionamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han desarrollado y probado servicios de comunicación en red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han analizado los requerimientos necesarios para crear servicios capaces de gestionar varios clientes concurrentes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han incorporado mecanismos para posibilitar la comunicación simultánea de varios clientes con el servicio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se ha verificado la disponibilidad del servicio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han depurado y documentado las aplicaciones desarrolladas.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 5</span>
+                            <span>Protege las aplicaciones y los datos definiendo y aplicando criterios de seguridad en el acceso, almacenamiento y transmisión de la información.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado y aplicado principios y prácticas de programación segura.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han analizado las principales técnicas y prácticas criptográficas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han definido e implantado políticas de seguridad para limitar y controlar el acceso de los usuarios a las aplicaciones desarrolladas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han utilizado esquemas de seguridad basados en roles.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han empleado algoritmos criptográficos para proteger el acceso a la información almacenada.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han identificado métodos para asegurar la información transmitida.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han desarrollado aplicaciones que utilicen sockets seguros para la transmisión de información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han depurado y documentado las aplicaciones desarrolladas.</li>
+
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Programación multiproceso</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Ejecutables. Procesos. Servicios.</li>
+<li>Estados de un proceso.</li>
+<li>Hilos.</li>
+<li>Programación concurrente.</li>
+<li>Programación paralela y distribuida.</li>
+<li>Comunicación entre procesos.</li>
+<li>Gestión de procesos.</li>
+<li>Sincronización entre procesos.</li>
+<li>Programación de aplicaciones multiproceso.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Programación multihilo</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Recursos compartidos por los hilos.</li>
+<li>Estados de un hilo. Cambios de estado.</li>
+<li>Elementos relacionados con la programación de hilos. Librerías y clases.</li>
+<li>Gestión de hilos.</li>
+<li>Sincronización de hilos.</li>
+<li>Compartición de información entre hilos.</li>
+<li>Programación de aplicaciones multihilo.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Programación de comunicaciones en red</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Comunicación entre aplicaciones.</li>
+<li>Roles cliente y servidor.</li>
+<li>Elementos de programación de aplicaciones en red. Librerías.</li>
+<li>Sockets.</li>
+<li>Creación de sockets.</li>
+<li>Enlazado y establecimiento de conexiones.</li>
+<li>Utilización de sockets para la transmisión y recepción de información.</li>
+<li>Programación de aplicaciones cliente y servidor.</li>
+<li>Utilización de hilos en la programación de aplicaciones en red.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Generación de servicios en red</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Protocolos estándar de comunicación en red a nivel de aplicación (telnet, ftp, http, pop3, smtp, entre otros).</li>
+<li>Librerías de clases y componentes.</li>
+<li>Utilización de objetos predefinidos.</li>
+<li>Establecimiento y finalización de conexiones.</li>
+<li>Transmisión de información.</li>
+<li>Programación de aplicaciones cliente.</li>
+<li>Programación de servidores.</li>
+<li>Implementación de comunicaciones simultáneas.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Utilización de técnicas de programación segura</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Prácticas de programación segura.</li>
+<li>Criptografía de clave pública y clave privada.</li>
+<li>Principales aplicaciones de la criptografía.</li>
+<li>Protocolos criptográficos.</li>
+<li>Política de seguridad.</li>
+<li>Programación de mecanismos de control de acceso.</li>
+<li>Encriptación de información.</li>
+<li>Protocolos seguros de comunicaciones.</li>
+<li>Programación de aplicaciones con comunicaciones seguras.</li>
+
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>&copy; 2024 - FP Informática y Comunicaciones</p>
+            <p class="mt-2">Basado en el Real Decreto 450/2010</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

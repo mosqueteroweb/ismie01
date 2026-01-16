@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguajes de Marcas (DAM) - Módulo 0373</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-orange-500">DAM</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso DAM</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Lenguajes de Marcas</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0373. Lenguajes de marcado (XML, HTML), hojas de estilo y sistemas de gestión de información empresarial.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">7</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-orange-400">0373</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">70</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">4</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el RD 450/2010.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 1</span>
+                            <span>Reconoce las características de lenguajes de marcas analizando e interpretando fragmentos de código.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado las características generales de los lenguajes de marcas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han reconocido las ventajas que proporcionan en el tratamiento de la información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han clasificado los lenguajes de marcas e identificado los más relevantes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han diferenciado sus ámbitos de aplicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han reconocido la necesidad y los ámbitos específicos de aplicación de un lenguaje de marcas de propósito general.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han analizado las características propias del lenguaje XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han identificado la estructura de un documento XML y sus reglas sintácticas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han contrastado la necesidad de crear documentos XML bien formados y la influencia en su procesamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han identificado las ventajas que aportan los espacios de nombres.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 2</span>
+                            <span>Utiliza lenguajes de marcas para la transmisión de información a través de la web analizando la estructura de los documentos e identificando sus elementos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han establecido las semejanzas y diferencias entre los lenguajes HTML y XHTML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se ha reconocido la utilidad de XHTML en los sistemas de gestión de información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han utilizado herramientas en la creación documentos web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han identificado las ventajas que aporta la utilización de hojas de estilo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han aplicado hojas de estilo.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 3</span>
+                            <span>Genera canales de contenidos analizando y utilizando tecnologías de sindicación.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado las ventajas que aporta la sindicación de contenidos en la gestión y transmisión de la información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han definido sus ámbitos de aplicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han analizado las tecnologías en que se basa la sindicación de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha identificado la estructura y la sintaxis de un canal de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han creado y validado canales de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se ha comprobado la funcionalidad y el acceso a los canales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han utilizado herramientas específicas como agregadores y directorios de canales.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 4</span>
+                            <span>Establece mecanismos de validación para documentos XML utilizando métodos para definir su sintaxis y estructura.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se ha establecido la necesidad de describir la información transmitida en los documentos XML y sus reglas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han identificado las tecnologías relacionadas con la definición de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se ha analizado la estructura y sintaxis específica utilizada en la descripción.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han creado descripciones de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han utilizado descripciones en la elaboración y validación de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han asociado las descripciones con los documentos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han utilizado herramientas específicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han documentado las descripciones.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 5</span>
+                            <span>Realiza conversiones sobre documentos XML utilizando técnicas y herramientas de procesamiento.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se ha identificado la necesidad de la conversión de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han establecido ámbitos de aplicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han analizado las tecnologías implicadas y su modo de funcionamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se ha descrito la sintaxis específica utilizada en la conversión y adaptación de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han creado especificaciones de conversión.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han identificado y caracterizado herramientas específicas relacionadas con la conversión de documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han realizado conversiones con distintos formatos de salida.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han documentado y depurado las especificaciones de conversión.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 6</span>
+                            <span>Gestiona información en formato XML analizando y utilizando tecnologías de almacenamiento y lenguajes de consulta.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han identificado los principales métodos de almacenamiento de la información usada en documentos XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han identificado los inconvenientes de almacenar información en formato XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han establecido tecnologías eficientes de almacenamiento de información en función de sus características.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han utilizado sistemas gestores de bases de datos relacionales en el almacenamiento de información en formato XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se han utilizado técnicas específicas para crear documentos XML a partir de información almacenada en bases de datos relacionales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han identificado las características de los sistemas gestores de bases de datos nativas XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han instalado y analizado sistemas gestores de bases de datos nativas XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han utilizado técnicas para gestionar la información almacenada en bases de datos nativas XML.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento de información y su inclusión en documentos XML.</li>
+
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA 7</span>
+                            <span>Opera sistemas empresariales de gestión de información realizando tareas de importación, integración, aseguramiento y extracción de la información.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a)	Se han reconocido las ventajas de los sistemas de gestión y planificación de recursos empresariales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b)	Se han evaluado las características de las principales aplicaciones de gestión empresarial.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c)	Se han instalado aplicaciones de gestión empresarial.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d)	Se han configurado y adaptado las aplicaciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e)	Se ha establecido y verificado el acceso seguro a la información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f)	Se han generado informes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g)	Se han realizado tareas de integración con aplicaciones ofimáticas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h)	Se han realizado procedimientos de extracción de información para su tratamiento e incorporación a diversos sistemas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i)	Se han realizado tareas de asistencia y resolución de incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j)	Se han elaborado documentos relativos a la explotación de la aplicación.</li>
+
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Reconocimiento de las características de lenguajes de marcas</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Clasificación.</li>
+<li>XML: Estructura y sintaxis.</li>
+<li>Etiquetas.</li>
+<li>Herramientas de edición.</li>
+<li>Elaboración de documentos XML bien formados.</li>
+<li>Utilización de espacios de nombres en XML.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Utilización de lenguajes de marcas en entornos web</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Identificación de etiquetas y atributos de HTML.</li>
+<li>XHTM: diferencias sintácticas y estructurales con HTML.</li>
+<li>Versiones de HTML y de XHTML.</li>
+<li>Herramientas de diseño web.</li>
+<li>Hojas de estilo.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Aplicación de los lenguajes de marcas a la sindicación de contenidos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Ámbitos de aplicación.</li>
+<li>Estructura de los canales de contenidos.</li>
+<li>Tecnologías de creación de canales de contenidos.</li>
+<li>Validación.</li>
+<li>Directorios de canales de contenidos.</li>
+<li>Agregación.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Definición de esquemas y vocabularios en XML</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Utilización de métodos de definición de documentos XML.</li>
+<li>Creación de descripciones.</li>
+<li>Asociación con documentos XML.</li>
+<li>Validación.</li>
+<li>Herramientas de creación y validación.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Conversión y adaptación de documentos XML</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Técnicas de transformación de documentos XML.</li>
+<li>Descripción de la estructura y de la sintaxis.</li>
+<li>Utilización de plantillas.</li>
+<li>Utilización de herramientas de procesamiento.</li>
+<li>Elaboración de documentación.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Almacenamiento de información</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Sistemas de almacenamiento de información.</li>
+<li>Inserción y extracción de información en XML.</li>
+<li>Técnicas de búsqueda de información en documentos XML.</li>
+<li>Lenguajes de consulta y manipulación.</li>
+<li>Almacenamiento XML nativo.</li>
+<li>Herramientas de tratamiento y almacenamiento de información en formato XML.</li>
+
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Sistemas de gestión empresarial</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Instalación.</li>
+<li>Adaptación y configuración.</li>
+<li>Integración de módulos.</li>
+<li>Elaboración de informes.</li>
+<li>Integración con aplicaciones ofimáticas.</li>
+<li>Exportación de información.</li>
+
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>&copy; 2024 - FP Informática y Comunicaciones</p>
+            <p class="mt-2">Basado en el Real Decreto 450/2010</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
