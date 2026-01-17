@@ -2677,336 +2677,39 @@
                     "e) Se han aplicado los protocolos y normas de relación social propios del país de la lengua extranjera.",
                     "f) Se han reconocido los marcadores lingüísticos de la procedencia regional."
                 ]
-            },
-            {
-                "id": "1",
-                "description": "Las acreditaciones parciales de la competencia, certificados de competencia profesional y certificados profesionales establecidos en este real decreto serán expedidos de acuerdo con las siguientes características:",
-                "evaluation_criteria": [
-                    "a) El soporte será el material especificado en el apartado 2 de este anexo y llevará incorporado determinadas marcas de seguridad. En el proceso de impresión de atributos y en la personalización de las acreditaciones, certificados y títulos se incorporarán, asimismo, marcas de seguridad contra la falsificación.",
-                    "b) Los soportes llevarán incorporado el Escudo de España con las características definidas por la Ley 33/1981, de 5 de octubre, y el Real Decreto 2964/1981, de 18 de diciembre.",
-                    "c) Figurarán en el centro en el supuesto de ser emitidos por el Ministerio de Educación y Formación Profesional, y en el caso de ser expedidos por las comunidades autónomas figurará en el ángulo superior izquierdo el escudo del Ministerio Educación y Formación Profesional y en el ángulo superior derecho el escudo de la comunidad autónoma competente.",
-                    "d) Estarán numerados mediante series alfanuméricas.",
-                    "e) La acreditación parcial de la competencia, el certificado de competencia profesional y el certificado profesional llevarán impreso todo su texto, así como las firmas de los cargos que tengan la competencia atribuida en la Administración de la comunidad autónoma respectiva.",
-                    "f) No se incorporará inscripción alguna no impresa en el anverso, salvo la firma del interesado.",
-                    "g) El anverso llevara la referencia formativa correspondiente a cada una de las acreditaciones, certificados de competencia profesional y títulos de certificados profesionales"
-                ]
-            },
-            {
-                "id": "2",
-                "description": "Los materiales de los soportes, características mínimas de seguridad, formatos y tamaños de los certificados profesionales serán los siguientes:",
-                "evaluation_criteria": [
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Composición fibrosa: sin pasta mecánica (o similares), ni pasta semiquímica.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Grado de blancura de 80 a 86 por 100 (norma UNE 57-062).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Opacidad: > 93 por 100 (UNE 57-063).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Porosidad: entre 100 y 200 ml/min medido en aparato Bendtsen (UNE 57-066).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "5",
-                "description": "º Lisura: entre 150 y 300 ml/min medio en aparato Bendtsen (UNE 57-080).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "6",
-                "description": "º Resistencia mecánica a la rotura (UNE 57-028):",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "7",
-                "description": "º Alargamiento:",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "8",
-                "description": "º Estabilidad dimensional, en sentido transversal: > 2 por 100, por inmersión al agua (UNE 57-049).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "9",
-                "description": "º Llevar perfectamente indicada la dirección de la fibra o sentido máquina.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "10",
-                "description": "º Índice de rasgado: > al 70 media de las medidas en la dirección longitudinal y transversal del papel (UNE 57 033).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "11",
-                "description": "º Tener un gramaje de 160 g/m",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "12",
-                "description": "º El soporte debe tener un pH entre 7 y 9.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "13",
-                "description": "º Carente de blanqueantes ópticos.",
-                "evaluation_criteria": [
-                    "b) Tintas:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Solidez a la luz: Mínimo admisible «5» en la escala de lana.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tratamiento adicional de protección para elevar la solidez, especialmente en los tonos del entorno del amarillo magenta.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Protección de las tintas metalizadas contra la oxidación.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Las tintas invisibles, especialmente el azul, deben ser anclables y resistentes a la migración y corrimiento.",
-                "evaluation_criteria": [
-                    "c) Colores:",
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Atributos luminiscentes incluidos en la masa del soporte en dos colores (a determinar).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Reactivo contra borrado químico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Marca al agua del escudo de España de 2,5 centímetros de alto en el ángulo inferior izquierdo de la cartela, que se determina en el siguiente apartado de formatos y tamaños.",
-                "evaluation_criteria": [
-                    "b) Impresión:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Tintas luminiscentes visibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tintas luminiscentes invisibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Tintas metaméricas con un máximo de un 20 por 100 de diferencia de intensidad.",
-                "evaluation_criteria": [
-                    "c) Atributos:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Control alfanumérico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Número de Registro.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Sello en seco.",
-                "evaluation_criteria": [
-                    "a) El soporte será el material especificado en el apartado 2 de este anexo y llevará incorporado determinadas marcas de seguridad. En el proceso de impresión de atributos y en la personalización de las acreditaciones, certificados y títulos se incorporarán, asimismo, marcas de seguridad contra la falsificación.",
-                    "b) Los soportes llevarán incorporado el Escudo de España con las características definidas por la Ley 33/1981, de 5 de octubre, y el Real Decreto 2964/1981, de 18 de diciembre.",
-                    "c) Figurarán en el centro en el supuesto de ser emitidos por el Ministerio de Educación y Formación Profesional, y en el caso de ser expedidos por las comunidades autónomas figurará en el ángulo superior izquierdo el escudo del Ministerio Educación y Formación Profesional y en el ángulo superior derecho el escudo de la comunidad autónoma competente.",
-                    "d) Estarán numerados mediante series alfanuméricas.",
-                    "e) La acreditación parcial de la competencia, el certificado de competencia profesional y el certificado profesional llevarán impreso todo su texto, así como las firmas de los cargos que tengan la competencia atribuida en la Administración de la comunidad autónoma respectiva.",
-                    "f) No se incorporará inscripción alguna no impresa en el anverso, salvo la firma del interesado.",
-                    "g) El anverso llevara la referencia formativa correspondiente a cada una de las acreditaciones, certificados de competencia profesional y títulos de certificados profesionales."
-                ]
-            },
-            {
-                "id": "2",
-                "description": "Los materiales de los soportes, características mínimas de seguridad, formatos y tamaños de los certificados profesionales serán los siguientes:",
-                "evaluation_criteria": [
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Composición fibrosa: sin pasta mecánica (o similares), ni pasta semiquímica.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Grado de blancura de 80 a 86 por 100 (norma UNE 57-062).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Opacidad: > 93 por 100 (UNE 57-063).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Porosidad: entre 100 y 200 ml/min medido en aparato Bendtsen (UNE 57-066).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "5",
-                "description": "º Lisura: entre 150 y 300 ml/min medio en aparato Bendtsen (UNE 57-080).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "6",
-                "description": "º Resistencia mecánica a la rotura (UNE 57-028):",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "7",
-                "description": "º Alargamiento:",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "8",
-                "description": "º Estabilidad dimensional, en sentido transversal > 2 por 100, por inmersión al agua (UNE 57-049).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "9",
-                "description": "º Llevar perfectamente indicada la dirección de la fibra o sentido máquina.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "10",
-                "description": "º Índice de rasgado: > al 70 media de las medidas en la dirección longitudinal y transversal del papel (UNE 57 033).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "11",
-                "description": "º Tener un gramaje de 160 g/m2 (± 4 por 100) (UNE 57-009).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "12",
-                "description": "º El soporte debe tener un pH entre 7 y 9.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "13",
-                "description": "º Carente de blanqueantes ópticos.",
-                "evaluation_criteria": [
-                    "b) Tintas:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Solidez a la luz: mínimo admisible «5» en la escala de lana.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tratamiento adicional de protección para elevar la solidez, especialmente en los tonos del entorno del amarillo magenta.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Protección de las tintas metalizadas contra la oxidación.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Las tintas invisibles, especialmente el azul, deben ser anclables y resistentes a la migración y corrimiento.",
-                "evaluation_criteria": [
-                    "c) Colores:",
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Atributos luminiscentes incluidos en la masa del soporte en dos colores (a determinar).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Reactivo contra borrado químico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Marca al agua del escudo de España de 2,5 centímetros de alto en el ángulo inferior izquierdo de la cartela, que se determina en el siguiente apartado de formatos y tamaños.",
-                "evaluation_criteria": [
-                    "b) Impresión:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Tintas luminiscentes visibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tintas luminiscentes invisibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Tintas metaméricas con un máximo de un 20 por 100 de diferencia de intensidad.",
-                "evaluation_criteria": [
-                    "c) Atributos:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Control alfanumérico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Número de Registro.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Sello en seco.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "1",
-                "description": "Suscribir el presente convenio, para el desarrollo de planes formativos de Formación Profesional de Grado C conducentes a Certificados Profesionales, entre el centro formativo y la empresa u organismo equiparado que se indican en el presente documento, estableciendo así, la colaboración necesaria para posibilitar el desarrollo de estancias de formación en empresa de personas en formación, en el marco del Sistema de Formación Profesional regulado por la Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "Incorporar al presente Convenio, a lo largo del periodo de vigencia, las relaciones nominales de las personas en formación acogidas al mismo, el plan de formación, que podrá ser modificado y adaptado en función de las necesidades del desarrollo del mismo, y los documentos necesarios que faciliten su seguimiento y evaluación.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "Formalizar el presente Convenio de acuerdo con las siguientes",
-                "evaluation_criteria": []
             }
         ],
-        "contents": []
+        "contents": [
+            "Análisis de mensajes orales:",
+            "−\tComprensión de mensajes profesionales y cotidianos.",
+            "−\tMensajes directos, telefónicos y grabados.",
+            "−\tTerminología específica del sector.",
+            "−\tIdea principal y detalles secundarios.",
+            "−\tMensajes con diferentes registros.",
+            "Interpretación de mensajes escritos:",
+            "−\tComprensión de mensajes, textos, artículos básicos profesionales y cotidianos.",
+            "−\tSoportes telemáticos: fax, e-mail, burofax.",
+            "−\tTerminología específica del sector.",
+            "−\tIdea principal y detalles secundarios.",
+            "−\tRelaciones lógicas: oposición, concesión, comparación, condición, causa, finalidad, resultado.",
+            "−\tRelaciones temporales: anterioridad, posterioridad, simultaneidad.",
+            "Producción de mensajes orales:",
+            "−\tRegistros utilizados en la emisión de mensajes orales.",
+            "−\tTerminología específica del sector.",
+            "−\tFórmulas y saludos.",
+            "−\tMantenimiento y seguimiento del discurso oral.",
+            "−\tMarcadores lingüísticos de relaciones sociales, normas de cortesía y diferencias de registro.",
+            "Emisión de textos escritos:",
+            "−\tExpresión y cumplimentación de mensajes y textos profesionales y cotidianos.",
+            "−\tCurriculum vitae y soportes telemáticos: fax, e-mail, burofax.",
+            "−\tTerminología específica del sector.",
+            "−\tIdea principal y detalles secundarios.",
+            "−\tRelaciones lógicas: oposición, concesión, comparación, condición, causa, finalidad, resultado.",
+            "−\tRelaciones temporales: anterioridad, posterioridad, simultaneidad.",
+            "Identificación e interpretación de los elementos culturales:",
+            "−\tElementos culturales más significativos de los países de lengua inglesa.",
+            "−\tNormas de conducta y protocolo.",
+            "−\tRelaciones sociales y laborales."
+        ]
     }
 }
