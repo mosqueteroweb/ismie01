@@ -96,7 +96,7 @@ def create_index_page():
 
     <footer class="bg-white border-t border-slate-200 mt-auto py-12">
         <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
-            <p>&copy; 2024 - FP Informática y Comunicaciones</p>
+            <p>Autor &copy; Pedro Salazar 2026</p>
         </div>
     </footer>
 
