@@ -2318,77 +2318,14 @@
         "contents": []
     },
     "1665": {
-        "name": "Digitalización aplicada a los sectores productivos I (GM)",
+        "name": "Digitalización Aplicada a los Sectores Productivos",
         "code": "1665",
         "hours": "30",
         "ects": "3",
         "learning_results": [
             {
                 "id": "1",
-                "description": "Establece las diferencias entre la Economía Lineal (EL) y la Economía Circular (EC), identificando las ventajas de la EC en relación con el medioambiente y el desarrollo sostenible. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se han identificado las etapas «típicas» de los modelos basados en EL y modelos basados en EC.",
-                    "b) Se ha analizado cada etapa de los modelos EL y EC y su repercusión en el medio ambiente.",
-                    "c) Se ha valorado la importancia del reciclaje en los modelos económicos.",
-                    "d) Se han identificado procesos reales basados en EL.",
-                    "e) Se han identificado procesos reales basados en EC.",
-                    "f) Se han comparado los modelos anteriores en relación con su impacto medioambiental y los ODS (Objetivos de Desarrollo Sostenible)."
-                ]
-            },
-            {
-                "id": "2",
-                "description": "Caracteriza los principales aspectos de la 4.ª Revolución Industrial indicando los cambios y las ventajas que se producen tanto desde el punto de vista de los clientes como de las empresas. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se han relacionado los sistemas ciber físicos con la evolución industrial.",
-                    "b) Se ha analizado el cambio producido en los sistemas automatizados.",
-                    "c) Se ha descrito la combinación de la parte física de las industrias con el",
-                    "d) Se ha descrito la interrelación entre el mundo físico y el virtual.",
-                    "e) Se ha relacionado la migración a entornos 4.0 con la mejora de los resultados de las empresas.",
-                    "f) Se han identificado las ventajas para clientes y empresas."
-                ]
-            },
-            {
-                "id": "3",
-                "description": "Identifica la estructura de los sistemas basados en",
-                "evaluation_criteria": [
-                    "a) Se han identificado los diferentes niveles de la",
-                    "b) Se han identificado las principales funciones de la",
-                    "c) Se ha descrito el concepto de",
-                    "d) Se han definido los conceptos de",
-                    "e) Se han identificado las ventajas que proporciona la utilización de la"
-                ]
-            },
-            {
-                "id": "4",
-                "description": "Compara los sistemas de producción/prestación de servicios digitalizados con los sistemas clásicos identificando las mejoras introducidas. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se han identificado las tecnologías habilitadoras (THD) actuales que definen un sistema digitalizado.",
-                    "b) Se han descrito las características y aplicaciones del IoT, IA (Inteligencia Artificial), Big Data, tecnología 5G, la robótica colaborativa,",
-                    "c) Se ha descrito la contribución de las THD a la mejora de la productividad y la eficiencia de los sistemas productivos o de prestación de servicios.",
-                    "d) Se ha relacionado la alineación entre las unidades funcionales de las empresas que conforman el sistema y el objetivo del mismo.",
-                    "e) Se ha relacionado la implantación de las tecnologías habilitadoras (sensórica, tratamiento de datos, automatización y comunicaciones, entre otras) con la reducción de costes y la mejora de la competitividad.",
-                    "f) Se han relacionado las tecnologías disruptivas con aplicaciones concretas en los sectores productivos.",
-                    "g) Se han definido los sistemas de almacenamiento de datos no convencionales y el acceso a los mismos desde cada unidad.",
-                    "h) Se han descrito las mejoras producidas en el sistema y en cada una de sus etapas."
-                ]
-            },
-            {
-                "id": "5",
-                "description": "Elabora un plan de transformación de una empresa clásica del sector en el que se enmarca el título, basada en una EL, al concepto 4.0, determinando los cambios a introducir en las principales fases del sistema e indicando como afectaría a los recursos humanos. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se ha definido a nivel de bloques el diagrama de funcionamiento de la empresa clásica.",
-                    "b) Se han identificado las etapas susceptibles de ser digitalizadas.",
-                    "c) Se han definido las tecnologías implicadas en cada una de las etapas.",
-                    "d) Se ha establecido la conexión de las etapas digitalizadas con el resto del sistema.",
-                    "e) Se ha elaborado un diagrama de bloques del sistema digitalizado.",
-                    "f) Se ha elaborado un informe de viabilidad y de las mejoras introducidas.",
-                    "g) Se ha analizado la mejora en la producción y gestión de residuos, entre otras.",
-                    "h) Se ha elaborado un documento con la secuencia del plan de transformación y los recursos empleados."
-                ]
-            },
-            {
-                "id": "1",
-                "description": "Analiza el concepto de digitalización y su repercusión en los sectores productivos teniendo en cuenta la actividad de la empresa e identificando entornos IT (",
+                "description": "Analiza el concepto de digitalización y su repercusión en los sectores productivos teniendo en cuenta la actividad de la empresa e identificando entornos IT (Information Technology) y OT (Operation Technology) característicos.",
                 "evaluation_criteria": [
                     "a) Se ha descrito en qué consiste el concepto de digitalización.",
                     "b) Se ha relacionado la implantación de la tecnología digital con la organización de las empresas.",
@@ -2401,7 +2338,7 @@
             },
             {
                 "id": "2",
-                "description": "Caracteriza las tecnologías habilitadoras digitales necesarias para la adecuación/transformación de las empresas a entornos digitales describiendo sus características y aplicaciones. Criterios de evaluación:",
+                "description": "Caracteriza las tecnologías habilitadoras digitales necesarias para la adecuación/transformación de las empresas a entornos digitales describiendo sus características y aplicaciones.",
                 "evaluation_criteria": [
                     "a) Se han identificado las principales tecnologías habilitadoras digitales.",
                     "b) Se han relacionado las THD con el desarrollo de productos y servicios.",
@@ -2414,21 +2351,21 @@
             },
             {
                 "id": "3",
-                "description": "Identifica sistemas basados en",
+                "description": "Identifica sistemas basados en la nube (Cloud Computing) y su aplicación en el sector.",
                 "evaluation_criteria": [
-                    "a) Se han identificado los diferentes niveles de la",
-                    "b) Se han identificado las principales funciones de la",
-                    "c) Se ha descrito el concepto de",
-                    "d) Se han definido los conceptos de",
-                    "e) Se han identificado las ventajas que proporciona la utilización de la"
+                    "a) Se han identificado los diferentes niveles de la nube.",
+                    "b) Se han identificado las principales funciones de la nube.",
+                    "c) Se ha descrito el concepto de edge computing.",
+                    "d) Se han definido los conceptos de fog y mist computing.",
+                    "e) Se han identificado las ventajas que proporciona la utilización de la nube."
                 ]
             },
             {
                 "id": "4",
-                "description": "Identifica aplicaciones de la IA (inteligencia artificial) en entornos del sector donde está enmarcado el título describiendo las mejoras implícitas en su implementación. Criterios de evaluación:",
+                "description": "Identifica aplicaciones de la IA (inteligencia artificial) en entornos del sector donde está enmarcado el título describiendo las mejoras implícitas en su implementación.",
                 "evaluation_criteria": [
                     "a) Se ha identificado la importancia de la IA en la automatización de procesos y su optimización.",
-                    "b) Se ha relacionado la IA con la recogida masiva de datos (",
+                    "b) Se ha relacionado la IA con la recogida masiva de datos (Big Data).",
                     "c) Se ha valorado la importancia presente y futura de la IA.",
                     "d) Se han identificado los sectores con implantación más relevante de IA.",
                     "e) Se han identificado los lenguajes de programación en IA.",
@@ -2437,22 +2374,22 @@
             },
             {
                 "id": "5",
-                "description": "Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales. Criterios de evaluación:",
+                "description": "Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales.",
                 "evaluation_criteria": [
                     "a) Se ha establecido la diferencia entre dato e información.",
                     "b) Se ha descrito el ciclo de vida del dato.",
-                    "c) Se ha identificado la relación entre",
-                    "d) Se han descrito las características que definen",
+                    "c) Se ha identificado la relación entre Big Data, análisis de datos e IA.",
+                    "d) Se han descrito las características que definen Big Data.",
                     "e) Se han descrito las etapas típicas de la ciencia de datos y su relación en el proceso.",
-                    "f) Se han descrito los procedimientos de almacenaje de datos en la",
-                    "g) Se ha descrito la importancia del",
+                    "f) Se han descrito los procedimientos de almacenaje de datos en la nube.",
+                    "g) Se ha descrito la importancia del cloud computing.",
                     "h) Se han identificado los principales objetivos de la ciencia de datos en las diferentes empresas.",
                     "i) Se ha valorado la importancia de la seguridad y su regulación en relación con los datos."
                 ]
             },
             {
                 "id": "6",
-                "description": "Desarrolla un proyecto de transformación digital de una empresa de un sector relacionado con el título, teniendo en cuenta los cambios que se deben producir en función de los objetivos de la empresa. Criterios de evaluación:",
+                "description": "Desarrolla un proyecto de transformación digital de una empresa de un sector relacionado con el título, teniendo en cuenta los cambios que se deben producir en función de los objetivos de la empresa.",
                 "evaluation_criteria": [
                     "a) Se han identificado los objetivos estratégicos de la empresa.",
                     "b) Se han identificado y alineado las áreas de producción/negocio y de comunicaciones.",
@@ -2468,7 +2405,35 @@
                 ]
             }
         ],
-        "contents": []
+        "contents": [
+            "Digitalización en los sistemas productivos:",
+            "−\tConcepto de digitalización y transformación digital.",
+            "−\tEntornos IT y OT. Diferencias y similitudes.",
+            "−\tTecnologías de digitalización en planta y en negocio.",
+            "Tecnologías Habilitadoras Digitales (THD):",
+            "−\tIdentificación y características de las THD.",
+            "−\tIoT (Internet de las Cosas).",
+            "−\tRobótica colaborativa.",
+            "−\tTecnología 5G.",
+            "−\tRealidad Virtual y Aumentada.",
+            "Sistemas basados en la Nube (Cloud):",
+            "−\tConcepto de Cloud Computing.",
+            "−\tNiveles y modelos de despliegue en la nube.",
+            "−\tEdge Computing, Fog Computing y Mist Computing.",
+            "Inteligencia Artificial (IA):",
+            "−\tConcepto y aplicaciones de la IA.",
+            "−\tMachine Learning y Deep Learning.",
+            "−\tLenguajes de programación para IA.",
+            "Datos y Ciberseguridad:",
+            "−\tDato vs Información. Ciclo de vida del dato.",
+            "−\tBig Data: características y almacenamiento.",
+            "−\tSeguridad y protección de datos. Normativa.",
+            "−\tCiberseguridad en entornos IT/OT.",
+            "Plan de Transformación Digital:",
+            "−\tEstrategia de transformación digital.",
+            "−\tAnálisis de viabilidad.",
+            "−\tRecursos humanos y capacitación digital."
+        ]
     },
     "1708": {
         "name": "Sostenibilidad aplicada al sistema productivo",
@@ -2712,336 +2677,39 @@
                     "e) Se han aplicado los protocolos y normas de relación social propios del país de la lengua extranjera.",
                     "f) Se han reconocido los marcadores lingüísticos de la procedencia regional."
                 ]
-            },
-            {
-                "id": "1",
-                "description": "Las acreditaciones parciales de la competencia, certificados de competencia profesional y certificados profesionales establecidos en este real decreto serán expedidos de acuerdo con las siguientes características:",
-                "evaluation_criteria": [
-                    "a) El soporte será el material especificado en el apartado 2 de este anexo y llevará incorporado determinadas marcas de seguridad. En el proceso de impresión de atributos y en la personalización de las acreditaciones, certificados y títulos se incorporarán, asimismo, marcas de seguridad contra la falsificación.",
-                    "b) Los soportes llevarán incorporado el Escudo de España con las características definidas por la Ley 33/1981, de 5 de octubre, y el Real Decreto 2964/1981, de 18 de diciembre.",
-                    "c) Figurarán en el centro en el supuesto de ser emitidos por el Ministerio de Educación y Formación Profesional, y en el caso de ser expedidos por las comunidades autónomas figurará en el ángulo superior izquierdo el escudo del Ministerio Educación y Formación Profesional y en el ángulo superior derecho el escudo de la comunidad autónoma competente.",
-                    "d) Estarán numerados mediante series alfanuméricas.",
-                    "e) La acreditación parcial de la competencia, el certificado de competencia profesional y el certificado profesional llevarán impreso todo su texto, así como las firmas de los cargos que tengan la competencia atribuida en la Administración de la comunidad autónoma respectiva.",
-                    "f) No se incorporará inscripción alguna no impresa en el anverso, salvo la firma del interesado.",
-                    "g) El anverso llevara la referencia formativa correspondiente a cada una de las acreditaciones, certificados de competencia profesional y títulos de certificados profesionales"
-                ]
-            },
-            {
-                "id": "2",
-                "description": "Los materiales de los soportes, características mínimas de seguridad, formatos y tamaños de los certificados profesionales serán los siguientes:",
-                "evaluation_criteria": [
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Composición fibrosa: sin pasta mecánica (o similares), ni pasta semiquímica.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Grado de blancura de 80 a 86 por 100 (norma UNE 57-062).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Opacidad: > 93 por 100 (UNE 57-063).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Porosidad: entre 100 y 200 ml/min medido en aparato Bendtsen (UNE 57-066).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "5",
-                "description": "º Lisura: entre 150 y 300 ml/min medio en aparato Bendtsen (UNE 57-080).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "6",
-                "description": "º Resistencia mecánica a la rotura (UNE 57-028):",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "7",
-                "description": "º Alargamiento:",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "8",
-                "description": "º Estabilidad dimensional, en sentido transversal: > 2 por 100, por inmersión al agua (UNE 57-049).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "9",
-                "description": "º Llevar perfectamente indicada la dirección de la fibra o sentido máquina.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "10",
-                "description": "º Índice de rasgado: > al 70 media de las medidas en la dirección longitudinal y transversal del papel (UNE 57 033).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "11",
-                "description": "º Tener un gramaje de 160 g/m",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "12",
-                "description": "º El soporte debe tener un pH entre 7 y 9.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "13",
-                "description": "º Carente de blanqueantes ópticos.",
-                "evaluation_criteria": [
-                    "b) Tintas:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Solidez a la luz: Mínimo admisible «5» en la escala de lana.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tratamiento adicional de protección para elevar la solidez, especialmente en los tonos del entorno del amarillo magenta.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Protección de las tintas metalizadas contra la oxidación.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Las tintas invisibles, especialmente el azul, deben ser anclables y resistentes a la migración y corrimiento.",
-                "evaluation_criteria": [
-                    "c) Colores:",
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Atributos luminiscentes incluidos en la masa del soporte en dos colores (a determinar).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Reactivo contra borrado químico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Marca al agua del escudo de España de 2,5 centímetros de alto en el ángulo inferior izquierdo de la cartela, que se determina en el siguiente apartado de formatos y tamaños.",
-                "evaluation_criteria": [
-                    "b) Impresión:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Tintas luminiscentes visibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tintas luminiscentes invisibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Tintas metaméricas con un máximo de un 20 por 100 de diferencia de intensidad.",
-                "evaluation_criteria": [
-                    "c) Atributos:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Control alfanumérico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Número de Registro.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Sello en seco.",
-                "evaluation_criteria": [
-                    "a) El soporte será el material especificado en el apartado 2 de este anexo y llevará incorporado determinadas marcas de seguridad. En el proceso de impresión de atributos y en la personalización de las acreditaciones, certificados y títulos se incorporarán, asimismo, marcas de seguridad contra la falsificación.",
-                    "b) Los soportes llevarán incorporado el Escudo de España con las características definidas por la Ley 33/1981, de 5 de octubre, y el Real Decreto 2964/1981, de 18 de diciembre.",
-                    "c) Figurarán en el centro en el supuesto de ser emitidos por el Ministerio de Educación y Formación Profesional, y en el caso de ser expedidos por las comunidades autónomas figurará en el ángulo superior izquierdo el escudo del Ministerio Educación y Formación Profesional y en el ángulo superior derecho el escudo de la comunidad autónoma competente.",
-                    "d) Estarán numerados mediante series alfanuméricas.",
-                    "e) La acreditación parcial de la competencia, el certificado de competencia profesional y el certificado profesional llevarán impreso todo su texto, así como las firmas de los cargos que tengan la competencia atribuida en la Administración de la comunidad autónoma respectiva.",
-                    "f) No se incorporará inscripción alguna no impresa en el anverso, salvo la firma del interesado.",
-                    "g) El anverso llevara la referencia formativa correspondiente a cada una de las acreditaciones, certificados de competencia profesional y títulos de certificados profesionales."
-                ]
-            },
-            {
-                "id": "2",
-                "description": "Los materiales de los soportes, características mínimas de seguridad, formatos y tamaños de los certificados profesionales serán los siguientes:",
-                "evaluation_criteria": [
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Composición fibrosa: sin pasta mecánica (o similares), ni pasta semiquímica.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Grado de blancura de 80 a 86 por 100 (norma UNE 57-062).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Opacidad: > 93 por 100 (UNE 57-063).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Porosidad: entre 100 y 200 ml/min medido en aparato Bendtsen (UNE 57-066).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "5",
-                "description": "º Lisura: entre 150 y 300 ml/min medio en aparato Bendtsen (UNE 57-080).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "6",
-                "description": "º Resistencia mecánica a la rotura (UNE 57-028):",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "7",
-                "description": "º Alargamiento:",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "8",
-                "description": "º Estabilidad dimensional, en sentido transversal > 2 por 100, por inmersión al agua (UNE 57-049).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "9",
-                "description": "º Llevar perfectamente indicada la dirección de la fibra o sentido máquina.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "10",
-                "description": "º Índice de rasgado: > al 70 media de las medidas en la dirección longitudinal y transversal del papel (UNE 57 033).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "11",
-                "description": "º Tener un gramaje de 160 g/m2 (± 4 por 100) (UNE 57-009).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "12",
-                "description": "º El soporte debe tener un pH entre 7 y 9.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "13",
-                "description": "º Carente de blanqueantes ópticos.",
-                "evaluation_criteria": [
-                    "b) Tintas:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Solidez a la luz: mínimo admisible «5» en la escala de lana.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tratamiento adicional de protección para elevar la solidez, especialmente en los tonos del entorno del amarillo magenta.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Protección de las tintas metalizadas contra la oxidación.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "4",
-                "description": "º Las tintas invisibles, especialmente el azul, deben ser anclables y resistentes a la migración y corrimiento.",
-                "evaluation_criteria": [
-                    "c) Colores:",
-                    "a) Papel:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Atributos luminiscentes incluidos en la masa del soporte en dos colores (a determinar).",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Reactivo contra borrado químico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Marca al agua del escudo de España de 2,5 centímetros de alto en el ángulo inferior izquierdo de la cartela, que se determina en el siguiente apartado de formatos y tamaños.",
-                "evaluation_criteria": [
-                    "b) Impresión:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Tintas luminiscentes visibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Tintas luminiscentes invisibles.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Tintas metaméricas con un máximo de un 20 por 100 de diferencia de intensidad.",
-                "evaluation_criteria": [
-                    "c) Atributos:"
-                ]
-            },
-            {
-                "id": "1",
-                "description": "º Control alfanumérico.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "º Número de Registro.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "º Sello en seco.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "1",
-                "description": "Suscribir el presente convenio, para el desarrollo de planes formativos de Formación Profesional de Grado C conducentes a Certificados Profesionales, entre el centro formativo y la empresa u organismo equiparado que se indican en el presente documento, estableciendo así, la colaboración necesaria para posibilitar el desarrollo de estancias de formación en empresa de personas en formación, en el marco del Sistema de Formación Profesional regulado por la Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "2",
-                "description": "Incorporar al presente Convenio, a lo largo del periodo de vigencia, las relaciones nominales de las personas en formación acogidas al mismo, el plan de formación, que podrá ser modificado y adaptado en función de las necesidades del desarrollo del mismo, y los documentos necesarios que faciliten su seguimiento y evaluación.",
-                "evaluation_criteria": []
-            },
-            {
-                "id": "3",
-                "description": "Formalizar el presente Convenio de acuerdo con las siguientes",
-                "evaluation_criteria": []
             }
         ],
-        "contents": []
+        "contents": [
+            "Análisis de mensajes orales:",
+            "−\tComprensión de mensajes profesionales y cotidianos.",
+            "−\tMensajes directos, telefónicos y grabados.",
+            "−\tTerminología específica del sector.",
+            "−\tIdea principal y detalles secundarios.",
+            "−\tMensajes con diferentes registros.",
+            "Interpretación de mensajes escritos:",
+            "−\tComprensión de mensajes, textos, artículos básicos profesionales y cotidianos.",
+            "−\tSoportes telemáticos: fax, e-mail, burofax.",
+            "−\tTerminología específica del sector.",
+            "−\tIdea principal y detalles secundarios.",
+            "−\tRelaciones lógicas: oposición, concesión, comparación, condición, causa, finalidad, resultado.",
+            "−\tRelaciones temporales: anterioridad, posterioridad, simultaneidad.",
+            "Producción de mensajes orales:",
+            "−\tRegistros utilizados en la emisión de mensajes orales.",
+            "−\tTerminología específica del sector.",
+            "−\tFórmulas y saludos.",
+            "−\tMantenimiento y seguimiento del discurso oral.",
+            "−\tMarcadores lingüísticos de relaciones sociales, normas de cortesía y diferencias de registro.",
+            "Emisión de textos escritos:",
+            "−\tExpresión y cumplimentación de mensajes y textos profesionales y cotidianos.",
+            "−\tCurriculum vitae y soportes telemáticos: fax, e-mail, burofax.",
+            "−\tTerminología específica del sector.",
+            "−\tIdea principal y detalles secundarios.",
+            "−\tRelaciones lógicas: oposición, concesión, comparación, condición, causa, finalidad, resultado.",
+            "−\tRelaciones temporales: anterioridad, posterioridad, simultaneidad.",
+            "Identificación e interpretación de los elementos culturales:",
+            "−\tElementos culturales más significativos de los países de lengua inglesa.",
+            "−\tNormas de conducta y protocolo.",
+            "−\tRelaciones sociales y laborales."
+        ]
     }
 }
