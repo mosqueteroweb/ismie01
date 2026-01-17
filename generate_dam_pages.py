@@ -247,8 +247,8 @@ def generate_pages():
                          content)
 
         # 2. Course Badge
-        content = re.sub(r'<span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">.*?</span>',
-                         f'<span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-sm">{meta["course"]}</span>',
+        content = re.sub(r'<div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">.*?</div>',
+                         f'<div class="inline-block bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">{meta["course"]}</div>',
                          content)
 
         # 3. Description
