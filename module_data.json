@@ -2318,77 +2318,14 @@
         "contents": []
     },
     "1665": {
-        "name": "Digitalización aplicada a los sectores productivos I (GM)",
+        "name": "Digitalización Aplicada a los Sectores Productivos",
         "code": "1665",
         "hours": "30",
         "ects": "3",
         "learning_results": [
             {
                 "id": "1",
-                "description": "Establece las diferencias entre la Economía Lineal (EL) y la Economía Circular (EC), identificando las ventajas de la EC en relación con el medioambiente y el desarrollo sostenible. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se han identificado las etapas «típicas» de los modelos basados en EL y modelos basados en EC.",
-                    "b) Se ha analizado cada etapa de los modelos EL y EC y su repercusión en el medio ambiente.",
-                    "c) Se ha valorado la importancia del reciclaje en los modelos económicos.",
-                    "d) Se han identificado procesos reales basados en EL.",
-                    "e) Se han identificado procesos reales basados en EC.",
-                    "f) Se han comparado los modelos anteriores en relación con su impacto medioambiental y los ODS (Objetivos de Desarrollo Sostenible)."
-                ]
-            },
-            {
-                "id": "2",
-                "description": "Caracteriza los principales aspectos de la 4.ª Revolución Industrial indicando los cambios y las ventajas que se producen tanto desde el punto de vista de los clientes como de las empresas. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se han relacionado los sistemas ciber físicos con la evolución industrial.",
-                    "b) Se ha analizado el cambio producido en los sistemas automatizados.",
-                    "c) Se ha descrito la combinación de la parte física de las industrias con el",
-                    "d) Se ha descrito la interrelación entre el mundo físico y el virtual.",
-                    "e) Se ha relacionado la migración a entornos 4.0 con la mejora de los resultados de las empresas.",
-                    "f) Se han identificado las ventajas para clientes y empresas."
-                ]
-            },
-            {
-                "id": "3",
-                "description": "Identifica la estructura de los sistemas basados en",
-                "evaluation_criteria": [
-                    "a) Se han identificado los diferentes niveles de la",
-                    "b) Se han identificado las principales funciones de la",
-                    "c) Se ha descrito el concepto de",
-                    "d) Se han definido los conceptos de",
-                    "e) Se han identificado las ventajas que proporciona la utilización de la"
-                ]
-            },
-            {
-                "id": "4",
-                "description": "Compara los sistemas de producción/prestación de servicios digitalizados con los sistemas clásicos identificando las mejoras introducidas. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se han identificado las tecnologías habilitadoras (THD) actuales que definen un sistema digitalizado.",
-                    "b) Se han descrito las características y aplicaciones del IoT, IA (Inteligencia Artificial), Big Data, tecnología 5G, la robótica colaborativa,",
-                    "c) Se ha descrito la contribución de las THD a la mejora de la productividad y la eficiencia de los sistemas productivos o de prestación de servicios.",
-                    "d) Se ha relacionado la alineación entre las unidades funcionales de las empresas que conforman el sistema y el objetivo del mismo.",
-                    "e) Se ha relacionado la implantación de las tecnologías habilitadoras (sensórica, tratamiento de datos, automatización y comunicaciones, entre otras) con la reducción de costes y la mejora de la competitividad.",
-                    "f) Se han relacionado las tecnologías disruptivas con aplicaciones concretas en los sectores productivos.",
-                    "g) Se han definido los sistemas de almacenamiento de datos no convencionales y el acceso a los mismos desde cada unidad.",
-                    "h) Se han descrito las mejoras producidas en el sistema y en cada una de sus etapas."
-                ]
-            },
-            {
-                "id": "5",
-                "description": "Elabora un plan de transformación de una empresa clásica del sector en el que se enmarca el título, basada en una EL, al concepto 4.0, determinando los cambios a introducir en las principales fases del sistema e indicando como afectaría a los recursos humanos. Criterios de evaluación:",
-                "evaluation_criteria": [
-                    "a) Se ha definido a nivel de bloques el diagrama de funcionamiento de la empresa clásica.",
-                    "b) Se han identificado las etapas susceptibles de ser digitalizadas.",
-                    "c) Se han definido las tecnologías implicadas en cada una de las etapas.",
-                    "d) Se ha establecido la conexión de las etapas digitalizadas con el resto del sistema.",
-                    "e) Se ha elaborado un diagrama de bloques del sistema digitalizado.",
-                    "f) Se ha elaborado un informe de viabilidad y de las mejoras introducidas.",
-                    "g) Se ha analizado la mejora en la producción y gestión de residuos, entre otras.",
-                    "h) Se ha elaborado un documento con la secuencia del plan de transformación y los recursos empleados."
-                ]
-            },
-            {
-                "id": "1",
-                "description": "Analiza el concepto de digitalización y su repercusión en los sectores productivos teniendo en cuenta la actividad de la empresa e identificando entornos IT (",
+                "description": "Analiza el concepto de digitalización y su repercusión en los sectores productivos teniendo en cuenta la actividad de la empresa e identificando entornos IT (Information Technology) y OT (Operation Technology) característicos.",
                 "evaluation_criteria": [
                     "a) Se ha descrito en qué consiste el concepto de digitalización.",
                     "b) Se ha relacionado la implantación de la tecnología digital con la organización de las empresas.",
@@ -2401,7 +2338,7 @@
             },
             {
                 "id": "2",
-                "description": "Caracteriza las tecnologías habilitadoras digitales necesarias para la adecuación/transformación de las empresas a entornos digitales describiendo sus características y aplicaciones. Criterios de evaluación:",
+                "description": "Caracteriza las tecnologías habilitadoras digitales necesarias para la adecuación/transformación de las empresas a entornos digitales describiendo sus características y aplicaciones.",
                 "evaluation_criteria": [
                     "a) Se han identificado las principales tecnologías habilitadoras digitales.",
                     "b) Se han relacionado las THD con el desarrollo de productos y servicios.",
@@ -2414,21 +2351,21 @@
             },
             {
                 "id": "3",
-                "description": "Identifica sistemas basados en",
+                "description": "Identifica sistemas basados en la nube (Cloud Computing) y su aplicación en el sector.",
                 "evaluation_criteria": [
-                    "a) Se han identificado los diferentes niveles de la",
-                    "b) Se han identificado las principales funciones de la",
-                    "c) Se ha descrito el concepto de",
-                    "d) Se han definido los conceptos de",
-                    "e) Se han identificado las ventajas que proporciona la utilización de la"
+                    "a) Se han identificado los diferentes niveles de la nube.",
+                    "b) Se han identificado las principales funciones de la nube.",
+                    "c) Se ha descrito el concepto de edge computing.",
+                    "d) Se han definido los conceptos de fog y mist computing.",
+                    "e) Se han identificado las ventajas que proporciona la utilización de la nube."
                 ]
             },
             {
                 "id": "4",
-                "description": "Identifica aplicaciones de la IA (inteligencia artificial) en entornos del sector donde está enmarcado el título describiendo las mejoras implícitas en su implementación. Criterios de evaluación:",
+                "description": "Identifica aplicaciones de la IA (inteligencia artificial) en entornos del sector donde está enmarcado el título describiendo las mejoras implícitas en su implementación.",
                 "evaluation_criteria": [
                     "a) Se ha identificado la importancia de la IA en la automatización de procesos y su optimización.",
-                    "b) Se ha relacionado la IA con la recogida masiva de datos (",
+                    "b) Se ha relacionado la IA con la recogida masiva de datos (Big Data).",
                     "c) Se ha valorado la importancia presente y futura de la IA.",
                     "d) Se han identificado los sectores con implantación más relevante de IA.",
                     "e) Se han identificado los lenguajes de programación en IA.",
@@ -2437,22 +2374,22 @@
             },
             {
                 "id": "5",
-                "description": "Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales. Criterios de evaluación:",
+                "description": "Evalúa la importancia de los datos, así como su protección en una economía digital globalizada, definiendo sistemas de seguridad y ciberseguridad tanto a nivel de equipo/sistema, como globales.",
                 "evaluation_criteria": [
                     "a) Se ha establecido la diferencia entre dato e información.",
                     "b) Se ha descrito el ciclo de vida del dato.",
-                    "c) Se ha identificado la relación entre",
-                    "d) Se han descrito las características que definen",
+                    "c) Se ha identificado la relación entre Big Data, análisis de datos e IA.",
+                    "d) Se han descrito las características que definen Big Data.",
                     "e) Se han descrito las etapas típicas de la ciencia de datos y su relación en el proceso.",
-                    "f) Se han descrito los procedimientos de almacenaje de datos en la",
-                    "g) Se ha descrito la importancia del",
+                    "f) Se han descrito los procedimientos de almacenaje de datos en la nube.",
+                    "g) Se ha descrito la importancia del cloud computing.",
                     "h) Se han identificado los principales objetivos de la ciencia de datos en las diferentes empresas.",
                     "i) Se ha valorado la importancia de la seguridad y su regulación en relación con los datos."
                 ]
             },
             {
                 "id": "6",
-                "description": "Desarrolla un proyecto de transformación digital de una empresa de un sector relacionado con el título, teniendo en cuenta los cambios que se deben producir en función de los objetivos de la empresa. Criterios de evaluación:",
+                "description": "Desarrolla un proyecto de transformación digital de una empresa de un sector relacionado con el título, teniendo en cuenta los cambios que se deben producir en función de los objetivos de la empresa.",
                 "evaluation_criteria": [
                     "a) Se han identificado los objetivos estratégicos de la empresa.",
                     "b) Se han identificado y alineado las áreas de producción/negocio y de comunicaciones.",
@@ -2468,7 +2405,35 @@
                 ]
             }
         ],
-        "contents": []
+        "contents": [
+            "Digitalización en los sistemas productivos:",
+            "−\tConcepto de digitalización y transformación digital.",
+            "−\tEntornos IT y OT. Diferencias y similitudes.",
+            "−\tTecnologías de digitalización en planta y en negocio.",
+            "Tecnologías Habilitadoras Digitales (THD):",
+            "−\tIdentificación y características de las THD.",
+            "−\tIoT (Internet de las Cosas).",
+            "−\tRobótica colaborativa.",
+            "−\tTecnología 5G.",
+            "−\tRealidad Virtual y Aumentada.",
+            "Sistemas basados en la Nube (Cloud):",
+            "−\tConcepto de Cloud Computing.",
+            "−\tNiveles y modelos de despliegue en la nube.",
+            "−\tEdge Computing, Fog Computing y Mist Computing.",
+            "Inteligencia Artificial (IA):",
+            "−\tConcepto y aplicaciones de la IA.",
+            "−\tMachine Learning y Deep Learning.",
+            "−\tLenguajes de programación para IA.",
+            "Datos y Ciberseguridad:",
+            "−\tDato vs Información. Ciclo de vida del dato.",
+            "−\tBig Data: características y almacenamiento.",
+            "−\tSeguridad y protección de datos. Normativa.",
+            "−\tCiberseguridad en entornos IT/OT.",
+            "Plan de Transformación Digital:",
+            "−\tEstrategia de transformación digital.",
+            "−\tAnálisis de viabilidad.",
+            "−\tRecursos humanos y capacitación digital."
+        ]
     },
     "1708": {
         "name": "Sostenibilidad aplicada al sistema productivo",
