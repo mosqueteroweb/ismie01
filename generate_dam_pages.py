@@ -151,7 +151,7 @@ def generate_ra_html(module_info):
                 <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
                     <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
                         <div class="flex items-center gap-3">
-                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono">RA {ra_id}</span>
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA {ra_id}</span>
                             <span>{ra_desc}</span>
                         </div>
                         <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
