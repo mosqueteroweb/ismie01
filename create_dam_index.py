@@ -7,7 +7,7 @@ MODULES_YR1 = [
     {"filename": "dam_ed.html", "title": "Entornos de Desarrollo", "code": "0487"},
     {"filename": "dam_lm.html", "title": "Lenguajes de Marcas", "code": "0373"},
     {"filename": "dam_ipe1.html", "title": "Itinerario Personal para la Empleabilidad I", "code": "1709"},
-    {"filename": "dam_da.html", "title": "Digitalización Aplicada", "code": "1665"},
+    {"filename": "#", "title": "Módulo Profesional Optativo", "code": "OPT1"},
 ]
 
 MODULES_YR2 = [
@@ -19,6 +19,9 @@ MODULES_YR2 = [
     {"filename": "dam_ip.html", "title": "Inglés Profesional", "code": "0179"},
     {"filename": "dam_ipe2.html", "title": "Itinerario Personal para la Empleabilidad II", "code": "1710"},
     {"filename": "dam_sa.html", "title": "Sostenibilidad Aplicada", "code": "1708"},
+    {"filename": "dam_da.html", "title": "Digitalización Aplicada", "code": "1665"},
+    {"filename": "#", "title": "Módulo Profesional Optativo", "code": "OPT1"},
+    {"filename": "dam_proy.html", "title": "Proyecto Intermodular de Desarrollo de Aplicaciones Multiplataforma", "code": "0492"},
 ]
 
 INDEX_FILENAME = "dam.html"
@@ -26,8 +29,11 @@ BACK_LINK_OLD = '<a href="infografia01c.html" class="text-slate-400 hover:text-b
 BACK_LINK_NEW = '<a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">'
 
 def create_card(module):
+    tag = "a" if module['filename'] != "#" else "div"
+    href = f' href="{module["filename"]}"' if module['filename'] != "#" else ""
+
     return f"""
-            <a href="{module['filename']}" class="block group">
+            <{tag}{href} class="block group">
                 <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                         <span class="text-6xl font-black text-slate-800">{module['code']}</span>
@@ -37,7 +43,7 @@ def create_card(module):
                         <h3 class="text-xl font-bold text-slate-800 leading-tight group-hover:text-blue-600 transition-colors">{module['title']}</h3>
                     </div>
                 </div>
-            </a>
+            </{tag}>
     """
 
 def create_index_page():
@@ -111,6 +117,7 @@ def update_module_pages():
     all_modules = MODULES_YR1 + MODULES_YR2
     for module in all_modules:
         filename = module['filename']
+        if filename == "#": continue # Skip modules without files
         if not os.path.exists(filename):
             print(f"Warning: {filename} does not exist.")
             continue
