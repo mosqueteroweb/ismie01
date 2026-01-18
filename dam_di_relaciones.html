@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - Desarrollo de Interfaces</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Mermaid JS for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="dam_di.html" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo 0488</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">Desarrollo de Interfaces</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Visual Graph Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4">Mapa Visual de Relaciones</h2>
+            <div class="mermaid flex justify-center overflow-x-auto">
+                graph LR
+                RA1["RA 1<br/>Genera interfaces gráficos de usuario me..."] --> CB1("Generación de interfaces de usuario")
+            style RA1 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB1 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA2["RA 2<br/>Genera interfaces naturales de usuario u..."] --> CB2("Generación de interfaces naturales de usuario")
+            style RA2 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB2 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA3["RA 3<br/>Crea componentes visuales valorando y em..."] --> CB3("Creación de componentes visuales")
+            style RA3 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB3 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA4["RA 4<br/>Diseña interfaces gráficas identificando..."] --> CB4("Diseño de interfaces gráficas")
+            style RA4 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB4 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA5["RA 5<br/>Crea informes evaluando y utilizando her..."] --> CB5("Creación de informes")
+            style RA5 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB5 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA6["RA 6<br/>Documenta aplicaciones seleccionando y u..."] --> CB6("Documentación de aplicaciones")
+            style RA6 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB6 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA7["RA 7<br/>Prepara aplicaciones para su distribució..."] --> CB7("Distribución de aplicaciones")
+            style RA7 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB7 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+            RA8["RA 8<br/>Evalúa el funcionamiento de aplicaciones..."] --> CB8("Realización de pruebas")
+            style RA8 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
+            style CB8 fill:#fff7ed,stroke:#f97316,stroke-width:2px
+
+            </div>
+            <p class="text-center text-sm text-slate-400 mt-4">Diagrama generado automáticamente con Mermaid.js</p>
+        </section>
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 1</span><br>Genera interfaces gráficos de usuario mediante editores visuales utilizando las funcionalidades del editor y adaptando el código generado.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han analizado las herramientas y librerías disponibles para la generación de interfaces gráficos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha creado un interfaz gráfico utilizando las herramientas de un editor visual.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han utilizado las funciones del editor para ubicar los componentes del interfaz.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han modificado las propiedades de los componentes para adecuarlas a las necesidades de la aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha analizado el código generado por el editor visual.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha modificado el código generado por el editor visual.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han asociado a los eventos las acciones correspondientes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se ha desarrollado una aplicación que incluye el interfaz gráfico obtenido.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Generación de interfaces de usuario</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Patrones de arquitectura de las aplicaciones gráficas.</li><li>Librerías de componentes nativas y multiplataforma. Características.</li><li>Herramientas propietarias y libres de edición de interfaces.</li><li>Lenguajes descriptivos para la definición de interfaces.</li><li>Componentes: características y campo de aplicación.</li><li>Enlace de componentes a orígenes de datos.</li><li>Asociación de acciones a eventos.</li><li>Edición del código generado por la herramienta de diseño.</li><li>Clases, propiedades, métodos.</li><li>Eventos; escuchadores.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 2</span><br>Genera interfaces naturales de usuario utilizando herramientas visuales.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado las herramientas disponibles para el aprendizaje automático relacionadas con las interfaces de usuario.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha creado una interfaz natural de usuario utilizando las herramientas disponibles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha utilizado el reconocimiento de voz para implementar acciones en las interfaces naturales de usuario.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha incorporado la detección del movimiento del cuerpo para implementar acciones en las interfaces naturales de usuario.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han integrado elementos de detección de partes del cuerpo para implementar acciones en las interfaces naturales de usuario.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha integrado la realidad aumentada en los interfaces de usuario.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Generación de interfaces naturales de usuario</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Herramientas para el aprendizaje automático. Entrenamiento.</li><li>Interfaces naturales. Tipos.</li><li>Voz y Habla. Reconocimiento.</li><li>Partes y movimientos del cuerpo. Detección.</li><li>Realidad aumentada.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 3</span><br>Crea componentes visuales valorando y empleando herramientas específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado las herramientas para diseño y prueba de componentes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han creado componentes visuales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han definido sus métodos y propiedades con asignación de valores por defecto.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han determinado los eventos a los que debe responder el componente y se les han asociado las acciones correspondientes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han realizado pruebas unitarias sobre los componentes desarrollados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han documentado los componentes creados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han empaquetado componentes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han programado aplicaciones cuyo interfaz gráfico utiliza los componentes creados.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Creación de componentes visuales</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Concepto de componente; características.</li><li>Propiedades, atributos y métodos.</li><li>Eventos; asociación de acciones a eventos.</li><li>Persistencia del componente.</li><li>Herramientas para desarrollo de componentes visuales.</li><li>Prueba de los componentes.</li><li>Empaquetado de componentes.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 4</span><br>Diseña interfaces gráficas identificando y aplicando criterios de usabilidad y accesibilidad.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los principales estándares de usabilidad y accesibilidad.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha valorado la importancia del uso de estándares para la creación de interfaces.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han creado diferentes tipos de menús cuya estructura y contenido siguen los estándares establecidos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han distribuido las acciones en menús, barras de herramientas, botones de comando, entre otros, siguiendo un criterio coherente.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han distribuido adecuadamente los controles en la interfaz de usuario.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha utilizado el tipo de control más apropiado en cada caso.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha diseñado el aspecto de la interfaz de usuario (colores y fuentes entre otros) atendiendo a su legibilidad.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se ha verificado que los mensajes generados por la aplicación son adecuados en extensión y claridad.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han realizado pruebas para evaluar la usabilidad y accesibilidad de la aplicación.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Diseño de interfaces gráficas</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Usabilidad y accesibilidad. Características. Pautas. Estándares.</li><li>Medidas de usabilidad y accesibilidad de las aplicaciones; herramientas.</li><li>Esquemas (Wireframes) y Maquetas (Mockups).</li><li>Pautas de diseño de la estructura de la interfaz de usuario; menús, ventanas, cuadros de diálogo, atajos de teclado, entre otros.</li><li>Pautas de diseño del aspecto de la interfaz de usuario: colores, fuentes, iconos, distribución de los elementos.</li><li>Pautas de diseño de los elementos interactivos de la interfaz de usuario: Botones de comando, listas desplegables, entre otros.</li><li>Pautas de diseño de la secuencia de control de la aplicación.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 5</span><br>Crea informes evaluando y utilizando herramientas gráficas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha establecido la estructura del informe.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han generado informes básicos a partir de diferentes fuentes de datos mediante asistentes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han establecido filtros sobre los valores a presentar en los informes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han incluido valores calculados, recuentos y totales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han incluido gráficos generados a partir de los datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado herramientas para generar el código correspondiente a los informes de una aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha modificado el código correspondiente a los informes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se ha desarrollado una aplicación que incluye informes incrustados.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Creación de informes</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Informes incrustados y no incrustados en la aplicación.</li><li>Herramientas gráficas integradas en el IDE y externas al mismo.</li><li>Estructura general. Secciones.</li><li>Filtrado de datos.</li><li>Numeración de líneas, recuentos y totales.</li><li>Gráficos.</li><li>Librerías para generación de informes. Clases, métodos y atributos.</li><li>Conexión con las fuentes de datos. Ejecución de consultas.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 6</span><br>Documenta aplicaciones seleccionando y utilizando herramientas específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado sistemas de generación de ayudas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han generado ayudas en los formatos habituales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han generado ayudas sensibles al contexto.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha documentado la estructura de la información persistente.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha confeccionado el manual de usuario y la guía de referencia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han confeccionado los manuales de instalación, configuración y administración.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han confeccionado tutoriales.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Documentación de aplicaciones</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Ficheros de ayuda. Formatos.</li><li>Herramientas de generación de ayudas.</li><li>Tablas de contenidos, índices, sistemas de búsqueda, entre otros.</li><li>Tipos de manuales: Manual de usuario, guía de referencia, guías rápidas, manuales de instalación, configuración y administración. Preguntas más frecuentes. Destinatarios y estructura.</li><li>Elaboración de tutoriales.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 7</span><br>Prepara aplicaciones para su distribución evaluando y utilizando herramientas específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han empaquetado los componentes que requiere la aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha personalizado el asistente de instalación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han generado paquetes de instalación utilizando el entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han generado paquetes de instalación utilizando herramientas externas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han firmado digitalmente las aplicaciones para su distribución.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han generado paquetes instalables en modo desatendido.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha preparado el paquete de instalación para que la aplicación pueda ser correctamente desinstalada.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se ha preparado la aplicación para ser distribuida a través de diferentes canales de distribución.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Distribución de aplicaciones</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Componentes de una aplicación. Empaquetado.</li><li>Instaladores.</li><li>Paquetes autoinstalables.</li><li>Firma digital de aplicaciones.</li><li>Herramientas para crear paquetes de instalación.</li><li>Personalización de la instalación: Logotipos, fondos, diálogos, botones, idioma, entre otros.</li><li>Asistentes de instalación y desinstalación.</li><li>Canales de distribución: repositorios (stores), ad-hoc, sitios web, correo electrónico, entre otros.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 8</span><br>Evalúa el funcionamiento de aplicaciones diseñando y ejecutando pruebas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha establecido una estrategia de pruebas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han realizado pruebas de integración de los distintos elementos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han realizado pruebas de regresión.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han realizado pruebas de volumen y estrés.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han realizado pruebas de seguridad.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han realizado pruebas de uso de recursos por parte de la aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha documentado la estrategia de pruebas y los resultados obtenidos.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Realización de pruebas</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Objetivo, importancia y limitaciones del proceso de prueba. Estrategias.</li><li>Pruebas de integración: ascendentes y descendentes.</li><li>Pruebas de sistema: configuración, recuperación, entre otras.</li><li>Pruebas de uso de recursos.</li><li>Pruebas de seguridad.</li><li>Pruebas manuales y automáticas. Herramientas software para la realización de pruebas.</li></ul></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

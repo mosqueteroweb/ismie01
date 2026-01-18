@@ -292,6 +292,12 @@ def generate_pages():
             if start_div_ra != -1 and last_div_ra != -1:
                 content = content[:start_div_ra] + ra_html + content[last_div_ra+6:]
 
+        # Inject link for 0488
+        if code == "0488":
+             target_str = '<p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el Real Decreto 405/2023, de 29 de mayo.</p>'
+             replacement = target_str + '\n            <div class="mt-4"><a href="dam_di_relaciones.html" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>Ver mapa de relaciones RA-Contenidos</a></div>'
+             content = content.replace(target_str, replacement)
+
         # 6. Contents
         con_html = generate_contents_html(data)
         start_sec_con = content.find('id="contenidos"')
