@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - Sistemas Informáticos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="dam_si.html" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo 0483</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">Sistemas Informáticos</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 1</span><br>Evalúa sistemas informáticos, identificando sus componentes y características.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han reconocido los componentes físicos de un sistema informático y sus mecanismos de interconexión.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han clasificado los tipos de memorias, señalando sus características e identifcando sus prestaciones y la función que desarrollan en el conjunto del sistema.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha verificado el proceso de puesta en marcha de un equipo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han clasificado, instalado y configurado diferentes tipos de dispositivos periféricos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han identificado los tipos de redes y sistemas de comunicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han identificado los componentes de una red informática.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han interpretado mapas físicos y lógicos de una red informática.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han reconocido las normas de seguridad y prevención de riesgos laborales en el uso de los sistemas informáticos.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Explotación de sistemas microinformáticos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Placas base. Formatos.</li><li>Estructura y componentes: procesador (Set de Instrucciones, Registros, Contador, Unidad Aritmético-Lógica, Interrupciones); memoria interna, tipos y características (RAM, xPROM y otras); interfaces de entrada/salida; discos Periféricos. Adaptadores para la conexión de dispositivos. Componentes de un sistema informático.</li><li>Periféricos. Adaptadores para la conexión de dispositivos.</li><li>Normas de seguridad y prevención de riesgos laborales.</li><li>Características de las redes. Ventajas e inconvenientes.</li><li>Tipos de redes.</li><li>Componentes de una red informática.</li><li>Topologías de red.</li><li>Tipos de cableado. Conectores.</li><li>Mapa físico y lógico de una red local.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 2</span><br>Instala sistemas operativos planificando el proceso e interpretando documentación técnica.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los elementos funcionales de un sistema informático.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han analizado las características, funciones y arquitectura de un sistema operativo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han comparado sistemas operativos en base a sus requisitos, características, campos de aplicación y licencias de uso.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha planificado el proceso de la instalación de sistemas operativos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han instalado y actualizado sistemas operativos libres y propietarios.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han aplicado técnicas de actualización y recuperación del sistema.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado tecnologías de virtualización para instalar y probar sistemas operativos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han instalado, desinstalado y actualizado aplicaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han documentado los procesos realizados.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Instalación de sistemas operativos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Evolución histórica y clasificación.</li><li>Funciones de un sistema operativo.</li><li>Tipos de sistemas operativos.</li><li>Tipos de aplicaciones.</li><li>Licencias y tipos de licencias.</li><li>Procedimiento de instalación.</li><li>Gestores de arranque. Configuración y reparación.</li><li>Tecnologías de virtualización. Tipos.</li><li>Consideraciones previas a la instalación de sistemas operativos libres y propietarios.</li><li>Instalación de sistemas operativos libres y propietarios. Requisitos, versiones y licencias.</li><li>Instalación/desinstalación de aplicaciones. Requisitos, versiones y licencias.</li><li>Actualización y recuperación de sistemas operativos y aplicaciones.</li><li>Documentación de la instalación y de las incidencias detectadas.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 3</span><br>Gestiona la información del sistema identificando las estructuras de almacenamiento y aplicando medidas para asegurar la integridad de los datos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han comparado sistemas de archivos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha identificado la estructura y función de los directorios del sistema</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) operativo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado herramientas en entorno gráfico y comandos para localizar información en el sistema de archivos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han creado diferentes tipos de particiones y unidades lógicas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han realizado y restaurado copias de seguridad.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han planificado y automatizado tareas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han instalado y evaluado utilidades relacionadas con la gestión de información.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Gestión de la información</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Gestión de sistemas de archivos mediante comandos y entornos gráficos.</li><li>Estructura de directorios de sistemas operativos libres y propietarios.</li><li>Búsqueda de información del sistema mediante comandos y herramientas gráficas.</li><li>Identificación del software instalado mediante comandos y herramientas gráficas.</li><li>Realización y restauración de copias de seguridad.</li><li>Herramientas de administración de discos. Particiones y volúmenes. Desfragmentación y chequeo. Cifrado.</li><li>Tareas automáticas. Planificación.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 4</span><br>Gestiona sistemas operativos utilizando comandos y herramientas gráficas y evaluando las necesidades del sistema.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han configurado cuentas de usuario locales y grupos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha asegurado el acceso al sistema mediante el uso de directivas de cuenta y directivas de contraseñas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han identificado, arrancado y detenido servicios y procesos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha protegido el acceso a la información mediante el uso de permisos locales y listas de control de acceso.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado comandos para realizar las tareas básicas de configuración y administración del sistema.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha monitorizado el sistema.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han instalado y evaluado utilidades para el mantenimiento y optimización del sistema.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han evaluado las necesidades del sistema informático en relación con el desarrollo de aplicaciones.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Configuración de sistemas operativos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Configuración de usuarios y grupos.</li><li>Seguridad de cuentas de usuario.</li><li>Seguridad de contraseñas.</li><li>Acceso a recursos. Permisos locales. Listas de control de acceso.</li><li>Servicios y procesos.</li><li>Comandos de sistemas operativos libres y propietarios.</li><li>Herramientas de monitorización del sistema. Registros y logs.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 5</span><br>Interconecta sistemas en red configurando dispositivos y protocolos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha configurado el protocolo TCP/IP.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han configurado redes de área local cableadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han configurado redes de área local inalámbricas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado dispositivos de interconexión de redes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha configurado el acceso a redes de área extensa.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han gestionado puertos de comunicaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha verificado el funcionamiento de la red mediante el uso de comandos y herramientas básicas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han aplicado protocolos seguros de comunicaciones.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Conexión de sistemas en red</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Configuración del protocolo TCP/IP en un cliente de red. Direcciones IP. Máscaras de subred. Puertas de enlace. Servidores de nombres de dominio. IPv4. IPv6. Configuración estática. Configuración dinámica automática.</li><li>Ficheros de configuración de red.</li><li>Gestión de puertos.</li><li>Resolución de problemas de conectividad en sistemas operativos en red. Herramientas de diagnóstico.</li><li>Herramientas gráficas y comandos utilizados en sistemas operativos libres y propietarios.</li><li>Monitorización de redes.</li><li>Protocolos TCP/IP.</li><li>Configuración de los adaptadores de red en sistemas operativos libres y propietarios.</li><li>Interconexión de redes: adaptadores de red y dispositivos de interconexión. Enrutamiento.</li><li>Redes cableadas. Tipos y características. Adaptadores de red. Conmutadores, enrutadores, entre otros. Seguridad.</li><li>Redes inalámbricas. Tipos y características. Adaptadores. Dispositivos de interconexión. Seguridad.</li><li>Seguridad de comunicaciones.</li><li>Tecnologías de acceso a redes de área extensa.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 6</span><br>Opera sistemas en red gestionando sus recursos e identificando las restricciones de seguridad existentes.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha configurado el acceso a recursos locales y recursos de red.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han identificado y configurado los derechos de usuario y directivas de seguridad.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han explotado servidores de ficheros, servidores de impresión y servidores de aplicaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha accedido a los servidores utilizando técnicas de conexión remota.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha evaluado la necesidad de proteger los recursos y el sistema.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han instalado y evaluado utilidades de seguridad básica.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han configurado y explotado dominios.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Gestión de recursos en una red</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Permisos y derechos. Permisos de red. Permisos locales. Herencia. Listas de control de acceso.</li><li>Configuración de recursos compartidos. Permisos de acceso y directivas de seguridad.</li><li>Requisitos de seguridad del sistema y de los datos.</li><li>Servidores de ficheros.</li><li>Servidores de impresión.</li><li>Servidores de aplicaciones.</li><li>Técnicas de conexión remota.</li><li>Cortafuegos.</li><li>Implantación y explotación de dominios.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 7</span><br>Elabora documentación valorando y utilizando aplicaciones informáticas de propósito general.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha clasificado software en función de su licencia y propósito.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han analizado las necesidades específicas de software asociadas al uso de sistemas informáticos en diferentes entornos productivos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han realizado tareas de documentación mediante el uso de herramientas ofimáticas y de trabajo colaborativo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado sistemas de correo y mensajería electrónica.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado los servicios de transferencia de ficheros.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado métodos de búsqueda de documentación técnica mediante el uso de servicios de Internet.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado herramientas de propósito general.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Explotación de aplicaciones informáticas de propósito general</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Software: tipos, requisitos, licencias.</li><li>Herramientas ofimáticas y de trabajo colaborativo.</li><li>Utilidades de propósito general: antimalware, correo, transferencia de ficheros, recuperación de datos, mantenimiento del sistema, entre otros.</li></ul></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

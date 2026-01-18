@@ -124,6 +124,22 @@ MODULES_METADATA = [
         "weekly": "6",
         "desc": "Diseño y desarrollo de interfaces gráficas de usuario, usabilidad y experiencia de usuario.",
         "course": "2º Curso DAM"
+    },
+    {
+        "filename": "dam_fct.html",
+        "title": "Formación en Centros de Trabajo",
+        "code": "0495",
+        "weekly": "0",
+        "desc": "Prácticas en empresa.",
+        "course": "2º Curso DAM"
+    },
+    {
+        "filename": "dam_proy.html",
+        "title": "Proyecto de Desarrollo de Aplicaciones Multiplataforma",
+        "code": "0492",
+        "weekly": "0",
+        "desc": "Proyecto final de ciclo.",
+        "course": "2º Curso DAM"
     }
 ]
 
@@ -133,6 +149,33 @@ def load_module_data():
         return {}
     with open("module_data.json", "r", encoding="utf-8") as f:
         return json.load(f)
+
+def parse_contents(module_info):
+    current_block_title = "Contenidos Generales"
+    current_items = []
+    blocks = []
+
+    if module_info and 'contents' in module_info:
+        for line in module_info['contents']:
+            line = line.strip()
+            if not line: continue
+
+            if line.endswith(":") and len(line) < 100:
+                if current_items:
+                    blocks.append({"title": current_block_title, "items": current_items})
+                current_block_title = line.rstrip(':')
+                current_items = []
+            else:
+                clean_line = line.lstrip('−').lstrip('-').lstrip('•').strip()
+                if clean_line:
+                    current_items.append(clean_line)
+
+        if current_items:
+            blocks.append({"title": current_block_title, "items": current_items})
+
+        if not blocks and current_items:
+            blocks.append({"title": "Contenidos", "items": current_items})
+    return blocks
 
 def generate_ra_html(module_info):
     html = '<div class="space-y-4">'
@@ -172,30 +215,7 @@ def generate_contents_html(module_info):
     if not module_info or 'contents' not in module_info:
         return html + "<!-- No data available --></div>"
 
-    current_block_title = "Contenidos Generales"
-    current_items = []
-    blocks = []
-
-    for line in module_info['contents']:
-        line = line.strip()
-        if not line: continue
-
-        if line.endswith(":") and len(line) < 100:
-            if current_items:
-                blocks.append({"title": current_block_title, "items": current_items})
-            current_block_title = line.rstrip(':')
-            current_items = []
-        else:
-            clean_line = line.lstrip('−').lstrip('-').lstrip('•').strip()
-            if clean_line:
-                current_items.append(clean_line)
-
-    if current_items:
-        blocks.append({"title": current_block_title, "items": current_items})
-
-    if not blocks and current_items:
-        blocks.append({"title": "Contenidos", "items": current_items})
-
+    blocks = parse_contents(module_info)
     colors = ["blue", "orange", "green", "purple"]
 
     for i, block in enumerate(blocks):
@@ -216,6 +236,111 @@ def generate_contents_html(module_info):
     html += '</div>'
     return html
 
+def generate_relations_page(module_info, meta, acronym):
+    blocks = parse_contents(module_info)
+    ras = module_info.get('learning_results', []) if module_info else []
+
+    # Generate Rows HTML
+    rows_html = ""
+    for i, ra in enumerate(ras):
+        ra_id = ra['id']
+        ra_desc = ra['description']
+
+        # Criteria
+        criteria_html = '<ul class="space-y-2">'
+        for crit in ra['evaluation_criteria']:
+             criteria_html += f'<li class="flex gap-2"><span class="text-blue-400">•</span> <span>{crit}</span></li>'
+        criteria_html += '</ul>'
+
+        # Content Block
+        content_html = ""
+        if i < len(blocks):
+            block = blocks[i]
+            items_list = "".join([f'<li>{item}</li>' for item in block['items']])
+            content_html = f"<div class='font-bold text-orange-600 mb-2'>{block['title']}</div><ul class=\"list-disc pl-4 space-y-1 text-xs\">{items_list}</ul>"
+        else:
+             content_html = "<span class='text-slate-400 italic'>No hay contenidos vinculados directamente.</span>"
+
+        rows_html += f"""
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA {ra_id}</span><br>{ra_desc}</td>
+                            <td class="px-6 py-6 align-top">{criteria_html}</td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30">{content_html}</td>
+                        </tr>
+        """
+
+    # Full Page Template
+    html = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - {meta['title']}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {{ font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }}
+        .back-btn {{ position: fixed; top: 20px; left: 20px; z-index: 100; }}
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="{meta['filename']}" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo {meta['code']}</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">{meta['title']}</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        {rows_html}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>"""
+
+    rel_filename = f"dam_{acronym}_relaciones.html"
+    with open(rel_filename, "w", encoding="utf-8") as out:
+        out.write(html)
+    print(f"Generated {rel_filename}")
+    return rel_filename
+
 def generate_pages():
     module_data_json = load_module_data()
 
@@ -233,6 +358,7 @@ def generate_pages():
 
         hours = data.get('hours') or meta.get('hours', '???')
         ects = data.get('ects') or meta.get('ects', '???')
+        acronym = meta['filename'].replace('dam_', '').replace('.html', '')
 
         content = template_content
 
@@ -280,17 +406,24 @@ def generate_pages():
             start_div_ra = content.find('<div class="space-y-4">', start_sec_res)
             end_sec_res = content.find('</section>', start_div_ra)
 
-            # Find the closing div of space-y-4.
-            # In the template (dam_di.html), it has nested details.
-            # We assume the template structure is valid.
-            # Find the last </div> before </section> is the CONTAINER closer.
-            # The one before that is the space-y-4 closer.
-
             last_div = content.rfind('</div>', start_div_ra, end_sec_res)
             last_div_ra = content.rfind('</div>', start_div_ra, last_div)
 
             if start_div_ra != -1 and last_div_ra != -1:
                 content = content[:start_div_ra] + ra_html + content[last_div_ra+6:]
+
+        # Handle Relations Page Generation and Link
+        has_content = len(data.get('contents', [])) > 0
+        if has_content:
+            generate_relations_page(data, meta, acronym)
+            # Replace the link in the template with the correct filename
+            content = content.replace('dam_di_relaciones.html', f'dam_{acronym}_relaciones.html')
+        else:
+             # Remove the link button if no content (or if we don't want to generate a blank page)
+             # The template has: <div class="mt-4"><a href="dam_di_relaciones.html" ... </div>
+             # We can regex replace it to empty string.
+             content = re.sub(r'<div class="mt-4"><a href="dam_di_relaciones\.html".*?</div>', '', content, flags=re.DOTALL)
+
 
         # 6. Contents
         con_html = generate_contents_html(data)

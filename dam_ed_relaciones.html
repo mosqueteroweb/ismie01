@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - Entornos de Desarrollo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="dam_ed.html" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo 0487</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">Entornos de Desarrollo</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 1</span><br>Reconoce los elementos y herramientas que intervienen en el desarrollo de un programa informático, analizando sus características y las fases en las que actúan hasta llegar a su puesta en funcionamiento.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha reconocido la relación de los programas con los componentes del sistema informático: memoria, procesador, periféricos, entre otros.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han identificado las fases de desarrollo de una aplicación informática.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han diferenciado los conceptos de código fuente, objeto y ejecutable.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han reconocido las características de la generación de código intermedio para su ejecución en máquinas virtuales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han clasificado los lenguajes de programación, identificando sus características.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha evaluado la funcionalidad ofrecida por las herramientas utilizadas en el desarrollo de software.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han identificado las características y escenarios de uso de las metodologías ágiles de desarrollo de software.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Desarrollo de software</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Concepto de programa informático.</li><li>Código fuente, código objeto y código ejecutable; tecnologías de virtualización.</li><li>Tipos de lenguajes de programación. Paradigmas.</li><li>Características de los lenguajes más difundidos.</li><li>Fases del desarrollo de una aplicación: análisis, diseño, codificación, pruebas, documentación, explotación y mantenimiento, entre otras.</li><li>Proceso de obtención de código ejecutable a partir del código fuente; herramientas implicadas.</li><li>Metodologías ágiles. Técnicas. Características.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 2</span><br>Evalúa entornos integrados de desarrollo analizando sus características para editar código fuente y generar ejecutables.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han instalado entornos de desarrollo, propietarios y libres.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han añadido y eliminado módulos en el entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha personalizado y automatizado el entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha configurado el sistema de actualización del entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han generado ejecutables a partir de código fuente de diferentes lenguajes en un mismo entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han generado ejecutables a partir de un mismo código fuente con varios entornos de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han identificado las características comunes y específicas de diversos entornos de desarrollo.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Instalación y uso de entornos de desarrollo</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Funciones de un entorno de desarrollo.</li><li>Instalación de un entorno de desarrollo.</li><li>Uso básico de un entorno de desarrollo.</li><li>Personalización del entorno de desarrollo: temas, estilos de codificación, módulos y extensiones, entre otros.</li><li>Edición de programas.</li><li>Generación de ejecutables en distintos entornos.</li><li>Herramientas y automatización.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 3</span><br>Verifica el funcionamiento de programas diseñando y realizando pruebas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los diferentes tipos de pruebas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han definido casos de prueba.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han identificado las herramientas de depuración y prueba de aplicaciones</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) ofrecidas por el entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado herramientas de depuración para definir puntos de ruptura y seguimiento.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado las herramientas de depuración para examinar y modificar el comportamiento de un programa en tiempo de ejecución.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han efectuado pruebas unitarias de clases y funciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han implementado pruebas automáticas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han documentado las incidencias detectadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han utilizado dobles de prueba para aislar los componentes durante las pruebas.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Diseño y realización de pruebas</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Planificación de Pruebas.</li><li>Tipos de pruebas: Funcionales, estructurales, regresión, entre otras.</li><li>Procedimientos y casos de prueba.</li><li>Pruebas de Código: Cubrimiento, valores límite, clases de equivalencia, entre otras.</li><li>Pruebas unitarias; herramientas de automatización.</li><li>Documentación de las incidencias.</li><li>Dobles de prueba. Tipos. Características.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 4</span><br>Optimiza código empleando las herramientas disponibles en el entorno de desarrollo.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los patrones de refactorización más usuales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han elaborado las pruebas asociadas a la refactorización.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha revisado el código fuente usando un analizador de código.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han identificado las posibilidades de configuración de un analizador de código.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han aplicado patrones de refactorización con las herramientas que proporciona el entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha realizado el control de versiones integrado en el entorno de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado herramientas del entorno de desarrollo para documentar las clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han utilizado repositorios remotos para el desarrollo de código colaborativo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han utilizado herramientas para la integración continua del código.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Optimización y documentación</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Refactorización. Concepto. Limitaciones. Patrones de refactorización más usuales. Refactorización y pruebas. Herramientas de ayuda a la refactorización.</li><li>Analizadores de código.</li><li>Control de versiones. Estructura de las herramientas de control de versiones. Repositorio. Herramientas de control de versiones. Uso integrado en el entorno de desarrollo.</li><li>Repositorios remotos.</li><li>Documentación. Uso de comentarios. Alternativas.</li><li>Integración continua. Herramientas.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 5</span><br>Genera diagramas de clases valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los conceptos básicos de la programación orientada a objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han utilizado herramientas para la elaboración de diagramas de clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha interpretado el significado de diagramas de clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han trazado diagramas de clases a partir de las especificaciones de las mismas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha generado código a partir de un diagrama de clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha generado un diagrama de clases mediante ingeniería inversa.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Elaboración de diagramas de clases</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Clases. Atributos, métodos y visibilidad.</li><li>Objetos. Instanciación.</li><li>Relaciones. Asociación, navegabilidad y multiplicidad. Herencia, composición, agregación. Realización y dependencia.</li><li>Notación de los diagramas de clases.</li><li>Herramientas.</li><li>Generación automática de código. Ingeniería inversa.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 6</span><br>Genera diagramas de comportamiento valorando su importancia en el desarrollo de aplicaciones y empleando herramientas específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los distintos tipos de diagramas de comportamiento.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha reconocido el significado de los diagramas de casos de uso.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han interpretado diagramas de interacción.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han elaborado diagramas de interacción sencillos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha interpretado el significado de diagramas de actividades.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han elaborado diagramas de actividades sencillos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han interpretado diagramas de estados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han planteado diagramas de estados sencillos.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Elaboración de diagramas de comportamiento</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Tipos. Campo de aplicación.</li><li>Diagrama de casos de uso. Actores, escenario, relación de comunicación.</li><li>Diagrama de secuencia. Línea de vida de un objeto, activación, envío de mensajes.</li><li>Diagrama de comunicación. Objetos, mensajes.</li><li>Diagrama de actividad. Diagrama de estados.</li></ul></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

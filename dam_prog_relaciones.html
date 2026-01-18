@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - Programación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="dam_prog.html" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo 0485</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">Programación</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 1</span><br>Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje de programación utilizado.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los bloques que componen la estructura de un programa informático.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han creado proyectos de desarrollo de aplicaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han utilizado entornos integrados de desarrollo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han identificado los distintos tipos de variables y la utilidad específica de cada uno.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se ha modificado el código de un programa para crear y utilizar variables.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han creado y utilizado constantes y literales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han clasificado, reconocido y utilizado en expresiones los operadores del lenguaje.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se ha comprobado el funcionamiento de las conversiones de tipo explícitas e implícitas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han introducido comentarios en el código.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Identificación de los elementos de un programa informático</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Estructura y bloques fundamentales.</li><li>Variables.</li><li>Tipos de datos.</li><li>Literales.</li><li>Constantes.</li><li>Operadores y expresiones.</li><li>Conversiones de tipo.</li><li>Comentarios.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 2</span><br>Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a objetos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los fundamentos de la programación orientada a objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han escrito programas simples.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han instanciado objetos a partir de clases predefinidas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado métodos y propiedades de los objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han escrito llamadas a métodos estáticos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado parámetros en la llamada a métodos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han incorporado y utilizado librerías de objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han utilizado constructores.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se ha utilizado el entorno integrado de desarrollo en la creación y compilación de programas simples.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Utilización de objetos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Características de los objetos.</li><li>Instanciación de objetos.</li><li>Utilización de métodos. Parámetros.</li><li>Utilización de propiedades.</li><li>Utilización de métodos estáticos.</li><li>Constructores.</li><li>Destrucción de objetos y liberación de memoria.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 3</span><br>Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha escrito y probado código que haga uso de estructuras de selección.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han utilizado estructuras de repetición.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han reconocido las posibilidades de las sentencias de salto.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha escrito código utilizando control de excepciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han creado programas ejecutables utilizando diferentes estructuras de control.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han probado y depurado los programas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha comentado y documentado el código.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han creado excepciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han utilizado aserciones para la detección y corrección de errores durante la fase de desarrollo.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Uso de estructuras de control</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Estructuras de selección.</li><li>Estructuras de repetición.</li><li>Estructuras de salto.</li><li>Control de excepciones.</li><li>Aserciones.</li><li>Prueba, depuración y documentación de la aplicación.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 4</span><br>Desarrolla programas organizados en clases analizando y aplicando los principios de la programación orientada a objetos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han definido clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han definido propiedades y métodos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han creado constructores.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han desarrollado programas que instancien y utilicen objetos de las clases creadas anteriormente.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado mecanismos para controlar la visibilidad de las clases y de sus miembros.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han definido y utilizado clases heredadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han creado y utilizado métodos estáticos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han creado y utilizado conjuntos y librerías de clases.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Desarrollo de clases</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Concepto de clase.</li><li>Estructura y miembros de una clase. Visibilidad.</li><li>Creación de propiedades.</li><li>Creación de métodos.</li><li>Creación de constructores.</li><li>Utilización de clases y objetos.</li><li>Utilización de clases heredadas.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 5</span><br>Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha utilizado la consola para realizar operaciones de entrada y salida de información.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han aplicado formatos en la visualización de la información.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado ficheros para almacenar y recuperar información.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han creado programas que utilicen diversos métodos de acceso al contenido de los ficheros.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado las herramientas del entorno de desarrollo para crear interfaces gráficos de usuario simples.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han programado controladores de eventos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han escrito programas que utilicen interfaces gráficos para la entrada y salida de información.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Lectura y escritura de información</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Flujos. Tipos: bytes y caracteres. Clases relacionadas.</li><li>Ficheros de datos. Registros.</li><li>Apertura y cierre de ficheros. Modos de acceso. Escritura y lectura de información en ficheros.</li><li>Utilización de los sistemas de ficheros.</li><li>Creación y eliminación de ficheros y directorios.</li><li>Entrada desde teclado. Salida a pantalla. Formatos de visualización.</li><li>Interfaces gráficas.</li><li>Concepto de evento.</li><li>Creación de controladores de eventos.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 6</span><br>Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han escrito programas que utilicen matrices (arrays).</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han utilizado listas para almacenar y procesar información.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado iteradores para recorrer los elementos de las listas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han creado clases y métodos genéricos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado expresiones regulares en la búsqueda de patrones en cadenas de texto.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han identificado las clases relacionadas con el tratamiento de documentos escritos en diferentes lenguajes de intercambio de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han realizado programas que realicen manipulaciones sobre documentos escritos en diferentes lenguajes de intercambio de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han utilizado operaciones agregadas para el manejo de información almacenada en colecciones.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Aplicación de las estructuras de almacenamiento</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Estructuras estáticas y dinámicas.</li><li>Creación de matrices (arrays).</li><li>Matrices (arrays) multidimensionales.</li><li>Genericidad.</li><li>Cadenas de caracteres. Expresiones regulares.</li><li>Colecciones: Listas, Conjuntos y Diccionarios.</li><li>Operaciones agregadas: filtrado, reducción y recolección.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 7</span><br>Desarrolla programas aplicando características avanzadas de los lenguajes orientados a objetos y del entorno de programación.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los conceptos de herencia, superclase y subclase.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha reconocido la incidencia de los constructores en la herencia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han creado clases heredadas que sobrescriben la implementación de métodos de la superclase.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han diseñado y aplicado jerarquías de clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han probado y depurado las jerarquías de clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han realizado programas que implementen y utilicen jerarquías de clases.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se ha comentado y documentado el código.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han identificado y evaluado los escenarios de uso de interfaces.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han identificado y evaluado los escenarios de utilización de la herencia y la composición.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Utilización avanzada de clases</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Composición de clases.</li><li>Herencia y polimorfismo.</li><li>Jerarquía de clases: Superclases y subclases.</li><li>Clases y métodos abstractos y finales.</li><li>Interfaces.</li><li>Sobreescritura de métodos.</li><li>Constructores y herencia.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 8</span><br>Utiliza bases de datos orientadas a objetos, analizando sus características y aplicando técnicas para mantener la persistencia de la información.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado las características de las bases de datos orientadas a objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se ha analizado su aplicación en el desarrollo de aplicaciones mediante lenguajes orientados a objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han instalado sistemas gestores de bases de datos orientados a objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han clasificado y analizado los distintos métodos soportados por los sistemas gestores para la gestión de la información almacenada.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han creado bases de datos y las estructuras necesarias para el almacenamiento de objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han programado aplicaciones que almacenen objetos en las bases de datos creadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han realizado programas para recuperar, actualizar y eliminar objetos de las bases de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han realizado programas para almacenar y gestionar tipos de datos estructurados, compuestos y relacionados.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Mantenimiento de la persistencia de los objetos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Bases de datos orientadas a objetos.</li><li>Características de las bases de datos orientadas a objetos.</li><li>Instalación del gestor de bases de datos.</li><li>Creación de bases de datos.</li><li>Mecanismos de consulta.</li><li>El lenguaje de consultas: sintaxis, expresiones, operadores.</li><li>Recuperación, modificación y borrado de información.</li><li>Tipos de datos objeto; atributos y métodos.</li><li>Tipos de datos colección.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 9</span><br>Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado las características y métodos de acceso a sistemas gestores de bases de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han programado conexiones con bases de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se ha escrito código para almacenar información en bases de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han creado programas para recuperar y mostrar información almacenada en bases de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han efectuado borrados y modificaciones sobre la información almacenada.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han creado aplicaciones que muestren la información almacenada en bases de datos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han creado aplicaciones para gestionar la información presente en bases de datos.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Gestión de bases de datos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Acceso a bases de datos. Estándares. Características.</li><li>Establecimiento de conexiones.</li><li>Almacenamiento, recuperación, actualización y eliminación de información en bases de datos.</li></ul></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>

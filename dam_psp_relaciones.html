@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - Prog. de Servicios y Procesos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="dam_psp.html" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo 0490</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">Prog. de Servicios y Procesos</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 1</span><br>Desarrolla aplicaciones compuestas por varios procesos reconociendo y aplicando principios de programación paralela.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han reconocido las características de la programación concurrente y sus ámbitos de aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han identificado las diferencias entre programación paralela y programación distribuida, sus ventajas e inconvenientes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han analizado las características de los procesos y de su ejecución por el sistema operativo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han caracterizado los hilos de ejecución y descrito su relación con los procesos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado clases para programar aplicaciones que crean subprocesos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado mecanismos para compartir información con los subprocesos iniciados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado mecanismos para sincronizar y obtener el valor devuelto por los subprocesos iniciados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han desarrollado aplicaciones que gestionen y utilicen procesos para la ejecución de varias tareas en paralelo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han depurado y documentado las aplicaciones desarrolladas.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Programación multiproceso</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Ejecutables. Procesos. Servicios.</li><li>Estados de un proceso. Planificación de procesos.</li><li>Hilos.</li><li>Programación concurrente.</li><li>Programación paralela y distribuida.</li><li>Comunicación entre procesos.</li><li>Gestión de procesos. Herramientas de monitorización.</li><li>Sincronización entre procesos.</li><li>Programación de aplicaciones multiproceso.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 2</span><br>Desarrolla aplicaciones compuestas por varios hilos de ejecución analizando y aplicando librerías específicas del lenguaje de programación.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado situaciones en las que resulte útil la utilización de varios hilos en un programa.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han reconocido los mecanismos para crear, iniciar y finalizar hilos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han programado aplicaciones que implementen varios hilos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han identificado los posibles estados de ejecución de un hilo y programado aplicaciones que los gestionen.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado mecanismos para compartir información entre varios hilos de un mismo proceso.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han desarrollado programas formados por varios hilos sincronizados mediante técnicas específicas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha establecido y controlado la prioridad de cada uno de los hilos de ejecución.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han depurado y documentado los programas desarrollados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se ha analizado el contexto de ejecución de los hilos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han analizado librerías específicas del lenguaje de programación que permiten la programacióm multihilo.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>k) Se han reconocido los problemas derivados de la compartición de información entre los hilos de un mismo proceso.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Programación multihilo</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Contexto de ejecución de los hilos. Recursos compartidos.</li><li>Estados de un hilo. Cambios de estado.</li><li>Librerías y clases.</li><li>Gestión de hilos. Prioridades.</li><li>Sincronización de hilos.</li><li>Compartición de información entre hilos. Problemas.</li><li>Programación de aplicaciones multihilo.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 3</span><br>Programa mecanismos de comunicación en red empleando sockets y analizando el escenario de ejecución.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado escenarios que precisan establecer comunicación en red entre varias aplicaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han identificado los roles de cliente y de servidor y sus funciones asociadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han reconocido librerías y mecanismos del lenguaje de programación que permiten programar aplicaciones en red.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se ha analizado el concepto de socket, sus tipos y características.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado sockets para programar una aplicación cliente que se comunique con un servidor.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha desarrollado una aplicación servidor en red y verificado su funcionamiento.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han desarrollado aplicaciones que utilizan sockets para intercambiar</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) información.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han utilizado hilos para posibilitar la comunicación simultánea de varios clientes con el servidor.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han caracterizado los modelos de comunicación más usuales en las arquitecturas de aplicaciones distribuidas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>k) Se han depurado y documentado las aplicaciones desarrolladas.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Programación de comunicaciones en red</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Comunicación entre aplicaciones. Modelos.</li><li>Roles cliente y servidor.</li><li>Librerías y clases.</li><li>Sockets. Tipos. Características.</li><li>Creación de sockets.</li><li>Enlazado y establecimiento de conexiones.</li><li>Utilización de sockets para la transmisión y recepción de información.</li><li>Programación de aplicaciones cliente y servidor.</li><li>Utilización de hilos para la implementación de comunicaciones simultáneas con el servidor.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 4</span><br>Desarrolla aplicaciones que ofrecen servicios en red, utilizando librerías de clases y aplicando criterios de eficiencia y disponibilidad.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado diferentes protocolos estándar de comunicación para la implementación de servicios en red.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han reconocido las ventajas de la utilización de protocolos estándar para la comunicación entre aplicaciones y procesos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han analizado librerías que permitan implementar servicios en red utilizando protocolos estándar de comunicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han desarrollado y probado servicios de comunicación en red.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado clientes de comunicaciones para verificar el funcionamiento de los servicios.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han incorporado mecanismos para posibilitar la comunicación simultánea de varios clientes con el servicio.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se ha verificado la disponibilidad del servicio.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han depurado y documentado las aplicaciones desarrolladas.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Generación de servicios en red</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Protocolos estándar de comunicación en red a nivel de aplicación. Ventajas de su utilización.</li><li>Servicios web.</li><li>Librerías de clases y componentes.</li><li>Programación de servidores.</li><li>Establecimiento y finalización de conexiones.</li><li>Transmisión de información.</li><li>Implementación de comunicaciones simultáneas.</li><li>Utilización de aplicaciones clientes.</li><li>Monitorización del servicio. Herramientas.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 5</span><br>Protege las aplicaciones y los datos definiendo y aplicando criterios de seguridad en el acceso, almacenamiento y transmisión de la información.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado y aplicado principios y prácticas de programación segura.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han analizado las principales técnicas y prácticas criptográficas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han definido e implantado políticas de seguridad para limitar y controlar el acceso de los usuarios a las aplicaciones desarrolladas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado esquemas de seguridad basados en roles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han empleado algoritmos criptográficos para proteger el acceso a la información almacenada.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han identificado métodos para asegurar la información transmitida.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han desarrollado aplicaciones que utilicen comunicaciones seguras para la transmisión de información.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han depurado y documentado las aplicaciones desarrolladas.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Utilización de técnicas de programación segura</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Prácticas de programación segura.</li><li>Criptografía de clave pública y clave privada.</li><li>Principales aplicaciones de la criptografía.</li><li>Protocolos criptográficos.</li><li>Política de seguridad. Roles.</li><li>Programación de mecanismos de control de acceso.</li><li>Encriptación de información.</li><li>Protocolos seguros de comunicaciones.</li><li>Programación de aplicaciones con comunicaciones seguras.</li></ul></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
