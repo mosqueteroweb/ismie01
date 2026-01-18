@@ -6,11 +6,6 @@
     <title>Relaciones RA-Contenidos - Desarrollo de Interfaces</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- Mermaid JS for diagrams -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-    </script>
     <style>
         body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
         .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
@@ -35,40 +30,6 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-6 space-y-16">
-
-        <!-- Visual Graph Section -->
-        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-            <h2 class="text-2xl font-bold text-slate-800 mb-6 border-l-4 border-blue-500 pl-4">Mapa Visual de Relaciones</h2>
-            <div class="mermaid flex justify-center overflow-x-auto">
-                graph LR
-                RA1["RA 1<br/>Genera interfaces gráficos de usuario me..."] --> CB1("Generación de interfaces de usuario")
-            style RA1 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB1 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA2["RA 2<br/>Genera interfaces naturales de usuario u..."] --> CB2("Generación de interfaces naturales de usuario")
-            style RA2 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB2 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA3["RA 3<br/>Crea componentes visuales valorando y em..."] --> CB3("Creación de componentes visuales")
-            style RA3 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB3 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA4["RA 4<br/>Diseña interfaces gráficas identificando..."] --> CB4("Diseño de interfaces gráficas")
-            style RA4 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB4 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA5["RA 5<br/>Crea informes evaluando y utilizando her..."] --> CB5("Creación de informes")
-            style RA5 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB5 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA6["RA 6<br/>Documenta aplicaciones seleccionando y u..."] --> CB6("Documentación de aplicaciones")
-            style RA6 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB6 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA7["RA 7<br/>Prepara aplicaciones para su distribució..."] --> CB7("Distribución de aplicaciones")
-            style RA7 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB7 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-            RA8["RA 8<br/>Evalúa el funcionamiento de aplicaciones..."] --> CB8("Realización de pruebas")
-            style RA8 fill:#eff6ff,stroke:#3b82f6,stroke-width:2px
-            style CB8 fill:#fff7ed,stroke:#f97316,stroke-width:2px
-
-            </div>
-            <p class="text-center text-sm text-slate-400 mt-4">Diagrama generado automáticamente con Mermaid.js</p>
-        </section>
 
         <!-- Detailed Table Section -->
         <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">

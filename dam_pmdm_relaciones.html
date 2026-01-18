@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaciones RA-Contenidos - Prog. Multimedia y Disp. Móviles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .back-btn { position: fixed; top: 20px; left: 20px; z-index: 100; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Back Button -->
+    <a href="dam_pmdm.html" class="back-btn bg-white p-3 rounded-full shadow-lg hover:bg-blue-50 text-blue-600 transition-all border border-blue-100 group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 mb-12">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+            <div class="inline-block bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full mb-3">Módulo 0489</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">Relación Resultados de Aprendizaje - Contenidos</h1>
+            <p class="text-slate-500 text-lg">Prog. Multimedia y Disp. Móviles</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 space-y-16">
+
+        <!-- Detailed Table Section -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-8 border-b border-slate-100">
+                 <h2 class="text-2xl font-bold text-slate-800 border-l-4 border-orange-500 pl-4">Matriz de Detalle</h2>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-800 font-bold uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4 w-1/4">Resultado de Aprendizaje</th>
+                            <th class="px-6 py-4 w-1/3">Criterios de Evaluación</th>
+                            <th class="px-6 py-4 w-1/3">Contenidos Básicos Asociados</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 1</span><br>Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han identificado las tecnologías de desarrollo de aplicaciones para dispositivos móviles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han instalado, configurado y utilizado entornos de trabajo para el desarrollo de aplicaciones para dispositivos móviles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han identificado configuraciones que clasifican los dispositivos móviles en base a sus características.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han descrito perfiles que establecen la relación entre el dispositivo y la aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha analizado la estructura de aplicaciones existentes para dispositivos móviles identificando las clases utilizadas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han realizado modificaciones sobre aplicaciones existentes.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han utilizado emuladores para comprobar el funcionamiento de las aplicaciones.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Análisis de tecnologías para aplicaciones en dispositivos móviles</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Dispositivos móviles. Evolución. Tipos. Características.</li><li>Hardware para dispositivos móviles: pantalla, procesador, memoria, cámara, batería, sensores, conectividad, entre otros. Limitaciones.</li><li>Tecnologías de desarrollo. Nativas y multiplataforma. Entornos de trabajo. Módulos y librerías. Lenguajes.</li><li>Emuladores. Configuraciones. Perfiles. Dispositivos soportados.</li><li>Aplicaciones móviles. Estructura. Jerarquía de clases.</li><li>Modelo de estados de una aplicación móvil: activo, pausa y destruido.</li><li>Ciclo de vida de una aplicación: descubrimiento, instalación, ejecución, actualización y borrado.</li><li>Modificación de aplicaciones existentes.</li><li>Utilización del entorno de ejecución del administrador de aplicaciones.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 2</span><br>Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha generado la estructura de clases necesaria para la aplicación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han analizado y utilizado las clases que modelan ventanas, menús, alertas y controles para el desarrollo de aplicaciones gráficas sencillas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han utilizado las clases necesarias para la conexión y comunicación con dispositivos inalámbricos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han desarrollado aplicaciones que hacen uso de las funcionalidades proporcionadas por los sensores.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado las clases necesarias para establecer conexiones y comunicaciones HTTP y HTTPS.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado las clases necesarias para establecer conexiones con almacenes de datos garantizando la persistencia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han realizado pruebas de interacción usuario-aplicación para optimizar las aplicaciones desarrolladas a partir de emuladores.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han empaquetado y desplegado las aplicaciones desarrolladas en dispositivos móviles reales.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han documentado los procesos necesarios para el desarrollo de las aplicaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han establecido los permisos requeridos para el funcionamiento de las aplicaciones.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Desarrollo de aplicaciones para dispositivos móviles</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Herramientas. Flujo de trabajo.</li><li>Componentes de una aplicación. Recursos.</li><li>Interfaces de usuario. Clases asociadas.</li><li>Contexto gráfico. Imágenes.</li><li>Métodos de entrada. Eventos.</li><li>Gestión de las preferencias de la aplicación.</li><li>Bases de datos y almacenamiento.</li><li>Persistencia.</li><li>Tareas en segundo plano. Servicios.</li><li>Seguridad y permisos.</li><li>Conectividad. Tipos. Clases asociadas. Gestión de las comunicaciones.</li><li>Manejo de conexiones HTTP y HTTPS. Acceso a servicios web.</li><li>Sensores.</li><li>Posicionamiento. Localización. Mapas.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 3</span><br>Desarrolla programas que integran contenidos multimedia analizando y empleando las tecnologías y librerías específicas.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han analizado entornos de desarrollo multimedia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han reconocido las clases que permiten la captura, procesamiento y almacenamiento de datos multimedia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han utilizado clases para la conversión de datos multimedia de un formato a otro.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han utilizado clases para procesar datos multimedia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han utilizado clases para el control de eventos, tipos de media y excepciones, entre otros.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se han utilizado clases para la creación y control de animaciones.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado clases para reproducir contenidos multimedia.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han depurado y documentado los programas desarrollados.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Utilización de librerías multimedia integradas</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Conceptos sobre aplicaciones multimedia.</li><li>Arquitectura del API utilizado.</li><li>Fuentes de datos multimedia. Clases.</li><li>Procesamiento de objetos multimedia. Clases. Estados, métodos y eventos.</li><li>Reproducción de objetos multimedia. Clases. Estados, métodos y eventos.</li><li>Animación de objetos.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 4</span><br>Selecciona y prueba motores de juegos analizando la arquitectura de juegos 2D y 3D.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se han identificado los elementos que componen la arquitectura de un juego 2D y 3D.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han analizado los componentes de un motor de juegos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han analizado entornos de desarrollo de juegos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han analizado diferentes motores de juegos, sus características y funcionalidades.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han identificado los bloques funcionales de un juego existente.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha reconocido la representación lógica y espacial de una escena gráfica sobre un juego existente.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Análisis de motores de juegos</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Animación 2D y 3D.</li><li>Arquitectura del juego. Componentes.</li><li>Motores de juegos: Tipos y utilización.</li><li>Áreas de especialización, librerías utilizadas y lenguajes de programación.</li><li>Componentes de un motor de juegos.</li><li>Librerías que proporcionan las funciones básicas de un Motor 2D/3D. Clases.</li><li>Estudio de juegos existentes.</li><li>Aplicación de modificaciones sobre juegos existentes.</li></ul></td>
+                        </tr>
+
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA 5</span><br>Desarrolla juegos 2D y 3D sencillos utilizando motores de juegos.</td>
+                            <td class="px-6 py-6 align-top"><ul class="space-y-2"><li class="flex gap-2"><span class="text-blue-400">•</span> <span>a) Se ha establecido la lógica de un nuevo juego.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>b) Se han creado los objetos necesarios para el juego y definido sus características.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>c) Se han creado las escenas del juego y distribuido los objetos en las mismas.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>d) Se han creado materiales para determinar las propiedades finales de la superficie de un objeto.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>e) Se han establecido las propiedades físicas de los objetos.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>f) Se ha incorporado sonido a los diferentes eventos del juego.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>g) Se han utilizado cámaras y configurado la iluminación.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>h) Se han desarrollado e implantado juegos para dispositivos móviles.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>i) Se han realizado pruebas de funcionamiento y optimización de los juegos desarrollados.</span></li><li class="flex gap-2"><span class="text-blue-400">•</span> <span>j) Se han documentado las fases de diseño y desarrollo de los juegos creados.</span></li></ul></td>
+                            <td class="px-6 py-6 align-top bg-orange-50/30"><div class='font-bold text-orange-600 mb-2'>Desarrollo de juegos 2D y 3D</div><ul class="list-disc pl-4 space-y-1 text-xs"><li>Técnicas de programación 2D/3D.</li><li>Fases de desarrollo.</li><li>Componentes de los objetos: materiales y texturas. Propiedades físicas (peso, gravedad, fricciones, colisiones, entre otros).</li><li>Fuentes de audio. Propiedades.</li><li>Cámaras e iluminación.</li><li>Creación de escenas. Jerarquía de objetos.</li><li>Análisis de ejecución. Optimización del código.</li></ul></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor © Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
