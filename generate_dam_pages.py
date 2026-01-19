@@ -178,19 +178,20 @@ def parse_contents(module_info):
     return blocks
 
 def generate_ra_html(module_info):
-    html = '<div class="space-y-4">'
-
     if not module_info or 'learning_results' not in module_info:
-        return html + "<!-- No data available --></div>"
+        return '<div class="space-y-4"><!-- No data available --></div>'
+
+    html_parts = ['<div class="space-y-4">']
 
     for ra in module_info['learning_results']:
         ra_id = ra['id']
         ra_desc = ra['description']
-        criteria_html = ""
-        for crit in ra['evaluation_criteria']:
-            criteria_html += f'<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> {crit}</li>\n'
+        criteria_html = '\n'.join([
+            f'<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> {crit}</li>'
+            for crit in ra['evaluation_criteria']
+        ])
 
-        html += f"""
+        html_parts.append(f"""
                 <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
                     <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
                         <div class="flex items-center gap-3">
@@ -205,71 +206,65 @@ def generate_ra_html(module_info):
                         </ul>
                     </div>
                 </details>
-        """
-    html += '</div>'
-    return html
+        """)
+    html_parts.append('</div>')
+    return ''.join(html_parts)
 
 def generate_contents_html(module_info):
-    html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-6">'
-
     if not module_info or 'contents' not in module_info:
-        return html + "<!-- No data available --></div>"
+        return '<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- No data available --></div>'
 
     blocks = parse_contents(module_info)
     colors = ["blue", "orange", "green", "purple"]
+    html_parts = ['<div class="grid grid-cols-1 md:grid-cols-2 gap-6">']
 
     for i, block in enumerate(blocks):
         color = colors[i % len(colors)]
-        items_html = ""
-        for item in block['items']:
-            items_html += f'<li>{item}</li>\n'
+        items_html = "\n".join([f'<li>{item}</li>' for item in block['items']])
 
-        html += f"""
+        html_parts.append(f"""
                 <div class="card p-6 border-l-4 border-l-{color}-500">
                     <h4 class="text-lg font-bold text-slate-800 mb-3">{block['title']}</h4>
                     <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
                         {items_html}
                     </ul>
                 </div>
-        """
+        """)
 
-    html += '</div>'
-    return html
+    html_parts.append('</div>')
+    return "".join(html_parts)
 
 def generate_relations_page(module_info, meta, acronym):
     blocks = parse_contents(module_info)
     ras = module_info.get('learning_results', []) if module_info else []
+    rows_html_parts = []
 
-    # Generate Rows HTML
-    rows_html = ""
     for i, ra in enumerate(ras):
         ra_id = ra['id']
         ra_desc = ra['description']
 
-        # Criteria
-        criteria_html = '<ul class="space-y-2">'
-        for crit in ra['evaluation_criteria']:
-             criteria_html += f'<li class="flex gap-2"><span class="text-blue-400">•</span> <span>{crit}</span></li>'
-        criteria_html += '</ul>'
+        criteria_items = [
+            f'<li class="flex gap-2"><span class="text-blue-400">•</span> <span>{crit}</span></li>'
+            for crit in ra['evaluation_criteria']
+        ]
+        criteria_html = f'<ul class="space-y-2">{"".join(criteria_items)}</ul>'
 
-        # Content Block
-        content_html = ""
         if i < len(blocks):
             block = blocks[i]
             items_list = "".join([f'<li>{item}</li>' for item in block['items']])
             content_html = f"<div class='font-bold text-orange-600 mb-2'>{block['title']}</div><ul class=\"list-disc pl-4 space-y-1 text-xs\">{items_list}</ul>"
         else:
-             content_html = "<span class='text-slate-400 italic'>No hay contenidos vinculados directamente.</span>"
+            content_html = "<span class='text-slate-400 italic'>No hay contenidos vinculados directamente.</span>"
 
-        rows_html += f"""
+        rows_html_parts.append(f"""
                         <tr class="hover:bg-slate-50 transition-colors">
                             <td class="px-6 py-6 align-top bg-white"><span class='font-bold text-blue-600'>RA {ra_id}</span><br>{ra_desc}</td>
                             <td class="px-6 py-6 align-top">{criteria_html}</td>
                             <td class="px-6 py-6 align-top bg-orange-50/30">{content_html}</td>
                         </tr>
-        """
+        """)
 
-    # Full Page Template
+    rows_html = "".join(rows_html_parts)
     html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
