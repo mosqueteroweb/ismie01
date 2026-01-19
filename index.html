@@ -339,7 +339,7 @@
 </details>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<div class="lg:col-span-5 space-y-4">
+<div class="lg:col-span-6 space-y-4">
 <div class="card p-0 overflow-hidden">
 <div class="p-6 bg-blue-600 text-white relative overflow-hidden">
 <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-20 h-20 text-white opacity-10" fill="none" stroke="currentColor" viewbox="0 0 24 24">
@@ -369,28 +369,48 @@
 </details>
 </div>
 </div>
-<div class="lg:col-span-7 card p-8 flex flex-col items-center">
-<div class="flex flex-col md:flex-row items-center gap-8 w-full">
-<div class="chart-container"><canvas id="smrChart"></canvas></div>
-<div class="bg-slate-50 border border-slate-200 rounded-xl p-6 w-full md:w-64">
-<h5 class="text-[10px] font-black text-slate-400 uppercase mb-4 border-b pb-2">Clave de
-                                Horas</h5>
-<div class="space-y-4">
-<div class="custom-legend-item">
-<div class="legend-color bg-[#1e40af]"></div>
-<span class="font-bold">Módulos Aula <br/><small class="text-slate-400">(1200h)</small></span>
-</div>
-<div class="custom-legend-item">
-<div class="legend-color bg-[#3b82f6]"></div>
-<span class="font-bold">Transversales <br/><small class="text-slate-400">(300h)</small></span>
-</div>
-<div class="custom-legend-item">
-<div class="legend-color bg-[#f97316]"></div>
-<span class="font-bold text-orange-600">Fase Empresa FFE <br/><small class="text-orange-400 font-medium">(500h)</small></span>
-</div>
-</div>
-</div>
-</div>
+<div class="lg:col-span-6 card p-8 flex flex-col justify-center w-full">
+    <h3 class="text-2xl font-black text-slate-800 mb-8 text-center uppercase tracking-tight">La Paradoja FFE</h3>
+    <div class="w-full space-y-8 max-w-2xl mx-auto">
+        <!-- Bar 1: Totales en Módulos (2000h) -->
+        <div class="space-y-2">
+            <div class="flex justify-between text-sm font-bold text-slate-700">
+                <span>Nº de horas totales en módulos</span>
+                <span class="text-blue-800">2000h</span>
+            </div>
+            <div class="h-8 w-full bg-slate-100 rounded-full overflow-hidden relative">
+                <div class="h-full bg-blue-800 rounded-full flex items-center justify-end px-3" style="width: 100%">
+                    <span class="text-white text-[10px] font-bold">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bar 2: FFE (500h) -->
+        <div class="space-y-2">
+            <div class="flex justify-between text-sm font-bold text-slate-700">
+                <span>Nº de horas FFE</span>
+                <span class="text-orange-600">500h</span>
+            </div>
+            <div class="h-8 w-full bg-slate-100 rounded-full overflow-hidden relative">
+                <div class="h-full bg-orange-500 rounded-full flex items-center justify-end px-3" style="width: 25%">
+                    <span class="text-white text-[10px] font-bold">25%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bar 3: Totales Ciclo (2000h) -->
+        <div class="space-y-2">
+            <div class="flex justify-between text-sm font-bold text-slate-700">
+                <span>Nº de horas totales ciclo</span>
+                <span class="text-blue-600">2000h</span>
+            </div>
+            <div class="h-8 w-full bg-slate-100 rounded-full overflow-hidden relative">
+                <div class="h-full bg-blue-600 rounded-full flex items-center justify-end px-3" style="width: 100%">
+                    <span class="text-white text-[10px] font-bold">100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 </section>
@@ -399,8 +419,7 @@
 <div class="mb-8 border-b border-gray-200 pb-4">
 <span class="text-orange-600 font-black text-sm uppercase tracking-widest">Nivel 3 - Grado
                     Superior</span>
-<h3 class="text-4xl font-black text-slate-900 tracking-tighter mt-2">Ciclos de Especialización (DAM,
-                    DAW, ASIR)</h3>
+<h3 class="text-4xl font-black text-slate-900 tracking-tighter mt-2">DAM, DAW y ASIR</h3>
 </div>
 <!-- TARJETA LEGAL SUPERIOR (ACTUALIZADA) -->
 <div class="mb-8">
@@ -419,7 +438,7 @@
 <div class="flex items-start mt-2">
 <a class="text-orange-600 hover:underline font-bold" href="https://www.bocm.es/boletin/CM_Orden_BOCM/2024/11/15/BOCM-20241115-2.PDF" target="_blank">Decreto 103/2024,
                                     de 13 de noviembre (Madrid)</a>
-<span class="update-badge">MODIFICA TODOS</span>
+<span class="update-badge ml-4">MODIFICA TODOS</span>
 </div>
 <p class="text-xs text-slate-500 mt-1 pl-4 border-l-2 border-orange-200">
                                 Reestructura la carga horaria de ASIR, DAM y DAW para dar cabida a nuevos módulos
@@ -586,25 +605,6 @@
         }
 
         window.onload = function () {
-            const ctxSMR = document.getElementById('smrChart').getContext('2d');
-            new Chart(ctxSMR, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Módulos de Centro', 'Módulos Transversales', 'Fase Empresa FFE'].map(wrapLabel),
-                    datasets: [{
-                        data: [1200, 300, 500],
-                        backgroundColor: ['#1e40af', '#3b82f6', '#f97316'],
-                        borderWidth: 0,
-                        hoverOffset: 15
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '75%',
-                    ...tooltipConfig
-                }
-            });
         };
     </script>
 </body>
