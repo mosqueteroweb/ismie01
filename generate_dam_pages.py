@@ -433,6 +433,29 @@ def generate_pages():
             if start_div_con != -1 and last_div_grid != -1:
                 content = content[:start_div_con] + con_html + content[last_div_grid+6:]
 
+        # Check for SI module to add Evaluation section
+        if code == "0483":
+            eval_html = """
+        <!-- Evaluación -->
+        <section id="evaluacion" class="mt-16">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Evaluación</h3>
+            </div>
+            <a href="dam_si_evaluacion.html" class="block group">
+                <div class="card p-6 border-l-4 border-l-indigo-500 hover:bg-slate-50 transition-colors">
+                    <h4 class="text-lg font-bold text-slate-800 mb-2 group-hover:text-blue-600">
+                        Sistema de Evaluación
+                    </h4>
+                    <p class="text-slate-600">
+                        Accede a los criterios de evaluación y calificación del módulo.
+                    </p>
+                </div>
+            </a>
+        </section>"""
+
+            # Insert before closing </main>
+            content = content.replace("</main>", eval_html + "\n    </main>")
+
         with open(meta['filename'], "w", encoding="utf-8") as out:
             out.write(content)
 
