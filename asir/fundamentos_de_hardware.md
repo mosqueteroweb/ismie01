@@ -1,9 +1,7 @@
 # Módulo 0371 - Fundamentos de Hardware.
 
-## Currículo BOE (Resultados de aprendizaje y Criterios de evaluación)
+## 1. Configura equipos microinformáticos, componentes y periféricos, analizando sus
 
-Resultados de aprendizaje y criterios de evaluación.
-1. Configura equipos microinformáticos, componentes y periféricos, analizando sus
 características y relación con el conjunto.
 Criterios de evaluación:
 a) Se han identificado y caracterizado los dispositivos que constituyen los bloques
@@ -21,7 +19,9 @@ h) Se han clasificado los dispositivos periféricos y sus mecanismos de
 comunicación.
 i) Se han utilizado protocolos estándar de comunicación inalámbrica entre
 dispositivos.
-2. Instala software de propósito general evaluando sus características y entornos de
+
+## 2. Instala software de propósito general evaluando sus características y entornos de
+
 aplicación.
 Criterios de evaluación:
 a) Se han catalogado los tipos de software según su licencia, distribución y
@@ -41,7 +41,45 @@ las utilidades instaladas en el sistema.
 h) Se han probado y comparado aplicaciones portables y no portables.
 i) Se han realizado inventarios del software instalado y las características de su
 licencia.
-3. Ejecuta procedimientos para recuperar el software base de un equipo, analizándolos
+
+### Contenidos Básicos Relacionados (CM):
+
+Instalación de software de utilidad y propósito general para un sistema informático:
+- Entornos operativos.
+- Tipos de aplicaciones: Software de sistema. Software de programación. Software de
+aplicación.
+- Instalación y prueba de aplicaciones: ventajas de las técnicas de virtualización para la
+evaluación de las  aplicaciones, comprobar la compatibilidad con otras aplicaciones,
+actualizaciones, instalación de parches, etc.
+- Necesidades de los entornos de explotación.
+- Requerimientos de las aplicaciones: requisitos hardware y software.
+- Comparación de aplicaciones. Evaluación y rendimiento.
+- Software de propósito general:
+• Ofimática y documentación electrónica.
+• Imagen, diseño y multimedia.
+• Programación.
+• Educación.
+• Hogar y ocio.
+• Productividad y negocios.
+• Clientes para servicios de Internet.
+• Software a medida.
+• Otras categorías de interés vigentes en el momento actual.
+- Utilidades:
+• Compresores.
+• Monitorización y optimización del sistema.
+• Grabación, unidades de CD y DVD virtuales.
+• Gestión de ficheros y recuperación de datos.
+• Gestión de discos. Fragmentación y particionado.
+• Seguridad.
+• Antivirus, antiespías y cortafuegos.
+• Codificadores y conversores multimedia.
+• Herramientas software para testeo de equipos y evaluación de rendimiento
+(benchmarchs).
+• Software de control y gestión remotos.
+• Otras utilidades de interés vigentes en el momento actual.
+
+## 3. Ejecuta procedimientos para recuperar el software base de un equipo, analizándolos
+
 y utilizando imágenes almacenadas en memoria auxiliar.
 Criterios de evaluación:
 a) Se han identificado los soportes de memoria auxiliar adecuados para el almacenaje
@@ -53,7 +91,29 @@ en un equipo.
 d) Se han utilizado herramientas para el particionado de discos.
 e) Se han empleado distintas utilidades y soportes para realizar imágenes.
 f) Se han restaurado imágenes desde distintas ubicaciones.
-4. Implanta hardware específico de centros de proceso de datos (CPD), analizando
+
+### Contenidos Básicos Relacionados (CM):
+
+Creación de imágenes de software. Respaldo del software base de un sistema:
+- Particionado de discos. Redimensionado de las particiones.
+- Imágenes de respaldo.
+- Opciones de arranque de un sistema.
+- Memorias auxiliares y dispositivos asociables al arranque de un ordenador.
+- Creación de imágenes:
+• Guardar la imagen en un medio de almacenamiento local.
+• Guardar la imagen en un recurso de la red.
+- Recuperación de imágenes:
+• Desde un medio de almacenamiento local.
+• Desde un recurso de la red.
+- Respaldo de equipos con software base virtualizado.
+- Utilización de imágenes para trasladar sistemas operativos a un hardware distinto:
+• Un sistema en un hardware físico a un nuevo hardware físico.
+• Un sistema en un hardware físico a una máquina virtual, physical to virtual (P2V).
+• Un sistema en una máquina virtual a un hardware físico (V2P).
+• Un sistema en una máquina virtual a otra máquina virtual (V2V).
+
+## 4. Implanta hardware específico de centros de proceso de datos (CPD), analizando
+
 sus características y aplicaciones.
 Criterios de evaluación:
 a) Se han reconocido las diferencias entre las configuraciones hardware de tipo
@@ -74,7 +134,9 @@ h) Se han utilizado herramientas de inventariado, registrando las característic
 los dispositivos hardware.
 i) Se ha clasificado y organizado la documentación técnica, controladores, utilidades
 y accesorios del hardware.
-5. Cumple las normas de prevención de riesgos laborales y de protección ambiental,
+
+## 5. Cumple las normas de prevención de riesgos laborales y de protección ambiental,
+
 identificando los riesgos asociados, las medidas y equipos para prevenirlos.
 Criterios de evaluación:
 a) Se han identificado los riesgos y el nivel de peligrosidad que suponen la
@@ -96,7 +158,7 @@ g) Se han clasificado los residuos generados para su retirada selectiva.
 h) Se ha valorado el orden y la limpieza de instalaciones y equipos como primer
 factor de prevención de riesgos.
 
-## Contenidos Básicos (Comunidad de Madrid)
+### Contenidos Básicos Relacionados (CM):
 
 CONTENIDOS (Duración 100 horas)
 Configuración de equipos y periféricos: Arquitectura de ordenadores.
@@ -191,57 +253,6 @@ Técnicas   de  overclocking y underclocking.
 - Chequeo y diagnóstico: auto diagnóstico al encender (POST).
 - Tarjetas de red. Técnicas de conexión y comunicación. Comunicaciones entre sistemas
 informáticos. Conexión a redes.
-
-Instalación de software de utilidad y propósito general para un sistema informático:
-- Entornos operativos.
-- Tipos de aplicaciones: Software de sistema. Software de programación. Software de
-aplicación.
-- Instalación y prueba de aplicaciones: ventajas de las técnicas de virtualización para la
-evaluación de las  aplicaciones, comprobar la compatibilidad con otras aplicaciones,
-actualizaciones, instalación de parches, etc.
-- Necesidades de los entornos de explotación.
-- Requerimientos de las aplicaciones: requisitos hardware y software.
-- Comparación de aplicaciones. Evaluación y rendimiento.
-- Software de propósito general:
-• Ofimática y documentación electrónica.
-• Imagen, diseño y multimedia.
-• Programación.
-• Educación.
-• Hogar y ocio.
-• Productividad y negocios.
-• Clientes para servicios de Internet.
-• Software a medida.
-• Otras categorías de interés vigentes en el momento actual.
-- Utilidades:
-• Compresores.
-• Monitorización y optimización del sistema.
-• Grabación, unidades de CD y DVD virtuales.
-• Gestión de ficheros y recuperación de datos.
-• Gestión de discos. Fragmentación y particionado.
-• Seguridad.
-• Antivirus, antiespías y cortafuegos.
-• Codificadores y conversores multimedia.
-• Herramientas software para testeo de equipos y evaluación de rendimiento
-(benchmarchs).
-• Software de control y gestión remotos.
-• Otras utilidades de interés vigentes en el momento actual.
-Creación de imágenes de software. Respaldo del software base de un sistema:
-- Particionado de discos. Redimensionado de las particiones.
-- Imágenes de respaldo.
-- Opciones de arranque de un sistema.
-- Memorias auxiliares y dispositivos asociables al arranque de un ordenador.
-- Creación de imágenes:
-• Guardar la imagen en un medio de almacenamiento local.
-• Guardar la imagen en un recurso de la red.
-- Recuperación de imágenes:
-• Desde un medio de almacenamiento local.
-• Desde un recurso de la red.
-- Respaldo de equipos con software base virtualizado.
-- Utilización de imágenes para trasladar sistemas operativos a un hardware distinto:
-• Un sistema en un hardware físico a un nuevo hardware físico.
-• Un sistema en un hardware físico a una máquina virtual, physical to virtual (P2V).
-• Un sistema en una máquina virtual a un hardware físico (V2P).
-• Un sistema en una máquina virtual a otra máquina virtual (V2V).
 
 Implantación de hardware en centros de proceso de datos (CPD):
 - Arquitecturas de ordenadores personales, sistemas departamentales y grandes

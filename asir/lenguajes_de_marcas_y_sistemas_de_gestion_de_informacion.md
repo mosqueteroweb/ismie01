@@ -1,9 +1,7 @@
 # Módulo 0373 - Lenguajes de Marcas y Sistemas de Gestión de Información.
 
-## Currículo BOE (Resultados de aprendizaje y Criterios de evaluación)
+## 1. Reconoce las características de  lenguajes de marcas analizando e interpretando
 
-Resultados de aprendizaje y criterios de evaluación.
-1. Reconoce las características de  lenguajes de marcas analizando e interpretando
 fragmentos de código.
 Criterios de evaluación:
 a) Se han identificado las características generales de los lenguajes de marcas.
@@ -18,7 +16,9 @@ g) Se ha identificado la estructura de un documento XML y sus reglas sintáctica
 h) Se ha contrastado la necesidad de crear documentos XML bien formados y la
 influencia en su procesamiento.
 i) Se han identificado las ventajas que aportan los espacios de nombres.
-2. Utiliza lenguajes de marcas para la transmisión de información a través de la Web
+
+## 2. Utiliza lenguajes de marcas para la transmisión de información a través de la Web
+
 analizando la estructura de los documentos e identificando sus elementos.
 Criterios de evaluación:
 a) Se han identificado y clasificado los lenguajes de marcas relacionados con la Web
@@ -34,7 +34,35 @@ información.
 f) Se han utilizado herramientas en la creación documentos Web.
 g) Se han identificado las ventajas que aporta la utilización de hojas de estilo.
 h) Se han aplicado hojas de estilo.
-3. Genera canales de contenidos analizando y utilizando tecnologías de
+
+### Contenidos Básicos Relacionados (CM):
+
+Reconocimiento de las características de lenguajes de marcas:
+- Conceptos.
+- Etiquetas, elementos, atributos.
+- Orígenes. SGML (Standard Generalized Markup Language).
+- Organizaciones desarrolladoras: ISO (International Standard Organization), W3C (World
+Wide Web Consortium).
+- Clasificación.
+- Utilización de lenguajes de marcas en entornos web.
+- Gramáticas.
+
+Lenguajes para la visualización de información:
+- Modelo de objetos del documento DOM (Document Object Model).
+- Identificación de etiquetas y atributos de HTML (Hyper Text Markup Language).
+- Estructura de documentos HTML. Partes del documento.
+- Etiquetas de contenido: títulos, párrafos, listas…
+- Elementos de formulario: campos de texto, botones, desplegables…
+- Otros elementos de formato y agrupamiento: tablas, marcos, capas
+- XHTML (eXtended HTML): diferencias sintácticas y estructurales con HTML.
+- Versiones de HTML y XHTML.
+- Herramientas de diseño web.
+- Hojas de estilo en cascada. CSS (Cascading Style Sheets).
+• Selectores.
+• Diferentes tipos de elementos. Atributos.
+
+## 3. Genera canales de contenidos analizando y utilizando tecnologías de
+
 sindicación.
 Criterios de evaluación:
 a) Se han identificado las ventajas que aporta la sindicación de contenidos en la
@@ -49,7 +77,24 @@ canales.
 cve: BOE-A-2009-18355
 BOLETÍN OFICIAL DEL ESTADO
 Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97875
-4. Establece mecanismos de validación para documentos XML utilizando métodos
+
+### Contenidos Básicos Relacionados (CM):
+
+CONTENIDOS (Duración 140 horas)
+
+Aplicación de los lenguajes de marcas a la sindicación de contenidos:
+- Descripción y características de la sindicación de contenidos.
+- Estándares y formatos de redifusión. RSS (Really Simple Syndication), Atom, …
+- Ámbitos de aplicación.
+- Estructura de los canales de contenidos.
+- Tecnologías de creación de canales de contenidos.
+- Validación.
+- Directorios de canales de contenidos.
+- Agregación.
+- Utilización de herramientas.
+
+## 4. Establece mecanismos de validación para documentos XML utilizando métodos
+
 para definir su sintaxis y estructura.
 Criterios de evaluación:
 a) Se ha establecido la necesidad de describir la información transmitida en los
@@ -62,7 +107,19 @@ e) Se han utilizado descripciones en la elaboración y validación de documentos
 f) Se han asociado las descripciones con los documentos.
 g) Se han utilizado herramientas específicas.
 h) Se han documentado las descripciones.
-5. Realiza conversiones sobre documentos XML utilizando técnicas y herramientas
+
+### Contenidos Básicos Relacionados (CM):
+
+Definición de esquemas y vocabularios en XML:
+- Utilización de métodos de definición de documentos XML.
+- Creación de descripciones.
+- Asociación con documentos XML.
+- Validación.
+- Herramientas de creación y validación.
+- Documentación de especificaciones.
+
+## 5. Realiza conversiones sobre documentos XML utilizando técnicas y herramientas
+
 de procesamiento.
 Criterios de evaluación:
 a) Se ha identificado la necesidad de la conversión de documentos XML.
@@ -75,7 +132,22 @@ f) Se han identificado y caracterizado herramientas específicas relacionadas co
 conversión de documentos XML.
 g) Se han realizado conversiones con distintos formatos de salida.
 h) Se han documentado y depurado las especificaciones de conversión.
-6. Gestiona información en formato XML analizando y utilizando tecnologías de
+
+### Contenidos Básicos Relacionados (CM):
+
+Conversión y adaptación de documentos XML:
+- Técnicas de transformación de documentos XML.
+- Lenguajes de transformaciones.
+- Formatos de salida: HTML, XML, PDF (Portable Document Format), texto…
+- Descripción de la estructura y de la sintaxis.
+- Utilización de plantillas.
+- Utilización de herramientas de procesamiento:
+• DOM.
+• SAX (Simple Application programming interface for Xml).
+- Elaboración de documentación.
+
+## 6. Gestiona información en formato XML analizando y utilizando tecnologías de
+
 almacenamiento y lenguajes de consulta.
 Criterios de evaluación:
 a) Se han identificado los principales métodos de almacenamiento de la información
@@ -95,7 +167,31 @@ h) Se han utilizado técnicas para gestionar la información almacenada en bases
 datos nativas XML.
 i) Se han identificado lenguajes y herramientas para el tratamiento y almacenamiento
 de información y su inclusión en documentos XML.
-7. Trabaja con sistemas empresariales de gestión de información realizando tareas
+
+### Contenidos Básicos Relacionados (CM):
+
+Lenguajes para el almacenamiento y transmisión de información:
+- Tipos de lenguajes:
+• De marcas: XML (eXtended Markup Language).
+• De listas: JSON (JavaScript Object Notation).
+- XML: estructura y sintaxis.
+- Etiquetas.
+- Herramientas de edición.
+- Elaboración de documentos XML bien formados:
+• Definición de tipo de documento (DTD, Document Type Definition).
+• Esquema XML (XSD, Xml Schema Definition).
+- Utilización de espacios de nombres en XML.
+
+Almacenamiento de información:
+- Sistemas de almacenamiento de información.
+- Manipulación de información en documentos XML: inserción y extracción.
+- Técnicas de búsqueda de información en documentos XML.
+- Lenguajes de consulta y manipulación.
+- Almacenamiento XML nativo.
+- Herramientas de tratamiento y almacenamiento de información en formato XML.
+
+## 7. Trabaja con sistemas empresariales de gestión de información realizando tareas
+
 de importación, integración, aseguramiento y extracción de la información.
 cve: BOE-A-2009-18355
 BOLETÍN OFICIAL DEL ESTADO
@@ -115,79 +211,8 @@ e incorporación a diversos sistemas.
 i) Se han realizado tareas de asistencia y resolución de incidencias.
 j) Se han elaborado documentos relativos a la explotación de la aplicación.
 
-## Contenidos Básicos (Comunidad de Madrid)
+### Contenidos Básicos Relacionados (CM):
 
-CONTENIDOS (Duración 140 horas)
-
-Reconocimiento de las características de lenguajes de marcas:
-- Conceptos.
-- Etiquetas, elementos, atributos.
-- Orígenes. SGML (Standard Generalized Markup Language).
-- Organizaciones desarrolladoras: ISO (International Standard Organization), W3C (World
-Wide Web Consortium).
-- Clasificación.
-- Utilización de lenguajes de marcas en entornos web.
-- Gramáticas.
-Lenguajes para la visualización de información:
-- Modelo de objetos del documento DOM (Document Object Model).
-- Identificación de etiquetas y atributos de HTML (Hyper Text Markup Language).
-- Estructura de documentos HTML. Partes del documento.
-- Etiquetas de contenido: títulos, párrafos, listas…
-- Elementos de formulario: campos de texto, botones, desplegables…
-- Otros elementos de formato y agrupamiento: tablas, marcos, capas
-- XHTML (eXtended HTML): diferencias sintácticas y estructurales con HTML.
-- Versiones de HTML y XHTML.
-- Herramientas de diseño web.
-- Hojas de estilo en cascada. CSS (Cascading Style Sheets).
-• Selectores.
-• Diferentes tipos de elementos. Atributos.
-
-Lenguajes para el almacenamiento y transmisión de información:
-- Tipos de lenguajes:
-• De marcas: XML (eXtended Markup Language).
-• De listas: JSON (JavaScript Object Notation).
-- XML: estructura y sintaxis.
-- Etiquetas.
-- Herramientas de edición.
-- Elaboración de documentos XML bien formados:
-• Definición de tipo de documento (DTD, Document Type Definition).
-• Esquema XML (XSD, Xml Schema Definition).
-- Utilización de espacios de nombres en XML.
-
-Definición de esquemas y vocabularios en XML:
-- Utilización de métodos de definición de documentos XML.
-- Creación de descripciones.
-- Asociación con documentos XML.
-- Validación.
-- Herramientas de creación y validación.
-- Documentación de especificaciones.
-Conversión y adaptación de documentos XML:
-- Técnicas de transformación de documentos XML.
-- Lenguajes de transformaciones.
-- Formatos de salida: HTML, XML, PDF (Portable Document Format), texto…
-- Descripción de la estructura y de la sintaxis.
-- Utilización de plantillas.
-- Utilización de herramientas de procesamiento:
-• DOM.
-• SAX (Simple Application programming interface for Xml).
-- Elaboración de documentación.
-Almacenamiento de información:
-- Sistemas de almacenamiento de información.
-- Manipulación de información en documentos XML: inserción y extracción.
-- Técnicas de búsqueda de información en documentos XML.
-- Lenguajes de consulta y manipulación.
-- Almacenamiento XML nativo.
-- Herramientas de tratamiento y almacenamiento de información en formato XML.
-Aplicación de los lenguajes de marcas a la sindicación de contenidos:
-- Descripción y características de la sindicación de contenidos.
-- Estándares y formatos de redifusión. RSS (Really Simple Syndication), Atom, …
-- Ámbitos de aplicación.
-- Estructura de los canales de contenidos.
-- Tecnologías de creación de canales de contenidos.
-- Validación.
-- Directorios de canales de contenidos.
-- Agregación.
-- Utilización de herramientas.
 Sistemas de gestión empresarial:
 - Conceptos generales de ERP (Enterprise Resource Planning).
 - Instalación.
