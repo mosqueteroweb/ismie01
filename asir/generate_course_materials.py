@@ -175,14 +175,14 @@ def call_gemini(prompt, retries=3):
         print("[DRY RUN] Would send to Gemini:", prompt[:80].replace('\n', ' '), "...")
         return "Contenido generado (Simulación)\n"
 
-    model_name = os.environ.get('GEMINI_MODEL', 'gemini-3.1-flash-lite')
+    model_name = os.environ.get('GEMINI_MODEL', 'gemini-1.5-flash-8b')
     model = genai.GenerativeModel(model_name)
 
     for attempt in range(retries):
         try:
             response = model.generate_content(prompt)
-            if 'lite' in model_name.lower():
-                time.sleep(4)  # 15 RPM limit for Lite
+            if 'flash' in model_name.lower():
+                time.sleep(4)  # 15 RPM limit for Flash free tier
             else:
                 time.sleep(13)  # 5 RPM limit for others
             return response.text

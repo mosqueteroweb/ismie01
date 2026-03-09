@@ -33,14 +33,14 @@ jobs:
       if: ${{ github.event.inputs.module_file != '' }}
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        GEMINI_MODEL: 'gemini-3.1-flash-lite'
+        GEMINI_MODEL: 'gemini-1.5-flash-8b'
       run: python asir/generate_course_materials.py ${{ github.event.inputs.module_file }}
 
     - name: Run script for ALL modules
       if: ${{ github.event.inputs.module_file == '' }}
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        GEMINI_MODEL: 'gemini-3.1-flash-lite'
+        GEMINI_MODEL: 'gemini-1.5-flash-8b'
       run: python asir/generate_course_materials.py --all
 
     - name: Commit and push generated materials
