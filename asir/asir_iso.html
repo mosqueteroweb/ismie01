@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implantación de sistemas operativos (ASIR) - Módulo 0369</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="asir.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-blue-900">ASIR</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">1º Curso ASIR</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Implantación de sistemas operativos</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0369. Instalación, configuración y administración de sistemas operativos monousuario y en red.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">15</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-300">0369</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">140</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">7</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el Real Decreto 405/2023, de 29 de mayo.</p>
+
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 1</span>
+                            <span>Instala sistemas operativos, analizando sus características e interpretando la documentación técnica.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los elementos funcionales de un sistema informático.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado las características, funciones y arquitectura de un sistema operativo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han comparado diferentes sistemas operativos, sus versiones y licencias de uso, en función de sus requisitos, características y campos de aplicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han realizado instalaciones de diferentes sistemas operativos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han previsto y aplicado técnicas de actualización y recuperación del sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han solucionado incidencias del sistema y del proceso de inicio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado herramientas para conocer el software instalado en el sistema y su origen.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha elaborado documentación de soporte relativa a las instalaciones efectuadas y a las incidencias detectadas.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 2</span>
+                            <span>Configura el software de base, analizando las necesidades de explotación del sistema informático.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han planificado, creado y configurado cuentas de usuario, grupos, perfiles y políticas de contraseñas locales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha asegurado el acceso al sistema mediante el uso de directivas de cuenta y directivas de contraseñas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha actuado sobre los servicios y procesos en función de las necesidades del sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han instalado, configurado y verificado protocolos de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han analizado y configurado los diferentes métodos de resolución de nombres.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha optimizado el uso de los sistemas operativos para sistemas portátiles.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado máquinas virtuales para realizar tareas de configuración de sistemas operativos y analizar sus resultados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han documentado las tareas de configuración del software de base.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 3</span>
+                            <span>Asegura la información del sistema, describiendo los procedimientos y utilizando copias de seguridad y sistemas tolerantes a fallos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han comparado diversos sistemas de archivos y analizado sus diferencias y ventajas de implementación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha descrito la estructura de directorios del sistema operativo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han identificado los directorios contenedores de los archivos de configuración del sistema (binarios, órdenes y librerías).</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han utilizado herramientas de administración de discos para crear particiones, unidades lógicas, volúmenes simples y volúmenes distribuidos. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97858</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han implantado sistemas de almacenamiento redundante (RAID).</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han implementado y automatizado planes de copias de seguridad.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han administrado cuotas de disco.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han documentado las operaciones realizadas y los métodos a seguir para la recuperación ante desastres.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 4</span>
+                            <span>Centraliza la información en servidores administrando estructuras de dominios y analizando sus  ventajas.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han implementado dominios.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han administrado cuentas de usuario y cuentas de equipo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha centralizado la información personal de los usuarios del dominio mediante el uso de perfiles móviles y carpetas personales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han creado y administrado grupos de seguridad.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han creado plantillas que faciliten la administración de usuarios con características similares.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han organizado los objetos del dominio para facilitar su administración.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado máquinas virtuales para administrar dominios y verificar su funcionamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha documentado la estructura del dominio y las tareas realizadas.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 5</span>
+                            <span>Administra el acceso a dominios analizando y respetando requerimientos de seguridad.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han incorporado equipos al dominio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han previsto bloqueos de accesos no autorizados al dominio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha administrado el acceso a recursos locales y recursos de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han tenido en cuenta los requerimientos de seguridad.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han implementado y verificado directivas de grupo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han asignado directivas de grupo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han documentado las tareas y las incidencias.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 6</span>
+                            <span>Detecta problemas de rendimiento, monitorizando el sistema con las herramientas adecuadas y documentando el procedimiento.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los objetos monitorizables en un sistema informático.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado los tipos de sucesos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han utilizado herramientas de monitorización en tiempo real.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha monitorizado el rendimiento mediante registros de contador y de seguimiento del sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han planificado y configurado alertas de rendimiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han interpretado los registros de rendimiento almacenados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha analizado el sistema mediante técnicas de simulación para optimizar el rendimiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha elaborado documentación de soporte y de incidencias.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 7</span>
+                            <span>Audita la utilización y acceso a recursos, identificando y respetando las necesidades de seguridad del sistema.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han administrado derechos de usuario y directivas de seguridad.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado los objetos y sucesos auditables. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97859</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha elaborado un plan de auditorías.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han identificado las repercusiones de las auditorías en el rendimiento del sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han auditado sucesos correctos y erróneos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han auditado los intentos de acceso y los accesos a recursos del sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han gestionado los registros de auditoría.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha documentado el proceso de auditoría y sus resultados.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 8</span>
+                            <span>Implanta software específico con estructura cliente/servidor dando respuesta a los requisitos funcionales.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha instalado software específico según la documentación técnica.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han realizado instalaciones desatendidas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha configurado y utilizado un servidor de actualizaciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han planificado protocolos de actuación para resolver incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han seguido los protocolos de actuación para resolver incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha dado asistencia técnica a través de la red documentando las incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han elaborado guías visuales y manuales para instruir en el uso de sistemas operativos o aplicaciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han documentado las tareas realizadas.</li>
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Contenidos Generales</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>CONTENIDOS (Duración 280 horas)</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación de software libre y propietario</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Estructura de un sistema informático. Monolítica. Jerárquica. Capas o anillos (ring).</li>
+<li>Máquinas    virtuales. Cliente-servidor.</li>
+<li>Arquitectura de un sistema operativo. Sistemas por lotes (batch). Sistemas por lotes con</li>
+<li>multiprogramación. Sistemas de tiempo compartido. Sistemas distribuidos.</li>
+<li>Funciones de un sistema operativo.</li>
+<li>Controlar y gestionar el uso del hardware del ordenador: CPU, dispositivos de E/S,</li>
+<li>Memoria principal, tarjetas gráficas y el resto de periféricos.</li>
+<li>Administrar la ejecución de los procesos. Planificación.</li>
+<li>Controlar el proceso de organización de la información. Creación, acceso (ubicación</li>
+<li>física) y borrado de archivos.</li>
+<li>Controlar el acceso de los programas o los usuarios a los recursos del sistema.</li>
+<li>Proporcionar interfaces de usuario: en modo texto y gráficos.</li>
+<li>Servicios soporte: actualizaciones de software, controladores para nuevos</li>
+<li>periféricos, etc.</li>
+<li>Tipos de sistemas operativos.</li>
+<li>Monousuario o multiusuario</li>
+<li>Centralizado o distribuido</li>
+<li>Monotarea o multitarea</li>
+<li>Uniprocesador o multiprocesador</li>
+<li>Instalables y/o autoarrancables.</li>
+<li>Sistemas operativos libres.</li>
+<li>Sistemas operativos propietarios.</li>
+<li>Tipos de aplicaciones. Software de sistema. Software de programación. Software de</li>
+<li>aplicación.</li>
+<li>Licencias y tipos de licencias. Según los derechos que cada autor se reserva sobre su</li>
+<li>obra. Según su destinatario.</li>
+<li>Máquinas virtuales (M.V.)</li>
+<li>Concepto de virtualización del hardware y características de los principales productos</li>
+<li>software libre y propietario, para el uso de máquinas virtuales.</li>
+<li>Creación y personalización de M.V.</li>
+<li>Ventajas e inconvenientes de la virtualización.</li>
+<li>Consideraciones previas a la instalación de sistemas operativos libres y propietarios.</li>
+<li>Particionado del disco duro.</li>
+<li>En sistemas Windows determinar la partición donde instalaremos el S.O.</li>
+<li>En sistemas Linux determinar las particiones para los distintos puntos de montaje.</li>
+<li>Controladores (drivers) de almacenamiento necesarios.</li>
+<li>Instalación de sistemas operativos.</li>
+<li>Requisitos hardware, versiones y licencias.</li>
+<li>Soporte utilizado para la instalación: CD/DVD, Pendrive, LAN.</li>
+<li>Datos necesarios para la instalación: usuarios, contraseñas, nombre del equipo,</li>
+<li>direcciones IP, número de licencia, etc.</li>
+<li>Gestión de varios sistemas operativos en un ordenador.</li>
+<li>Requisitos previos. Administración del espacio del disco. Particionado y</li>
+<li>redimensionado.</li>
+<li>Problemas con el registro maestro de arranque (MBR). Elegir un gestor de arranque</li>
+<li>compatible con todos los sistemas operativos a instalar.</li>
+<li>Preparar las particiones de los S.O. para permitir su arranque.</li>
+<li>Analizar el orden en la instalación de los sistemas operativos.</li>
+<li>Gestores de arranque.</li>
+<li>Código de arranque maestro (Master Boot Code).</li>
+<li>Formatos tabla de particiones. Master Boot Record (MBR) y Guid Partition Table</li>
+<li>(GPT).</li>
+<li>Configuración de los gestores de arranque de los sistemas operativos libres y</li>
+<li>propietarios.</li>
+<li>Reparación del gestor de arranque.</li>
+<li>Sustitución del gestor de arranque estándar por otro más completo.</li>
+<li>Instalación/desinstalación de aplicaciones. Requisitos hardware y software, versiones y</li>
+<li>licencias.</li>
+<li>Actualización de sistemas operativos y aplicaciones.</li>
+<li>Actualizar a una versión superior (update).</li>
+<li>Cambiar a una versión inferior (downgrade).</li>
+<li>Instalación de parches: de seguridad, funcionales, opcionales, etc.</li>
+<li>Automatizar las actualizaciones. Configurar la fuente de las actualizaciones.</li>
+<li>Ficheros necesarios para el arranque de los principales sistemas operativos.</li>
+<li>Registros (logs) del sistema.</li>
+<li>Formato de los registros: fuente/origen, prioridades (informativos, advertencias,</li>
+<li>errores, etc.)</li>
+<li>Herramientas para su monitorización en sistemas libres y propietarios.</li>
+<li>Gestión: Aplicar filtros, asociar tareas en respuesta a ciertos eventos, etc.</li>
+<li>Actualización y mantenimiento de controladores de dispositivos.</li>
+<li>Automatizar la actualización de controladores.</li>
+<li>Volver a una versión anterior de un controlador.</li>
+<li>Actualización manual de los controladores.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Administración de software de base</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Administración de usuarios y grupos locales.</li>
+<li>Crear, modificar y editar usuarios y grupos. Añadir usuarios a los grupos.</li>
+<li>Cambiar la ruta del perfil del usuario, scripts de inicio y carpeta particular.</li>
+<li>Usuarios y grupos predeterminados.</li>
+<li>Conocer los privilegios asignados.</li>
+<li>Seguridad de cuentas de usuario.</li>
+<li>Establecer la contraseña.</li>
+<li>Habilitar y deshabilitar cuentas de usuario.</li>
+<li>Añadir las cuentas de usuario a los grupos predeterminados según sus necesidades.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Seguridad de las contraseñas</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Algoritmos para la elección de contraseñas seguras.</li>
+<li>Opciones de la contraseña: obligar a cambiar la contraseña, caducidad, etc.</li>
+<li>Administración de perfiles locales de usuario.</li>
+<li>Directorios y ficheros implicados.</li>
+<li>Cambiar la ruta de las carpetas de documentos a otra partición o recurso de red.</li>
+<li>Configuración del protocolo TCP/IP en un cliente de red.</li>
+<li>Configuración de la resolución de nombres.</li>
+<li>Ficheros de configuración de red.</li>
+<li>Optimización de sistemas para ordenadores portátiles.</li>
+<li>Archivos de red sin conexión.</li>
+<li>Asegurar la información para evitar su uso en caso de pérdida o robo. Cifrado de</li>
+<li>ficheros y de discos, copia de seguridad remota, etc.</li>
+<li>Configurar el firewall para asegurar el portátil en las conexiones no seguras.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Sistemas de archivos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Propietarios y libres.</li>
+<li>Rutas y nombres de archivos. Estructura jerárquica.</li>
+<li>Gestión de sistemas de archivos mediante comandos y entornos gráficos.</li>
+<li>Gestión de enlaces.</li>
+<li>Estructura de directorios de sistemas operativos libres y propietarios.</li>
+<li>Búsqueda de información del sistema mediante comandos y herramientas gráficas.</li>
+<li>Identificación del software instalado mediante comandos y herramientas gráficas.</li>
+<li>Gestión de la información del sistema. Rendimiento. Estadísticas.</li>
+<li>Montaje y desmontaje de dispositivos en sistemas operativos. Automatización.</li>
+<li>En sistemas Windows montar un volumen en una o más carpetas.</li>
+<li>Herramientas de administración de discos. Particiones y volúmenes. Desfragmentación y</li>
+<li>chequeo.</li>
+<li>Permisos locales de acceso a ficheros y directorios.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Niveles RAID</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Implementación por hardware y por software. Ventajas e inconvenientes.</li>
+<li>Niveles RAID usados en la actualidad. Características: tolerancia a fallos, número de</li>
+<li>mínimo de discos necesarios para su implementación, cuántos discos pueden fallar</li>
+<li>sin perder el servicio, etc.</li>
+<li>Funciones avanzadas. Unión de niveles RAID más usados como RAID 10, RAID 50 y</li>
+<li>RAID 60.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Implementación RAID por software</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Operaciones con volúmenes: extender y distribuir.</li>
+<li>Aumentar la velocidad.</li>
+<li>Tolerancia a fallos. Simular un fallo de disco para comprobar la tolerancia del</li>
+<li>sistema.</li>
+<li>Detectar fallos consultando los registros del sistema.</li>
+<li>Programar alertas por correo.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Tipos de copias de seguridad</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Locales y Remotas.</li>
+<li>Herramientas clásicas: copias de seguridad completas, diferenciales e incrementales.</li>
+<li>Herramientas de sincronización con control de versiones.</li>
+<li>Planes de copias de seguridad y restablecimiento.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Consideraciones</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Dónde realizar las copias de seguridad (backup), locales y remotas.</li>
+<li>· Programación de copias de seguridad: para decidir la programación habrá que</li>
+<li>tener en cuenta el tiempo asumible de pérdida de datos, si es necesario detener</li>
+<li>servicios para realizar las copias de seguridad, etc.</li>
+<li>· Espacio necesario, históricos, rotaciones de los medios, etc.</li>
+<li>Responsabilidad de las copias de seguridad. Personas encargadas de revisar las</li>
+<li>copias de seguridad y restablecerlas si es necesario. Asignar los permisos</li>
+<li>necesarios a estas personas.</li>
+<li>Elección del software para realizar los backups. Uso de herramientas estándar o</li>
+<li>específicas para los datos/servicios a asegurar.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Probar la integridad de las copias de seguridad</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Crear un plan de pruebas. Ventajas del uso de máquinas virtuales para las</li>
+<li>pruebas de integridad de los backups.</li>
+<li>· Comprobar si los tiempos de restauración son asumibles.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Crear un plan de restauración</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Dónde se restaurarán los datos en caso de fallo físico de discos, servidores, etc.</li>
+<li>· Quien está autorizado para realizar la restauración.</li>
+<li>· Detallar los pasos a realizar.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Recuperación en caso de fallo del sistema</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Responsables de la recuperación, mecanismos para localizar a estas personas.</li>
+<li>Hardware crítico para la restauración.</li>
+<li>Medidas a adoptar para mitigar el impacto del fallo.</li>
+<li>Discos de arranque. Discos de recuperación.</li>
+<li>Copias de seguridad del sistema. Recuperación del sistema mediante consola.</li>
+<li>Puntos de recuperación.</li>
+<li>Creación y recuperación de imágenes de servidores.</li>
+<li>Cuotas de disco. Niveles de cuota y niveles de advertencia.</li>
+<li>Compresión de datos.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Administración de recursos compartidos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Instalación y configuración de servicios</li>
+<li>Administración del acceso a recursos. SMB/CIFS. SAMBA. NFS.</li>
+<li>Grupos de trabajo.</li>
+<li>Permisos de red. Permisos locales. Herencia. Permisos efectivos.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Administración de dominios</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Estructura grupo de trabajo.</li>
+<li>Estructura cliente-servidor.</li>
+<li>Protocolo LDAP.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Estructura lógica del directorio activo (DA)</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Concepto de dominio. Subdominios.</li>
+<li>Unidades organizativas. Objetos.</li>
+<li>Árboles y bosques.</li>
+<li>Catálogo global. Esquema.</li>
+<li>Funciones de los maestros de operaciones.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Estructura física del DA</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Concepto de sitio (Site). Optimización del tráfico de red.</li>
+<li>Configurar la replicación entre Sites.</li>
+<li>Requisitos necesarios para montar un dominio.</li>
+<li>Administración de cuentas. Cuentas predeterminadas.</li>
+<li>Contraseñas. Bloqueos de cuenta.</li>
+<li>Cuentas de usuarios y equipos.</li>
+<li>Perfiles móviles y obligatorios.</li>
+<li>Carpetas personales.</li>
+<li>Plantillas de usuario. Variables de entorno.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Restringir el inicio de sesión de una cuenta</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>A ciertas horas y días.</li>
+<li>En determinados ordenadores.</li>
+<li>Scripts de inicio de sesión.</li>
+<li>Administración de grupos. Tipos. Estrategias de anidamiento. Grupos predeterminados.</li>
+<li>Unidades Organizativas (UO).</li>
+<li>Estrategias de administración.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Administración del acceso al dominio</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Equipos del dominio.</li>
+<li>Permisos y derechos.</li>
+<li>Delegación de permisos / autoridad.</li>
+<li>Asistente para la delegación de control.</li>
+<li>Herramientas de línea de comandos: dsacls.exe y dsrevoke.exe.</li>
+<li>Listas de control de acceso.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Supervisión del rendimiento del sistema</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Herramientas de monitorización en tiempo real.</li>
+<li>Herramientas de monitorización continuada.</li>
+<li>Herramientas de análisis del rendimiento.</li>
+<li>Tipos de sucesos: sucesos del sistema, sucesos de seguridad, sucesos de aplicaciones,</li>
+<li>etc.</li>
+<li>Registros de sucesos.</li>
+<li>Monitorización de sucesos.</li>
+<li>Gestión de aplicaciones, procesos y subprocesos.</li>
+<li>Monitorización de aplicaciones y procesos.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Monitorización del rendimiento</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Monitor del sistema: histogramas, gráficos e informes.</li>
+<li>Contadores y registros de seguimiento.</li>
+<li>Programas acciones mediante las alertas.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Directivas de seguridad y auditorías</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Requisitos de seguridad del sistema y de los datos.</li>
+<li>Derechos de usuario.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Directivas de seguridad</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Locales</li>
+<li>Del controlador de dominio</li>
+<li>Del dominio.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Directivas de grupo</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Administrar la directiva basada en el Registro con las plantillas administrativas.</li>
+<li>Asignar secuencias de comandos al inicio/apagado del equipo y/o al inicio/cierre de</li>
+<li>sesión.</li>
+<li>Redirección de carpetas.</li>
+<li>Administrar aplicaciones.</li>
+<li>Especificar las opciones de seguridad.</li>
+<li>Orden de aplicación de las directivas.</li>
+<li>Conjunto resultante de directivas.</li>
+<li>Filtrar la directiva en función de la pertenencia a grupos de seguridad</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Opciones avanzadas en la aplicación de las directivas</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Bloqueo de la herencia de directivas.</li>
+<li>No reemplazar y deshabilitar.</li>
+<li>Registro del sistema operativo.</li>
+<li>Objetivos de la auditoría.</li>
+<li>Ámbito de la auditoría. Aspectos auditables.</li>
+<li>Mecanismos de auditoría. Alarmas y acciones correctivas.</li>
+<li>Información del registro de auditoría.</li>
+<li>Técnicas y herramientas de auditoría.</li>
+<li>Configurar la auditoría: Auditar sucesos de inicio de sesión de cuenta, la administración de</li>
+<li>cuentas, el acceso del servicio de directorio, sucesos de inicio de sesión, el acceso a</li>
+<li>objetos, el cambio de directivas, uso de privilegios, el seguimiento de procesos y sucesos</li>
+<li>del sistema.</li>
+<li>Informes de auditoría.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Resolución de incidencias y asistencia técnica</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Interpretación, análisis y elaboración de documentación técnica.</li>
+<li>Interpretación, análisis y elaboración de manuales de instalación y configuración de</li>
+<li>sistemas  operativos y aplicaciones.</li>
+<li>Licencias de cliente y licencias de servidor.</li>
+<li>Control de versiones y licencias.</li>
+<li>Instalaciones desatendidas.</li>
+<li>Implementación de ficheros de respuestas.</li>
+<li>Servidores de actualizaciones automáticas.</li>
+<li>Asistencia remota.</li>
+<li>Partes de incidencias.</li>
+<li>Protocolos de actuación.</li>
+<li>Administración remota.</li>
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor &copy; Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
