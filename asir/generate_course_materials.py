@@ -72,34 +72,48 @@ def parse_module_file(filepath):
 
 def test_parsing():
     for f in os.listdir('asir'):
-        if f.endswith('.md') and f != 'generate_course_materials.py' and f != 'extract_asir_curriculum.py' and f != 'update_asir_curriculum.py':
+        if f.endswith('.md') and f not in ['generate_course_materials.py', 'extract_asir_curriculum.py', 'update_asir_curriculum.py']:
             mod_name, outcomes = parse_module_file(f'asir/{f}')
             if outcomes:
                 print(f"[{mod_name}] Found {len(outcomes)} RAs.")
 
-PROMPT_THEORY = """
+PROMPT_OUTLINE = """
 Eres un profesor experto del ciclo formativo de grado superior ASIR (Administración de Sistemas Informáticos en Red).
-Tu objetivo es escribir un temario teórico detallado y pedagógico para el siguiente módulo y Resultado de Aprendizaje (RA).
+Tu objetivo es diseñar un índice maestro sumamente detallado (outline) para crear el temario de un Resultado de Aprendizaje.
 
 Módulo: {mod_name}
 Resultado de Aprendizaje (RA): {ra_title}
-Criterios de Evaluación que los alumnos deben cumplir:
+Criterios de Evaluación a cubrir:
 {criteria}
 
-Contenidos Básicos a explicar:
+Contenidos Básicos obligatorios:
 {contents}
 
 INSTRUCCIONES:
-1. Escribe un temario completo de aproximadamente 3-5 páginas.
-2. Utiliza formato Markdown profesional, con títulos (##, ###), listas, negritas para conceptos clave y bloques de código si aplica.
-3. El temario debe estar enfocado estrictamente en cubrir los Contenidos Básicos mencionados y capacitar al alumno para cumplir los Criterios de Evaluación.
-4. Incluye ejemplos prácticos o casos de uso dentro de la explicación teórica.
-5. No inventes contenidos que no estén relacionados con el temario oficial propuesto.
+1. Analiza los contenidos y los criterios, y divídelos en una lista de exactamente 4 a 6 secciones temáticas principales.
+2. Cada sección debe tener un título claro y conciso.
+3. Responde ÚNICAMENTE con la lista de títulos, uno por línea, numerados (ej. "1. Introducción a...", "2. Arquitectura de...").
+4. No incluyas saludos ni explicaciones, solo la lista numerada.
+"""
+
+PROMPT_THEORY_SECTION = """
+Eres un profesor experto del ciclo formativo ASIR escribiendo un manual técnico detallado de nivel universitario/técnico superior.
+Estás escribiendo un capítulo específico para el siguiente Resultado de Aprendizaje: {ra_title}
+
+Tu tarea actual es desarrollar EXCLUSIVAMENTE la siguiente sección del temario:
+TÍTULO DE LA SECCIÓN: "{section_title}"
+
+INSTRUCCIONES PARA LA REDACCIÓN:
+1. Escribe al menos 600-800 palabras de teoría profunda, técnica y exhaustiva SOLO sobre este título.
+2. Utiliza formato Markdown profesional: subtítulos (###, ####), listas, negritas para términos técnicos.
+3. INCLUYE SIEMPRE EJEMPLOS TÉCNICOS: comandos de terminal, código de configuración, o ejemplos de topologías de red que apliquen.
+4. DIAGRAMAS: Si aplica a la temática, debes incluir obligatoriamente al menos un bloque de código tipo `mermaid` para ilustrar arquitecturas, flujos de trabajo o diagramas de red.
+5. No hagas introducciones generales al módulo entero, céntrate estrictamente y a fondo en "{section_title}".
 """
 
 PROMPT_PRACTICE = """
-Eres un profesor experto del ciclo formativo de grado superior ASIR (Administración de Sistemas Informáticos en Red).
-Basándote en el siguiente Resultado de Aprendizaje y sus Contenidos Básicos, debes crear un documento de prácticas guiadas y ejercicios resueltos.
+Eres un profesor experto del ciclo formativo de grado superior ASIR.
+Basándote en el siguiente Resultado de Aprendizaje, debes crear un documento de prácticas guiadas basadas en Aprendizaje Basado en Retos (Casos Reales).
 
 Módulo: {mod_name}
 Resultado de Aprendizaje (RA): {ra_title}
@@ -110,48 +124,58 @@ Contenidos Básicos:
 {contents}
 
 INSTRUCCIONES:
-1. Crea al menos 3 ejercicios prácticos o casos de estudio reales.
-2. Para cada ejercicio incluye:
-   - Título del ejercicio.
-   - Enunciado claro y contexto del problema.
-   - Solución paso a paso detallada (incluyendo comandos, configuración o código si aplica).
-3. Utiliza formato Markdown con bloques de código adecuados.
-4. Los ejercicios deben evaluar directamente los Criterios de Evaluación listados.
+1. Diseña 3 prácticas. Cada práctica debe estar ambientada en una empresa ficticia con un problema informático realista y urgente.
+2. Para cada práctica incluye en Markdown:
+   - ## Práctica X: [Título atractivo]
+   - ### 🏢 El Escenario: Contexto de la empresa, el problema exacto y por qué es crítico solucionarlo.
+   - ### 🎯 Requisitos del Cliente: Qué se espera que haga el técnico (el alumno).
+   - ### 🛠️ Solución Paso a Paso: Instrucciones detalladas de cómo resolverlo (comandos exactos, líneas de configuración de archivos, pasos en la interfaz gráfica, etc.).
+3. Los ejercicios deben ser avanzados, técnicos y evaluar directamente los Criterios de Evaluación listados.
 """
 
 PROMPT_TEST = """
-Eres un profesor experto del ciclo formativo de grado superior ASIR (Administración de Sistemas Informáticos en Red).
-Tu tarea es generar un examen tipo test para evaluar los conocimientos del siguiente Resultado de Aprendizaje.
+Eres un profesor experto del ciclo formativo de grado superior ASIR.
+Genera un examen tipo test para evaluar el siguiente Resultado de Aprendizaje.
 
 Módulo: {mod_name}
 Resultado de Aprendizaje (RA): {ra_title}
 Criterios de Evaluación:
 {criteria}
 
-Contenidos Básicos:
-{contents}
+INSTRUCCIONES:
+1. Genera 10 preguntas de opción múltiple muy técnicas (evita preguntas demasiado obvias).
+2. Cada pregunta debe tener 4 opciones de respuesta, donde solo UNA es correcta.
+3. IMPORTANTE: El formato de salida DEBE SER EXCLUSIVAMENTE el formato GIFT de Moodle. No incluyas saludos, explicaciones, ni bloques de código markdown, solo el texto GIFT puro.
+
+Ejemplo estricto de formato GIFT esperado:
+::Título corto:: Enunciado de la pregunta {{
+    =Respuesta correcta
+    ~Respuesta falsa 1
+    ~Respuesta falsa 2
+    ~Respuesta falsa 3
+}}
+"""
+
+PROMPT_TEST_REVIEW = """
+Eres un inspector educativo técnico y experto en ASIR.
+Aquí tienes un examen tipo test generado en formato GIFT de Moodle para el RA: {ra_title}.
+
+Examen Generado:
+{test_content}
 
 INSTRUCCIONES:
-1. Genera 10 preguntas de opción múltiple.
-2. Cada pregunta debe tener 4 opciones de respuesta, donde solo UNA es correcta.
-3. Las preguntas deben evaluar los Criterios de Evaluación y basarse en los Contenidos Básicos.
-4. IMPORTANTE: El formato de salida DEBE SER EXCLUSIVAMENTE el formato GIFT de Moodle. No incluyas saludos ni explicaciones, solo el código GIFT.
-
-Ejemplo de formato GIFT esperado:
-::Título de la pregunta:: ¿Cuál es el puerto por defecto de HTTP? {{
-    =80
-    ~8080
-    ~443
-    ~21
-}}
+1. Revisa rigurosamente el examen. Comprueba que las respuestas marcadas con "=" son técnicamente 100% correctas y que las marcadas con "~" son innegablemente incorrectas.
+2. Comprueba que no hay preguntas repetidas.
+3. Corrige cualquier error, mejora la redacción si es ambigua, y asegúrate de que el formato GIFT es perfecto.
+4. Devuelve ÚNICAMENTE el código GIFT corregido final. Sin preámbulos, sin bloques de código markdown, solo el texto plano.
 """
 
 def call_gemini(prompt, retries=3):
     if not HAS_GENAI:
-        print("[DRY RUN] Would send to Gemini:", prompt[:100].replace('\n', ' '), "...")
-        return "Contenido generado (Simulación)"
+        print("[DRY RUN] Would send to Gemini:", prompt[:80].replace('\n', ' '), "...")
+        return "Contenido generado (Simulación)\n"
 
-    model_name = os.environ.get('GEMINI_MODEL', 'gemini-3.1-flash-lite')
+    model_name = os.environ.get('GEMINI_MODEL', 'gemini-3.1-flash-lite-preview')
     model = genai.GenerativeModel(model_name)
 
     for attempt in range(retries):
@@ -165,7 +189,7 @@ def call_gemini(prompt, retries=3):
         except Exception as e:
             print(f"  [ERROR] Gemini API Error: {e}")
             if attempt < retries - 1:
-                print(f"  [WAITING] Retrying in 10 seconds...")
+                print(f"  [WAITING] Retrying in 65 seconds...")
                 time.sleep(65) # Wait 1 minute for RPM reset
             else:
                 return f"Error al generar contenido: {e}"
@@ -182,24 +206,65 @@ def generate_materials_for_module(filepath, output_dir='asir/materials'):
     print(f"\n--- Generating Materials for: {mod_name} ---")
 
     for ra in outcomes:
-        print(f"Processing RA {ra.number}: {ra.title[:30]}...")
+        print(f"\nProcessing RA {ra.number}: {ra.title[:50]}...")
 
-        theory_prompt = PROMPT_THEORY.format(mod_name=mod_name, ra_title=ra.title, criteria=ra.criteria, contents=ra.contents)
-        theory_content = call_gemini(theory_prompt)
+        # 1. GENERATE THEORY (Multi-step)
+        print(f"  [1/4] Generating Theory Outline...")
+        outline_prompt = PROMPT_OUTLINE.format(
+            mod_name=mod_name, ra_title=ra.title, criteria=ra.criteria, contents=ra.contents
+        )
+        outline = call_gemini(outline_prompt)
+
+        # Parse outline lines (e.g. "1. Introducción a redes")
+        sections = [line.strip() for line in outline.split('\n') if line.strip() and re.match(r'^\d+\.', line.strip())]
+        if not sections:
+            # Fallback if AI didn't format properly
+            sections = ["Conceptos Generales", "Desarrollo de Criterios", "Aspectos Prácticos"]
+
+        theory_content = f"# Temario: {ra.title}\n\n"
+
+        for i, section_title in enumerate(sections):
+            print(f"  [1/4] Generating Theory Section {i+1}/{len(sections)}: {section_title[:30]}...")
+            section_prompt = PROMPT_THEORY_SECTION.format(
+                ra_title=ra.title, section_title=section_title
+            )
+            section_text = call_gemini(section_prompt)
+            theory_content += f"## {section_title}\n\n{section_text}\n\n"
+
         with open(os.path.join(mod_dir, f"RA{ra.number}_teoria.md"), 'w', encoding='utf-8') as f:
             f.write(theory_content)
 
-        practice_prompt = PROMPT_PRACTICE.format(mod_name=mod_name, ra_title=ra.title, criteria=ra.criteria, contents=ra.contents)
+        # 2. GENERATE PRACTICE (Role-play)
+        print(f"  [2/4] Generating Role-play Practices...")
+        practice_prompt = PROMPT_PRACTICE.format(
+            mod_name=mod_name, ra_title=ra.title, criteria=ra.criteria, contents=ra.contents
+        )
         practice_content = call_gemini(practice_prompt)
         with open(os.path.join(mod_dir, f"RA{ra.number}_practica.md"), 'w', encoding='utf-8') as f:
             f.write(practice_content)
 
-        test_prompt = PROMPT_TEST.format(mod_name=mod_name, ra_title=ra.title, criteria=ra.criteria, contents=ra.contents)
-        test_content = call_gemini(test_prompt)
-        with open(os.path.join(mod_dir, f"RA{ra.number}_test.txt"), 'w', encoding='utf-8') as f:
-            f.write(test_content)
+        # 3. GENERATE TEST
+        print(f"  [3/4] Generating GIFT Test...")
+        test_prompt = PROMPT_TEST.format(
+            mod_name=mod_name, ra_title=ra.title, criteria=ra.criteria
+        )
+        test_content_raw = call_gemini(test_prompt)
 
-        print(f"  -> Generated RA {ra.number} files in {mod_dir}")
+        # 4. REVIEW TEST
+        print(f"  [4/4] Reviewing and correcting Test...")
+        review_prompt = PROMPT_TEST_REVIEW.format(
+            ra_title=ra.title, test_content=test_content_raw
+        )
+        test_content_final = call_gemini(review_prompt)
+
+        # Strip potential markdown code blocks from the final GIFT output
+        test_content_final = re.sub(r'```(?:gift|txt|text)?\n', '', test_content_final)
+        test_content_final = test_content_final.replace('```', '')
+
+        with open(os.path.join(mod_dir, f"RA{ra.number}_test.txt"), 'w', encoding='utf-8') as f:
+            f.write(test_content_final.strip())
+
+        print(f"  -> Finished RA {ra.number} files in {mod_dir}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate ASIR Course Materials using Google Gemini API')
