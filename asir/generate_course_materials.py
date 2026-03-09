@@ -151,18 +151,22 @@ def call_gemini(prompt, retries=3):
         print("[DRY RUN] Would send to Gemini:", prompt[:100].replace('\n', ' '), "...")
         return "Contenido generado (Simulación)"
 
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model_name = os.environ.get('GEMINI_MODEL', 'gemini-3.1-flash-lite')
+    model = genai.GenerativeModel(model_name)
 
     for attempt in range(retries):
         try:
             response = model.generate_content(prompt)
-            time.sleep(4)
+            if 'lite' in model_name.lower():
+                time.sleep(4)  # 15 RPM limit for Lite
+            else:
+                time.sleep(13)  # 5 RPM limit for others
             return response.text
         except Exception as e:
             print(f"  [ERROR] Gemini API Error: {e}")
             if attempt < retries - 1:
                 print(f"  [WAITING] Retrying in 10 seconds...")
-                time.sleep(10)
+                time.sleep(65) # Wait 1 minute for RPM reset
             else:
                 return f"Error al generar contenido: {e}"
 
