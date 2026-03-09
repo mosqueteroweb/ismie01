@@ -91,7 +91,11 @@ def process_html_file(filepath):
         except Exception as e:
             print(f"  > Error ejecutando CrewAI para {ra_number}: {e}")
 
-def main():
+def run():
+    """
+    Función principal de ejecución para CrewAI.
+    Se puede ejecutar con `crewai run` (si se configura en pyproject.toml) o `python main.py`.
+    """
     # Buscar todos los archivos HTML del directorio ASIR que tengan el formato asir_*.html
     # Asumiendo que se ejecuta desde la raíz o dentro de asir/
     target_files = []
@@ -115,4 +119,4 @@ def main():
         print("-" * 50)
 
 if __name__ == "__main__":
-    main()
+    run()
