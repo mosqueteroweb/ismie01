@@ -1,0 +1,55 @@
+research_curriculum_task:
+  description: >
+    1. Analiza con sumo detalle el fragmento de currículo HTML proporcionado:
+    {contexto_archivo}
+
+    2. Localiza la sección correspondiente al módulo {modulo} y, dentro de ella, el {ra_number} específico.
+    3. Extrae íntegramente:
+       - El enunciado del Resultado de Aprendizaje.
+       - La lista de Criterios de Evaluación (etiquetados de la 'a' en adelante).
+       - Relaciona de forma lógica los Criterios de Evaluación extraídos con los puntos detallados en la sección "Contenidos Básicos" que también viene en el fragmento.
+    4. Genera un informe de investigación técnica que correlacione cada Criterio de Evaluación de ese RA con sus contenidos teóricos y prácticos asociados.
+  expected_output: >
+    Un informe técnico exhaustivo que servirá como única fuente de verdad para el resto de agentes,
+    desglosando RA, CE y Contenidos Básicos (CM) del {ra_number}.
+  agent: curriculum_researcher
+
+write_theory_task:
+  description: >
+    Basándote en el informe del investigador, redacta el manual de TEORÍA para el {ra_number} de {modulo}.
+    Debes desarrollar de forma enciclopédica cada concepto mencionado en los "Contenidos Básicos" asignados a ese RA.
+    REGLA ESTRICTA: Este documento es puramente conceptual. No incluyas comandos de terminal,
+    pasos de instalación ni capturas de pantalla. Céntrate en fundamentos y arquitectura técnica.
+  expected_output: >
+    Archivo Markdown de teoría profunda y profesional para el {ra_number}.
+  agent: theory_writer
+  context:
+    - research_curriculum_task
+
+design_labs_task:
+  description: >
+    Diseña la guía de PRÁCTICAS y laboratorios para el {ra_number}.
+    Utiliza los Criterios de Evaluación y los Contenidos Básicos reportados por el investigador para crear escenarios reales.
+    Debes incluir:
+    1. Requisitos previos de hardware/software.
+    2. Comandos detallados de terminal (Linux/Windows).
+    3. Explicación técnica de qué ocurre en el sistema con cada comando.
+    4. Procedimientos de resolución de incidencias comunes.
+  expected_output: >
+    Guía de laboratorios prácticos en Markdown, con pasos detallados y comandos verificables para el {ra_number}.
+  agent: practical_instructor
+  context:
+    - research_curriculum_task
+
+create_assessment_task:
+  description: >
+    Genera el paquete de EVALUACIÓN para el {ra_number}.
+    1. Crea un examen tipo test de 15 preguntas de alta dificultad (4 opciones) basado en la teoría y la práctica generada.
+    2. Diseña 2 supuestos prácticos de "Troubleshooting" (resolución de averías en redes o sistemas) donde el alumno deba proponer una solución técnica.
+    3. Redacta el SOLUCIONARIO justificado para el profesor, explicando por qué cada respuesta es la correcta.
+  expected_output: >
+    Documento Markdown con el examen, los casos prácticos y el solucionario detallado para el docente, correspondiente al {ra_number}.
+  agent: assessment_evaluator
+  context:
+    - write_theory_task
+    - design_labs_task
