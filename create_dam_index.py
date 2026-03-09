@@ -25,7 +25,7 @@ MODULES_YR2 = [
 ]
 
 INDEX_FILENAME = "dam.html"
-BACK_LINK_OLD = '<a href="index.html" class="text-slate-400 hover:text-blue-600 transition-colors">'
+BACK_LINK_OLD = '<a href="../index.html" class="text-slate-400 hover:text-blue-600 transition-colors">'
 BACK_LINK_NEW = '<a href="dam.html" class="text-slate-400 hover:text-blue-600 transition-colors">'
 
 def create_card(module):

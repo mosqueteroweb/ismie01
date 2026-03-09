@@ -2,7 +2,7 @@ import os
 import json
 import re
 
-TEMPLATE_FILE = "dam_di.html"
+TEMPLATE_FILE = "DAM/dam_di.html"
 
 MODULES_METADATA = [
     {
@@ -330,7 +330,7 @@ def generate_relations_page(module_info, meta, acronym):
 </body>
 </html>"""
 
-    rel_filename = f"dam_{acronym}_relaciones.html"
+    rel_filename = f"DAM/dam_{acronym}_relaciones.html"
     with open(rel_filename, "w", encoding="utf-8") as out:
         out.write(html)
     print(f"Generated {rel_filename}")
@@ -456,10 +456,11 @@ def generate_pages():
             # Insert before closing </main>
             content = content.replace("</main>", eval_html + "\n    </main>")
 
-        with open(meta['filename'], "w", encoding="utf-8") as out:
+        output_filename = f"DAM/{meta['filename']}"
+        with open(output_filename, "w", encoding="utf-8") as out:
             out.write(content)
 
-        print(f"Generated {meta['filename']}")
+        print(f"Generated {output_filename}")
 
 if __name__ == "__main__":
     generate_pages()
