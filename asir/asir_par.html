@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificación y administración de redes (ASIR) - Módulo 0370</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="asir.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-blue-900">ASIR</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">1º Curso ASIR</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Planificación y administración de redes</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0370. Diseño, configuración, interconexión y gestión de redes de área local y extensa.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">12</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-300">0370</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">110</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">6</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el Real Decreto 405/2023, de 29 de mayo.</p>
+
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 1</span>
+                            <span>Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los factores que impulsan la continua expansión y evolución de las redes de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han diferenciado los distintos medios de transmisión utilizados en las redes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han reconocido los distintos tipos de red y sus topologías.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han descrito las arquitecturas de red y los niveles que las componen.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha descrito el concepto de protocolo de comunicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha descrito el funcionamiento de las pilas de protocolos en las distintas arquitecturas de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han presentado y descrito los elementos funcionales, físicos y lógicos, de las redes de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han diferenciado los dispositivos de interconexión de redes atendiendo al nivel funcional en el que se encuadran.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 2</span>
+                            <span>Integra ordenadores y periféricos en redes cableadas e inalámbricas, evaluando su funcionamiento y prestaciones.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los estándares para redes cableadas e inalámbricas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han montado cables directos, cruzados y de consola.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han utilizado comprobadores para verificar la conectividad de distintos tipos de cables.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha utilizado el sistema de direccionamiento lógico IP para asignar direcciones de red y máscaras de subred.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han configurado adaptadores de red cableados e inalámbricos bajo distintos sistemas operativos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han integrado dispositivos en redes cableadas e inalámbricas. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97863</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha comprobado la conectividad entre diversos dispositivos y adaptadores inalámbricos sobre distintas configuraciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han utilizado aplicaciones para representar el mapa físico y lógico de una red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha monitorizado la red mediante aplicaciones basadas en el protocolo SNMP.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 3</span>
+                            <span>Administra conmutadores estableciendo opciones de configuración para su integración en la red.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han conectado conmutadores entre sí y con las estaciones de trabajo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha interpretado la información que proporcionan los «leds» del conmutador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han utilizado distintos métodos para acceder al modo de configuración del conmutador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han identificado los archivos que guardan la configuración del conmutador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha administrado la tabla de direcciones MAC del conmutador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha configurado la seguridad del puerto.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha actualizado el sistema operativo del conmutador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han utilizado los comandos proporcionados por el sistema operativo del conmutador que permiten hacer el seguimiento de posibles incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha verificado el funcionamiento del Spanning Tree Protocol en un conmutador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j) Se han modificado los parámetros que determinan el proceso de selección del puente raíz.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 4</span>
+                            <span>Administra las funciones básicas de un «router» estableciendo opciones de configuración para su integración en la red.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha interpretado la información que proporcionan los «leds» del «router».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han utilizado distintos métodos para acceder al modo de configuración del «router».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han identificado las etapas de la secuencia de arranque del «router».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han utilizado los comandos para la configuración y administración básica del «router».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han identificado los archivos que guardan la configuración del «router» y se han gestionado mediante los comandos correspondientes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han configurado rutas estáticas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado los comandos proporcionados por el sistema operativo del «router» que permiten hacer el seguimiento de posibles incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha configurado el «router» como servidor de direcciones IP dinámicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han descrito las capacidades de filtrado de tráfico del «router».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j) Se han utilizado comandos para gestionar listas de control de acceso.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 5</span>
+                            <span>Configura redes locales virtuales identificando su campo de aplicación.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han descrito las ventajas que presenta la utilización de redes locales virtuales (VLANs).</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han implementado VLANs.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha realizado el diagnóstico de incidencias en VLANs.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han configurado enlaces troncales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha utilizado un router para interconectar diversas VLANs.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han descrito las ventajas que aporta el uso de protocolos de administración centralizada de VLANs.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han configurado los conmutadores para trabajar de acuerdo con los protocolos de administración centralizada. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97864</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 6</span>
+                            <span>Realiza tareas avanzadas de administración de red analizando y utilizando protocolos dinámicos de encaminamiento.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha configurado el protocolo de enrutamiento RIPv1.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han configurado redes con el protocolo RIPv2.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha realizado el diagnóstico de fallos en una red que utiliza RIP.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha valorado la necesidad de utilizar máscaras de longitud variable en IPv4.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha dividido una red principal en subredes de distintos tamaños con VLSM.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han realizado agrupaciones de redes con CIDR.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha habilitado y configurado OSPF en un «router».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha establecido y propagado una ruta por defecto usando OSPF.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 7</span>
+                            <span>Conecta redes privadas a redes públicas identificando y aplicando diferentes tecnologías.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han descrito las ventajas e inconvenientes del uso de la traducción de direcciones de red (NAT).</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha utilizado NAT para realizar la traducción estática de direcciones de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha utilizado NAT para realizar la traducción dinámica de direcciones de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han descrito las características de las tecnologías «Frame Relay», RDSI y ADSL.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han descrito las analogías y diferencias entre las tecnologías «Wifi» y «Wimax».</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han descrito las características de las tecnologías UMTS y HSDPA.</li>
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Caracterización de redes</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Sistemas de numeración decimal, binario y hexadecimal. Conversión entre sistemas.</li>
+<li>Sistemas de comunicación. Características y componentes.</li>
+<li>Componentes de una red. Dispositivos hardware (finales e intermedios), software,</li>
+<li>unidades de información y medios de transmisión.</li>
+<li>Terminología: redes LAN (Local Area Network), MAN (Metropolitan Area Network) y WAN</li>
+<li>(Wide Area Network), topologías, arquitecturas, tecnologías de transmisión (difusión y</li>
+<li>conmutación), protocolos e  interredes.</li>
+<li>Arquitectura de redes. Niveles, protocolos, unidades de datos, funcionamiento y evolución.</li>
+<li>Encapsulamiento de la información.</li>
+<li>El modelo OSI (Open System Interconnection). Estructura de niveles y  unidades de</li>
+<li>información.</li>
+<li>El modelo TCP/IP (Transmission Control Protocol/Internet Protocol). Características y</li>
+<li>niveles.</li>
+<li>Arquitectura en las redes de área local.  Descripción básica de los principales estándares.</li>
+<li>Introducción a las tecnologías «Ethernet».</li>
+<li>Comparativa entre el modelo OSI, el modelo TCP/IP y la arquitectura de redes de área</li>
+<li>local.</li>
+<li>Generalidades sobre estándares y organismos de normalización.</li>
+<li>Integración de elementos en una red: Fundamentos de redes.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Nivel físico. Aspectos físicos básicos en la transmisión de datos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Objetivos y funciones.</li>
+<li>Tipos de transmisión.</li>
+<li>Los medios físicos. Los cables metálicos: cable coaxial, cables de pares STP</li>
+<li>(Shielded Twisted Pair), FTP (Foiled Twisted Pair), UTP (Unshielded Twisted Pair) y</li>
+<li>fibra óptica.</li>
+<li>Medios inalámbricos.</li>
+<li>Conectores.</li>
+<li>Factores físicos que afectan a la transmisión (atenuación, ruido…).</li>
+<li>Ancho de banda y tasa de transferencia. Capacidad de transferencia útil.</li>
+<li>Nivel de enlace</li>
+<li>Objetivos y funciones</li>
+<li>Tramas. Formatos, tipos y direccionamiento (unicast, multicast y  broadcast).</li>
+<li>Estándares y protocolos de nivel de enlace.</li>
+<li>Nivel de red (TCP/IP)</li>
+<li>Objetivos y funciones</li>
+<li>Direccionamiento.</li>
+<li>Direcciones IPv4 y máscaras de red. Direcciones IP especiales (red, broadcast,</li>
+<li>loopback…). Direcciones IP públicas y privadas.</li>
+<li>Direccionamiento dinámico DHCP (Dynamic Host Configuration Protocol).</li>
+<li>Protocolo IP.  Características y formato del  datagrama IP.</li>
+<li>Protocolos  de resolución de direcciones. ARP (Address Resolution Protocol).</li>
+<li>Características y funcionamiento.</li>
+<li>Protocolo ICMP (Internet Control Message Protocol). Características y mensajes</li>
+<li>ICMP.</li>
+<li>Encaminamiento IP. Proceso de reenvió/encaminamiento. Tablas de</li>
+<li>encaminamiento. Introducción a los protocolos de encaminamiento.</li>
+<li>Clases de direcciones IP.</li>
+<li>La subdivisión de redes y el uso de máscaras de longitud variable VLMs (Variable</li>
+<li>Length Subnet Mask).</li>
+<li>Superredes y CIRD (Classless Inter-Domain Routing).</li>
+<li>Fragmentación IP.</li>
+<li>IPv6. Características básicas.</li>
+<li>Nivel de transporte (TCP/IP)</li>
+<li>Objetivos y funciones.</li>
+<li>Puertos. Multiplexación de conexiones.</li>
+<li>Protocolo UDP (User Datagram Protocol). Características y funciones.</li>
+<li>Protocolo TCP. Características y funciones. Establecimiento y liberación de</li>
+<li>conexiones.</li>
+<li>Nivel de aplicación (TCP/IP)</li>
+<li>Aplicaciones, protocolos y servicios.</li>
+<li>Modelo cliente/servidor, modelos P2P (Peer-to-Peer), modelos híbridos.</li>
+<li>Descripción general y utilidad de los protocolos de nivel de aplicación. DNS (Domain</li>
+<li>Name Service),  HTTP (Hypertext Transfer Protocol),  FTP (File Transfer Protocol),</li>
+<li>SMTP (Simple Mail Transfer Protocol), POP (Post Office Protocol), IMAP (Internet</li>
+<li>Message Access Protocol), Tenet, SSH (Secure Shell), SNMP (Simple Network</li>
+<li>Management Protocol), DHCP.</li>
+<li>Uso y configuración básica de aplicaciones clientes.</li>
+<li>Integración de elementos en una red: Redes de área local.</li>
+<li>Características.</li>
+<li>Estándares.</li>
+<li>Nivel de enlace en las redes de área local. MAC (Media Access Control). LLC (Logical</li>
+<li>Link Control). Direcciones MAC.</li>
+<li>Redes de área local Ethernet (IEEE 802.3)</li>
+<li>Topologías</li>
+<li>Medios de transmisión. Tipos de cableado «Ethernet».</li>
+<li>Formato de trama.</li>
+<li>Dispositivos de interconexión: Concentradores,  Puentes,  Switchs…</li>
+<li>Dominios de colisión y de «broadcast».</li>
+<li>Modos de funcionamiento (half-duplex/full-duplex). Autonegociación.</li>
+<li>Normas Ethernet (IEEE 802.3).</li>
+<li>Agregación de enlaces (Etherchanel).</li>
+<li>Adaptadores alámbricos: instalación y configuración.</li>
+<li>Redes de área local inalámbricas (IEEE 802.11)</li>
+<li>Los espectros de onda de microondas y radio.</li>
+<li>Formato de trama.</li>
+<li>La conexión inalámbrica. . Asociación y autenticación en la WLAN (Wireless Local</li>
+<li>Area Network).</li>
+<li>Topologías.  Arquitectura celular BSS (Basic Service Set). Ad-hoc (Peer-to-Perr).</li>
+<li>Modo infraestructura. SSID. Canales. Interconexión de BSSs ESS (Extended</li>
+<li>Service).</li>
+<li>Dispositivos de interconexión: Repetidores, Puentes inalámbricos,  Puntos de</li>
+<li>acceso, Routers inalámbricos</li>
+<li>Normas IEEE 802.11.</li>
+<li>Amenazas de seguridad y mecanismos de seguridad básicos (filtrado de MAC, WEP,</li>
+<li>WPA…).</li>
+<li>Adaptadores inalámbricos: instalación y configuración.</li>
+<li>Instalación y configuración de puntos de acceso.</li>
+<li>Implantación de redes de área local.</li>
+<li>Cableado estructurado. Tomas de red. Espacios. Cuartos de comunicaciones. Armarios de</li>
+<li>comunicaciones. Paneles de parcheo. Canalizaciones. Recomendaciones en la instalación</li>
+<li>del cableado.</li>
+<li>Herramientas.</li>
+<li>El diseño de redes locales a tres capas (núcleo, distribución y acceso).  Latencia,</li>
+<li>congestión de red, ancho de banda. Mapa físico y lógico de la red.</li>
+<li>Creación de cables (Estándar EIA/TIA 568B).</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Configuración y administración de conmutadores</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Tipos de conmutadores: Velocidad, gestionables/no gestionables, ubicación,…</li>
+<li>Conmutadores y dominios de colisión y «broadcast».</li>
+<li>Segmentación de redes. Segmentación de la red. Ventajas que presenta.</li>
+<li>Direcciones y tablas MAC.</li>
+<li>Métodos de reenvío de los conmutadores.</li>
+<li>Proceso de arranque.</li>
+<li>Formas de conexión al conmutador para su configuración. Puertos y acceso remoto</li>
+<li>(http, telnet, ssh…).</li>
+<li>Configuración del conmutador. Modos de configuración. Estado del conmutador</li>
+<li>Configuración TCP/IP del interfaz de administración. Habilitar acceso remoto (http, telnet,</li>
+<li>ssh…).  Administración gráfica. Contraseñas de acceso. Seguridad de puertos, Archivos</li>
+<li>de configuración.</li>
+<li>Configuración estática y dinámica de la tabla de direcciones MAC.</li>
+<li>Redundancia y bucles. Protocolo STP (Spanning Tree Protocol) y sus evoluciones.</li>
+<li>Conmutadores de nivel 3.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Configuración y administración básica de «routers»</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Los «routers» en las LAN y en las WAN.</li>
+<li>Componentes del «router».</li>
+<li>Proceso de arranque.</li>
+<li>Formas de conexión al «router» para su configuración inicial. Puertos  y acceso remoto</li>
+<li>(http, telnet, ssh).</li>
+<li>Comandos para configuración del «router». Comandos para administración del «router».</li>
+<li>Modos de configuración. Archivos de configuración. Contraseñas de acceso.</li>
+<li>Configuración de interfaces.</li>
+<li>Configuración del enrutamiento estático. Mostrar la tabla de rutas. Añadir/eliminar rutas</li>
+<li>estáticas.</li>
+<li>Listas de control de acceso ACLs (Access Control List). Definición y ubicación de ACLs.</li>
+<li>Tipos de ACLs.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Configuración de redes virtuales VLANs (Virtual Local Area Network)</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Características de las VLANs</li>
+<li>Ventajas.</li>
+<li>Tipos de VLANs.</li>
+<li>Tipos de enlaces. Enlaces de acceso y enlaces troncales y etiquetado de tramas.</li>
+<li>Implantación y configuración de redes virtuales.</li>
+<li>Definición de enlaces troncales en los conmutadores y «routers». El protocolo</li>
+<li>IEEE802.1Q.</li>
+<li>Interconexión (enrutamiento) entre VLANs.</li>
+<li>Protocolos de administración centralizada de VLANs.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Configuración y administración de protocolos dinámicos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Protocolos enrutables y protocolos de enrutamiento.</li>
+<li>Encaminamiento estático vs. encaminamiento dinámico.</li>
+<li>Algoritmos de encaminamiento.</li>
+<li>Encaminamiento en Internet. Sistemas autónomos. Protocolos de enrutamiento interior y</li>
+<li>exterior.</li>
+<li>El enrutamiento sin clase vs. el encaminamiento con clase.</li>
+<li>El protocolo RIPv2 (Routing Information Protocol); comparación con RIPv1.</li>
+<li>Configuración y administración de RIPv1.</li>
+<li>Configuración y administración de RIPv2.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Configuración del acceso a Internet desde una LAN</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Arquitectura de acceso a Internet.</li>
+<li>Tecnologías de acceso a Internet.</li>
+<li>RTC (Red Telefónica Conmutada), RDSI (Red Digital de Servicios Integrados), xDSL</li>
+<li>(Digital Subscriber Line), redes de cable, líneas dedicadas, UMTS (Universal Mobile</li>
+<li>Telecommunications System), HSDPA (High Speed Downlink Packet Access) y otras</li>
+<li>tecnologías vigentes en el momento actual.</li>
+<li>Dispositivos de acceso a Internet.</li>
+<li>Direccionamiento interno y direccionamiento externo.</li>
+<li>NAT (Network Address Translation) origen y NAT destino.</li>
+<li>Tipos de NAT. NAT estático, dinámico, de sobrecarga PAT (Port Address Translation) e</li>
+<li>inverso.</li>
+<li>Configuración de NAT.</li>
+<li>Configuración de PAT.</li>
+<li>Diagnóstico de incidencias de NAT/PAT.</li>
+<li>Redirección de puertos.</li>
+<li>Limitaciones y problemas de NAT.</li>
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor &copy; Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

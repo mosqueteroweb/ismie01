@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de hardware (ASIR) - Módulo 0371</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="asir.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-blue-900">ASIR</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">1º Curso ASIR</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Fundamentos de hardware</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0371. Configuración y ensamblaje de equipos informáticos, sistemas físicos y arquitectura de computadores.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">6</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-300">0371</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">55</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">3</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el Real Decreto 405/2023, de 29 de mayo.</p>
+
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 1</span>
+                            <span>Configura equipos microinformáticos, componentes y periféricos, analizando sus características y relación con el conjunto.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado y caracterizado los dispositivos que constituyen los bloques funcionales de un equipo microinformático.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha descrito el papel de los elementos físicos y lógicos que intervienen en el proceso de puesta en marcha de un equipo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha analizado la arquitectura general de un equipo y los mecanismos de conexión entre dispositivos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han establecido los parámetros de configuración (hardware y software) de un equipo microinformático con las utilidades específicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha evaluado las prestaciones del equipo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han ejecutado utilidades de chequeo y diagnóstico.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han identificado averías y sus causas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han clasificado los dispositivos periféricos y sus mecanismos de comunicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han utilizado protocolos estándar de comunicación inalámbrica entre dispositivos.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 2</span>
+                            <span>Instala software de propósito general evaluando sus características y entornos de aplicación.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han catalogado los tipos de software según su licencia, distribución y propósito.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han analizado las necesidades específicas de software asociadas al uso de sistemas informáticos en diferentes entornos productivos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han instalado y evaluado utilidades para la gestión de archivos, recuperación de datos, mantenimiento y optimización del sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han instalado y evaluado utilidades de seguridad básica. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97867</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha instalado y evaluado software ofimático y de utilidad general.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha consultado la documentación y las ayudas interactivas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha verificado la repercusión de la eliminación, modificación y/o actualización de las utilidades instaladas en el sistema.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han probado y comparado aplicaciones portables y no portables.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han realizado inventarios del software instalado y las características de su licencia.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 3</span>
+                            <span>Ejecuta procedimientos para recuperar el software base de un equipo, analizándolos y utilizando imágenes almacenadas en memoria auxiliar.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los soportes de memoria auxiliar adecuados para el almacenaje y restauración de imágenes de software.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha reconocido la diferencia entre una instalación estándar y una preinstalación o imagen de software.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han identificado y probado las distintas secuencias de arranque configurables en un equipo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han utilizado herramientas para el particionado de discos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han empleado distintas utilidades y soportes para realizar imágenes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han restaurado imágenes desde distintas ubicaciones.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 4</span>
+                            <span>Implanta hardware específico de centros de proceso de datos (CPD), analizando sus características y aplicaciones.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han reconocido las diferencias entre las configuraciones hardware de tipo personal y empresarial.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han analizado entornos que requieren implantar soluciones hardware específicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han detallado componentes hardware específicos para soluciones empresariales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han analizado los requerimientos básicos de seguridad física, organización y condiciones ambientales de un CPD.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han implantado sistemas de alimentación ininterrumpida y estabilizadores de tensión.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han manipulado correctamente dispositivos hardware para almacenamiento y alimentación con conexión en caliente.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han documentado procedimientos, incidencias y parámetros utilizados en la instalación y configuración de dispositivos hardware.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han utilizado herramientas de inventariado, registrando las características de los dispositivos hardware.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha clasificado y organizado la documentación técnica, controladores, utilidades y accesorios del hardware.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 5</span>
+                            <span>Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los riesgos y el nivel de peligrosidad que suponen la manipulación de los materiales, herramientas, útiles, máquinas y medios de transporte.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han operado las máquinas respetando las normas de seguridad.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han identificado las causas más frecuentes de accidentes en la manipulación de materiales y  herramientas, entre otras. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97868</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han descrito los elementos de seguridad (protecciones, alarmas, y pasos de emergencia, entre otros) de las máquinas y los equipos de protección individual (calzado, protección ocular e indumentaria, entre otros) que se deben emplear en las distintas operaciones de montaje y mantenimiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha relacionado la manipulación de materiales, herramientas y máquinas con las medidas de seguridad y protección personal requeridos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han identificado las posibles fuentes de contaminación del entorno ambiental.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han clasificado los residuos generados para su retirada selectiva.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha valorado el orden y la limpieza de instalaciones y equipos como primer factor de prevención de riesgos.</li>
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Contenidos Generales</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>CONTENIDOS (Duración 100 horas)</li>
+<li>Configuración de equipos y periféricos: Arquitectura de ordenadores.</li>
+<li>El modelo lógico o arquitectura Von Neumann. Programa almacenado.</li>
+<li>Elementos funcionales y subsistemas.</li>
+<li>La unidad central de proceso: Unidad de Control (UC) y la Unidad Aritmético Lógica</li>
+<li>(ALU).</li>
+<li>La memoria central (RAM).</li>
+<li>El subsistema de E/S.</li>
+<li>Concepto de bus e interfaz.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Tipos de arquitecturas de bus</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Único</li>
+<li>· Dedicado.</li>
+<li>Principales buses: Front Side Bus (FSB), HyperTransport (HT), Intel QuickPath</li>
+<li>Interconnect (QPI), PCI-Express (PCI-E), bus universal en serie (USB), IEEE1394 o</li>
+<li>Firewire.</li>
+<li>Interfaces: Parallel Advanced Technology Attachment (PATA), Serial ATA (SATA);</li>
+<li>Small Computer System Interface (SCSI) y Serial Attached SCSI (SAS).</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Estándar</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Extended Advanced Technology (ATX).</li>
+<li>· Balanced Technology Extended (BTX).</li>
+<li>· Workstation Technology Extended (WTX).</li>
+<li>Propietarios.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Cajas de ordenador</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Formatos Propietarios y estándar.</li>
+<li>· Implementaciones ATX: FlexATX, Micro ATX (µATX), Mini ATX, Standard ATX,</li>
+<li>Extended ATX (E-ATX), Enhanced Extended ATX (EE-ATX),  XL-ATX, Mini-ITX,</li>
+<li>SSI-CEB).</li>
+<li>· Implementaciones BTX: picoBTX, microBTX y regularBTX.</li>
+<li>· Tamaños y diseños: Torres, semitorres, small form factor (SFF), formato rack.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Fuentes de alimentación conmutadas</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Características: Potencia, rendimiento y funciones de seguridad, etc.</li>
+<li>· Factor de forma.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Sistemas de refrigeración</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Tipos: activos y pasivos.</li>
+<li>· Principales materiales usados y sus características.</li>
+<li>· Pastas térmicas usadas para la unión del disipador y el microprocesador.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Placas base</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Principales fabricantes.</li>
+<li>· Factor de forma.</li>
+<li>· Socket.</li>
+<li>· Chipsets.</li>
+<li>· Slots de expansión.</li>
+<li>· Controladoras y conectores.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Microprocesador</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Principales fabricantes.</li>
+<li>· Tipos: sobremesa, servidor y portátiles.</li>
+<li>· Microarquitecturas.</li>
+<li>· Características: frecuencia de reloj (interno y externo), tamaño de las cachés,</li>
+<li>consumo energético máximo, voltaje del núcleo, socket, número de núcleos,</li>
+<li>tecnología de fabricación (nanómetros) y comandos y tecnologías soportados</li>
+<li>(SSE, Virtualization Technology, etc.)</li>
+<li>Memoria RAM. Tipos de memorias y tipos de encapsulados. Técnicas de</li>
+<li>transferencia de múltiples canales. Medidas de velocidad. Tiempos: Señalizador de</li>
+<li>Direccionamiento en Columna (CAS), Señalizador de Direccionamiento en Fila</li>
+<li>(RAS), demora RAS a CAS y tiempo activo de RAS.</li>
+<li>Dispositivos de almacenamiento: Internos y Externos. Tecnologías de los</li>
+<li>dispositivos: dispositivos magnéticos (HDD), ópticos y en estado sólido (SSD).</li>
+<li>Controladoras: PATA, SATA, SCSI y SAS.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">• Tarjetas gráficas</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>· Integradas: en la placa base, en el procesador o externas.</li>
+<li>· Características: Procesador gráfico (GPU), Cantidad, tipo de memoria (dedicada</li>
+<li>o compartida), tipo de conexión, resoluciones soportadas, tipo y número de</li>
+<li>conexiones.</li>
+<li>· Incrementar el rendimiento gráfico mediante técnicas de conexión entre tarjetas</li>
+<li>(SLI y Crossfire).</li>
+<li>Periféricos. Adaptadores para la conexión de dispositivos. Mecanismos y técnicas de</li>
+<li>interconexión.</li>
+<li>Secuencia de arranque de un equipo: Selección en el sistema básico de entrada y</li>
+<li>salida (BIOS) y activación del menú de arranque.</li>
+<li>Configuración y verificación de equipos.</li>
+<li>Normas de seguridad.</li>
+<li>Ensamblado de todos los componentes hardware de un ordenador.</li>
+<li>Instalación y configuración de dispositivos.</li>
+<li>Sustitución, ampliación y/o reparación de equipos.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Software empotrado de configuración de un equipo</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Definición de sistema básico de entrada y salida (BIOS).</li>
+<li>Selección del dispositivo de arranque (BOOT). Activación  de la visualización del</li>
+<li>menú de arranque.</li>
+<li>Configuración de los periféricos integrados. Habilitar y deshabilitar dispositivos,</li>
+<li>configurar los modos de funcionamiento de las controladoras de discos (Nativo, AHCI</li>
+<li>y RAID).</li>
+<li>Monitorización de la temperatura del procesador,  temperatura de la placa base y la</li>
+<li>velocidad de giro de los distintos ventiladores (FAN).</li>
+<li>Activación y configuración de alarmas para controlar la temperatura y velocidad de</li>
+<li>giro de los ventiladores con la finalidad de  preservar la integridad hardware del</li>
+<li>ordenador.</li>
+<li>Parámetros avanzados para la configuración de la CPU, GPU, RAM y buses.</li>
+<li>Técnicas   de  overclocking y underclocking.</li>
+<li>Chequeo y diagnóstico: auto diagnóstico al encender (POST).</li>
+<li>Tarjetas de red. Técnicas de conexión y comunicación. Comunicaciones entre sistemas</li>
+<li>informáticos. Conexión a redes.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación de software de utilidad y propósito general para un sistema informático</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Entornos operativos.</li>
+<li>Tipos de aplicaciones: Software de sistema. Software de programación. Software de</li>
+<li>aplicación.</li>
+<li>Instalación y prueba de aplicaciones: ventajas de las técnicas de virtualización para la</li>
+<li>evaluación de las  aplicaciones, comprobar la compatibilidad con otras aplicaciones,</li>
+<li>actualizaciones, instalación de parches, etc.</li>
+<li>Necesidades de los entornos de explotación.</li>
+<li>Requerimientos de las aplicaciones: requisitos hardware y software.</li>
+<li>Comparación de aplicaciones. Evaluación y rendimiento.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Software de propósito general</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Ofimática y documentación electrónica.</li>
+<li>Imagen, diseño y multimedia.</li>
+<li>Programación.</li>
+<li>Educación.</li>
+<li>Hogar y ocio.</li>
+<li>Productividad y negocios.</li>
+<li>Clientes para servicios de Internet.</li>
+<li>Software a medida.</li>
+<li>Otras categorías de interés vigentes en el momento actual.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Utilidades</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Compresores.</li>
+<li>Monitorización y optimización del sistema.</li>
+<li>Grabación, unidades de CD y DVD virtuales.</li>
+<li>Gestión de ficheros y recuperación de datos.</li>
+<li>Gestión de discos. Fragmentación y particionado.</li>
+<li>Seguridad.</li>
+<li>Antivirus, antiespías y cortafuegos.</li>
+<li>Codificadores y conversores multimedia.</li>
+<li>Herramientas software para testeo de equipos y evaluación de rendimiento</li>
+<li>(benchmarchs).</li>
+<li>Software de control y gestión remotos.</li>
+<li>Otras utilidades de interés vigentes en el momento actual.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Creación de imágenes de software. Respaldo del software base de un sistema</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Particionado de discos. Redimensionado de las particiones.</li>
+<li>Imágenes de respaldo.</li>
+<li>Opciones de arranque de un sistema.</li>
+<li>Memorias auxiliares y dispositivos asociables al arranque de un ordenador.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Creación de imágenes</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Guardar la imagen en un medio de almacenamiento local.</li>
+<li>Guardar la imagen en un recurso de la red.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Recuperación de imágenes</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Desde un medio de almacenamiento local.</li>
+<li>Desde un recurso de la red.</li>
+<li>Respaldo de equipos con software base virtualizado.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Utilización de imágenes para trasladar sistemas operativos a un hardware distinto</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Un sistema en un hardware físico a un nuevo hardware físico.</li>
+<li>Un sistema en un hardware físico a una máquina virtual, physical to virtual (P2V).</li>
+<li>Un sistema en una máquina virtual a un hardware físico (V2P).</li>
+<li>Un sistema en una máquina virtual a otra máquina virtual (V2V).</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Implantación de hardware en centros de proceso de datos (CPD)</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Arquitecturas de ordenadores personales, sistemas departamentales y grandes</li>
+<li>ordenadores.</li>
+<li>Estructura de un CPD. Organización.</li>
+<li>Seguridad física y lógica.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Componentes específicos en soluciones empresariales</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Bastidores o «racks».</li>
+<li>Dispositivos de conexión en caliente.</li>
+<li>Sistemas redundantes de discos (RAID): Implementación por hardware.</li>
+<li>Fuentes de alimentación redundantes.</li>
+<li>Control y gestión remotos.</li>
+<li>Arquitecturas de alta disponibilidad.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Inventariado del hardware</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Utilidades software para realizar el inventariado de manera automática y</li>
+<li>desatendida.</li>
+<li>Software para controlar la sustitución o actualización del hardware.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Cumplimiento de las normas de prevención de riesgos laborales y protección ambiental</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Identificación de riesgos.</li>
+<li>Determinación de las medidas de prevención de riesgos laborales.</li>
+<li>Prevención de riesgos laborales en los procesos de montaje y mantenimiento.</li>
+<li>Equipos de protección individual.</li>
+<li>Cumplimiento de la normativa de prevención de riesgos laborales.</li>
+<li>Cumplimiento de la normativa de protección ambiental.</li>
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor &copy; Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

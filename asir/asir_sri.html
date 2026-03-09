@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de red e internet (ASIR) - Módulo 0376</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="asir.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-blue-900">ASIR</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso ASIR</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Servicios de red e internet</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0376. Instalación, configuración y administración de servicios de red e internet (DNS, DHCP, correo, web, FTP).</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">6</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-300">0376</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">55</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">5</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el Real Decreto 405/2023, de 29 de mayo.</p>
+
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 1</span>
+                            <span>Prepara el entorno de desarrollo y los servidores de aplicaciones Web instalando e integrando las funcionalidades necesarias.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha identificado el software necesario para su funcionamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han identificado las diferentes tecnologías empleadas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han instalado y configurado servidores Web y de bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han reconocido las posibilidades de procesamiento en los entornos cliente y servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han añadido y configurado los componentes y módulos necesarios para el procesamiento de código en el servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha instalado y configurado el acceso a bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha establecido y verificado la seguridad en los accesos al servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han utilizado plataformas integradas orientadas a la prueba y desarrollo de aplicaciones Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han documentado los procedimientos realizados.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 2</span>
+                            <span>Implanta gestores de contenidos seleccionándolos y estableciendo la configuración de sus parámetros.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha valorado el uso y utilidad de los gestores de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han clasificado según la funcionalidad principal del sitio Web que permiten gestionar.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han instalado diferentes tipos de gestores de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han diferenciado sus características (uso, licencia, entre otras).</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han personalizado y configurado los gestores de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han activado y configurado los mecanismos de seguridad proporcionados por los propios gestores de contenidos. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97887</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han realizado pruebas de funcionamiento.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han publicado los gestores de contenidos.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 3</span>
+                            <span>Administra gestores de contenidos adaptándolos a los  requerimientos y garantizando la integridad de la información.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han adaptado y configurado los módulos del gestor de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han creado y gestionado usuarios con distintos perfiles.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han integrado módulos atendiendo a requerimientos de funcionalidad.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han realizado copias de seguridad de los contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han importado y exportado contenidos en distintos formatos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han gestionado plantillas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han integrado funcionalidades de sindicación.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han realizado actualizaciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han obtenido informes de acceso.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 4</span>
+                            <span>Gestiona aplicaciones de ofimática Web integrando funcionalidades y asegurando el acceso a la información.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha reconocido la utilidad de las aplicaciones de ofimática Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han clasificado según su funcionalidad y prestaciones específicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han instalado aplicaciones de ofimática Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han configurado las aplicaciones para integrarlas en una intranet.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han gestionado las cuentas de usuario.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han aplicado criterios de seguridad en el acceso de los usuarios.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado las aplicaciones de forma cooperativa.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha elaborado documentación relativa al uso y gestión de las aplicaciones.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 5</span>
+                            <span>Genera documentos Web utilizando lenguajes de guiones de servidor.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los lenguajes de guiones de servidor más relevantes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha reconocido la relación entre los lenguajes de guiones de servidor y los lenguajes de marcas utilizados en los clientes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha reconocido la sintaxis básica de un lenguaje de guiones concreto.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han utilizado estructuras de control del lenguaje.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han definido y utilizado funciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han utilizado formularios para introducir información.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han establecido y utilizado mecanismos para asegurar la persistencia de la información entre distintos documentos Web relacionados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha identificado y asegurado a los usuarios que acceden al documento Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha verificado el aislamiento del entorno específico de cada usuario.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 6</span>
+                            <span>Genera documentos Web con acceso a bases de datos utilizando lenguajes de guiones de servidor.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado los sistemas gestores de bases de datos más utilizados en entornos Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha verificado la integración de los sistemas gestores de bases de datos con el lenguaje de guiones de servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha configurado en el lenguaje de guiones la conexión para el acceso al sistema gestor de base de datos. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97888</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han creado bases de datos y tablas en el gestor utilizando el lenguaje de guiones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha obtenido y actualizado la información almacenada en bases de datos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han aplicado criterios de seguridad en el acceso de los usuarios.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se ha verificado el funcionamiento y el rendimiento del sistema.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 7</span>
+                            <span>Realiza modificaciones en gestores de contenidos adaptando su apariencia y funcionalidades.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha identificado la estructura de directorios del gestor de contenidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha reconocido la funcionalidad de los ficheros que utiliza y su naturaleza (código, imágenes, configuración, entre otros).</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han seleccionado las funcionalidades que hay que adaptar e incorporar.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han identificado los recursos afectados por las modificaciones.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha modificado el código de la aplicación para incorporar nuevas funcionalidades y adaptar otras existentes.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha verificado el correcto funcionamiento de los cambios realizados.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han documentado los cambios realizados.</li>
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Contenidos Generales</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>CONTENIDOS (Duración 100 horas)</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Conceptos generales de la arquitectura aplicaciones web</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Aplicaciones web vs. aplicaciones de escritorio.</li>
+<li>Arquitectura cliente servidor. Elementos.</li>
+<li>Arquitectura de tres niveles.</li>
+<li>Protocolos de aplicación más usados: HTTP (Hyper Text Transfer Protocol), HTTPS</li>
+<li>(Hyper Text Transfer Protocol Secure), FTP.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Análisis de requerimientos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Del equipo servidor: procesador, memoria, almacenamiento, tolerancia a fallos…</li>
+<li>Del sistema operativo anfitrión: sistema de ficheros…</li>
+<li>Del propio servidor de aplicaciones: tiempos de respuesta, conexiones</li>
+<li>concurrentes…</li>
+<li>Del sistema gestor de bases de datos: accesos concurrentes</li>
+<li>De las conexiones de red; internet, intranet, medios físicos…</li>
+<li>Sistema operativo anfitrión: instalación y configuración.</li>
+<li>Servidor web: instalación y configuración.</li>
+<li>Sistema gestor de bases de datos: instalación y configuración.</li>
+<li>Procesamiento de código: lenguajes de script en cliente y servidor.</li>
+<li>Módulos y componentes necesarios.</li>
+<li>Utilidades de prueba e instalación integrada (paquetes que incluyan el servidor web, el</li>
+<li>lenguaje de script del servidor y el sistema gestor).</li>
+<li>Verificación del funcionamiento integrado.</li>
+<li>Documentación de la instalación.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación de gestores de contenidos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Conceptos generales y casuística de uso recomendado.</li>
+<li>Tipos de gestores de contenidos: portales, de enseñanza, blogs, wikis, foros…</li>
+<li>Licencias de uso.</li>
+<li>Requerimientos de funcionamiento: servidor web, lenguaje de script, sistema gestor de</li>
+<li>bases de datos,…</li>
+<li>Instalación.</li>
+<li>Creación de la base de datos.</li>
+<li>Estructura.</li>
+<li>Creación de contenidos.</li>
+<li>Personalización de la interfaz.</li>
+<li>Mecanismos de seguridad integrados: control de acceso, usuarios…</li>
+<li>Verificación del rendimiento y funcionamiento.</li>
+<li>Publicación.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Administración de gestores de contenidos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Usuarios y grupos.</li>
+<li>Perfiles.</li>
+<li>Seguridad. Control de accesos.</li>
+<li>Integración de módulos.</li>
+<li>Gestión de temas.</li>
+<li>Plantillas.</li>
+<li>Copias de seguridad.</li>
+<li>Sindicación de contenidos.</li>
+<li>Importación y exportación de la información.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Adaptación de gestores de contenidos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Selección de modificaciones a realizar.</li>
+<li>Reconocimiento de elementos involucrados.</li>
+<li>Modificación de la apariencia.</li>
+<li>Incorporación y adaptación de funcionalidades.</li>
+<li>Verificación del funcionamiento.</li>
+<li>Documentación.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Implantación de aplicaciones de ofimática web</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Tipos de aplicaciones.</li>
+<li>Requerimientos.</li>
+<li>Instalación.</li>
+<li>Configuración.</li>
+<li>Integración de aplicaciones heterogéneas.</li>
+<li>Gestión de usuarios.</li>
+<li>Control de accesos.</li>
+<li>Aseguramiento de la información.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Lenguajes de marcas para representar el contenido de un documento</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Modificación de la apariencia de un documento web con hojas de estilos.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Programación de documentos web utilizando lenguajes de «script» del cliente</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Diferencias entre la ejecución en lado del cliente y del servidor.</li>
+<li>Modelo de objetos del documento DOM.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">- Resolución de problemas concretos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Validación de formularios.</li>
+<li>Introducción de comportamientos dinámicos. Captura de eventos.</li>
+<li>Limitaciones y riesgos de ataques.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Programación de documentos web utilizando lenguajes de «script» de servidor</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Clasificación.</li>
+<li>Integración con los lenguajes de marcas.</li>
+<li>Sintaxis.</li>
+<li>Herramientas de edición de código.</li>
+<li>Elementos del lenguaje estructurado: tipos de datos, variables, operadores, estructuras de</li>
+<li>control, subprogramas…</li>
+<li>Elementos de orientación a objeto.</li>
+<li>Comentarios.</li>
+<li>Funciones integradas y de usuario.</li>
+<li>Gestión de errores.</li>
+<li>Mecanismos de introducción de información: formularios. Procesamiento de datos</li>
+<li>recibidos desde el cliente.</li>
+<li>Métodos de envío de datos desde el cliente al servidor.</li>
+<li>Autenticación de usuarios.</li>
+<li>Control de accesos.</li>
+<li>Sesiones. Mecanismos para mantener el estado entre conexiones.</li>
+<li>Configuración del intérprete.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Acceso a bases de datos desde lenguajes de «script» de servidor</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Integración de los lenguajes de «script» de servidor con los sistemas gestores de bases de</li>
+<li>datos.</li>
+<li>Conexión a bases de datos. Acceso mediante funciones nativas. Acceso mediante ODBC</li>
+<li>(Open DataBase Connectivity).</li>
+<li>Creación de bases de datos y tablas.</li>
+<li>Creación de vistas. Creación de procedimientos almacenados.</li>
+<li>Recuperación de la información de la base de datos desde una página web.</li>
+<li>Modificación de la información almacenada: inserciones, actualizaciones y borrados.</li>
+<li>Verificación de la información.</li>
+<li>Gestión de errores.</li>
+<li>Verificación del funcionamiento y pruebas de rendimiento.</li>
+<li>Mecanismos de seguridad y control de accesos.</li>
+<li>Documentación.</li>
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor &copy; Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

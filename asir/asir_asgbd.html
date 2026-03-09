@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de sistemas gestores de bases de datos (ASIR) - Módulo 0375</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            scroll-behavior: smooth;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        details>summary {
+            list-style: none;
+            outline: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased pb-20">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="asir.html" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                </a>
+                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">FP <span class="text-blue-900">ASIR</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#info" class="hover:text-blue-600">Ficha</a>
+                <a href="#resultados" class="hover:text-blue-600">Resultados</a>
+                <a href="#contenidos" class="hover:text-blue-600">Contenidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="info" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="max-w-5xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+                <div class="inline-block bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">2º Curso ASIR</div>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Administración de sistemas gestores de bases de datos</h2>
+                <p class="text-xl text-slate-300 max-w-2xl">Módulo Profesional 0375. Administración, rendimiento y seguridad de sistemas gestores de bases de datos y bases de datos distribuidas.</p>
+            </div>
+            <div class="flex-shrink-0 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                <div class="grid grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-black text-white">8</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">ECTS</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-blue-300">0375</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Código</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">75</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Horas</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-black text-white">3</p>
+                        <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Semanales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- Resultados de Aprendizaje -->
+        <section id="resultados">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Resultados de Aprendizaje</h3>
+                <p class="text-slate-500 mt-2">Capacidades y criterios de evaluación definidos en el Real Decreto 405/2023, de 29 de mayo.</p>
+
+            </div>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 1</span>
+                            <span>Administra servicios de resolución de nombres, analizándolos y garantizando la seguridad del servicio.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han identificado y descrito escenarios en los que surge la necesidad de un servicio de resolución de nombres.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han clasificado los principales mecanismos de resolución de nombres.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han instalado y configurado servicios jerárquicos de resolución de nombres.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha preparado el servicio para reenviar consultas de recursos externos a otro servidor de nombres.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha preparado el servicio para almacenar y distribuir las respuestas procedentes de otros servidores.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han añadido registros de nombres correspondientes a una zona nueva, con opciones relativas a servidores de correo y alias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han implementado soluciones de servidores de nombres en direcciones «ip» dinámicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han realizado transferencias de zona entre dos o más servidores.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j) Se han documentado los procedimientos de instalación y configuración.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 2</span>
+                            <span>Administra servicios de configuración automática, identificándolos y verificando la correcta asignación de los parámetros.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han reconocido los mecanismos automatizados de configuración de los parámetros de red y las ventajas que proporcionan.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han ilustrado los procedimientos y pautas que intervienen en una solicitud de configuración de los parámetros de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han instalado servidores de configuración de los parámetros de red.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha preparado el servicio para asignar la configuración básica a los equipos de una red local.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han configurado asignaciones estáticas y dinámicas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han integrado en el servicio opciones adicionales de configuración.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han documentado los procedimientos realizados.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 3</span>
+                            <span>Administra servidores Web aplicando criterios de configuración y asegurando  el funcionamiento del servicio.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han instalado y configurado servidores Web.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han creado y configurado sitios virtuales.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han configurado los mecanismos de autenticación y control de acceso del servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han obtenido e instalado certificados digitales. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97883</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han establecido mecanismos para asegurar las comunicaciones entre el cliente y el servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han realizado pruebas de monitorización del servicio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se han analizado los registros del servicio para la elaboración de estadísticas y la resolución de incidencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> j) Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso del servicio.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 4</span>
+                            <span>Administra servicios de transferencia de archivos asegurando y limitando el acceso a la información.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha establecido la utilidad y modo de operación del servicio de transferencia de archivos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se han instalado y configurado servidores de transferencia de archivos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han creado usuarios y grupos para acceso remoto al servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha configurado el acceso anónimo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han establecido límites en los distintos modos de acceso.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se ha comprobado el acceso al servidor, tanto en modo activo como en modo pasivo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han realizado pruebas con clientes en línea de comandos y con clientes en modo gráfico.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha utilizado el navegador como cliente del servicio de transferencia de archivos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso del servicio.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 5</span>
+                            <span>Administra servidores de correo electrónico, aplicando criterios de configuración y garantizando la seguridad del servicio.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han descrito los diferentes protocolos que intervienen en el envío y recogida del correo electrónico.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha instalado y configurado un servidor de correo electrónico.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han creado cuentas de usuario y verificado el acceso de las mismas.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han establecido y aplicado métodos para impedir usos indebidos del servidor de correo electrónico.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han instalado servicios para permitir la recogida remota del correo existente en los buzones de usuario.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han usado clientes de correo electrónico para enviar y recibir correo desde las cuentas creadas en el servidor.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado la firma digital y el correo cifrado.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha configurado el servidor de correo como un servicio seguro.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso del servicio.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 6</span>
+                            <span>Administra servicios de mensajería instantánea, noticias y listas de distribución, verificando y asegurando el acceso de los usuarios.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se han descrito los servicios de mensajería instantánea, noticias y listas de distribución.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha instalado y configurado el servicio de mensajería instantánea.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se han utilizado clientes gráficos y de texto de mensajería instantánea.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se ha instalado y configurado el servicio de noticias. cve: BOE-A-2009-18355 BOLETÍN OFICIAL DEL ESTADO Núm. 278 Miércoles 18 de noviembre de 2009 Sec. I.   Pág. 97884</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se ha instalado y configurado el servicio de listas de distribución.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han determinado el tipo de lista y los modos de acceso permitidos.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han creado cuentas de usuario y verificado el acceso a los servicios de mensajería instantánea, noticias y listas de distribución.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha elaborado documentación relativa a la instalación, configuración y recomendaciones de uso de los servicios de mensajería instantánea, noticias y listas de distribución.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 7</span>
+                            <span>Administra servicios de audio identificando las necesidades de distribución y adaptando los formatos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha descrito la funcionalidad del servicio de audio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha instalado y configurado un servidor de distribución de audio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha instalado y configurado el cliente para el acceso al servidor de audio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han reconocido y utilizado formatos de audio digital.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han utilizado herramientas de reproducción de audio en el cliente.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han utilizado servicios de audio a través del navegador.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han utilizado técnicas de sindicación y suscripción de audio.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se ha elaborado documentación relativa a la instalación y administración del servidor de audio.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-slate-200 overflow-hidden transition-all duration-300 open:shadow-lg open:ring-1 open:ring-blue-500">
+                    <summary class="flex justify-between items-center cursor-pointer p-5 bg-slate-50 hover:bg-slate-100 font-bold text-slate-800 select-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded font-mono whitespace-nowrap shrink-0">RA 8</span>
+                            <span>Administra servicios de vídeo identificando las necesidades de distribución y adaptando los formatos.</span>
+                        </div>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
+                    </summary>
+                    <div class="p-6 border-t border-slate-200 bg-white">
+                        <ul class="space-y-2 text-sm text-slate-700">
+                            <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> a) Se ha descrito la funcionalidad del servicio de vídeo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> b) Se ha instalado y configurado un servidor de vídeo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> c) Se ha configurado el cliente para el acceso al servidor de vídeo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> d) Se han reconocido y utilizado formatos de compresión de vídeo digital.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> e) Se han utilizado técnicas de sindicación y suscripción de vídeo.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> f) Se han descrito las características y protocolos utilizados en el servicio de videoconferencia.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> g) Se han instalado y configurado herramientas gráficas para realizar videoconferencia.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> h) Se han utilizado herramientas gráficas y navegadores para realizar videoconferencias.</li>
+<li class="flex items-start gap-2"><span class="text-blue-500 mt-1">•</span> i) Se ha elaborado documentación relativa a la instalación y administración del servidor de vídeo y del servicio de videoconferencia.</li>
+                        </ul>
+                    </div>
+                </details>
+        </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Contenidos Básicos -->
+        <section id="contenidos">
+            <div class="mb-8 pb-4 border-b border-slate-200">
+                <h3 class="text-3xl font-bold text-slate-900">Contenidos Básicos</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación y administración de servicios de nombres de dominio</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Sistemas de nombres planos y jerárquicos.</li>
+<li>Características y utilidades del servicio DNS (Domain Name Server).</li>
+<li>Espacio de nombres de dominio. Nombres de dominio: dominio raíz, dominios de nivel</li>
+<li>superior TLD (Top Level Domain), dominios de segundo nivel y sucesivos.</li>
+<li>Delegación.</li>
+<li>Registro de nombres de dominio en Internet.</li>
+<li>Resolutores de nombres. Proceso de resolución de un nombre de dominio (consultas</li>
+<li>iterativas y recursivas). Resolución inversa.</li>
+<li>Clientes DNS. Configuración</li>
+<li>Servidores DNS.</li>
+<li>Servidores raíz y dominios de primer nivel y sucesivos.</li>
+<li>Servidores cache.</li>
+<li>Reenviadores.</li>
+<li>Zonas primarias y secundarias. Transferencias de zona.</li>
+<li>Zonas de resolución directa y zonas de resolución inversa.</li>
+<li>Delegaciones y subdominios.</li>
+<li>Base datos DNS. Tipos de registros.</li>
+<li>Registros (logs) y monitorización.</li>
+<li>DNS Dinámico. Actualizaciones DNS dinámicas. Servidores de nombres en direcciones</li>
+<li>«ip» dinámicas.</li>
+<li>Herramientas de consulta a servidores DNS.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación y administración de servicios de configuración automática de red</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Funcionamiento del servicio DHCP.</li>
+<li>Asignaciones. Tipos (rangos, exclusiones y  reservas).</li>
+<li>Tiempos de concesión.</li>
+<li>Tipos de mensajes DHCP.</li>
+<li>Clientes DHCP. Configuración.</li>
+<li>Servidores DHCP</li>
+<li>Parámetros y declaraciones de configuración.</li>
+<li>Comandos utilizados para el funcionamiento del servicio.</li>
+<li>Información sobre concesiones.</li>
+<li>Registros (logs) y monitorización.</li>
+<li>Agentes de retransmisión DHCP (DHCP relay).</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación y administración de servidores Web</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Servicio web y la WWW (Wold Wide Web).</li>
+<li>URLs (Uniform Resource Locator).</li>
+<li>Protocolo HTTP.</li>
+<li>Protocolo HTTPS (Hypertext Transfer Protocol Secure).</li>
+<li>Tipos MIME (Multipurpose Internet Mail Extensions).</li>
+<li>Cookies.</li>
+<li>Navegadores (clientes)  web. Parámetros de apariencia y uso. Complementos.</li>
+<li>Servidores web</li>
+<li>Características generales de un servidor Web.</li>
+<li>Configuración básica de un servidor Web.</li>
+<li>Módulos: instalación, configuración y uso.</li>
+<li>«Hosts» virtuales. Creación, configuración y utilización.</li>
+<li>Autenticación y control de acceso. Restricciones de acceso a recursos</li>
+<li>Conexiones seguras (HTTPS). Certificados. Servidores de certificados.</li>
+<li>Códigos de error.</li>
+<li>Registros (logs) y monitorización.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-purple-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación y administración de servicios de transferencia de archivos</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Características de los protocolos de transferencia de archivos.</li>
+<li>Características y funcionamiento del protocolo FTP.</li>
+<li>Funcionalidad.</li>
+<li>Tipos de transferencia de archivos.</li>
+<li>Modos de conexión del cliente. Modos activo y pasivo.</li>
+<li>Clientes FTP</li>
+<li>Clientes en modo texto. Comandos de control, autenticación, gestión y transferencia</li>
+<li>de ficheros.</li>
+<li>Clientes en modo gráfico.</li>
+<li>Navegadores como clientes FTP.</li>
+<li>Servidores FTP</li>
+<li>Configuración del servicio de transferencia de archivos.</li>
+<li>Acceso anónimo. Tipos de usuarios y accesos al servicio.</li>
+<li>Permisos y cuotas. Límites de ancho de banda.</li>
+<li>Servidores virtuales.</li>
+<li>Registros (logs) y monitorización.</li>
+<li>Otros protocolos de transferencia de archivos (TFTP - Trivial file transfer Protocol, SFTP</li>
+<li>Secure File Transfer Protocol,…).</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-blue-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación y administración del servicio de correo electrónico</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Funcionamiento general o del servicio de correo electrónico.</li>
+<li>Direcciones de correo.</li>
+<li>DNS y correo electrónico.</li>
+<li>Estructura de los mensajes de correo electrónico.</li>
+<li>Elementos del servicio de correo electrónico MTA (Mail Transport Agent), MDA (Mail</li>
+<li>Delivery Agent), MUA (Mail User Agent).</li>
+<li>Protocolo de transferencia de mensajes SMTP, /ESMTP (Enhanced Simple Mail Transfer</li>
+<li>Protocol). Tipos MIME.</li>
+<li>Protocolos y servicios de descarga de correo POP e IMAP.</li>
+<li>Seguridad en el  envío y recepción de correo SSL/TSL (Secure Sockets Layer/Transport</li>
+<li>Layer Security), SALSL (Simple Authentication and Security Layer).</li>
+<li>Correo seguro: firma digital y cifrado de mensajes.</li>
+<li>Spam (correo no deseado). Tipos. Precauciones.</li>
+<li>Clientes de correo electrónico (MUA).</li>
+<li>Tipos. Configuración.</li>
+<li>Clientes de correo electrónico vía web (webmail). Uso y configuración básica.</li>
+<li>Servidores de correo</li>
+<li>Configuración básica de un servidor de correo.</li>
+<li>Cuentas de correo, alias y buzones de usuario.</li>
+<li>Retransmisión de correo (relay).</li>
+<li>Filtrado de correo.</li>
+<li>Registros (logs) y monitorización.</li>
+<li>Instalación y administración de servicios de mensajería instantánea, noticias y listas de</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-orange-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">distribución</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Servicios de mensajería instantánea</li>
+<li>Características del servicio de mensajería instantánea. Protocolos IRC (Internet</li>
+<li>Relay Chat).</li>
+<li>Clientes de mensajera instantánea Clientes gráficos de mensajería instantánea.</li>
+<li>Clientes en modo texto de mensajería instantánea.</li>
+<li>Servidores de mensajera instantánea. Configuración básica.</li>
+<li>Servicios de listas de distribución</li>
+<li>Características del servicio de listas de distribución. Protocolos.</li>
+<li>Tipos de acceso a la lista de distribución.</li>
+<li>Tipos de listas de distribución.</li>
+<li>Uso de servicios de listas de distribución.</li>
+<li>Servidores de mensajera instantánea. Configuración básica.</li>
+<li>Servicios de noticias</li>
+<li>Características del servicio de listas de distribución. Protocolos NNTP (Network News</li>
+<li>Transport Protocol).</li>
+<li>Grupos de noticias.</li>
+<li>Clientes de noticias.</li>
+<li>Servidores de noticias. Configuración básica.</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 border-l-4 border-l-green-500">
+                    <h4 class="text-lg font-bold text-slate-800 mb-3">Instalación y administración del servicio de audio y del servicio de vídeo</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 list-disc pl-4">
+                        <li>Formatos de audio.</li>
+<li>Formatos de imagen.</li>
+<li>Formatos de vídeo. «Códecs» y reproductores.</li>
+<li>Herramientas de reproducción de audio.</li>
+<li>Herramientas de reproducción de video.</li>
+<li>Streaming</li>
+<li>Concepto</li>
+<li>Tipos de streaming.</li>
+<li>Protocolos.</li>
+<li>Aplicaciones.</li>
+<li>Servidores de distribución de de audio y video. Servidores de «streaming». Configuración</li>
+<li>básica.</li>
+<li>Sindicación y suscripción de audio. «Podcast».</li>
+<li>Sindicación y suscripción de vídeo. Video Podcast «Vodcast».</li>
+<li>Tecnología  VozIP</li>
+<li>Conceptos básicos.</li>
+<li>Protocolos.</li>
+<li>Teléfonos IP. Sofphones. Adaptadores analógicos IP.</li>
+<li>Centralita de voz IP.  Configuración básica.</li>
+<li>Servicios de videoconferencia.</li>
+<li>Conceptos básicos.</li>
+<li>Protocolos.</li>
+<li>Uso de herramientas para videoconferencia.</li>
+<li>Servidor de videoconferencia. Configuración básica.</li>
+                    </ul>
+                </div>
+        </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-20 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>Autor &copy; Pedro Salazar 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
