@@ -1,0 +1,114 @@
+---
+id: RA1_Evaluacion_rev_interactivo
+title: Evaluacion Interactiva (RA1)
+---
+
+# DOCUMENTO DE AUDITORÍA Y VALIDACIÓN FINAL - RA1: SISTEMAS INFORMÁTICOS
+**Ciclo Formativo:** Desarrollo de Aplicaciones Multiplataforma (DAM)
+**Módulo Profesional:** Sistemas Informáticos
+**Nivel:** Técnico Superior
+**Tipo de Documento:** Banco de Evaluación Validado y Solucionario Expandido (Versión 3.0 - Auditoría Didáctica)
+
+---
+
+## PREÁMBULO DEL AUDITOR
+Este documento ha sido sometido a un proceso riguroso de validación pedagógica y técnica. Se han conservado íntegramente los items originales solicitados, pero se ha procedido a una **expansión drástica del solucionario**. El objetivo es transformar este material de "examen" en un **"Manual de Estudio Avanzado"** para el alumno DAM. Cada justificación técnica se basa en la unidad correspondiente del Manual Enciclopédico de Fundamentos de Sistemas Informáticos (Unidades 1-5), garantizando que el estudiante no solo sepa *qué* respuesta es correcta, sino *por qué* lo es a nivel arquitectónico y lógico.
+
+---
+
+import Quiz from '@site/src/components/Quiz';
+
+<Quiz questions={[
+  {
+    question: "<h3>Pregunta 1</h3>\n<p>En el contexto de una aplicaci\u00f3n m\u00f3vil multiplataforma (Android/iOS), \u00bfqu\u00e9 implicaci\u00f3n t\u00e9cnica tiene la diferencia de arquitectura entre procesadores x86 y ARM respecto a la compilaci\u00f3n del c\u00f3digo nativo?</p>",
+    options: ["<strong>A)</strong> Los procesadores x86 requieren memoria RAM no vol\u00e1til para ejecutar c\u00f3digo, mientras que ARM no.", "<strong>B)</strong> La arquitectura CISC (x86) suele tener instrucciones m\u00e1s complejas pero consume m\u00e1s energ\u00eda que RISC (ARM), lo cual afecta la autonom\u00eda en dispositivos m\u00f3viles.", "<strong>C)</strong> Ambas arquitecturas utilizan el mismo conjunto de instrucciones (ISA), por lo que el compilador Java no necesita ajustes espec\u00edficos.", "<strong>D)</strong> La arquitectura ARM es de 16 bits y x86 es de 32 bits, limitando la cantidad de memoria direccionable en ambos casos."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 2</h3>\n<p>Un desarrollador observa que su aplicaci\u00f3n Java (ejecut\u00e1ndose en un servidor Linux) experimenta una ca\u00edda dr\u00e1stica del rendimiento cuando el uso de RAM supera el 90%. \u00bfQu\u00e9 componente de la jerarqu\u00eda de memoria es probable que se est\u00e9 saturando, forzando al sistema a utilizar recursos lentos?</p>",
+    options: ["<strong>A)</strong> La memoria Cache L3.", "<strong>B)</strong> El almacenamiento secundario (Swap/Disco).", "<strong>C)</strong> La memoria ROM UEFI.", "<strong>D)</strong> Los registros del procesador."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 3</h3>\n<p>Durante el proceso de arranque (Boot Sequence), \u00bfcu\u00e1l es la secuencia l\u00f3gica correcta que debe seguir un sistema para garantizar la integridad antes de cargar el Kernel?</p>",
+    options: ["<strong>A)</strong> Carga del Bootloader -&gt; POST -&gt; Verificaci\u00f3n BIOS/UEFI -&gt; Ejecuci\u00f3n Kernel.", "<strong>B)</strong> POST -&gt; Carga del Firmware (BIOS/UEFI) -&gt; Identificaci\u00f3n de dispositivos -&gt; Bootloader -&gt; Kernel.", "<strong>C)</strong> POST -&gt; Kernel -&gt; BIOS/UEFI -&gt; Bootloader.", "<strong>D)</strong> Firmware -&gt; Bootloader -&gt; POST -&gt; Kernel."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 4</h3>\n<p>En una red corporativa, un administrador instala conmutadores (Switches) en lugar de concentradores (Hubs). \u00bfCu\u00e1l es la ventaja t\u00e9cnica principal desde el punto de vista del modelo OSI y la seguridad que beneficia a una aplicaci\u00f3n cliente-servidor?</p>",
+    options: ["<strong>A)</strong> Los Switches operan en Capa 3 (Red), permitiendo enrutar paquetes entre subredes diferentes.", "<strong>B)</strong> Los Hubs permiten mayor ancho de banda, pero los Switches filtran el tr\u00e1fico por direcciones MAC, reduciendo colisiones y escuchas no autorizadas.", "<strong>C)</strong> Los Switches son dispositivos pasivos que requieren menos energ\u00eda, mientras que los Hubs generan m\u00e1s latencia.", "<strong>D)</strong> La diferencia es puramente f\u00edsica; ambos usan la misma l\u00f3gica de direccionamiento IP para comunicarse con el servidor.", "<strong>C)</strong> No son pasivos como un Hub (que solo amplifica se\u00f1ales el\u00e9ctricamente). Adem\u00e1s, la latencia de los Hubs suele ser menor por falta de procesamiento, pero su eficiencia es nula comparada con Switches."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 5</h3>\n<p>Al dise\u00f1ar una clase en Java para gestionar componentes hardware (como en la Pr\u00e1ctica 1), \u00bfqu\u00e9 tipo de memoria se utilizar\u00eda internamente en la JVM para almacenar los objetos creados, y c\u00f3mo afecta esto a la gesti\u00f3n de recursos?</p>",
+    options: ["<strong>A)</strong> Memoria ROM; permite que los datos persistan tras apagar el programa sin necesidad de liberaci\u00f3n.", "<strong>B)</strong> Memoria No Vol\u00e1til; asegura que las variables permanezcan en disco.", "<strong>C)</strong> Memoria RAM (Heap); requiere gesti\u00f3n expl\u00edcita o recolecci\u00f3n de basura para evitar fugas de memoria y saturar el sistema operativo.", "<strong>D)</strong> Memoria Cach\u00e9 L1; es persistente y no se ve afectada por el volumen de objetos creados.", "<strong>C)</strong> intenta liberar esta memoria autom\u00e1ticamente, pero un desarrollador DAM debe entender que el Heap es finito y comparte recursos con otros procesos del SO si se satura (Unidad 2.1)."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 6</h3>\n<p>Un t\u00e9cnico reporta que una placa base no reconoce un nuevo m\u00f3dulo de RAM DDR5 instalado correctamente en las ranuras f\u00edsicas. \u00bfQu\u00e9 componente l\u00f3gico de la placa base es el principal responsable de gestionar esta comunicaci\u00f3n de alta velocidad?</p>",
+    options: ["<strong>A)</strong> El Southbridge (o Platform Controller Hub moderno).", "<strong>B)</strong> El Chipset Norte o controlador integrado directamente en la CPU.", "<strong>C)</strong> La memoria ROM BIOS.", "<strong>D)</strong> La tarjeta de red Ethernet integrada.", "<strong>C)</strong> :** Falso. La ROM BIOS almacena el firmware para iniciar el sistema, pero no gestiona el tr\u00e1fico de datos en tiempo real entre CPU y RAM durante la ejecuci\u00f3n."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 7</h3>\n<p>En el contexto del Criterio CE h (Seguridad), \u00bfpor qu\u00e9 es cr\u00edtico almacenar contrase\u00f1as mediante algoritmos de hash y no en texto plano dentro de un sistema inform\u00e1tico gestionado por un DAM?</p>",
+    options: ["<strong>A)</strong> Para que el usuario pueda recordarlas m\u00e1s f\u00e1cilmente.", "<strong>B)</strong> Porque si la base de datos es comprometida, los atacantes podr\u00edan recuperar las credenciales originales f\u00e1cilmente.", "<strong>C)</strong> El almacenamiento en texto plano consume menos espacio en RAM.", "<strong>D)</strong> Los sistemas operativos modernos requieren contrase\u00f1as encriptadas para acceder al BIOS.", "<strong>C)</strong> :** Falso. La diferencia de espacio es insignificante (bytes). La seguridad no se sacrifica por un ahorro m\u00ednimo en almacenamiento."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 8</h3>\n<p>\u00bfCu\u00e1l es la funci\u00f3n principal del \"Gestor de Arranque\" (Bootloader), como GRUB o el gestor de Windows, en relaci\u00f3n con el Sistema Operativo?</p>",
+    options: ["<strong>A)</strong> Realizar pruebas f\u00edsicas de los componentes electr\u00f3nicos antes de encender la pantalla.", "<strong>B)</strong> Cargar el n\u00facleo (Kernel) del sistema operativo desde el disco a la memoria RAM para su ejecuci\u00f3n.", "<strong>C)</strong> Traducir las se\u00f1ales el\u00e9ctricas de la red a protocolos TCP/IP.", "<strong>D)</strong> Gestionar los controladores de perif\u00e9ricos USB en tiempo real.", "<strong>D)</strong> , cargarla en un espacio de memoria RAM seguro y transferir el control de ejecuci\u00f3n a \u00e9l. Sin esto, el CPU no sabr\u00eda c\u00f3mo iniciar el SO (Unidad 3.1.4).", "<strong>A)</strong> :** Falso. Esa es la funci\u00f3n del POST (Power-On Self-Test), que ocurre antes de cargar cualquier software en la RAM.", "<strong>D)</strong> :** Falso. Los controladores USB se cargan generalmente despu\u00e9s, cuando el Kernel ya est\u00e1 ejecut\u00e1ndose y gestionando dispositivos perif\u00e9ricos."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 9</h3>\n<p>Al analizar un mapa l\u00f3gico de red, identificas que dos dispositivos tienen direcciones IP <code>192.168.1.5</code> y <code>192.168.1.150</code>. Si ambos est\u00e1n en la misma subred <code>/24</code>, \u00bfqu\u00e9 dispositivo act\u00faa como puerta de enlace predeterminada si el tr\u00e1fico sale hacia Internet?</p>",
+    options: ["<strong>A)</strong> El dispositivo con IP .5, ya que tiene un n\u00famero menor.", "<strong>B)</strong> El dispositivo con IP .150, ya que es el \u00faltimo del rango.", "<strong>C)</strong> Un Router o Gateway configurado t\u00edpicamente en la primera direcci\u00f3n (ej. 192.168.1.1), no necesariamente uno de los dos host mencionados.", "<strong>D)</strong> Ambos dispositivos act\u00faan como gateways simult\u00e1neamente para redundancia.", "<strong>A)</strong> :** Falso. El n\u00famero IP bajo no determina la funci\u00f3n de Gateway; es una asignaci\u00f3n administrativa arbitraria. Un router podr\u00eda tener cualquier IP dentro del rango.", "<strong>B)</strong> :** Falso. La posici\u00f3n en el rango no define la capacidad de enrutar tr\u00e1fico hacia Internet.", "<strong>D)</strong> :** Falso. Tener dos gateways simult\u00e1neos requiere configuraci\u00f3n espec\u00edfica (redundancia activa-pasiva), lo cual es una excepci\u00f3n, no la norma para un escenario b\u00e1sico."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 10</h3>\n<p>En una aplicaci\u00f3n DAM que requiere alta disponibilidad, se implementa un sistema RAID 1 (Espejo). \u00bfCu\u00e1l es el beneficio principal en t\u00e9rminos de continuidad del servicio seg\u00fan la unidad 5?</p>",
+    options: ["<strong>A)</strong> Aumentar la velocidad de escritura al escribir datos en dos discos simult\u00e1neamente.", "<strong>B)</strong> Proporcionar redundancia; si uno de los discos falla, los datos permanecen accesibles desde el otro, evitando p\u00e9rdida de informaci\u00f3n cr\u00edtica.", "<strong>C)</strong> Reducir el costo del almacenamiento duplicando la capacidad en un solo disco f\u00edsico.", "<strong>D)</strong> Permitir que el sistema arranque m\u00e1s r\u00e1pido gracias a la memoria cach\u00e9 del RAID.", "<strong>A)</strong> :** Falso. RAID 0 aumenta la velocidad de escritura/lectura mediante striping, pero no tiene redundancia. RAID 1 puede incluso reducir ligeramente la velocidad de escritura al tener que duplicar el dato.", "<strong>C)</strong> :** Falso. Duplicar discos aumenta el costo del hardware (se paga doble capacidad f\u00edsica para obtener la misma capacidad l\u00f3gica).", "<strong>D)</strong> :** Falso. El RAID no afecta directamente al tiempo de arranque del sistema operativo en s\u00ed mismo, sino a la disponibilidad de los datos tras el arranque."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 11</h3>\n<p>\u00bfQu\u00e9 caracter\u00edstica distingue funcionalmente a la memoria RAM frente a la memoria ROM en el contexto de la carga de una aplicaci\u00f3n?</p>",
+    options: ["<strong>A)</strong> La RAM es vol\u00e1til (pierde datos sin energ\u00eda), mientras que la ROM retiene el firmware necesario para iniciar el hardware.", "<strong>B)</strong> La ROM es m\u00e1s r\u00e1pida que la RAM, por lo que se usa como cach\u00e9 principal del procesador.", "<strong>C)</strong> La RAM es de solo lectura y la ROM permite escritura frecuente durante la ejecuci\u00f3n de programas.", "<strong>D)</strong> No hay diferencia; ambos tipos son vol\u00e1tiles en los sistemas modernos.", "<strong>B)</strong> :** Falso. La RAM es mucho m\u00e1s r\u00e1pida que la ROM est\u00e1ndar. El uso de Flash Memory (tipo ROM moderna) para cach\u00e9 no es est\u00e1ndar en jerarqu\u00eda principal; se usa Cache L1/L2 dentro del CPU.", "<strong>C)</strong> :** Falso. Invierte las definiciones. RAM permite escritura frecuente, ROM es principalmente de solo lectura (aunque existen memorias EEPROM/Flash que permiten borrado el\u00e9ctrico, no son para ejecuci\u00f3n din\u00e1mica).", "<strong>D)</strong> :** Falso. La diferencia de volatilidad sigue siendo la caracter\u00edstica clave en sistemas modernos y legacy."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 12</h3>\n<p>Un desarrollador est\u00e1 optimizando un algoritmo que realiza millones de iteraciones sobre un mismo conjunto de datos peque\u00f1os. Seg\u00fan el conocimiento del manual (Unidad 2), \u00bfd\u00f3nde deber\u00eda alojarse preferentemente este conjunto de datos para minimizar la latencia?</p>",
+    options: ["<strong>A)</strong> En la memoria virtual en disco (Swap).", "<strong>B)</strong> En la memoria ROM UEFI.", "<strong>C)</strong> En los registros del procesador o Cache L1/L2, evitando accesos a RAM principal.", "<strong>D)</strong> En una partici\u00f3n NTFS del disco duro secundario.", "<strong>A)</strong> :** Falso. El Swap es extremadamente lento (disco) y causar\u00e1 un \"thrashing\" severo al intentar acceder a datos repetitivos.", "<strong>B)</strong> :** Falso. La ROM no permite escritura din\u00e1mica de datos durante la ejecuci\u00f3n de algoritmos; solo se usa para firmware est\u00e1tico.", "<strong>D)</strong> :** Falso. El disco duro es el nivel m\u00e1s lento de la jerarqu\u00eda (miles de ciclos). Usarlo para datos iterativos anular\u00eda cualquier optimizaci\u00f3n de rendimiento."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 13</h3>\n<p>En el protocolo TCP/IP, si est\u00e1s configurando un servicio web en tu red local (DAW/DAM), \u00bfen qu\u00e9 capa opera principalmente la comunicaci\u00f3n basada en puertos (ej. puerto 80 o 443)?</p>",
+    options: ["<strong>A)</strong> Capa de Acceso a Red (F\u00edsica/Enlace).", "<strong>B)</strong> Capa de Internet (Direcci\u00f3n IP).", "<strong>C)</strong> Capa de Transporte (TCP/UDP).", "<strong>D)</strong> Capa F\u00edsica (Cableado Ethernet).", "<strong>A)</strong> :** Falso. La Capa de Acceso a Red se encarga de la transmisi\u00f3n f\u00edsica y l\u00f3gica en el enlace local (MAC), no de los puertos l\u00f3gicos de aplicaci\u00f3n.", "<strong>B)</strong> :** Falso. La capa de Internet utiliza direcciones IP para enrutar paquetes entre redes, pero no gestiona los puertos que identifican servicios dentro de la red destino.", "<strong>D)</strong> :** Falso. La capa f\u00edsica trata sobre se\u00f1ales el\u00e9ctricas u \u00f3pticas y cableado, sin conocimiento de l\u00f3gica de protocolos o puertos."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 14</h3>\n<p>\u00bfCu\u00e1l es el riesgo principal asociado a la manipulaci\u00f3n de componentes electr\u00f3nicos internos sin las medidas de seguridad f\u00edsica adecuadas descritas en la Unidad 5?</p>",
+    options: ["<strong>A)</strong> Da\u00f1o por descarga electrost\u00e1tica (ESD) que puede destruir circuitos microsc\u00f3picos sensibles.", "<strong>B)</strong> La sobrecarga t\u00e9rmica inmediata de la fuente de alimentaci\u00f3n.", "<strong>C)</strong> La p\u00e9rdida de licencias de software del sistema operativo.", "<strong>D)</strong> El aumento de la latencia en la red inal\u00e1mbrica.", "<strong>B)</strong> :** Falso. La manipulaci\u00f3n de componentes internos no suele causar sobrecarga t\u00e9rmica a menos que se conecten cables incorrectamente bajo tensi\u00f3n, pero el riesgo m\u00e1s inmediato y com\u00fan es la est\u00e1tica.", "<strong>C)</strong> :** Falso. El software reside en disco, no tiene relaci\u00f3n directa con la manipulaci\u00f3n f\u00edsica de hardware (aunque un fallo f\u00edsico puede corromperlo).", "<strong>D)</strong> :** Falso. La latencia de red es un problema l\u00f3gico/f\u00edsico de infraestructura, no se ve afectada por tocar componentes internos sin protecci\u00f3n est\u00e1tica."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 15</h3>\n<p>Al ejecutar un script de diagn\u00f3stico (como el Pr\u00e1ctica 2), \u00bfqu\u00e9 excepci\u00f3n o comportamiento esperar\u00eda si intentas acceder a recursos de red o hardware sin los permisos adecuados en un sistema operativo moderno?</p>",
+    options: ["<strong>A)</strong> El programa se ejecutar\u00e1 normalmente pero con datos incorrectos.", "<strong>B)</strong> Se lanzar\u00e1 una <code>SecurityException</code> o <code>IOException</code>, indicando falta de privilegios para leer interfaces o puertos espec\u00edficos.", "<strong>C)</strong> El sistema reiniciar\u00e1 autom\u00e1ticamente debido a un error de hardware.", "<strong>D)</strong> La aplicaci\u00f3n se convertir\u00e1 en un servicio de segundo plano sin notificaci\u00f3n.", "<strong>A)</strong> :** Falso. Los sistemas operativos modernos protegen los recursos; no devuelven datos incorrectos, sino que bloquean el acceso. Esto se conoce como \"Fail Secure\".", "<strong>C)</strong> :** Falso. Un error de permisos en software no causa un reinicio de hardware (Kernel Panic) a menos que sea una violaci\u00f3n cr\u00edtica del kernel, lo cual es raro en aplicaciones de usuario.", "<strong>D)</strong> :** Falso. El comportamiento de segundo plano est\u00e1 controlado por el SO independientemente de los permisos de acceso; no es la respuesta t\u00e9cnica a un bloqueo de seguridad."],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+]} />
+
+## 2. CASOS

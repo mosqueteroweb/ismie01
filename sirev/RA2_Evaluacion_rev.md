@@ -351,7 +351,7 @@ El "Overcommit" de memoria es una técnica avanzada donde se asignan más recurs
 
 #### Pregunta 9: Respuesta Correcta **B**
 **Justificación Técnica Detallada:**
-Para cumplir con un RPO (Recovery Point Objective) de 1 hora y un RTO (Recovery Time Objective) de 2 horas, se necesita una estrategia que permita recuperar datos perdidos en el último hour y restaurar el sistema rápidamente. La combinación de **Backup Incremental cada 30 minutos** asegura que la pérdida de datos no supere los 30 minutos (cumpliendo RPO < 1h). El backup diferencial semanal reduce la frecuencia de copias completas costosas, mientras que una réplica en nube garantiza disponibilidad y recuperación ante desastres físicos. Este equilibrio minimiza el tiempo de restauración (RTO) al no necesitar leer copias completas antiguas para recuperar cambios recientes.
+Para cumplir con un RPO (Recovery Point Objective) de 1 hora y un RTO (Recovery Time Objective) de 2 horas, se necesita una estrategia que permita recuperar datos perdidos en el último hour y restaurar el sistema rápidamente. La combinación de **Backup Incremental cada 30 minutos** asegura que la pérdida de datos no supere los 30 minutos (cumpliendo RPO &lt; 1h). El backup diferencial semanal reduce la frecuencia de copias completas costosas, mientras que una réplica en nube garantiza disponibilidad y recuperación ante desastres físicos. Este equilibrio minimiza el tiempo de restauración (RTO) al no necesitar leer copias completas antiguas para recuperar cambios recientes.
 
 **Análisis de Distractores (Por qué son incorrectas):**
 *   **Opción A:** Un backup completo diario implica que, si falla a las 23:59 horas, se han perdido 24 horas de trabajo (RPO > 1h). Además, la restauración manual desde cinta es lenta y propensa a errores humanos, aumentando el RTO por encima de las 2 horas.
@@ -513,7 +513,7 @@ sudo chmod 750 "$BACKUP_DIR"
 # 2. Backup inicial con verificación de espacio
 FREE_SPACE=$(df -k "$BACKUP_DIR" | awk 'NR==2 {print $4}')
 if [ "$FREE_SPACE" -lt "$MIN_DISK_SPACE" ]; then
-    log_message "ERROR: Espacio insuficiente ($FREE_SPACE KB < $MIN_DISK_SPACE)"
+    log_message "ERROR: Espacio insuficiente ($FREE_SPACE KB &lt; $MIN_DISK_SPACE)"
     exit 1
 fi
 log_message "Iniciando backup de configuración..."
@@ -619,7 +619,7 @@ public class VirtualMachineConfig {
         
         // Validación crítica antes de permitir la creación del objeto
         if (!validateResources(cpuCores, ramGB, diskSizeGB)) {
-            throw new IllegalArgumentException("Recursos insuficientes para entorno DAM: CPU < " + MIN_CPU_CORES);
+            throw new IllegalArgumentException("Recursos insuficientes para entorno DAM: CPU &lt; " + MIN_CPU_CORES);
         }
         
         this.cpuCores = cpuCores;
@@ -634,13 +634,13 @@ public class VirtualMachineConfig {
     public boolean validateResources(int cpuCores, long ramGB, long diskSizeGB) {
         StringBuilder errorMessages = new StringBuilder();
         
-        if (cpuCores < MIN_CPU_CORES) 
+        if (cpuCores &lt; MIN_CPU_CORES)
             errorMessages.append("CPU insuficiente (Mín: ").append(MIN_CPU_CORES).append(" núcleos).\n");
         
-        if (ramGB < MIN_RAM_GB) 
+        if (ramGB &lt; MIN_RAM_GB)
             errorMessages.append("RAM insuficiente (Mín: ").append(MIN_RAM_GB).append(" GB).\n");
             
-        if (diskSizeGB < MIN_DISK_GB) 
+        if (diskSizeGB &lt; MIN_DISK_GB)
             errorMessages.append("Disco insuficiente (Mín: ").append(MIN_DISK_GB).append(" GB).\n");
         
         if (!errorMessages.isEmpty()) {

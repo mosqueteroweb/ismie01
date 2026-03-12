@@ -117,10 +117,10 @@ El criterio **f)** exige gestionar estos puertos a nivel de sistema. Usaremos he
 nc -zv localhost 8000
 
 # Escanear rango de puertos desde remoto (Servidor Web)
-nmap -p 1-1000 <IP_DEL_SERVIDOR>
+nmap -p 1-1000 &lt;IP_DEL_SERVIDOR>
 
 # Verificar qué procesos están escuchando en el servidor
-netstat -tulpn | grep :<PUERTO>
+netstat -tulpn | grep :&lt;PUERTO>
 ```
 
 **Gestión del Firewall:**
@@ -162,12 +162,12 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 ```
 
 2.  **Configuración del Servidor Web:** Editar el archivo de configuración de Apache o Nginx para apuntar a estos archivos (ej: `ssl_certificate` y `ssl_certificate_key`).
-3.  **Verificación:** Acceder desde el Cliente 1 a `https://<IP_DEL_SERVIDOR>`.
+3.  **Verificación:** Acceder desde el Cliente 1 a `https://&lt;IP_DEL_SERVIDOR>`.
 
 **Comandos de Verificación SSL:**
 ```bash
 # Comprobar certificado remoto
-openssl s_client -connect <IP_DEL_SERVIDOR>:443 -showcerts
+openssl s_client -connect &lt;IP_DEL_SERVIDOR>:443 -showcerts
 
 # Verificar la fecha de caducidad y emisor
 openssl x509 -in server.crt -text -noout | grep -A 1 "Validity"
@@ -252,7 +252,7 @@ El criterio **e)** trata sobre redes de área extensa (WAN). La forma más segur
 ssh-keygen -t ed25519 -C "usuario@laboratorio" -f ~/.ssh/id_rsa_lab
 
 # Copiar la clave pública al servidor remoto (Autorización)
-ssh-copy-id usuario@<IP_DEL_SERVIDOR>
+ssh-copy-id usuario@&lt;IP_DEL_SERVIDOR>
 ```
 
 3.  **Configuración de Túnel Puente:** Crear un túnel inverso para acceder a un servicio local desde el remoto sin exponer puertos en el firewall público.
@@ -260,7 +260,7 @@ ssh-copy-id usuario@<IP_DEL_SERVIDOR>
 **Comando de Ejecución de Túnel (CLI):**
 ```bash
 # Sintaxis: ssh -N -L [puerto_local]:localhost:[puerto_remoto] usuario@host
-ssh -N -L 8080:localhost:3000 usuario@<IP_DEL_SERVIDOR>
+ssh -N -L 8080:localhost:3000 usuario@&lt;IP_DEL_SERVIDOR>
 ```
 
 **Verificación de Acceso:**
@@ -282,7 +282,7 @@ Para aprobar el RA5 mediante estas prácticas administrativas, debes seguir el s
 1.  **Validación de Comandos:**
     *   Asegurar que todos los comandos `ip`, `nmap`, `openssl` ejecutan sin errores en la terminal del sistema operativo.
 2.  **Ejecución de Servicios:**
-    *   Verificar que los servicios (SSH, DHCP, HTTP) están corriendo (`systemctl status <servicio>`).
+    *   Verificar que los servicios (SSH, DHCP, HTTP) están corriendo (`systemctl status &lt;servicio>`).
 3.  **Pruebas de Integración:**
     *   Ejecutar el escáner `nmap` contra el puerto del servidor web levantado en la VM. Si detecta el puerto y responde correctamente con `OPEN`, se valida la gestión de puertos (CE f).
 4.  **Control de Versiones (Git):**
