@@ -472,7 +472,7 @@ public class HardwareDiagnosticSystem {
 
 #### Tarea 2: Justificación del Diseño (Principios DAM)
 
-1.  **Abstracción y Polimorfismo:** Se utiliza una clase abstracta `HardwareComponent` para definir la estructura común. Esto permite tratar a CPU, RAM y NIC de forma uniforme en un sistema de monitorización generalizado (`List<HardwareComponent>`), cumpliendo con principios de Ingeniería de Software (Principio SOLID).
+1.  **Abstracción y Polimorfismo:** Se utiliza una clase abstracta `HardwareComponent` para definir la estructura común. Esto permite tratar a CPU, RAM y NIC de forma uniforme en un sistema de monitorización generalizado (`List&lt;HardwareComponent>`), cumpliendo con principios de Ingeniería de Software (Principio SOLID).
 2.  **Relación RA1:** El diseño refleja explícitamente los componentes físicos descritos en el manual (Unidad 1 y 4). Los atributos como `nucleos` (Arquitectura CPU) o `macAddress` (Componentes Red) son datos técnicos específicos que un desarrollador debe conocer para dimensionar sistemas.
 3.  **Seguridad:** La inclusión del método `aplicarParcheSeguridad` en la interfaz refuerza el Criterio CE h, integrando la seguridad lógica/física como parte inherente de la gestión del hardware (Unidad 5.2).
 

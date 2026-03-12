@@ -203,7 +203,7 @@ En el contexto del modelo TCP/IP, un **puerto** es una dirección lógica utiliz
 Los sistemas operativos gestionan la escucha de puertos a través de procesos denominados "daemons" o servicios (en Linux) o "Services" (en Windows). La gestión de puertos implica:
 
 *   **Asignación:** Determinar qué aplicación se registra para escuchar en un puerto específico. En programación, esto suele hacerse con `listen(port)` en C/C++/Java o el equivalente en frameworks web.
-*   **Bloqueo/Permisos:** Controlar qué aplicaciones tienen privilegios para abrir puertos bajos (<1024). Por seguridad, los servicios modernos suelen ejecutarse como usuarios no privilegiados y usar puertos altos, redirigiendo luego las conexiones al puerto estándar mediante el sistema operativo.
+*   **Bloqueo/Permisos:** Controlar qué aplicaciones tienen privilegios para abrir puertos bajos (&lt;1024). Por seguridad, los servicios modernos suelen ejecutarse como usuarios no privilegiados y usar puertos altos, redirigiendo luego las conexiones al puerto estándar mediante el sistema operativo.
 *   **Seguridad:** Un puerto abierto es una puerta potencial a la red. La gestión implica cerrar servicios innecesarios que expongan vulnerabilidades al escaneo externo.
     *   *Caso de Uso:* Si desarrollas un juego online, debes asegurarte de que solo el puerto necesario para el juego esté abierto en el firewall del servidor, y no dejar abiertos puertos de depuración o SSH accesibles públicamente.
 

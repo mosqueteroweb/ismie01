@@ -185,9 +185,9 @@ La placa base (*Motherboard*) no es simplemente un soporte físico; actúa como 
 |-----------|-----------------|----------------|-------------------------|
 | **USB 2.0** | 480 Mbps | ~5 ms | Periféricos básicos (teclado, ratón) |
 | **USB 3.0/3.1** | 5-10 Gbps | ~2 ms | Almacenamiento externo, cámaras |
-| **USB-C / Thunderbolt 3/4** | 40 Gbps | <1 ms | Workstations de desarrollo, monitores 4K+ |
+| **USB-C / Thunderbolt 3/4** | 40 Gbps | \&lt;1 ms | Workstations de desarrollo, monitores 4K+ |
 | **PCIe Gen 3.0** | 8 GT/s por lane | ~0.5 ms | Tarjetas gráficas, NVMe SSD |
-| **PCIe Gen 4.0/5.0** | 16-32 GT/s por lane | <0.3 ms | Servidores de alto rendimiento, AI |
+| **PCIe Gen 4.0/5.0** | 16-32 GT/s por lane | \&lt;0.3 ms | Servidores de alto rendimiento, AI |
 
 #### 1.3.2. Protocolo de Transferencia y Controladores
 
@@ -439,7 +439,7 @@ El arranque sigue un flujo determinista diseñado para garantizar la integridad 
 
 | Esquema de Partición | Uso Recomendado | Ventajas | Desventajas |
 |---------------------|-----------------|----------|-------------|
-| **MBR (Master Boot Record)** | Sistemas antiguos, discos <2TB | Ampliamente compatible | Limitación 2TB, máximo 4 particiones primarias |
+| **MBR (Master Boot Record)** | Sistemas antiguos, discos \&lt;2TB | Ampliamente compatible | Limitación 2TB, máximo 4 particiones primarias |
 | **GPT (GUID Partition Table)** | UEFI moderno, discos >2TB | Soporte ilimitado particiones, mayor seguridad | Menor compatibilidad con sistemas muy antiguos |
 
 **Ejemplo de Esquema Recomendado para DAM:**
@@ -511,8 +511,8 @@ El sistema operativo asigna recursos a cada dispositivo para evitar conflictos:
 
 | Tipo de Red | Alcance Típico | Velocidad Típica | Latencia Típica | Casos de Uso en DAM |
 |-------------|----------------|------------------|-----------------|---------------------|
-| **PAN (Personal Area Network)** | 1 metro | Bluetooth: 1-3 Mbps | <10 ms | Dispositivos wearables, IoT personal |
-| **LAN (Local Area Network)** | Edificio/Oficina | 1 Gbps - 10 Gbps | <1 ms | Desarrollo local, servidores intranet |
+| **PAN (Personal Area Network)** | 1 metro | Bluetooth: 1-3 Mbps | \&lt;10 ms | Dispositivos wearables, IoT personal |
+| **LAN (Local Area Network)** | Edificio/Oficina | 1 Gbps - 10 Gbps | \&lt;1 ms | Desarrollo local, servidores intranet |
 | **WLAN (Wireless LAN)** | Sala/Edificio | Wi-Fi 6: hasta 9.6 Gbps | 5-20 ms | Movilidad en oficinas, hotspots |
 | **MAN (Metropolitan Area Network)** | Ciudad | 100 Mbps - 1 Gbps | 10-50 ms | Redes corporativas multi-sede |
 | **WAN (Wide Area Network)** | País/Continente | 10 Mbps - 100 Gbps | 50-200 ms | Cloud computing, servicios globales |
@@ -797,7 +797,7 @@ El sistema operativo asigna recursos a cada dispositivo para evitar conflictos:
 > 
 > **Configuración técnica requerida:**
 > - Backups automáticos cada 15 minutos
-> - Servidores en standby listos para activarse en <30 min
+> - Servidores en standby listos para activarse en \&lt;30 min
 > - Personal de soporte disponible 24/7
 
 ---

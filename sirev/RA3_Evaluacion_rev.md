@@ -626,7 +626,7 @@ class DiskHealthMonitor:
         """
         
         # Validación de parámetros (Principio de Defensa en Profundidad)
-        if not 0 <= alert_threshold <= 100:
+        if not 0 &lt;= alert_threshold &lt;= 100:
             raise ValueError("El umbral de alerta debe estar entre 0 y 100")
             
         self.mountpoint = mountpoint
@@ -679,7 +679,7 @@ class DiskHealthMonitor:
             current_percent = usage_info['percent_used']
             
             # Lógica de evaluación: Si usado > umbral, retorna False (alerta)
-            return current_percent < self.alert_threshold
+            return current_percent &lt; self.alert_threshold
             
         except Exception as e:
             # Logueo interno para debugging en producción
@@ -761,7 +761,7 @@ if __name__ == "__main__":
 2.  **Uso de Librerías Externas (`psutil`):** Se utiliza `psutil.disk_usage()` porque es multiplataforma. Esto permite que el mismo código funcione en Windows, Linux y macOS sin reescribir llamadas al kernel específicas (WMI vs `/proc`). Esto cumple con la portabilidad requerida en DAM.
 3.  **Manejo de Excepciones Específico:** En lugar de `except Exception`, se capturan `PermissionError` y `FileNotFoundError`. Esto permite al desarrollador saber exactamente qué falló sin tener que inspeccionar el stack trace completo. En la función `generate_alert`, las excepciones devuelven un string en lugar de lanzar error para permitir que el script continúe mostrando el resto del informe.
 4.  **Tipado y Documentación:** Se usan type hints (`Dict[str, float]`) y docstrings completos. Esto mejora la mantenibilidad del código, requisito clave en proyectos profesionales (Criterio 'h').
-5.  **Lógica de Negocio:** La función `check_health` encapsula la lógica comparativa (`< threshold`). Esto permite cambiar el umbral dinámicamente sin tocar el código fuente, cumpliendo con la flexibilidad requerida en Criterio 'e'.
+5.  **Lógica de Negocio:** La función `check_health` encapsula la lógica comparativa (`&lt; threshold`). Esto permite cambiar el umbral dinámicamente sin tocar el código fuente, cumpliendo con la flexibilidad requerida en Criterio 'e'.
 
 ### Criterios de Evaluación del Diseño (Rúbrica para el Docente)
 1.  **Principios OOP:** Encapsulamiento adecuado, atributos privados implícitos, métodos bien definidos.
@@ -786,7 +786,7 @@ if __name__ == "__main__":
 *(Nota: Ajustado para sumar 10 puntos si se desea redondear, o mantener como está)*.
 
 ### Rúbrica para Casos Prácticos (Calificación del Alumno)
-| Criterio | Excelente (10-9 pts) | Bueno (8-7 pts) | Regular (6-5 pts) | Insuficiente (<5 pts) |
+| Criterio | Excelente (10-9 pts) | Bueno (8-7 pts) | Regular (6-5 pts) | Insuficiente (&lt;5 pts) |
 |----------|------------------|-------------|---------------|-------------------|
 | **Identificación de Errores** | Identifica todos los errores con justificación técnica completa y referencia a línea. | Identifica mayoría de errores con justificación adecuada. | Identifica algunos errores sin justificación completa o incorrecta. | No identifica errores o justificación errónea. |
 | **Código Corregido (Case 1)** | Código funcional, documentado, maneja excepciones y sigue mejores prácticas OOP. | Código funcional pero con documentación incompleta o manejo de errores básico. | Código parcialmente funcional con errores menores no corregidos. | Código no funcional o con múltiples errores lógicos. |
