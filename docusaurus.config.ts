@@ -7,8 +7,8 @@ const config: Config = {
   tagline: 'Apuntes, prácticas y evaluaciones interactivos',
   favicon: 'img/favicon.ico',
 
-  url: 'https://tusitio.example.com',
-  baseUrl: '/',
+  url: 'https://mosqueteroweb.github.io',
+  baseUrl: '/ismie01/docsi/',
 
   organizationName: 'fp',
   projectName: 'documentacion',
