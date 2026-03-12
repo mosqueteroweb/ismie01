@@ -62,15 +62,15 @@ Como administrador del sistema en un entorno DAM, debes provisionar manualmente 
 2.  Ejecuta la secuencia de comandos para crear el usuario. No uses scripts, escribe las líneas directamente en la consola.
 
 **Paso 1: Creación del Usuario**
-Ejecuta el siguiente comando sustituyendo `<NombreUsuario>` por tu nombre de prueba (ej: `juan_dev`):
+Ejecuta el siguiente comando sustituyendo `&lt;NombreUsuario>` por tu nombre de prueba (ej: `juan_dev`):
 ```powershell
-net user <NombreUsuario> TempPass123! /add /fullname:"Desarrollador DAM" /description:"Usuario para proyectos de desarrollo"
+net user &lt;NombreUsuario> TempPass123! /add /fullname:"Desarrollador DAM" /description:"Usuario para proyectos de desarrollo"
 ```
 
 **Paso 2: Asignación al Grupo Administradores**
 Ejecuta el siguiente comando para añadirlo al grupo de administradores locales:
 ```powershell
-net localgroup Administrators <NombreUsuario> /add
+net localgroup Administrators &lt;NombreUsuario> /add
 ```
 
 **Paso 3: Configuración de Permisos en Carpeta (GUI)**
@@ -116,14 +116,14 @@ echo "juan_dev:TempPass123!" | sudo chpasswd
 
 ### Explicación Técnica de la Lógica:
 *   **Seguridad (CE b):** La creación manual asegura que el alumno entienda qué parámetros se están enviando al kernel del SO. En Windows, `net user` interactúa con SAM. En Linux, `useradd` modifica archivos de texto planos en `/etc`.
-    *   *[NOTA DEL AUDITOR]:* En un entorno real, nunca pasarías contraseñas como parámetros de línea de comandos (`echo "usuario:pass"`) porque quedan guardadas en el historial del shell. Deberíamos usar `passwd <usuario>` para que el sistema solicite la contraseña de forma segura.
+    *   *[NOTA DEL AUDITOR]:* En un entorno real, nunca pasarías contraseñas como parámetros de línea de comandos (`echo "usuario:pass"`) porque quedan guardadas en el historial del shell. Deberíamos usar `passwd &lt;usuario>` para que el sistema solicite la contraseña de forma segura.
 *   **Herencia y ACLs:** En ambos sistemas, el comando configura la carpeta raíz del proyecto. En Linux (`chmod 750`), se garantiza que solo el dueño y el grupo tengan acceso de escritura. En Windows, los permisos en pestaña "Seguridad" interactúan con ACLs.
     *   *[NOTA DEL AUDITOR]:* El comando `setfacl` en Linux requiere la herramienta `acl` instalada (`sudo apt install acl`). Sin ella, el script fallará silenciosamente o dará error.
 
 ### Compilación y Ejecución:
-*   **Windows:** Abre PowerShell como Admin -> Introduce los comandos uno a uno. Verifica con `net user <NombreUsuario>`.
+*   **Windows:** Abre PowerShell como Admin -> Introduce los comandos uno a uno. Verifica con `net user &lt;NombreUsuario>`.
     *   *[NOTA DEL AUDITOR]:* El error más común en Windows es la política de ejecución si intentas usar scripts, pero al escribir comandos directos esto no aplica.
-*   **Linux:** Guarda como `.sh` solo para referencia personal (no se evalúa), ejecuta los comandos uno a uno. Verifica con `id <NombreUsuario>`.
+*   **Linux:** Guarda como `.sh` solo para referencia personal (no se evalúa), ejecuta los comandos uno a uno. Verifica con `id &lt;NombreUsuario>`.
 
 ---
 
@@ -131,10 +131,10 @@ echo "juan_dev:TempPass123!" | sudo chpasswd
 
 | Error / Comportamiento | Causa Probable | Solución Propuesta |
 | :--- | :--- | :--- |
-| **PowerShell: "El usuario ya existe"** | El nombre del usuario fue reutilizado de un ejercicio anterior. | Ejecuta `net user <Usuario> /delete` antes de crearlo, o elige otro nombre único. |
+| **PowerShell: "El usuario ya existe"** | El nombre del usuario fue reutilizado de un ejercicio anterior. | Ejecuta `net user &lt;Usuario> /delete` antes de crearlo, o elige otro nombre único. |
 | **Linux: `sudo: groupadd: command not found`** | Herramientas administrativas no instaladas en la ISO mínima. | Verifica que estás usando una distribución completa (`ubuntu-desktop-server`). En algunas distros minimalistas falta el paquete `base-files`. |
 | **Windows: "Acceso denegado"** | No se ejecutó PowerShell como Administrador real (UAC bloqueado). | Asegúrate de hacer clic derecho en PowerShell y seleccionar **"Ejecutar como administrador"**. |
-| **Linux: `chown` cambia propietario pero no grupo** | El usuario no existe o el grupo es incorrecto. | Verifica con `id <Usuario>` y `getent group devgroup`. Asegúrate de crear el grupo antes que el usuario si se especifica `-g`. |
+| **Linux: `chown` cambia propietario pero no grupo** | El usuario no existe o el grupo es incorrecto. | Verifica con `id &lt;Usuario>` y `getent group devgroup`. Asegúrate de crear el grupo antes que el usuario si se especifica `-g`. |
 | **Permisos ACLs no surten efecto en Windows** | La carpeta tiene permisos heredados explícitos que sobrescriben. | Limpia los permisos heredados o modifica la regla específica con `icacls` antes de usar la GUI. |
 
 ---
@@ -142,7 +142,7 @@ echo "juan_dev:TempPass123!" | sudo chpasswd
 ### 🚀 RETO DE AMPLIACIÓN (NIVEL AVANZADO)
 **Objetivo:** Añadir funcionalidad de auditoría manual y borrado seguro.
 1.  **Ampliación Windows:** Usa el comando `Get-LocalUser` en PowerShell para listar todos los usuarios y verifica manualmente cuáles pertenecen al grupo Administradores usando `net localgroup Administrators`. Documenta esta lista en un archivo de texto `.txt`.
-2.  **Ampliación Linux:** Usa el comando `ls -la /home/<Usuario>` para verificar que los permisos sean exactamente `-rwx------` (700) o lo configurado, y confirma la propiedad con `stat <archivo>`.
+2.  **Ampliación Linux:** Usa el comando `ls -la /home/&lt;Usuario>` para verificar que los permisos sean exactamente `-rwx------` (700) o lo configurado, y confirma la propiedad con `stat &lt;archivo>`.
 
 ---
 
@@ -217,14 +217,14 @@ Para cumplir el **CE b**, utilizaremos herramientas nativas del sistema para apl
 | **Windows: "Access Denied"** al detener servicio | El script/comando se ejecutó sin privilegios elevados. | Abre PowerShell como **Administrador**. Algunos servicios requieren permisos específicos para ser consultados o detenidos. |
 | **Linux: `systemctl` no reconoce el servicio** | Nombre del servicio incorrecto o instalación incompleta. | Usa `systemctl list-units --type=service` para listar todos los disponibles y encontrar el nombre correcto (ej: `apache2` vs `httpd`). |
 | **Comando net no encontrado en PowerShell puro** | Comandos legacy de CMD no disponibles en PowerShell puro o falta acceso. | Ejecuta `cmd /c net accounts` dentro del script si falla, o usa PowerShell cmdlets como `Get-LocalGroupMember`. |
-| **Servicio se reinicia automáticamente** | El servicio está configurado para "Reiniciar en fallo". | Verifica la configuración de inicio del servicio en el Administrador de Servicios o con `systemctl edit <servicio>`. |
+| **Servicio se reinicia automáticamente** | El servicio está configurado para "Reiniciar en fallo". | Verifica la configuración de inicio del servicio en el Administrador de Servicios o con `systemctl edit &lt;servicio>`. |
 
 ---
 
 ### 🚀 RETO DE AMPLIACIÓN (NIVEL AVANZADO)
 **Objetivo:** Gestión manual de reinicios y auditoría.
-1.  **Ampliación Windows:** Utiliza el Administrador de Servicios para cambiar el "Tipo de inicio" de un servicio a "Desactivado". Luego verifica que no se ejecute tras un reinicio usando `sc qc <Servicio>`.
-2.  **Ampliación Linux:** Usa `systemctl disable <servicio>` para prevenir que arranque con el sistema y verifícalo con `systemctl is-enabled <servicio>`.
+1.  **Ampliación Windows:** Utiliza el Administrador de Servicios para cambiar el "Tipo de inicio" de un servicio a "Desactivado". Luego verifica que no se ejecute tras un reinicio usando `sc qc &lt;Servicio>`.
+2.  **Ampliación Linux:** Usa `systemctl disable &lt;servicio>` para prevenir que arranque con el sistema y verifícalo con `systemctl is-enabled &lt;servicio>`.
 
 ---
 

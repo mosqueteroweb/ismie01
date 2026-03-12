@@ -347,7 +347,7 @@ El uso de herramientas gráficas (Task Manager, Activity Monitor) y líneas de c
 *   **Uso de Recursos:** CPU, RAM, Disco, Red en tiempo real. Permite identificar cuellos de botella antes de que colapse el servicio.
     *   *Ejemplo:* Si vuestra App consume el 100% de la CPU, ¿es un bucle infinito en vuestro código o es una tarea del sistema? Usando `top` (Linux) o `Resource Monitor` (Windows), podéis ver qué proceso es responsable.
 *   **Gestión de Procesos:** Visualización y control de procesos en ejecución (prioridad, terminación forzada). Fundamental para aislar aplicaciones mal comportadas sin reiniciar todo el sistema.
-    *   *Comando Clave:* `kill -9 <PID>` o `taskkill /F`. Saber usar esto evita tener que apagar el ordenador si una app se congela.
+    *   *Comando Clave:* `kill -9 &lt;PID>` o `taskkill /F`. Saber usar esto evita tener que apagar el ordenador si una app se congela.
 
 ### 7.4 Recuperación de Datos: El Plan B
 En caso de corrupción lógica (virus, error humano) o física (disco roto):

@@ -169,7 +169,7 @@ git commit -m "Initial commit: Documentación básica de servidor"
 #### ⚠️ Posibles Errores y Soluciones (Troubleshooting)
 | Error | Causa Raíz Técnica | Solución Propuesta |
 |-------|-------------------|--------------------|
-| Conflictos de Merge (`CONFLICT`) | Dos ramas modificaron la misma línea del README. | Usar un editor de texto para resolver manualmente los marcadores `<<<<<<<` y `>>>>>>>`. Guardar solo una versión coherente antes de hacer el commit final. |
+| Conflictos de Merge (`CONFLICT`) | Dos ramas modificaron la misma línea del README. | Usar un editor de texto para resolver manualmente los marcadores `&lt;&lt;&lt;&lt;&lt;&lt;&lt;` y `>>>>>>>`. Guardar solo una versión coherente antes de hacer el commit final. |
 | Markdown no renderiza en Word | Copiar y pegar directo a veces pierde formato. | Usar un conversor online o guardar primero como PDF/HTML desde VS Code y luego importar, o usar la función "Insertar Objeto" de Word. |
 | `git config user not found` | Git necesita saber quién eres para firmar commits. | Ejecutar: `git config --global user.name "Tu Nombre"` y `git config --global user.email "tu@email.com"`. |
 

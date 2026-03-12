@@ -107,7 +107,7 @@ Organiza los datos en estructuras jerárquicas para persistencia.
     *   **Importancia para DAM:** La consistencia de las rutas es crucial para la portabilidad del software. Un desarrollador que usa `C:\` no podrá desplegar su app en Linux sin modificar el código o usar capas de compatibilidad (como Wine). Se recomienda usar rutas relativas o variables de entorno (`%APPDATA%` / `$HOME`).
 *   **Metadatos y Inodos:** Cada archivo posee metadatos (permisos, propietario, timestamps: creación, modificación, acceso). El sistema operativo mapea estos datos a bloques físicos en el disco.
     *   **Inodes (Linux):** Estructura de datos que almacena información sobre un archivo, no el nombre del archivo. Esto permite renombrar archivos instantáneamente sin mover datos.
-    *   **FAT/NTFS (Windows):** Tablas que mapean nombres a sectores del disco. NTFS soporta permisos avanzados y cifrado; FAT32 es más compatible pero limitado (archivos de <4GB).
+    *   **FAT/NTFS (Windows):** Tablas que mapean nombres a sectores del disco. NTFS soporta permisos avanzados y cifrado; FAT32 es más compatible pero limitado (archivos de &lt;4GB).
 
 #### 2.1.3. Gestión de Entradas/Salidas (I/O)
 Abstractiza los dispositivos de hardware mediante llamadas al sistema (`system calls`). Esto permite que las aplicaciones interactúen con periféricos sin conocer su implementación física.
@@ -198,7 +198,7 @@ Los humanos memorizan nombres (`servidor.local`), las máquinas direcciones IP (
 ### 3.3. Gestión de Puertos y Conectividad
 
 Los puertos lógicos (0-65535) permiten que un único servidor ejecute múltiples servicios simultáneamente usando una sola IP.
-*   **Puertos Privilegiados (<1024):** Requieren permisos de administrador para ser escuchados (ej. 80 HTTP, 443 HTTPS). Protegen servicios críticos del acceso casual.
+*   **Puertos Privilegiados (&lt;1024):** Requieren permisos de administrador para ser escuchados (ej. 80 HTTP, 443 HTTPS). Protegen servicios críticos del acceso casual.
 *   **Diagnóstico de Red:** Herramientas teóricas como el análisis del paquete (**Packet Sniffing**) permiten inspeccionar el flujo de datos usando herramientas como Wireshark. Comandos de diagnóstico (`ping`, `traceroute`) evalúan la latencia y la ruta de los paquetes a través de routers intermedios, identificando cuellos de botella o fallos en la conectividad.
     *   **Ejemplo:** Si tu aplicación web tarda 10 segundos en cargar, un `traceroute` puede decirte que el problema no es tu servidor, sino un router en España que está saturado.
 

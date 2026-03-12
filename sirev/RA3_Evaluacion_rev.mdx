@@ -1,0 +1,112 @@
+---
+id: RA3_Evaluacion_rev_interactivo
+title: Evaluacion Interactiva (RA3)
+---
+
+# BANCO DE EVALUACIÓN RA3 - GESTIÓN DE LA INFORMACIÓN DEL SISTEMA
+## Módulo: Sistemas Informáticos | Especialidad: DAM
+
+---
+
+# DOCUMENTO 1: EXAMEN TIPO TEST (RA3)
+
+**Instrucciones:** Seleccione la respuesta correcta para cada pregunta. Cada pregunta vale 0,6 puntos. Tiempo estimado: 45 minutos.
+
+---
+
+## PREGUNTAS DE EVALUACIÓN TEÓRICA Y PRÁCTICA
+
+import Quiz from '@site/src/components/Quiz';
+
+<Quiz questions={[
+  {
+    question: "<h3>Pregunta 1 - Arquitectura de Sistemas de Archivos (Criterio a)</h3>\n<p>En un entorno empresarial que requiere alta disponibilidad y recuperaci\u00f3n r\u00e1pida ante fallos el\u00e9ctricos, \u00bfqu\u00e9 caracter\u00edstica del sistema de archivos NTFS es fundamental para garantizar la integridad de los metadatos?</p>",
+    options: ["<strong>A)</strong> <strong>Journaling:</strong> Registra transacciones antes de ejecutarlas para recuperar estado coherente tras fallo del sistema", "<strong>B)</strong> <strong>Compresi\u00f3n Transparente:</strong> Reduce el uso de espacio sin afectar acceso l\u00f3gico", "<strong>C)</strong> <strong>Enlaces Simb\u00f3licos:</strong> Permite estructuras virtuales sin duplicar datos", "<strong>D)</strong> <strong>Copia al Escribir (Copy-on-Write):</strong> Evita sobrescribir datos existentes para permitir snapshots"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 2 - Sistemas de Rutas y Resoluci\u00f3n (Criterio b, c)</h3>\n<p>Un desarrollador crea una aplicaci\u00f3n que debe ser desplegada en diferentes entornos de producci\u00f3n sin modificar rutas absolutas. \u00bfQu\u00e9 estrategia es la m\u00e1s adecuada?</p>",
+    options: ["<strong>A)</strong> Utilizar exclusivamente rutas absolutas desde <code>C:\\Program Files</code> para garantizar unicidad", "<strong>B)</strong> Usar rutas relativas basadas en el directorio de trabajo actual (<code>working directory</code>)", "<strong>C)</strong> Configurar variables de entorno globales que apunten a cada ruta espec\u00edfica", "<strong>D)</strong> Implementar un sistema de rutas din\u00e1micas basado en UUIDs del disco"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 3 - Metadatos y Inodos (Criterio a)</h3>\n<p>En sistemas Unix/Linux, \u00bfqu\u00e9 informaci\u00f3n se almacena espec\u00edficamente en el <strong>inode</strong> y NO en la entrada del directorio?</p>",
+    options: ["<strong>A)</strong> Nombre del archivo y permisos de acceso", "<strong>B)</strong> Identificador num\u00e9rico \u00fanico y punteros a bloques f\u00edsicos", "<strong>C)</strong> Fecha de creaci\u00f3n y tama\u00f1o l\u00f3gico del archivo", "<strong>D)</strong> Propietario del archivo y grupo asociado"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 4 - Comparativa Filesystems (Criterio a)</h3>\n<p>Un t\u00e9cnico debe formatear un USB que ser\u00e1 utilizado en equipos Windows, Linux y macOS sin restricciones de compatibilidad. \u00bfQu\u00e9 sistema de archivos presenta la mayor limitaci\u00f3n te\u00f3rica para este caso?</p>",
+    options: ["<strong>A)</strong> <strong>NTFS:</strong> Limitado por ser propietario de Microsoft", "<strong>B)</strong> <strong>FAT32:</strong> No soporta Journaling y tiene l\u00edmite de 4 GB por archivo", "<strong>C)</strong> <strong>EXT4:</strong> Optimizado exclusivamente para Linux con caracter\u00edsticas avanzadas", "<strong>D)</strong> <strong>APFS:</strong> Dise\u00f1ado espec\u00edficamente para almacenamiento flash Apple"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 5 - Tablas de Particionamiento (Criterio e)</h3>\n<p>En un servidor que requiere discos de m\u00e1s de 2 TB y m\u00faltiples copias de seguridad de la tabla de particiones, \u00bfqu\u00e9 est\u00e1ndar debe implementarse?</p>",
+    options: ["<strong>A)</strong> <strong>MBR:</strong> Est\u00e1ndar antiguo con limitaci\u00f3n matem\u00e1tica de direcciones", "<strong>B)</strong> <strong>GPT:</strong> Soporta discos masivos, redundancia y identificadores globales \u00fanicos", "<strong>C)</strong> <strong>FAT16:</strong> Formato b\u00e1sico para compatibilidad retrocompatibilidad", "<strong>D)</strong> <strong>HFS+:</strong> Sistema heredado de Apple con limitaciones de particionamiento"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 6 - Gesti\u00f3n de Bloques F\u00edsicos (Criterio e)</h3>\n<p>\u00bfQu\u00e9 mecanismo en EXT4 agrupa bloques contiguos para reducir el tama\u00f1o del \u00edndice de punteros y mejorar rendimiento?</p>",
+    options: ["<strong>A)</strong> <strong>Delayed Allocation:</strong> Espera a escribir todos los datos antes de asignar bloques", "<strong>B)</strong> <strong>Extent Mapping:</strong> Agrupa bloques contiguos en estructuras \"extent\" optimizadas", "<strong>C)</strong> <strong>Journaling Completo:</strong> Protege metadatos y datos de usuario durante escrituras", "<strong>D)</strong> <strong>Striping RAID:</strong> Divide datos entre m\u00faltiples discos f\u00edsicos para rendimiento"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 7 - Enlaces Simb\u00f3licos vs Duros (Criterio b, c)</h3>\n<p>\u00bfCu\u00e1l es la diferencia fundamental entre un enlace simb\u00f3lico (symlink) y un enlace duro en sistemas Unix?</p>",
+    options: ["<strong>A)</strong> Los enlaces duros pueden apuntar a directorios, los simb\u00f3licos solo a archivos", "<strong>B)</strong> Los enlaces simb\u00f3licos son resueltos por el kernel al momento de apertura del recurso", "<strong>C)</strong> Los enlaces duros crean duplicados f\u00edsicos de datos en bloques diferentes", "<strong>D)</strong> Los enlaces simb\u00f3licos requieren permisos especiales de administrador para crear"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 8 - Copias de Seguridad (Criterio f)</h3>\n<p>Una empresa realiza copias diarias donde solo se guardan cambios desde la \u00faltima copia completa. \u00bfQu\u00e9 estrategia est\u00e1 implementando y cu\u00e1l es su principal desventaja?</p>",
+    options: ["<strong>A)</strong> <strong>Incremental:</strong> Restauraci\u00f3n compleja que requiere Full + todas las Incrementales", "<strong>B)</strong> <strong>Diferencial:</strong> Requiere menos espacio pero m\u00e1s tiempo de restauraci\u00f3n", "<strong>C)</strong> <strong>Full:</strong> Consuma mucho almacenamiento pero permite restauraci\u00f3n r\u00e1pida", "<strong>D)</strong> <strong>Espejo (Mirroring):</strong> Duplica datos en tiempo real sin historial de versiones"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 9 - Algoritmos de Respaldo (Criterio f)</h3>\n<p>Para minimizar el tiempo de restauraci\u00f3n en caso de fallo, \u00bfcu\u00e1l es la estrategia m\u00e1s eficiente?</p>",
+    options: ["<strong>A)</strong> <strong>Full Backup:</strong> Solo requiere el \u00faltimo backup para recuperaci\u00f3n total", "<strong>B)</strong> <strong>Incremental:</strong> Requiere m\u00faltiples archivos consecutivos para restaurar", "<strong>C)</strong> <strong>Diferencial:</strong> Necesita Full + Differential, pero menos que Incremental", "<strong>D)</strong> <strong>Snapshot:</strong> Instant\u00e1neas r\u00e1pidas pero sin historial hist\u00f3rico de cambios"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 10 - Planificaci\u00f3n de Tareas (Criterio g)</h3>\n<p>En un entorno Linux, \u00bfqu\u00e9 componente del sistema operativo es responsable de despertar procesos en intervalos definidos para automatizar tareas?</p>",
+    options: ["<strong>A)</strong> <strong>Daemon:</strong> Proceso que corre en segundo plano sin interacci\u00f3n directa", "<strong>B)</strong> <strong>Cron:</strong> Sistema de programaci\u00f3n que ejecuta comandos en horarios espec\u00edficos", "<strong>C)</strong> <strong>Systemd:</strong> Gestor de servicios y arranque del sistema operativo", "<strong>D)</strong> <strong>Init:</strong> Proceso padre que inicia todos los dem\u00e1s procesos del sistema"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 11 - Diagn\u00f3stico y Mantenimiento (Criterio h)</h3>\n<p>\u00bfPor qu\u00e9 NO es recomendable realizar desfragmentaci\u00f3n en discos SSD?</p>",
+    options: ["<strong>A)</strong> No mejora el rendimiento de lectura secuencial como en HDD", "<strong>B)</strong> Acelera la degradaci\u00f3n de los ciclos de escritura (Wear Leveling) del almacenamiento flash", "<strong>C)</strong> El sistema operativo ya realiza esta tarea autom\u00e1ticamente sin intervenci\u00f3n", "<strong>D)</strong> La desfragmentaci\u00f3n solo funciona con sistemas de archivos NTFS"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 12 - Hashing y Criptograf\u00eda (Criterio f)</h3>\n<p>\u00bfQu\u00e9 funci\u00f3n cumple un algoritmo hash como SHA-256 en la integridad de datos durante copias de seguridad?</p>",
+    options: ["<strong>A)</strong> <strong>Cifrado:</strong> Encripta los datos para evitar acceso no autorizado", "<strong>B)</strong> <strong>Verificaci\u00f3n:</strong> Genera huella digital para comparar integridad tras restauraci\u00f3n", "<strong>C)</strong> <strong>Compresi\u00f3n:</strong> Reduce el tama\u00f1o del archivo sin p\u00e9rdida de informaci\u00f3n", "<strong>D)</strong> <strong>Autenticaci\u00f3n:</strong> Verifica la identidad del usuario que realiza la copia"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 13 - Vol\u00famenes Din\u00e1micos (Criterio e)</h3>\n<p>\u00bfQu\u00e9 ventaja ofrece un volumen din\u00e1mico tipo Mirroring en entornos empresariales?</p>",
+    options: ["<strong>A)</strong> <strong>RAID 0:</strong> Striping para m\u00e1ximo rendimiento sin seguridad", "<strong>B)</strong> <strong>RAID 1:</strong> Datos id\u00e9nticos en dos discos; si uno falla, el sistema sigue operando", "<strong>C)</strong> <strong>Spanning:</strong> Espacio combinado de m\u00faltiples discos sin redundancia", "<strong>D)</strong> <strong>Striping con Paridad:</strong> Divide datos y a\u00f1ade paridad para recuperaci\u00f3n"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 14 - Utilidades de Gesti\u00f3n (Criterio h)</h3>\n<p>\u00bfQu\u00e9 herramienta nativa de Windows permite verificar sectores defectuosos y errores l\u00f3gicos en el sistema de archivos?</p>",
+    options: ["<strong>A)</strong> <strong>Disk Defragmenter:</strong> Reorganiza bloques contiguos para optimizar rendimiento", "<strong>B)</strong> <strong>Scandisk/Fsck:</strong> Analiza integridad de metadatos contra estructura f\u00edsica", "<strong>C)</strong> <strong>Performance Monitor:</strong> Visualiza uso de CPU, RAM y Disco en tiempo real", "<strong>D)</strong> <strong>Event Viewer:</strong> Registra eventos del sistema pero no verifica integridad"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+  {
+    question: "<h3>Pregunta 15 - Automatizaci\u00f3n y Dependencias (Criterio g)</h3>\n<p>Al dise\u00f1ar una tarea automatizada de backup, \u00bfqu\u00e9 elemento es CR\u00cdTICO para garantizar que la tarea se ejecute correctamente en diferentes entornos?</p>",
+    options: ["<strong>A)</strong> <strong>Trigger:</strong> Define cu\u00e1ndo inicia la tarea (ej: cada d\u00eda a las 03:00)", "<strong>B)</strong> <strong>Action:</strong> Especifica el comando o script a ejecutar", "<strong>C)</strong> <strong>Condition:</strong> Requisitos previos como conexi\u00f3n de red o estado de bater\u00eda", "<strong>D)</strong> <strong>Error Handling:</strong> Mecanismo robusto para notificar fallos y reintentar"],
+    correctAnswerIndex: 0,
+    justification: "<p>Justificaci\u00f3n no encontrada.</p>"
+  },
+]} />

@@ -22,9 +22,9 @@ El objetivo de esta guía es desarrollar la capacidad de utilizar **herramientas
 ### Matriz de Cobertura de Criterios de Evaluación (CE)
 | Ejercicio | Criterio(s) Cubiertos | Competencia DAM | Profundidad Técnica Añadida |
 | :--- | :--- | :--- | :--- |
-| **1. Inspección Hardware Nativa** | CE a) Componentes físicos.<br>CE b) Tipos y características de memoria. | Uso de utilidades del SO (CLI/GUI). | Interpretación directa de `/proc`, `msinfo32` y BIOS/UEFI. |
-| **2. Diagnóstico de Arranque** | CE c) Puesta en marcha.<br>CE d) Configuración periféricos. | Gestión de BIOS, Bootloader y Drivers. | Análisis del POST, secuencia de carga del Kernel y gestión de interrupciones. |
-| **3. Topología de Red Manual** | CE e) Tipos de red.<br>CE f) Componentes de red.<br>CE g) Mapas físicos/lógicos. | Configuración TCP/IP y análisis de tráfico. | Modelos OSI, tablas de enrutamiento y captura de paquetes con Wireshark. |
+| **1. Inspección Hardware Nativa** | CE a) Componentes físicos.&lt;br/>CE b) Tipos y características de memoria. | Uso de utilidades del SO (CLI/GUI). | Interpretación directa de `/proc`, `msinfo32` y BIOS/UEFI. |
+| **2. Diagnóstico de Arranque** | CE c) Puesta en marcha.&lt;br/>CE d) Configuración periféricos. | Gestión de BIOS, Bootloader y Drivers. | Análisis del POST, secuencia de carga del Kernel y gestión de interrupciones. |
+| **3. Topología de Red Manual** | CE e) Tipos de red.&lt;br/>CE f) Componentes de red.&lt;br/>CE g) Mapas físicos/lógicos. | Configuración TCP/IP y análisis de tráfico. | Modelos OSI, tablas de enrutamiento y captura de paquetes con Wireshark. |
 | **4. Auditoría de Seguridad** | CE h) Seguridad y PRL. | Políticas de seguridad del SO y Normativa. | Hardening (endurecimiento), gestión de usuarios locales y cumplimiento legal. |
 
 ---
