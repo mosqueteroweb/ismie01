@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUÍA DE PRÁCTICAS Y LABORATORIOS - MÓDULO SISTEMAS INFORMÁTICOS (RA1)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 999999px; /* Huge limit to prevent text cut-off */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA1.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA1</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">GUÍA DE PRÁCTICAS Y LABORATORIOS - MÓDULO SISTEMAS INFORMÁTICOS (RA1)</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">1. INTRODUCCIÓN Y OBJETIVOS DE LA PRÁCTICA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Como futuros desarrolladores DAM, no basta con escribir código; es fundamental comprender el entorno hardware y de red donde este código se ejecutará. <strong>No escribiremos software para analizar sistemas.</strong> En un entorno profesional real, un administrador utiliza las herramientas nativas del Sistema Operativo (SO) para diagnosticar el estado de la infraestructura.</p>
+<p>El objetivo de esta guía es desarrollar la capacidad de utilizar <strong>herramientas de diagnóstico nativas</strong>, configurar componentes físicos y lógicos, y generar informes técnicos basados en datos reales extraídos directamente del sistema operativo sin intermediarios de programación. Un desarrollador debe saber si un error proviene de su aplicación o de la infraestructura subyacente utilizando las utilidades del SO.</p>
+<blockquote>
+<p><strong>NOTA DEL COORDINADOR:</strong> En el entorno profesional DAM, un desarrollador debe operar herramientas como <code>ipconfig</code>, <code>msinfo32</code>, <code>Device Manager</code> (Administrador de dispositivos), gestores de particiones y analizadores de red (Wireshark) sin necesidad de compilar software adicional. Estas prácticas eliminan la capa intermedia de programación para garantizar una comprensión directa del hardware y el sistema operativo.</p>
+</blockquote>
+<h3>Matriz de Cobertura de Criterios de Evaluación (CE)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Ejercicio</th>
+<th style="text-align: left;">Criterio(s) Cubiertos</th>
+<th style="text-align: left;">Competencia DAM</th>
+<th style="text-align: left;">Profundidad Técnica Añadida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Inspección Hardware Nativa</strong></td>
+<td style="text-align: left;">CE a) Componentes físicos.&lt;br/&gt;CE b) Tipos y características de memoria.</td>
+<td style="text-align: left;">Uso de utilidades del SO (CLI/GUI).</td>
+<td style="text-align: left;">Interpretación directa de <code>/proc</code>, <code>msinfo32</code> y BIOS/UEFI.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Diagnóstico de Arranque</strong></td>
+<td style="text-align: left;">CE c) Puesta en marcha.&lt;br/&gt;CE d) Configuración periféricos.</td>
+<td style="text-align: left;">Gestión de BIOS, Bootloader y Drivers.</td>
+<td style="text-align: left;">Análisis del POST, secuencia de carga del Kernel y gestión de interrupciones.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Topología de Red Manual</strong></td>
+<td style="text-align: left;">CE e) Tipos de red.&lt;br/&gt;CE f) Componentes de red.&lt;br/&gt;CE g) Mapas físicos/lógicos.</td>
+<td style="text-align: left;">Configuración TCP/IP y análisis de tráfico.</td>
+<td style="text-align: left;">Modelos OSI, tablas de enrutamiento y captura de paquetes con Wireshark.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Auditoría de Seguridad</strong></td>
+<td style="text-align: left;">CE h) Seguridad y PRL.</td>
+<td style="text-align: left;">Políticas de seguridad del SO y Normativa.</td>
+<td style="text-align: left;">Hardening (endurecimiento), gestión de usuarios locales y cumplimiento legal.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">2. REQUISITOS PREVIOS DE SOFTWARE Y ENTORNO</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para garantizar la reproducibilidad en todos los laboratorios, se debe configurar el siguiente entorno base. <strong>No omitas estos pasos</strong>, ya que una configuración incorrecta del Sistema Operativo afectará los diagnósticos.</p>
+<ol>
+<li><strong>Sistema Operativo:</strong> Windows 10/11 Pro o Ubuntu Linux (versión LTS). Se recomienda tener acceso a ambos para comparar comportamientos nativos.</li>
+<li><strong>Virtualización:</strong> Oracle VirtualBox con al menos dos máquinas virtuales configuradas (una Windows y una Linux) conectadas en red interna. Esto simula un entorno de servidor/cliente sin riesgos de seguridad.</li>
+<li><strong>Herramientas de Diagnóstico Nativas:</strong> Asegúrate de tener acceso a:<ul>
+<li>Windows: <code>msinfo32.exe</code>, <code>cmd</code> (Símbolo del sistema), Administrador de dispositivos, Configuración de Firewall.</li>
+<li>Linux: Terminal, <code>lsblk</code>, <code>ip addr</code>, <code>uname -a</code>.</li>
+</ul>
+</li>
+<li><strong>Herramientas de Análisis:</strong> Wireshark instalado y configurado para capturar tráfico en las interfaces virtuales.</li>
+<li><strong>Entorno Físico:</strong> Estación de trabajo con al menos una tarjeta de red Ethernet activa y un monitor conectado.</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">3. PRÁCTICA 1: INSPECCIÓN DE HARDWARE NATIVA (CE a, b)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Identificar componentes físicos y características de memoria utilizando exclusivamente las herramientas proporcionadas por el Sistema Operativo, sin escribir ningún programa adicional.</p>
+<h3>3.1. Metodología de Trabajo</h3>
+<p>En lugar de compilar una aplicación para leer la CPU o RAM, utilizaremos interfaces de gestión del sistema operativo que exponen estos datos a nivel de usuario o administrador. Esto permite entender cómo el SO abstrae el hardware.</p>
+<ul>
+<li><strong>Información del Sistema (<code>msinfo32</code> en Windows / <code>uname -a</code> en Linux):</strong> Proporciona detalles sobre la arquitectura del procesador, versión del SO y capacidad de memoria instalada.</li>
+<li><strong>Gestión de Procesos:</strong> Observar el uso de recursos en tiempo real mediante el Administrador de Tareas (Windows) o <code>top/htop</code> (Linux).</li>
+<li><strong>Memoria Virtual vs Física:</strong> Comprender la diferencia entre la RAM física instalada y la Memoria Virtual (Archivo de paginación/Swap) configurada por el SO.</li>
+</ul>
+<h3>3.2. Procedimiento Paso a Paso</h3>
+<ol>
+<li>
+<p><strong>Identificación del Procesador (CE a):</strong></p>
+<ul>
+<li>En Windows, abre el menú Inicio y ejecuta <code>msinfo32</code>. Navega al apartado "Resumen del sistema". Anota el procesador, velocidad de reloj y número de núcleos físicos vs lógicos.</li>
+<li>En Linux, abre la terminal y ejecuta el comando para ver detalles del hardware. Observa el archivo <code>/proc/cpuinfo</code> utilizando un editor de texto o visualizador (<code>cat /proc/cpuinfo</code>). Identifica cuántas líneas <code>processor</code> existen (núcleos lógicos) y la información de la familia CPU.</li>
+<li><strong>Análisis:</strong> Determinar si el sistema operativo está reconociendo todos los núcleos físicos instalados en la placa base.</li>
+</ul>
+</li>
+<li>
+<p><strong>Características de Memoria (CE b):</strong></p>
+<ul>
+<li>Abre el Administrador de Tareas (Windows) o usa el comando <code>free -h</code> (Linux).</li>
+<li>Registra el valor de "Memoria física total" y "Memoria disponible".</li>
+<li>En Windows, en la pestaña Rendimiento &gt; Memoria, observa los gráficos de uso.</li>
+<li><strong>Ejercicio Crítico:</strong> Abre varias aplicaciones pesadas simultáneamente (navegador con múltiples pestañas, editor de texto). Observa cómo cambia el valor "Memoria en uso" y "Conmutador de páginas".</li>
+<li><strong>Verificación:</strong> Asegúrate de que la memoria virtual (Swap/Pagefile) esté configurada adecuadamente. En Windows, busca esta configuración en "Propiedades del sistema &gt; Configuración avanzada".</li>
+</ul>
+</li>
+<li>
+<p><strong>Interpretación Técnica de Resultados:</strong></p>
+<ul>
+<li>Redacta un informe donde expliques por qué la memoria disponible suele ser menor a la física instalada (memoria reservada para hardware).</li>
+<li>Identifica el tipo de tecnología de memoria DDR (DDR4, DDR5) si es visible en <code>msinfo32</code> o en la BIOS.</li>
+</ul>
+</li>
+</ol>
+<h3>3.3. Explicación Técnica Profunda: Abstracción del SO</h3>
+<ol>
+<li><strong>Gestión de Memoria:</strong> El Sistema Operativo reserva una parte de la RAM física para controladores y núcleo. El resto está disponible para aplicaciones. La memoria virtual permite usar el disco duro como extensión cuando la RAM se llena, aunque es más lenta.</li>
+<li><strong>Núcleos Lógicos vs Físicos:</strong> Tecnologías como Hyper-Threading (Intel) o SMT permiten que un núcleo físico se comporte como dos lógicos. El SO ve todos los hilos disponibles. Un desarrollador debe entender esto al optimizar concurrencia en su código.</li>
+<li><strong>Drivers de Hardware:</strong> Los datos mostrados por <code>msinfo32</code> dependen de los drivers instalados. Si falta un driver, el componente puede aparecer como "Desconocido".</li>
+</ol>
+<h3>3.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Probable</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No se visualiza la velocidad exacta del CPU</td>
+<td>Drivers de chipset desactualizados.</td>
+<td>Actualizar drivers desde el sitio web del fabricante de la placa base.</td>
+</tr>
+<tr>
+<td>La memoria disponible es muy baja a pesar de tener 16GB</td>
+<td>Aplicaciones en segundo plano consumiendo recursos o fugas de memoria.</td>
+<td>Cerrar aplicaciones innecesarias y reiniciar el equipo para liberar RAM.</td>
+</tr>
+<tr>
+<td>El comando no muestra información detallada</td>
+<td>Permisos insuficientes de usuario.</td>
+<td>Ejecutar la terminal o herramienta como Administrador/Root.</td>
+</tr>
+</tbody>
+</table>
+<h3>3.5. Reto de Ampliación (Para alumnos avanzados)</h3>
+<p><strong>Objetivo:</strong> Análisis de Consumo Energético y Temperatura.
+<strong>Instrucción:</strong> Utiliza herramientas nativas para monitorear la temperatura del CPU en tiempo real (ej. HWMonitor en Windows o <code>sensors</code> en Linux). Configura el plan de energía del sistema operativo a "Alto Rendimiento" y observa cómo cambia el consumo de memoria y la frecuencia del procesador frente al modo "Equilibrado".</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">4. PRÁCTICA 2: DIAGNÓSTICO DE ARRANQUE Y PERIFÉRICOS (CE c, d)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Verificar la puesta en marcha del equipo y la configuración de periféricos críticos utilizando la gestión nativa de dispositivos y el análisis de logs del sistema.</p>
+<h3>4.1. Metodología de Trabajo</h3>
+<p>El proceso de arranque (Boot) es crítico para la disponibilidad del sistema. Un desarrollador debe saber diagnosticar fallos antes de que su aplicación se ejecute. Analizaremos la secuencia física (POST) y lógica (Carga del Kernel/SO).</p>
+<ul>
+<li><strong>BIOS/UEFI:</strong> Configuración básica del orden de arranque.</li>
+<li><strong>Gestor de Dispositivos:</strong> Verificación de drivers e identificación de conflictos (iconos amarillos).</li>
+<li><strong>Logs del Sistema:</strong> Análisis de eventos críticos tras el reinicio.</li>
+</ul>
+<h3>4.2. Procedimiento Paso a Paso</h3>
+<ol>
+<li>
+<p><strong>Configuración del Arranque (CE c):</strong></p>
+<ul>
+<li>Reinicia la máquina virtual o equipo físico y accede al menú de arranque (tecla F2, Del, F10 según fabricante).</li>
+<li>Navega por las opciones de Boot Priority. Cambia el orden para que la unidad USB tenga prioridad sobre el disco duro e intenta arrancar desde un Live CD de Linux si está disponible en el laboratorio.</li>
+<li><strong>Vuelta a la normalidad:</strong> Restaura el orden original para asegurar que el sistema operativo principal arranque correctamente.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verificación de Periféricos (CE d):</strong></p>
+<ul>
+<li>En Windows, abre el Administrador de dispositivos (<code>devmgmt.msc</code>).</li>
+<li>Expande las categorías "Adaptadores de pantalla", "Teclados" y "Ratones". Verifica que no haya signos de advertencia.</li>
+<li>En Linux, utiliza el comando <code>lsusb</code> para listar todos los dispositivos USB conectados y <code>lspci</code> para dispositivos PCI (tarjetas de red, gráficos).</li>
+<li>Desconecta un periférico crítico (ej. ratón o teclado) mientras el sistema está activo y observa cómo reacciona el SO (pantallazo negro, mensajes en consola, etc.). Vuelve a conectarlo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Análisis de Logs de Sistema:</strong></p>
+<ul>
+<li>En Windows, abre el "Visor de Eventos". Busca en "Registros del sistema" los eventos de nivel "Error" o "Advertencia" ocurridos justo después de un reinicio.</li>
+<li>En Linux, revisa el archivo <code>/var/log/syslog</code> o <code>/var/log/messages</code>. Busca líneas que indiquen la carga de módulos del kernel (<code>initramfs</code>, <code>kernel modules</code>).</li>
+</ul>
+</li>
+</ol>
+<h3>4.3. Explicación Técnica Profunda: El Proceso Boot</h3>
+<ol>
+<li><strong>POST (Power-On Self-Test):</strong> Antes de cargar el SO, el firmware verifica la integridad del hardware básico (RAM, CPU). Si falla aquí, el equipo ni siquiera emite video.</li>
+<li><strong>Bootloader:</strong> Es el primer software que carga el kernel. Configurar esto correctamente asegura que el sistema arranque desde el disco correcto y no desde una memoria USB olvidada.</li>
+<li><strong>Gestión de Interrupciones:</strong> Los periféricos envían señales al CPU cuando reciben datos (ej. pulsación de tecla). El SO debe tener los drivers correctos para interpretar estas interrupciones.</li>
+</ol>
+<h3>4.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Probable</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El equipo no arranca desde el disco duro</td>
+<td>Orden de arranque incorrecto en BIOS o disco dañado.</td>
+<td>Revisar configuración de Boot Priority o conectar el disco a otro puerto SATA/USB.</td>
+</tr>
+<tr>
+<td>Dispositivo marcado con signo de exclamación amarillo</td>
+<td>Driver corrupto o faltante.</td>
+<td>Actualizar driver manualmente o usar la opción "Buscar software" del Administrador de dispositivos.</td>
+</tr>
+<tr>
+<td>Log muestra errores continuos tras arranque</td>
+<td>Hardware defectuoso (ej. disco duro con sectores malos).</td>
+<td>Ejecutar herramientas de diagnóstico SMART para verificar salud del almacenamiento.</td>
+</tr>
+</tbody>
+</table>
+<h3>4.5. Reto de Ampliación (Para alumnos avanzados)</h3>
+<p><strong>Objetivo:</strong> Análisis de Tiempos de Arranque.
+<strong>Instrucción:</strong> Mide el tiempo exacto que tarda el sistema en encender desde que pulsas el botón físico hasta que aparece la pantalla de login. Repite la prueba deshabilitando servicios innecesarios del inicio automático y registra la diferencia de tiempo.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">5. PRÁCTICA 3: TOPOLOGÍA DE RED MANUAL (CE e, f, g)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Mapear la red local identificando dispositivos activos, configuraciones IP y tipos de conexión utilizando herramientas de diagnóstico de red estándar.</p>
+<h3>5.1. Metodología de Trabajo</h3>
+<p>En lugar de programar un escáner de red, utilizaremos comandos nativos para obtener información sobre nuestra propia interfaz y herramientas externas (como Wireshark) para observar el tráfico en la red. Esto cumple con la identificación de componentes físicos/lógicos (CE f, g).</p>
+<ul>
+<li><strong>Configuración TCP/IP:</strong> Asignación estática vs dinámica (DHCP).</li>
+<li><strong>Comandos de Diagnóstico:</strong> <code>ping</code>, <code>tracert</code>/<code>traceroute</code>, <code>ipconfig</code>/<code>ifconfig</code>.</li>
+<li><strong>Análisis de Paquetes:</strong> Inspección visual del tráfico para entender la topología.</li>
+</ul>
+<h3>5.2. Procedimiento Paso a Paso</h3>
+<ol>
+<li>
+<p><strong>Identificación de Componentes de Red (CE f):</strong></p>
+<ul>
+<li>Ejecuta el comando que muestra tu configuración IP actual (<code>ipconfig /all</code> en Windows o <code>ifconfig -a</code> en Linux).</li>
+<li>Anota la Dirección MAC (Física), Dirección IPv4, Máscara de Subred y Puerta de Enlace predeterminada.</li>
+<li>Verifica si el adaptador está activo en el Administrador de dispositivos o en las opciones de red del sistema.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mapeo de Topología Lógica (CE g):</strong></p>
+<ul>
+<li>Utiliza la herramienta <code>ping</code> para verificar conectividad hacia tu puerta de enlace y direcciones IP externas (ej. Google DNS).</li>
+<li>Usa el comando <code>tracert</code> (Windows) o <code>traceroute</code> (Linux) para ver qué saltos intermedios hay hasta llegar a una dirección externa. Esto revela routers intermedios en la topología lógica.</li>
+<li><strong>Ejercicio de Red Interna:</strong> En tu laboratorio virtual, identifica las IPs de tus máquinas virtuales vecinas y verifica que puedes "pinguearlas".</li>
+</ul>
+</li>
+<li>
+<p><strong>Análisis con Wireshark (CE e):</strong></p>
+<ul>
+<li>Abre Wireshark y selecciona la interfaz de red activa.</li>
+<li>Inicia una captura de paquetes mientras haces ping a otro dispositivo en la red.</li>
+<li>Filtra el tráfico por protocolo ICMP para ver los paquetes "Echo Request" y "Echo Reply".</li>
+<li><strong>Interpretación:</strong> Identifica en la cabecera del paquete la dirección MAC origen y destino (capa 2) y las direcciones IP origen y destino (capa 3).</li>
+</ul>
+</li>
+</ol>
+<h3>5.3. Explicación Técnica Profunda: Protocolos de Red</h3>
+<ol>
+<li><strong>ARP (Address Resolution Protocol):</strong> Cuando haces ping a una IP, el sistema debe saber la dirección MAC asociada. Wireshark mostrará paquetes ARP "Who has X.X.X.X? Tell Y.Y.Y.Y".</li>
+<li><strong>ICMP:</strong> Es el protocolo utilizado por <code>ping</code>. No es un protocolo de transporte (como TCP/UDP), sino de control y diagnóstico del nivel de red.</li>
+<li><strong>Subnetting:</strong> La máscara de subred define qué dispositivos están en la misma red local directa y cuáles deben enviarse a través de una puerta de enlace.</li>
+</ol>
+<h3>5.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Probable</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ping request could not find host</code></td>
+<td>El nombre del equipo no se resuelve.</td>
+<td>Verificar que los nombres de host estén configurados correctamente en el SO o usar la IP numérica.</td>
+</tr>
+<tr>
+<td>No aparecen paquetes en Wireshark</td>
+<td>Se está capturando en la interfaz incorrecta (ej. VirtualBox Host-Only).</td>
+<td>Asegurarse de seleccionar la tarjeta de red física o virtual correcta donde se genera el tráfico.</td>
+</tr>
+<tr>
+<td>No hay respuesta al ping a otro equipo</td>
+<td>Firewall bloqueando ICMP.</td>
+<td>Desactivar temporalmente el firewall en ambos equipos para pruebas, o permitir "Solicitudes Eco".</td>
+</tr>
+</tbody>
+</table>
+<h3>5.5. Reto de Ampliación (Para alumnos avanzados)</h3>
+<p><strong>Objetivo:</strong> Resolución DNS Inversa.
+<strong>Instrucción:</strong> En Wireshark, captura tráfico mientras navegas a una web conocida (ej. google.com). Filtra por DNS y observa cómo el cliente solicita la dirección IP del nombre de dominio al servidor DNS configurado en tu red.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">6. PRÁCTICA 4: AUDITORÍA DE SEGURIDAD Y PRL (CE h)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Realizar una auditoría manual de seguridad lógica (configuración del SO) y física (ergonomía), generando un informe de cumplimiento sin utilizar software automatizado de hacking.</p>
+<h3>6.1. Metodología de Trabajo</h3>
+<p>La seguridad en RA1 se centra en la prevención y configuración adecuada de los recursos. Verificaremos que el entorno esté preparado para alojar aplicaciones de forma segura y cumpla con las normativas de protección de datos y riesgos laborales.</p>
+<ul>
+<li><strong>Seguridad Lógica:</strong> Configuración del Firewall, gestión de cuentas de usuario y actualizaciones.</li>
+<li><strong>PRL Física:</strong> Ergonomía de la estación de trabajo (cables, postura, iluminación).</li>
+</ul>
+<h3>6.2. Procedimiento Paso a Paso</h3>
+<ol>
+<li>
+<p><strong>Auditoría de Seguridad Lógica (CE h):</strong></p>
+<ul>
+<li><strong>Firewall:</strong> Abre el panel de control del Firewall. Verifica que esté "Activo" tanto para redes privadas como públicas. Revisa las reglas entrantes y salientes por defecto.</li>
+<li><strong>Cuentas de Usuario:</strong> Abre la gestión de usuarios locales (<code>lusrmgr.msc</code> en Windows o <code>/etc/passwd</code> en Linux). Identifica cuentas con privilegios de administrador innecesarias. Asegúrate de que no existan cuentas genéricas activas como "Admin" o "Usuario1" sin contraseña.</li>
+<li><strong>Actualizaciones:</strong> Verifica el estado del sistema operativo. ¿Hay actualizaciones pendientes? Un sistema desactualizado es un riesgo de seguridad mayor para cualquier aplicación DAM desplegada en él.</li>
+</ul>
+</li>
+<li>
+<p><strong>Auditoría PRL Física (CE h):</strong></p>
+<ul>
+<li>Realiza una inspección visual de tu estación de trabajo.</li>
+<li>Verifica que los cables estén organizados y no supongan un riesgo de tropiezo (cable management).</li>
+<li>Evalúa la postura: Monitor a altura de ojos, teclado alineado con los codos, silla ajustada.</li>
+<li>Comprueba las condiciones ambientales: Temperatura adecuada del entorno, iluminación sin reflejos en pantalla y ventilación correcta de equipos informáticos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Generación de Informe:</strong></p>
+<ul>
+<li>Redacta un documento final que incluya capturas de pantalla (sin código) que evidencien el estado del Firewall y la configuración de usuarios.</li>
+<li>Incluye una lista de verificación firmada sobre los aspectos ergonómicos revisados.</li>
+</ul>
+</li>
+</ol>
+<h3>6.3. Explicación Técnica Profunda: Seguridad Integral</h3>
+<ol>
+<li><strong>Principio de Mínimo Privilegio:</strong> Los usuarios no deben tener permisos de administrador por defecto para evitar la ejecución accidental o maliciosa de código en su entorno local.</li>
+<li><strong>Hardening del Sistema:</strong> Deshabilitar puertos innecesarios y servicios que no se usan reduce la superficie de ataque. Un firewall activo filtra el tráfico no autorizado antes de que llegue a las aplicaciones.</li>
+<li><strong>Cumplimiento Legal (RGPD/LOPD):</strong> La seguridad del sistema operativo es requisito para proteger datos personales. Una configuración insegura puede conllevar sanciones legales si hay una brecha de datos.</li>
+</ol>
+<h3>6.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Probable</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No se pueden cambiar reglas del Firewall</td>
+<td>Falta de permisos de Administrador.</td>
+<td>Ejecutar el panel de control con privilegios elevados.</td>
+</tr>
+<tr>
+<td>Cuenta de administrador no tiene contraseña</td>
+<td>Configuración de seguridad débil.</td>
+<td>Establecer una contraseña compleja siguiendo las políticas de la empresa.</td>
+</tr>
+<tr>
+<td>Riesgo ergonómico detectado</td>
+<td>Mobiliario inadecuado.</td>
+<td>Ajustar la altura del soporte, usar reposapiés o cambiar el monitor de posición.</td>
+</tr>
+</tbody>
+</table>
+<h3>6.5. Reto de Ampliación (Para alumnos avanzados)</h3>
+<p><strong>Objetivo:</strong> Configuración de Políticas de Grupo (GPO).
+<strong>Instrucción:</strong> En un entorno Windows Server simulado, configura una política que fuerce a todos los usuarios a tener una contraseña compleja y que cambie cada 90 días. Esto simula la gestión de seguridad en un dominio corporativo.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">7. RÚBRICA DE EVALUACIÓN DEL LABORATORIO (RA1)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para aprobar el módulo basado en estas prácticas, se evaluará lo siguiente:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Criterio</th>
+<th style="text-align: left;">Indicador de Logro</th>
+<th style="text-align: left;">Peso</th>
+<th style="text-align: left;">Profundidad Esperada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CE a, b</strong></td>
+<td style="text-align: left;">Uso correcto de <code>msinfo32</code>, <code>/proc/cpuinfo</code> y gestión de memoria. Explica diferencia RAM física vs virtual en informe escrito.</td>
+<td style="text-align: left;">25%</td>
+<td style="text-align: left;">Comprensión profunda de la arquitectura del sistema sin intermediarios de código.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE c, d</strong></td>
+<td style="text-align: left;">Configuración correcta de BIOS/UEFI y análisis de logs de dispositivos. Identificación de drivers conflictivos.</td>
+<td style="text-align: left;">25%</td>
+<td style="text-align: left;">Diferenciación clara entre arranque físico (POST) y lógico (Kernel).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE e, f, g</strong></td>
+<td style="text-align: left;">Mapeo manual de red usando <code>ipconfig</code>, <code>ping</code> y Wireshark. Interpretación correcta de cabeceras de paquetes.</td>
+<td style="text-align: left;">30%</td>
+<td style="text-align: left;">Dominio del Modelo OSI y configuración TCP/IP estándar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE h</strong></td>
+<td style="text-align: left;">Auditoría de Firewall, usuarios y PRL física realizada manualmente con informe detallado.</td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">Integración de normas legales (RGPD/PRL) en la configuración técnica del SO.</td>
+</tr>
+</tbody>
+</table>
+<h3>Nota Final para el Alumno:</h3>
+<p>Estas prácticas demuestran que un desarrollador DAM competente es capaz de <strong>administrar y auditar</strong> su propio entorno sin depender de scripts externos. La capacidad de diagnosticar hardware, red y seguridad mediante herramientas nativas reduce los tiempos de depuración, mejora la estabilidad del despliegue y garantiza el cumplimiento normativo en entornos profesionales reales.</p>
+<hr />
+<p><strong>Fin de la Guía de Prácticas RA1 - Versión 3.0 (Administración Pura).</strong></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUÍA DE PRÁCTICAS Y LABORATORIOS - RA3 (EDICIÓN EXPANDIDA Y AUDITADA)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 999999px; /* Huge limit to prevent text cut-off */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA3.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA3</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">GUÍA DE PRÁCTICAS Y LABORATORIOS - RA3 (EDICIÓN EXPANDIDA Y AUDITADA)</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Módulo: Sistemas Informáticos | Especialidad: DAM</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Título del Proyecto: Gestión, Auditoría y Seguridad del Sistema Operativo</p>
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">1. INTRODUCCIÓN Y OBJETIVOS DEL LABORATORIO</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>En el contexto del Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM), el módulo de <strong>Sistemas Informáticos</strong> requiere que el alumno no solo utilice herramientas, sino que comprenda la lógica subyacente para automatizarlas y asegurar su integridad. El Resultado de Aprendizaje RA3 (<strong>"Gestiona la información del sistema identificando las estructuras de almacenamiento y aplicando medidas para asegurar la integridad de los datos"</strong>) se abordará mediante la configuración, auditoría y mantenimiento directo del Sistema Operativo utilizando sus herramientas nativas y servicios de administración.</p>
+<p><strong>Objetivos Específicos:</strong>
+1.  <strong>Auditar</strong> el sistema de archivos identificando estructuras de directorios, permisos y metadatos mediante comandos nativos.
+2.  <strong>Configurar</strong> sistemas de almacenamiento (particiones, formateo) y gestionar volúmenes lógicos.
+3.  <strong>Implementar</strong> políticas de seguridad (copias de seguridad) utilizando planificadores de tareas del sistema operativo y herramientas de compresión estándar.
+4.  <strong>Validar</strong> la integridad de los datos mediante verificación manual o herramientas de checksum integradas en el SO, sin depender de software externo no instalado.</p>
+<blockquote>
+<p><strong>🔍 Auditoría del Tutor: Valor Añadido Teórico (Enfoque SysAdmin)</strong>
+*   <strong>¿Por qué usar herramientas nativas?</strong> En la administración profesional de sistemas, el objetivo es la estabilidad y la portabilidad. Depender de scripts externos introduce dependencias innecesarias. Un administrador experto debe saber ejecutar las tareas usando las utilidades que ya existen en el kernel (ej. <code>tar</code>, <code>rsync</code>, <code>fdisk</code>).
+*   <strong>Integridad vs. Disponibilidad:</strong> Este laboratorio toca dos pilares de la seguridad informática. La integridad asegura que los datos no han sido alterados (RA3), mientras que las copias aseguran la disponibilidad en caso de fallo. Entender la diferencia es crucial para un desarrollador DAM que debe desplegar sus aplicaciones en servidores seguros.
+*   <strong>Abstracción del SO:</strong> Al usar comandos de consola y configuraciones nativas, el alumno interactúa directamente con los servicios del sistema operativo (daemons, planificadores, gestión de disco). Esto es vital para entender dónde se alojan realmente los datos y cómo el SO gestiona la memoria y el almacenamiento.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">2. REQUISITOS PREVIOS DE SOFTWARE Y ENTORNO</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para completar este laboratorio, es necesario configurar un entorno de administración de sistemas que permita interactuar con el sistema operativo desde la interfaz de línea de comandos (CLI) o herramientas gráficas nativas.</p>
+<h3>2.1. Herramientas Necesarias</h3>
+<ul>
+<li><strong>Máquina Virtual (VM):</strong> Se recomienda VMware Workstation Player, VirtualBox o Hyper-V.<ul>
+<li><em>Explicación Ampliada:</em> El laboratorio debe realizarse en una máquina virtual para permitir la manipulación segura de discos y particiones sin riesgo de dañar el sistema operativo anfitrión. Esto simula un entorno de producción aislado.</li>
+</ul>
+</li>
+<li><strong>Sistema Operativo:</strong> Linux (Ubuntu Server/Debian) o Windows 10/11 Pro (con herramientas habilitadas). <em>Para esta guía, utilizaremos </em><em>Linux</em><em> por su predominancia en servidores y la potencia de sus utilidades CLI.</em><ul>
+<li><em>Explicación Ampliada:</em> Linux ofrece acceso directo a los permisos Unix (UID/GID) y sistemas de archivos que son fundamentales para comprender el RA3. Windows requiere habilitar PowerShell o CMD con privilegios elevados, lo cual es menos transparente para la gestión de inodos y permisos granulares.</li>
+</ul>
+</li>
+<li><strong>Editor de Texto:</strong> <code>nano</code>, <code>vim</code> o <code>gedit</code>.<ul>
+<li><em>Explicación Ampliada:</em> Necesario para editar archivos de configuración del sistema (ej. <code>/etc/fstab</code>, archivos de cron) sin necesidad de un IDE complejo.</li>
+</ul>
+</li>
+<li><strong>Herramientas de Virtualización:</strong><ul>
+<li><em>Detalles Internos:</em> Se asume que el alumno sabe montar una imagen ISO y asignar recursos de hardware (RAM, CPU, Disco Duro virtual) antes de iniciar la práctica.</li>
+</ul>
+</li>
+</ul>
+<h3>2.2. Dependencias del Entorno</h3>
+<p>Se utilizarán las utilidades estándar del sistema operativo instaladas por defecto. No se requiere instalación adicional de librerías de terceros para el núcleo de la práctica.
+*   <em>Nota:</em> Herramientas como <code>smartctl</code> pueden requerir paquetes base (<code>apt install smartmontools</code>) pero no código fuente externo.</p>
+<h3>2.3. Estructura del Proyecto (Archivo)</h3>
+<p>Crear una carpeta en el sistema de archivos local para organizar los entregables:</p>
+<pre><code class="language-text">/RA3_SystemAdmin
+  /auditoria   # Archivos de reportes generados por comandos
+  /backup      # Carpeta destino de las copias de seguridad
+  /config      # Copia de archivos de configuración editados
+  README.md    # Documentación del proceso (sin código)</code></pre>
+
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">3. PRÁCTICA 1: AUDITORÍA MANUAL DEL SISTEMA DE ARCHIVOS (Criterios a, b, d)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Realizar un análisis exhaustivo de la estructura del sistema de archivos utilizando herramientas nativas de consola, identificando jerarquías, tamaños y permisos sin escribir scripts.
+<strong>Criterios Vinculados:</strong>
+*   <strong>a)</strong> Comparación de sistemas de archivos (simulada mediante metadatos).
+*   <strong>b/c)</strong> Identificación de estructura y función de directorios.
+*   <strong>d)</strong> Uso de comandos/herramientas para localizar información.</p>
+<h3>3.1. Escenario Realista</h3>
+<p>Como administrador, necesitas auditar la carpeta <code>/var/log</code> o una carpeta de proyecto específica (<code>/home/alumno/proyectos</code>) para identificar archivos grandes, permisos incorrectos y la jerarquía antes de realizar mantenimiento. No se puede usar código; se debe dominar el terminal.</p>
+<blockquote>
+<p><strong>🔍 Auditoría del Tutor:</strong> En entornos reales, los logs pueden consumir todo el disco si no se gestionan manualmente o mediante configuración de herramientas existentes (ej. <code>logrotate</code>). Un administrador que domina la consola puede ejecutar estas auditorías en cualquier máquina sin necesidad de desplegar software adicional.</p>
+</blockquote>
+<h3>3.2. Procedimiento de Ejecución (Comandos)</h3>
+<p>El alumno debe abrir una terminal y ejecutar las siguientes operaciones, capturando los resultados en archivos de texto para el informe:</p>
+<ol>
+<li><strong>Exploración Jerárquica:</strong> Utilizar el comando <code>tree</code> o <code>find</code> con opciones específicas para visualizar la estructura del directorio actual (<code>.</code>).<ul>
+<li><em>Comando sugerido:</em> <code>tree -L 3 -a</code> (Mostrar hasta 3 niveles, incluyendo ocultos) o <code>ls -laR</code>.</li>
+</ul>
+</li>
+<li><strong>Análisis de Metadatos:</strong> Identificar el inodo y los permisos de un archivo específico usando <code>stat</code>.<ul>
+<li><em>Comando sugerido:</em> <code>stat /ruta/al/archivo.txt</code> (Observar campos: Inode, Links, Access, Uid/Gid).</li>
+</ul>
+</li>
+<li><strong>Búsqueda de Archivos Grandes:</strong> Localizar archivos mayores a 1MB dentro de una jerarquía.<ul>
+<li><em>Comando sugerido:</em> <code>find . -type f -size +1M</code>.</li>
+</ul>
+</li>
+</ol>
+<h3>3.3. Explicación Técnica de la Lógica (Ampliada)</h3>
+<ul>
+<li><strong><code>tree</code> vs <code>ls</code>:</strong> Mientras que <code>ls</code> muestra contenido plano, <code>tree</code> construye visualmente el árbol de directorios desde los metadatos del sistema de archivos (Inodos). Esto demuestra comprensión de la estructura jerárquica (Criterio b).<ul>
+<li><em>Detalles Internos:</em> El comando lee las entradas del directorio padre y recursivamente consulta los hijos, respetando los límites de profundidad (<code>-L</code>). No ejecuta procesos externos para leer contenido, solo metadatos.</li>
+</ul>
+</li>
+<li><strong><code>stat</code>:</strong> Proporciona información detallada sobre el "estado" del archivo a nivel de sistema operativo (Criterio d).<ul>
+<li><em>Detalles Internos:</em> El comando consulta la tabla de inodos del sistema de archivos. Permisos como <code>rw-r--r--</code> indican qué usuario y grupo pueden leer o escribir, crucial para la seguridad del sistema.</li>
+</ul>
+</li>
+<li><strong><code>find</code>:</strong> Es una herramienta de búsqueda potente que opera directamente sobre el árbol de directorios (Criterio a/e).<ul>
+<li><em>Detalles Internos:</em> <code>find</code> no necesita cargar todo el directorio en memoria; navega el árbol secuencialmente verificando atributos en tiempo real.</li>
+</ul>
+</li>
+</ul>
+<h3>3.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<ol>
+<li><strong>Error: <code>tree: command not found</code></strong><ul>
+<li><em>Causa:</em> La utilidad no está instalada por defecto en la distribución mínima de Linux.</li>
+<li><em>Solución:</em> Instalarla con el gestor de paquetes (<code>sudo apt install tree</code>) o usar el comando nativo <code>ls -R</code> como alternativa estándar.</li>
+</ul>
+</li>
+<li><strong>Error: <code>Permission denied</code></strong><ul>
+<li><em>Causa:</em> El usuario no tiene permisos para leer carpetas del sistema (ej. <code>/etc/shadow</code>).</li>
+<li><em>Solución:</em> Utilizar <code>sudo</code> ante el comando o cambiar al directorio de usuario actual (<code>/home/alumno</code>) donde se tienen permisos completos.</li>
+</ul>
+</li>
+<li><strong>Error: Búsqueda infinita en Enlaces Simbólicos</strong><ul>
+<li><em>Causa:</em> Algunos sistemas pueden contener bucles en enlaces simbólicos que confunden a las herramientas de navegación.</li>
+<li><em>Solución:</em> Utilizar la opción <code>-P</code> (no seguir links) o <code>-L</code> con cuidado en <code>find</code>.</li>
+</ul>
+</li>
+</ol>
+<h3>3.5. Procedimiento de Compilación y Ejecución</h3>
+<ol>
+<li>Abrir terminal en el directorio del proyecto.</li>
+<li>Ejecutar los comandos de auditoría descritos en el punto 3.2.</li>
+<li><strong>Verificación:</strong> El alumno debe generar un archivo <code>auditoria.txt</code> con la salida de estos comandos, demostrando comprensión de la estructura jerárquica (Criterio b).</li>
+</ol>
+<h3>3.6. Reto de Ampliación: Integridad mediante Hashing Manual</h3>
+<p><strong>Objetivo del Reto:</strong> Modificar el proceso para calcular el hash SHA-256 de archivos críticos y compararlos con una lista maestra.
+*   <strong>Instrucción:</strong> Usar la herramienta <code>sha256sum</code>. Generar un archivo de referencia <code>checksums.txt</code> para los archivos importantes. Posteriormente, volver a ejecutar el comando sobre los mismos archivos y comparar si alguno ha cambiado (indicando alteración).
+*   <strong>Pista:</strong> No uses scripts. Copia y pega la salida en un editor de texto y ejecuta manualmente <code>sha256sum -c checksums.txt</code> para verificar integridad.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">4. PRÁCTICA 2: GESTIÓN DE DISCOS Y PARTICIONES (Criterios e, h)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Configurar particiones virtuales, formatear sistemas de archivos y evaluar el estado del disco utilizando herramientas nativas del sistema operativo.
+<strong>Criterios Vinculados:</strong>
+*   <strong>e)</strong> Creación de tipos de particiones/volúmenes (Gestión de almacenamiento).
+*   <strong>h)</strong> Instalación y evaluación de utilidades (<code>smartctl</code>, <code>df</code>).</p>
+<h3>4.1. Escenario Realista</h3>
+<p>Antes de instalar una actualización grande o realizar una migración, el administrador debe verificar si hay espacio suficiente en las unidades lógicas. El alumno debe manipular discos virtuales dentro de la Máquina Virtual (VM) para simular una ampliación de capacidad.</p>
+<blockquote>
+<p><strong>🔍 Auditoría del Tutor:</strong> En virtualización (VMs), los discos suelen ser archivos <code>.vmdk</code> o <code>.qcow2</code>. Entender cómo el SO ve estos "discos virtuales" como particiones lógicas es clave para gestionar recursos en entornos cloud. Un administrador debe saber agregar un disco a la VM y luego montarlo, sin depender de scripts que lo hagan por él.</p>
+</blockquote>
+<h3>4.2. Procedimiento de Ejecución (Herramientas)</h3>
+<p>Uso de herramientas nativas (<code>fdisk</code>, <code>parted</code>, <code>lsblk</code>) para la gestión del almacenamiento.</p>
+<ol>
+<li><strong>Añadido de Disco:</strong> Desde el gestor de VirtualBox/VMware, añadir un nuevo disco duro virtual a la máquina (ej. 2GB). Reiniciar si es necesario.</li>
+<li><strong>Identificación:</strong> Identificar el nuevo dispositivo usando <code>lsblk</code> o <code>fdisk -l</code>.<ul>
+<li><em>Comando sugerido:</em> <code>sudo lsblk</code> (Listar bloques). Buscar el nuevo disco (<code>/dev/sdb</code>).</li>
+</ul>
+</li>
+<li><strong>Particionado:</strong> Crear una partición primaria en el nuevo disco usando <code>fdisk</code>.<ul>
+<li><em>Pasos:</em> Ejecutar <code>sudo fdisk /dev/sdb</code>, crear partición nueva (<code>n</code>), tipo primario, aceptar tamaños por defecto y guardar cambios (<code>w</code>).</li>
+</ul>
+</li>
+<li><strong>Formateado:</strong> Crear un sistema de archivos en la partición creada (ej. ext4).<ul>
+<li><em>Comando sugerido:</em> <code>sudo mkfs.ext4 /dev/sdb1</code>.</li>
+</ul>
+</li>
+<li><strong>Montaje:</strong> Asignar el punto de montaje y conectarlo al sistema de archivos existente.<ul>
+<li><em>Pasos:</em> Crear carpeta (<code>mkdir /mnt/disco_nuevo</code>), montar (<code>mount /dev/sdb1 /mnt/disco_nuevo</code>).</li>
+</ul>
+</li>
+</ol>
+<h3>4.3. Explicación Técnica de la Lógica (Ampliada)</h3>
+<ul>
+<li><strong>Gestión de Particiones:</strong> Herramientas como <code>fdisk</code> modifican la tabla de particiones en el encabezado del disco. Esto prepara al SO para reconocer una nueva unidad lógica (Criterio e).<ul>
+<li><em>Detalles Internos:</em> El comando escribe en el MBR o GPT (tabla de arranque) indicando dónde empieza y termina cada volumen. Sin esto, el kernel no puede acceder a los datos del dispositivo.</li>
+</ul>
+</li>
+<li><strong>Sistemas de Archivos (<code>mkfs</code>):</strong> Formatear es crear la estructura interna para guardar archivos (inodos, superbloques). Aquí se selecciona <code>ext4</code>.<ul>
+<li><em>Detalles Internos:</em> El sistema define cómo se organizan los bloques libres y dónde se guardan los permisos. Diferentes SOs requieren diferentes sistemas (NTFS en Windows, ext4 en Linux).</li>
+</ul>
+</li>
+<li><strong>Montaje:</strong> Conectar la partición física a un directorio accesible del árbol de archivos.<ul>
+<li><em>Detalles Internos:</em> El kernel actualiza sus tablas internas para que cualquier acceso al path <code>/mnt/disco_nuevo</code> redirija las operaciones de lectura/escritura al dispositivo <code>/dev/sdb1</code>.</li>
+</ul>
+</li>
+</ul>
+<h3>4.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<ol>
+<li><strong>Error: <code>mount: /mnt/disco_nuevo: mount point does not exist</code></strong><ul>
+<li><em>Causa:</em> La carpeta destino no fue creada antes de montar el disco.</li>
+<li><em>Solución:</em> Usar <code>mkdir -p /ruta/desinada</code> antes del comando mount.</li>
+</ul>
+</li>
+<li><strong>Error: <code>Device or resource busy</code></strong><ul>
+<li><em>Causa:</em> El disco ya está montado en algún otro lugar o hay un proceso usando archivos dentro de él.</li>
+<li><em>Solución:</em> Verificar con <code>df -h</code> y desmontar (<code>umount</code>) antes de intentar operaciones de particionado.</li>
+</ul>
+</li>
+<li><strong>Error: Diferencia de números entre Script y GUI</strong><ul>
+<li><em>Causa:</em> El sistema operativo puede reservar espacio para archivos del sistema (ej. "Reserva del sistema" en Windows) que no se muestra en el uso total estándar pero sí en la GUI.</li>
+<li><em>Solución:</em> Entender que <code>df -h</code> muestra la información tal cual la reporta la API del SO, que puede variar ligeramente según las políticas de caché o reservas.</li>
+</ul>
+</li>
+</ol>
+<h3>4.5. Procedimiento de Compilación y Ejecución</h3>
+<ol>
+<li>Asegurar instalación: Verificar disponibilidad de <code>lsblk</code>, <code>fdisk</code>.</li>
+<li>Ejecutar los pasos descritos en el punto 4.2.</li>
+<li><strong>Prueba:</strong> Comparar los resultados del comando <code>df -h</code> con la herramienta gráfica "Discos" (Windows) o <code>disco</code> (GNOME). Si coinciden, se valida el criterio de localización de información.</li>
+</ol>
+<h3>4.6. Reto de Ampliación: Persistencia de Montaje</h3>
+<p><strong>Objetivo del Reto:</strong> Configurar el sistema para que el disco montado se monte automáticamente al reiniciar la máquina virtual.
+*   <strong>Instrucción:</strong> Editar el archivo <code>/etc/fstab</code> manualmente usando un editor de texto (<code>nano /etc/fstab</code>). Añadir una línea con el UUID del disco y el punto de montaje.
+*   <strong>Pista:</strong> Usar <code>blkid</code> para obtener el UUID antes de editar fstab. Reiniciar la VM y verificar que la carpeta <code>/mnt/disco_nuevo</code> existe sin comandos manuales.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">5. PRÁCTICA 3: SISTEMA DE COPIAS DE SEGURIDAD AUTOMATIZADAS (Criterios f, g)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Configurar una política de copias de seguridad utilizando herramientas nativas del sistema operativo y planificadores de tareas, permitiendo su restauración lógica.
+<strong>Criterios Vinculados:</strong>
+*   <strong>f)</strong> Realización y restauración de copias de seguridad (Uso de <code>tar</code>, <code>rsync</code>).
+*   <strong>g)</strong> Planificación y automatización de tareas (Uso de Cron/Task Scheduler).</p>
+<h3>5.1. Escenario Realista</h3>
+<p>Se requiere una utilidad que, al ejecutarse (o mediante un planificador), comprima la carpeta de "Proyectos" en un archivo <code>.tar.gz</code> con fecha y hora en el nombre, asegurando la integridad temporal de los datos.</p>
+<blockquote>
+<p><strong>🔍 Auditoría del Tutor:</strong> Aquí aplicamos directamente las métricas RTO/RPO (Recovery Time/Point Objective). Un backup sin restauración probada no es una copia de seguridad válida. El administrador debe configurar herramientas que validen que lo restaurado sea idéntico a lo original usando verificación manual o checksums.</p>
+</blockquote>
+<h3>5.2. Procedimiento de Ejecución (Herramientas)</h3>
+<p>Uso de <code>tar</code> para compresión y <code>cron</code> para automatización. No se escriben scripts, se configuran tareas existentes.</p>
+<ol>
+<li><strong>Compresión Manual:</strong> Generar un archivo comprimido de una carpeta existente usando <code>tar</code>.<ul>
+<li><em>Comando sugerido:</em> <code>tar -czvf backup_proyectos_$(date +%F).tar.gz ./proyectos/</code> (Usa variables del shell para fecha automática).</li>
+</ul>
+</li>
+<li><strong>Verificación de Integridad:</strong> Comprobar que el archivo se puede leer sin corromper.<ul>
+<li><em>Comando sugerido:</em> <code>tar -tzvf backup_proyectos_*.tar.gz | head</code>. (Lista contenido sin extraer).</li>
+</ul>
+</li>
+<li><strong>Automatización con Cron:</strong> Configurar una tarea programada para ejecutar esta compresión diariamente a las 02:00 AM.<ul>
+<li><em>Pasos:</em> Editar la tabla de cron del usuario (<code>crontab -e</code>). Añadir línea: <code>0 2 * * * tar -czvf /ruta/backup/proyectos.tar.gz /ruta/proyectos</code>.</li>
+</ul>
+</li>
+</ol>
+<h3>5.3. Explicación Técnica de la Lógica (Ampliada)</h3>
+<ul>
+<li><strong>Compresión (<code>tar</code>):</strong> Reduce el tamaño del almacenamiento y agrupa múltiples archivos en uno solo, facilitando su transporte. <code>gzip</code> añade compresión adicional.<ul>
+<li><em>Detalles Internos:</em> El sistema operativo ve esto como un único archivo grande, ocultando la complejidad interna de múltiples archivos pequeños (que suelen ser ineficientes en sistemas de archivos).</li>
+</ul>
+</li>
+<li><strong>Timestamp:</strong> El uso de variables del shell (<code>$(date)</code>) garantiza que cada copia tenga un identificador único, evitando sobrescrituras accidentales y permitiendo la recuperación a versiones anteriores (Integridad RA3).<ul>
+<li><em>Detalles Internos:</em> La cadena de tiempo actúa como una clave primaria en el sistema de archivos del backup. Esto es crucial para la gestión de retención (ej. "mantener backups de los últimos 7 días").</li>
+</ul>
+</li>
+<li><strong>Automatización (Criterio g):</strong> El servicio <code>cron</code> ejecuta comandos predefinidos en intervalos regulares sin intervención humana.<ul>
+<li><em>Detalles Internos:</em> El daemon de cron lee el archivo <code>/etc/crontab</code> o la tabla del usuario cada minuto para verificar si hay tareas pendientes que ejecutar.</li>
+</ul>
+</li>
+</ul>
+<h3>5.4. Posibles Errores y Soluciones (Troubleshooting)</h3>
+<ol>
+<li><strong>Error: <code>BadZipFile</code> / Corrupción de Tar</strong><ul>
+<li><em>Causa:</em> El archivo se interrumpió durante la escritura o fue modificado manualmente con un editor de texto plano.</li>
+<li><em>Solución:</em> Verificar que el proceso de escritura no haya sido interrumpido abruptamente (ej. corte de luz). Implementar checksums para validar la integridad al abrir (<code>tar -tzf</code>).</li>
+</ul>
+</li>
+<li><strong>Error: <code>FileNotFoundError</code> en Restauración</strong><ul>
+<li><em>Causa:</em> La ruta del archivo de backup cambia o se borra antes de ejecutar el script de restauración.</li>
+<li><em>Solución:</em> Implementar lógica de "Backup Retention Policy" dentro del sistema operativo (ej. scripts de limpieza en cron) para borrar backups antiguos automáticamente y asegurar que solo haya versiones válidas disponibles.</li>
+</ul>
+</li>
+<li><strong>Error: Archivos bloqueados (Locked Files)</strong><ul>
+<li><em>Causa:</em> En Windows/Linux, si un archivo está abierto por otro proceso, el sistema operativo puede denegar la lectura para copiarlo.</li>
+<li><em>Solución:</em> Usar herramientas de copia que manejen archivos abiertos (<code>rsync --partial</code>) o implementar un esquema de "Shadow Copy" (VSS en Windows) antes de copiar.</li>
+</ul>
+</li>
+</ol>
+<h3>5.5. Procedimiento de Compilación y Ejecución</h3>
+<ol>
+<li>Ejecutar el comando <code>tar</code> manual para generar la primera copia.</li>
+<li>Configurar el <code>cron</code> para la automatización futura.</li>
+<li><strong>Prueba de Restauración:</strong> El alumno debe intentar extraer los archivos en una carpeta temporal (<code>tar -xzvf backup.tar.gz -C ./RestoreTest</code>) y verificar que los archivos estén íntegros comparando tamaños o checksums visuales.</li>
+</ol>
+<h3>5.6. Reto de Ampliación: Backup Incremental con <code>rsync</code></h3>
+<p><strong>Objetivo del Reto:</strong> Configurar una tarea que solo copie los archivos nuevos o modificados recientemente usando <code>rsync</code>.
+*   <strong>Instrucción:</strong> En lugar de comprimir todo cada vez, usar <code>rsync -avz --delete origen/ destino/</code>. Esto sincroniza solo cambios.
+*   <strong>Pista:</strong> Necesitarás verificar la fecha de modificación (<code>stat</code>) antes y después para entender qué archivos se han transferido realmente.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">6. EVALUACIÓN Y MATRIZ DE VERIFICACIÓN</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para aprobar este laboratorio, el alumno debe entregar un informe técnico con capturas de pantalla de la terminal y configuraciones realizadas, sin incluir scripts de programación.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Criterio de Evaluación</th>
+<th style="text-align: left;">Actividad Práctica Vinculada</th>
+<th style="text-align: left;">Evidencia de Cumplimiento (Entregable)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>a)</strong> Comparar sistemas de archivos</td>
+<td style="text-align: left;">Práctica 1 &amp; 2 (<code>lsblk</code>, <code>stat</code>)</td>
+<td style="text-align: left;">Salida de comandos mostrando tipos FS y comparación de metadatos en informe.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>b/c)</strong> Identificar estructura directorios</td>
+<td style="text-align: left;">Práctica 1 (<code>tree</code>, <code>find</code> recursivo)</td>
+<td style="text-align: left;">Captura de pantalla del árbol de directorios generado con indentación correcta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>d)</strong> Localizar información (Comandos/Herramientas)</td>
+<td style="text-align: left;">Práctica 2 (<code>df -h</code>, <code>lsblk</code>)</td>
+<td style="text-align: left;">Comparación visual entre output de terminal y herramienta gráfica "Discos".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>e)</strong> Crear particiones/unidades lógicas</td>
+<td style="text-align: left;">Práctica 2 (<code>fdisk</code>, <code>mkfs</code>)</td>
+<td style="text-align: left;">Confirmación de creación de partición mediante <code>lsblk</code> antes y después.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>f)</strong> Realizar/Restaurar copias</td>
+<td style="text-align: left;">Práctica 3 (<code>tar</code>, extracción manual)</td>
+<td style="text-align: left;">Archivo .tar.gz generado y carpeta restaurada exitosamente tras borrado simulado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>g)</strong> Planificar/Automatizar tareas</td>
+<td style="text-align: left;">Práctica 3 (Configuración de <code>crontab</code>)</td>
+<td style="text-align: left;">Captura del archivo <code>.cron</code> mostrando la tarea programada correctamente.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>h)</strong> Instalar/Evaluar utilidades</td>
+<td style="text-align: left;">Práctica 2 (<code>smartctl</code>, <code>fdisk</code>)</td>
+<td style="text-align: left;">Uso correcto de herramientas nativas y validación de estado del disco.</td>
+</tr>
+</tbody>
+</table>
+<h3>6.1. Rúbrica de Calidad Técnica (DAM Focus)</h3>
+<p>Además de la funcionalidad RA3, se evaluará:
+*   <strong>Uso de CLI:</strong> Dominio de los comandos sin errores sintácticos graves.
+*   <strong>Documentación:</strong> Explicación clara del proceso en el informe técnico (<code>README.md</code>).
+*   <strong>Seguridad:</strong> Manejo correcto de permisos (ej. no ejecutar como root innecesariamente, manejo seguro de <code>sudo</code>).
+*   <strong>Versionado:</strong> Uso de Git para guardar la configuración y los informes, aunque no haya código fuente.</p>
+<blockquote>
+<p><strong>🔍 Auditoría del Tutor sobre Evaluación:</strong>
+La entrega debe incluir un archivo <code>README.md</code> que explique cómo ejecutar el proceso paso a paso en una nueva máquina. Esto simula la documentación técnica real que se entrega a los clientes o equipos de mantenimiento. Un proceso sin documentación es difícil de replicar y viola las buenas prácticas de ingeniería de software DAM para entornos operativos.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">7. CONCLUSIONES TÉCNICAS PARA EL TUTOR</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Este diseño de laboratorio cumple con el requisito de evaluar contenidos del módulo SI (RA3) mediante la gestión directa del sistema operativo, eliminando la dependencia del desarrollo de software. Al usar comandos nativos y herramientas configuradas:
+1.  Se refuerza la comprensión de <strong>estructuras de almacenamiento</strong> (no solo visual, sino lógica mediante <code>stat</code> e inodos).
+2.  Se aplica la <strong>integridad de datos</strong> a través de backups verificables con checksums.
+3.  Se integra el conocimiento de <strong>Sistemas Operativos</strong> con competencias profesionales de administración (Cron, Disk Management, FS Audit).</p>
+<p>El uso de herramientas nativas (<code>tar</code>, <code>fdisk</code>, <code>cron</code>) permite que estas prácticas sean universales y no dependan de versiones específicas de lenguajes de programación, asegurando que los alumnos aprendan a administrar sistemas en cualquier entorno.</p>
+<h3>7.1. Notas Finales del Coordinador</h3>
+<ul>
+<li><strong>Seguridad:</strong> Recalca a los alumnos que nunca ejecuten comandos de gestión de sistema (<code>rm -rf /</code>, <code>fdisk</code>) como usuario administrador en entornos productivos sin revisión previa. El riesgo de "romper" el sistema es real (ej. borrar <code>/</code> o particiones críticas).</li>
+<li><strong>Escalabilidad:</strong> Si los alumnos terminan pronto, pídeles que consideren cómo manejarían este script si la carpeta a analizar tiene 1 millón de archivos. ¿Qué pasaría con el rendimiento del comando <code>find</code>? Esto abre el debate sobre eficiencia algorítmica y gestión de recursos.</li>
+</ul>
+<p><strong>Nota Final para el Alumno:</strong>
+Recuerda que la teoría sin práctica es estéril. Te insto a que abras una terminal, uses <code>ls -li</code> para ver los inodos, crees enlaces simbólicos, formatee un USB con GPT y ejecutes un backup manual usando <code>tar</code>. La comprensión real del RA3 se consolida cuando tocas el hardware y ves cómo el software lo abstrae.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

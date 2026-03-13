@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUÍA DE PRÁCTICAS Y LABORATORIOS: RA6 - SISTEMAS INFORMÁTICOS (DAM)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 999999px; /* Huge limit to prevent text cut-off */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA6.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA6</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">GUÍA DE PRÁCTICAS Y LABORATORIOS: RA6 - SISTEMAS INFORMÁTICOS (DAM)</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">OPERACIÓN DE SISTEMAS EN RED Y SEGURIDAD</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Módulo:</strong> Sistemas Informáticos<br />
+<strong>Especialidad:</strong> Desarrollo de Aplicaciones Multiplataforma (DAM)<br />
+<strong>Región:</strong> Comunidad de Madrid<br />
+<strong>Versión del Instructor:</strong> 2.0 (Auditoría Sin Código)  </p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">1. INTRODUCCIÓN Y OBJETIVOS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Esta guía está diseñada para cumplir con el <strong>Resultado de Aprendizaje 6 (RA6): "Opera sistemas en red gestionando sus recursos e identificando las restricciones de seguridad existentes"</strong>. </p>
+<p>Como tutor de laboratorio DAM, nos centraremos exclusivamente en la <strong>administración operativa</strong> y la configuración de infraestructuras. El enfoque es puramente técnico-operativo: configuraremos manualmente los servicios, gestionaremos usuarios mediante consolas gráficas y herramientas nativas del sistema operativo, y validaremos el estado de la red utilizando las utilidades oficiales incluidas en Windows y Linux. No se realizará desarrollo de software; todo debe lograrse mediante la correcta configuración de componentes existentes.</p>
+<h3>Cobertura de Criterios de Evaluación (CE)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Código</th>
+<th style="text-align: left;">Criterio de Evaluación</th>
+<th style="text-align: left;">Lab Asociado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CE a</strong></td>
+<td style="text-align: left;">Configuración acceso recursos locales/red</td>
+<td style="text-align: left;">Lab 01, Lab 03</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE b</strong></td>
+<td style="text-align: left;">Derechos usuario y directivas seguridad</td>
+<td style="text-align: left;">Lab 02</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE c</strong></td>
+<td style="text-align: left;">Explotación servidores (fichero/impresión/app)</td>
+<td style="text-align: left;">Lab 03</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE d</strong></td>
+<td style="text-align: left;">Conexión remota a servidores</td>
+<td style="text-align: left;">Lab 04</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE e</strong></td>
+<td style="text-align: left;">Evaluación protección recursos/sistema</td>
+<td style="text-align: left;">Lab 05</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE f</strong></td>
+<td style="text-align: left;">Utilidades de seguridad básica</td>
+<td style="text-align: left;">Lab 05</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE g</strong></td>
+<td style="text-align: left;">Configuración y explotación dominios</td>
+<td style="text-align: left;">Lab 06</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">2. REQUISITOS PREVIOS DEL ENTORNO DE ADMINISTRACIÓN (HERRAMIENTAS NATIVAS)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para ejecutar estos laboratorios, se requiere un entorno virtualizado seguro. Se recomienda el uso de <strong>VirtualBox</strong> o <strong>VMware Workstation</strong>.</p>
+<h3>2.1. Infraestructura Virtual</h3>
+<ol>
+<li><strong>Servidor Windows Server 2019/2022 (DC):</strong> Para gestionar Dominios y Servicios (CE b, c, g).</li>
+<li><strong>Cliente Linux Ubuntu Server:</strong> Para gestión de red y configuración de servicios SSH/Samba (CE a, d).</li>
+<li><strong>Workstation Cliente:</strong> Windows 10/11 con herramientas de administración nativas instaladas.</li>
+</ol>
+<h3>2.2. Software de Administración</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Herramienta</th>
+<th style="text-align: left;">Versión Recomendada</th>
+<th style="text-align: left;">Propósito en el Lab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Administrador de Servidores (Windows)</strong></td>
+<td style="text-align: left;">Nativo</td>
+<td style="text-align: left;">Gestión de roles y características.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Active Directory Users and Computers</strong></td>
+<td style="text-align: left;">Nativo</td>
+<td style="text-align: left;">Creación y gestión de usuarios/OU.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Group Policy Management Console (GPMC)</strong></td>
+<td style="text-align: left;">Nativo</td>
+<td style="text-align: left;">Configuración de políticas de seguridad.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Event Viewer (Visor de Eventos)</strong></td>
+<td style="text-align: left;">Nativo</td>
+<td style="text-align: left;">Análisis de logs del sistema y seguridad.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Windows Firewall with Advanced Security</strong></td>
+<td style="text-align: left;">Nativo</td>
+<td style="text-align: left;">Configuración de reglas de entrada/salida.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Herramientas de Red Linux</strong></td>
+<td style="text-align: left;">Nativo (<code>ip</code>, <code>netstat</code>, <code>ping</code>)</td>
+<td style="text-align: left;">Diagnóstico de conectividad.</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3. Herramientas de Diagnóstico (Opcionales)</h3>
+<ul>
+<li><strong>Wireshark:</strong> Para análisis de paquetes de red (Capa 7).</li>
+<li><strong>Active Directory Administrative Center:</strong> Para gestión avanzada de objetos AD.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">3. ARQUITECTURA DEL ESCENARIO DE PRÁCTICA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario Corporativo:</strong> "SoftNet Solutions".
+Configuraremos una red interna donde los administradores gestionan recursos compartidos, imprimen en la oficina central y controlan sus cuentas mediante un controlador de dominio, todo ello validado mediante herramientas nativas de diagnóstico. No se programarán utilidades; la automatización se deja a las GPOs y scripts predefinidos del SO que configuraremos manualmente.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">4. DESARROLLO DE LOS LABORATORIOS</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">LAB 01: Configuración de Red y Diagnóstico Manual (CE a)</p>
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Objetivo:</strong> Configurar TCP/IP estático/dinámico y utilizar las utilidades nativas para verificar la conectividad del nodo local con recursos remotos.</p>
+<h4>4.1. Procedimiento Manual (Red)</h4>
+<ol>
+<li>Acceder al Servidor Linux (<code>admin</code>).</li>
+<li>Configurar IP Estática mediante Netplan:
+    <code>bash
+    sudo nano /etc/netplan/00-installer-config.yaml</code>
+    <strong>Contenido del archivo (Editar manualmente):</strong><ul>
+<li>Asegurarse de que la interfaz <code>ens33</code> tenga la dirección correcta.</li>
+<li>Verificar el Gateway (<code>gateway4</code>).</li>
+<li>Guardar cambios y aplicar: <code>sudo netplan apply</code>.</li>
+</ul>
+</li>
+</ol>
+<h4>4.2. Diagnóstico de Conectividad (Herramientas Nativas)</h4>
+<p><strong>Tarea:</strong> Validar la conectividad hacia el servidor de archivos (<code>192.168.50.20</code>) utilizando comandos de red estándar del SO, sin escribir scripts.</p>
+<ol>
+<li>
+<p><strong>Ping Test:</strong> Desde el cliente Windows/Linux, abrir terminal y ejecutar:
+    <code>bash
+    ping -c 4 192.168.50.20</code>
+    <em>Objetivo:</em> Verificar la capa de red (ICMP). Si hay respuesta, la ruta es correcta.</p>
+</li>
+<li>
+<p><strong>Verificación de Puertos (Netcat/Telnet):</strong>
+    En Linux: <code>nc -zv 192.168.50.20 445</code>
+    En Windows PowerShell (Cmdlet nativo): <code>Test-NetConnection -ComputerName 192.168.50.20 -Port 445</code>
+    <em>Objetivo:</em> Verificar si el servicio SMB (puerto 445) está escuchando y aceptando conexiones TCP.</p>
+</li>
+<li>
+<p><strong>Análisis de Rutas:</strong>
+    Ejecutar <code>tracert 192.168.50.20</code> (Windows) o <code>traceroute 192.168.50.20</code> (Linux).
+    <em>Objetivo:</em> Identificar los saltos (routers) intermedios y detectar dónde se pierde la conexión si el ping falla.</p>
+</li>
+</ol>
+<h4>4.3. Explicación Técnica</h4>
+<ul>
+<li><strong>Capa de Transporte:</strong> Al usar <code>Test-NetConnection</code> o <code>nc</code>, estamos comprobando el estado del puerto objetivo. Un resultado "True" indica que la capa 4 (TCP) ha completado el handshake exitosamente.</li>
+<li><strong>ICMP vs TCP:</strong> El Ping verifica disponibilidad básica, pero no garantiza que un servicio específico (como SMB) esté activo. La prueba de puerto es más granular para diagnósticos de servicios en red.</li>
+</ul>
+<h4>[TROUBLESHOOTING] Posibles Errores y Soluciones</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Causa Probable</th>
+<th style="text-align: left;">Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Request Timed Out</code></td>
+<td style="text-align: left;">Firewall bloqueando ICMP o IP incorrecta.</td>
+<td style="text-align: left;">Verificar configuración de firewall en destino. Comprobar cabecera de red de la VM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Connection Refused</code> (Puerto 445)</td>
+<td style="text-align: left;">El servicio SMB no está corriendo en el destino.</td>
+<td style="text-align: left;">En Windows Server, asegurarse de que "Servicios de Archivo y Almacenamiento" estén activos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Name Resolution Failed</code></td>
+<td style="text-align: left;">DNS incorrecto o nombre de host mal escrito.</td>
+<td style="text-align: left;">Comprobar <code>/etc/hosts</code> en Linux o configuración DNS en TCP/IP del cliente.</td>
+</tr>
+</tbody>
+</table>
+<h4>[RETO DE AMPLIACIÓN] Reto Extra Lab 01</h4>
+<p><strong>Desafío:</strong> Utiliza <strong>Wireshark</strong> para capturar el tráfico durante un <code>ping</code>. Identifica y anota los tipos de paquetes ICMP (Echo Request vs Echo Reply) y observa la dirección MAC origen y destino en las cabeceras Ethernet.</p>
+<hr />
+<h3>LAB 02: Gestión de Usuarios y Políticas de Seguridad (CE b)</h3>
+<p><strong>Objetivo:</strong> Configurar cuentas de usuario locales/dominio mediante la consola gráfica y verificar el cumplimiento de directivas de contraseñas complejas utilizando GPO.</p>
+<h4>4.1. Procedimiento Manual (Windows Server - ADUC)</h4>
+<ol>
+<li>Abrir "Administrador del Servidor" &gt; "Herramientas" &gt; <strong>Usuarios y equipos Active Directory</strong>.</li>
+<li>Navegar a la Unidad Organizativa (OU) correspondiente (ej: <code>Developers</code>).</li>
+<li>Clic derecho sobre la OU &gt; Nuevo &gt; Usuario.</li>
+<li>Crear el usuario <code>dev_user_01</code> con contraseña inicial <code>P@ssw0rd!</code>.</li>
+</ol>
+<h4>4.2. Configuración de Políticas de Grupo (GPO)</h4>
+<p><strong>Tarea:</strong> Forzar políticas de seguridad mediante Group Policy Management Console sin escribir scripts PowerShell personalizados.</p>
+<ol>
+<li>Abrir <strong>Group Policy Management</strong>.</li>
+<li>Crear una nueva GPO vinculada a la OU <code>Developers</code>. Nombre: "Seguridad_Developers".</li>
+<li>Editar la GPO: Navegar a <code>Configuración del equipo &gt; Directivas &gt; Configuración de Windows &gt; Configuraciones de seguridad &gt; Directiva de contraseñas</code>.</li>
+<li>Habilitar y configurar los siguientes valores:<ul>
+<li><strong>Longitud mínima de contraseña:</strong> 12 caracteres.</li>
+<li><strong>La contraseña debe cumplir requisitos de complejidad:</strong> Activado.</li>
+</ul>
+</li>
+<li>Aplicar cambios en el cliente (<code>gpupdate /force</code>) o esperar replicación (30 min).</li>
+</ol>
+<h4>4.3. Validación de Políticas</h4>
+<p><strong>Tarea:</strong> Verificar que la GPO se ha aplicado correctamente utilizando herramientas nativas.</p>
+<ol>
+<li>En el Cliente Windows, abrir PowerShell como Administrador.</li>
+<li>Ejecutar: <code>Get-GPResultantSetOfPolicy -Report "C:\GPO_Report.htm"</code>.</li>
+<li>Abrir el archivo HTML generado y buscar la GPO "Seguridad_Developers".</li>
+<li>Intentar cambiar la contraseña del usuario a una débil (ej: "123"). El sistema debe rechazarla basándose en la política aplicada.</li>
+</ol>
+<h4>[AMPLIACIÓN DEL AUDITOR] Profundización Técnica y Permisos</h4>
+<ul>
+<li><strong>Herencia de GPO:</strong> Las políticas se aplican jerárquicamente (Local &gt; Sitio &gt; Dominio &gt; OU). Al vincular a una OU específica, aseguramos que solo los usuarios en ese contenedor reciban estas restricciones.</li>
+<li><strong>Seguridad del Hash:</strong> Cuando el usuario cambia la contraseña, el sistema operativo calcula un hash NTLMv2 y lo almacena en Active Directory. La política de complejidad se valida <em>antes</em> de permitir el cambio, asegurando que nunca se guarde una credencial insegura en la base de datos.</li>
+</ul>
+<h4>[TROUBLESHOOTING] Posibles Errores y Soluciones</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Causa Probable</th>
+<th style="text-align: left;">Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>GPO no se aplica</code></td>
+<td style="text-align: left;">El cliente no es miembro del dominio o firewall bloquea RPC.</td>
+<td style="text-align: left;">Verificar que el equipo está unido al dominio. Comprobar servicios DNS y Netlogon.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Acceso denegado para cambiar contraseña</code></td>
+<td style="text-align: left;">Usuario no tiene permisos de cambio local.</td>
+<td style="text-align: left;">Asegurarse de usar una cuenta Administradora en el cliente o habilitar "Usuario debe cambiar la contraseña".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Error de replicación</code></td>
+<td style="text-align: left;">Los controladores de dominio están desincronizados.</td>
+<td style="text-align: left;">Ejecutar <code>repadmin /syncall</code> en un DC y verificar la hora del sistema (Kerberos requiere sincronización).</td>
+</tr>
+</tbody>
+</table>
+<h4>[RETO DE AMPLIACIÓN] Reto Extra Lab 02</h4>
+<p><strong>Desafío:</strong> Configura una <strong>Directiva de Bloqueo de Cuenta</strong>. Establece que tras 5 intentos fallidos, la cuenta se bloquea durante 30 minutos. Verifica el comportamiento forjando un intento de inicio de sesión incorrecto en el cliente.</p>
+<hr />
+<h3>LAB 03: Explotación de Servidores y Gestión de Recursos Compartidos (CE c)</h3>
+<p><strong>Objetivo:</strong> Configurar un recurso compartido SMB y gestionar sus permisos de acceso mediante las propiedades del sistema de archivos, simulando la integración Dev-IT sin código.</p>
+<h4>4.1. Configuración del Servidor de Ficheros (Windows Server)</h4>
+<ol>
+<li>Crear carpeta <code>D:\RecursosCompartidos</code>.</li>
+<li>Clic derecho &gt; Propiedades &gt; Pestaña <strong>Compartir</strong>.</li>
+<li>Botón <strong>Uso compartido avanzado</strong>: Activar compartir, nombre "RecursosCompartidos".</li>
+<li>Pestaña <strong>Permisos de Seguridad (NTFS)</strong>: Añadir grupo "Developers" con permisos de "Modificar".</li>
+<li>Asegurar que los permisos de carpeta y compartición sean coherentes (el principio de menor privilegio).</li>
+</ol>
+<h4>4.2. Prueba de Acceso Manual (Workstation Cliente)</h4>
+<p><strong>Tarea:</strong> Verificar el acceso al recurso compartido utilizando herramientas nativas de Windows sin desarrollar aplicaciones Java o Python.</p>
+<ol>
+<li><strong>Mapeo de Unidad de Red:</strong><ul>
+<li>Abrir "Este Equipo" &gt; Clic derecho en "Equipo" &gt; Conectar unidad de red.</li>
+<li>Ruta: <code>\\192.168.50.20\RecursosCompartidos</code>.</li>
+<li>Marcar "Reconectar al iniciar sesión".</li>
+</ul>
+</li>
+<li><strong>Prueba de Escritura:</strong><ul>
+<li>Crear un archivo de texto vacío llamado <code>reporte_dev.txt</code> dentro de la unidad mapeada (ej: <code>Z:</code>).</li>
+</ul>
+</li>
+<li><strong>Verificación de Permisos:</strong><ul>
+<li>Intentar borrar el archivo desde una cuenta que NO tenga permisos (ej: usuario invitado o sin derechos en el grupo Developers) para validar que el sistema bloquea la acción.</li>
+</ul>
+</li>
+</ol>
+<h4>[AMPLIACIÓN DEL AUDITOR] Profundización Técnica y Protocolos SMB</h4>
+<ul>
+<li><strong>Herencia de Permisos:</strong> Windows combina los permisos NTFS (carpeta local) con los permisos de Compartición (red). El acceso efectivo es el <strong>menor permiso</strong> entre ambos. Si la carpeta permite "Leer" pero el share solo "Ejecutar", no podrás escribir.</li>
+<li><strong>Autenticación:</strong> Para que esto funcione, tu PC cliente debe estar en el mismo dominio o tener credenciales almacenadas para ese servidor (<code>net use \\192.168.50.20 /user:dominio\usuario</code>).</li>
+</ul>
+<h4>[TROUBLESHOOTING] Posibles Errores y Soluciones</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Causa Probable</th>
+<th style="text-align: left;">Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Acceso Denegado</code> (Al escribir)</td>
+<td style="text-align: left;">El grupo "Developers" no tiene permisos NTFS.</td>
+<td style="text-align: left;">Revisar pestaña Seguridad &gt; Editar en la carpeta del servidor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>La ruta de red no se encuentra</code></td>
+<td style="text-align: left;">Firewall bloquea SMB o nombre DNS incorrecto.</td>
+<td style="text-align: left;">Comprobar que el firewall permite "Compartir archivos e impresoras". Usar IP en lugar de nombre si falla DNS.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Error al mapear unidad</code></td>
+<td style="text-align: left;">Sesión de usuario no autenticada en el dominio.</td>
+<td style="text-align: left;">Desconectar y reconectar la unidad usando credenciales explícitas (<code>net use /savecred</code>).</td>
+</tr>
+</tbody>
+</table>
+<h4>[RETO DE AMPLIACIÓN] Reto Extra Lab 03</h4>
+<p><strong>Desafío:</strong> Utiliza <strong>Resource Monitor</strong> (Monitor de recursos) en Windows para ver qué procesos tienen abiertos archivos dentro del recurso compartido. Intenta identificar si un proceso tiene el archivo bloqueado ("Exclusive") y libera la conexión desde el servidor (<code>Open Files</code> en Admin Tools).</p>
+<hr />
+<h3>LAB 04: Conexión Remota y Administración (CE d)</h3>
+<p><strong>Objetivo:</strong> Acceder a un servidor remoto (Linux/Windows) utilizando las herramientas de conexión nativas del sistema operativo para ejecutar mantenimiento.</p>
+<h4>4.1. Configuración de Servicios Remotos</h4>
+<ol>
+<li><strong>Servidor Linux (SSH):</strong><ul>
+<li>Asegurar que el servicio <code>sshd</code> está activo: <code>sudo systemctl status ssh</code>.</li>
+<li>Configurar firewall para permitir puerto 22: <code>sudo ufw allow ssh</code>.</li>
+</ul>
+</li>
+<li><strong>Servidor Windows (WinRM/RDP):</strong><ul>
+<li>Habilitar Escritorio Remoto en "Opciones del Sistema".</li>
+<li>Configurar WinRM para gestión remota de PowerShell: <code>winrm quickconfig</code> (en CMD Admin).</li>
+</ul>
+</li>
+</ol>
+<h4>4.2. Conexión Manual y Verificación</h4>
+<p><strong>Tarea:</strong> Establecer sesiones remotas utilizando clientes nativos y verificar la ejecución de comandos desde el lado del cliente.</p>
+<ol>
+<li>
+<p><strong>Conexión SSH (Cliente Linux/PowerShell):</strong></p>
+<ul>
+<li>Desde PowerShell en Windows: <code>ssh admin@192.168.50.10</code>.</li>
+<li>Introducir contraseña cuando se solicite.</li>
+<li>Ejecutar comando de verificación en la consola remota: <code>uptime</code> y <code>df -h</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conexión RDP (Cliente Windows):</strong></p>
+<ul>
+<li>Abrir "Conexión a Escritorio Remoto" (<code>mstsc.exe</code>).</li>
+<li>Conectar a <code>192.168.50.20</code>.</li>
+<li>Iniciar sesión con cuenta de dominio.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verificación de Sesiones Activas:</strong></p>
+<ul>
+<li>En el Servidor Windows, abrir PowerShell y ejecutar: <code>Get-WinEvent -LogName Security -FilterXPath "*[System[EventID=4624]]"</code>.</li>
+<li>Filtrar manualmente en Visor de Eventos para ver la entrada de inicio de sesión remota.</li>
+</ul>
+</li>
+</ol>
+<h4>[AMPLIACIÓN DEL AUDITOR] Profundización Técnica y SSH Handshake</h4>
+<ul>
+<li><strong>Cifrado:</strong> Una vez establecido el túnel, todo el tráfico está cifrado con algoritmos como AES o ChaCha20. Esto previene ataques "Man-in-the-Middle" donde un atacante podría leer los comandos que envías.</li>
+<li><strong>Canal Estándar (stdin/stdout):</strong> La consola remota se comporta como una terminal local, permitiendo redirigir la salida a archivos o procesarla en el cliente sin necesidad de scripts externos.</li>
+</ul>
+<h4>[TROUBLESHOOTING] Posibles Errores y Soluciones</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Causa Probable</th>
+<th style="text-align: left;">Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Authentication failed</code></td>
+<td style="text-align: left;">Contraseña incorrecta o usuario no existe.</td>
+<td style="text-align: left;">Verificar credenciales en el servidor Linux (<code>id admin</code>). Asegurar que SSH está instalado y corriendo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Connection timed out</code></td>
+<td style="text-align: left;">Firewall bloquea puerto 22/3389.</td>
+<td style="text-align: left;">Ejecutar <code>telnet 192.168.50.10 22</code> desde tu PC cliente para verificar conectividad básica del puerto.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>RDP Connection Error</code></td>
+<td style="text-align: left;">Escritorio Remoto deshabilitado en servidor.</td>
+<td style="text-align: left;">Habilitar RDP en "Sistema &gt; Configuración remota" en Windows Server.</td>
+</tr>
+</tbody>
+</table>
+<h4>[RETO DE AMPLIACIÓN] Reto Extra Lab 04</h4>
+<p><strong>Desafío:</strong> Configura la transferencia de archivos usando <strong>SCP</strong> (Secure Copy) desde la línea de comandos de Linux (<code>scp</code>) o PowerShell (<code>Copy-Item -ToSession</code>). Transfiere el archivo <code>/var/log/syslog</code> al escritorio del cliente sin abrir interfaces gráficas.</p>
+<hr />
+<h3>LAB 05: Evaluación de Seguridad y Utilidades (CE e, f)</h3>
+<p><strong>Objetivo:</strong> Utilizar las herramientas nativas de seguridad para escanear puertos vulnerables y analizar logs del sistema manualmente.</p>
+<h4>5.1. Escaneo de Puertos Manual (Netstat/Resource Monitor)</h4>
+<p><strong>Tarea:</strong> Identificar servicios abiertos en el servidor local utilizando utilidades integradas en Windows/Linux, sin usar librerías externas.</p>
+<ol>
+<li><strong>En Linux (<code>admin</code>):</strong><ul>
+<li>Ejecutar <code>sudo netstat -tulpn</code>.</li>
+<li>Anotar todos los puertos que muestran un estado <code>LISTEN</code>.</li>
+<li>Comparar con la lista de servicios esperados (SSH, Samba).</li>
+</ul>
+</li>
+<li><strong>En Windows Server:</strong><ul>
+<li>Abrir el Administrador de Tareas &gt; Pestaña Rendimiento &gt; Monitor de Recursos &gt; Pestaña Red.</li>
+<li>Identificar los puertos TCP/UDP que están en uso por procesos del sistema.</li>
+</ul>
+</li>
+</ol>
+<h4>5.2. Análisis de Logs (Event Viewer)</h4>
+<p><strong>Tarea:</strong> Revisar manualmente el registro de seguridad para detectar eventos críticos o fallos de inicio de sesión.</p>
+<ol>
+<li>Abrir <strong>Visor de Eventos</strong> (<code>eventvwr.msc</code>).</li>
+<li>Navegar a <code>Registros de Windows &gt; Seguridad</code>.</li>
+<li>Utilizar la acción "Filtrar registro actual" en el panel derecho.</li>
+<li>Configurar filtro para ver eventos con ID <strong>4625</strong> (Inicio de sesión fallido) y <strong>4672</strong> (Inicio de sesión especial).</li>
+<li>Documentar manualmente cuántos intentos fallidos se detectan en la última hora.</li>
+</ol>
+<h4>[AMPLIACIÓN DEL AUDITOR] Profundización Técnica y Auditoría</h4>
+<ul>
+<li><strong>Estados de Puerto:</strong> Un puerto puede estar <em>Abierto</em>, <em>Cerrado</em> o <em>Filtrado</em>. <code>netstat</code> muestra los puertos que el SO está escuchando activamente. Si un firewall bloquea la conexión antes del puerto, no aparecerá en una lista local de sockets abiertos.</li>
+<li><strong>Event ID 4625:</strong> Este evento es crucial para detectar ataques de fuerza bruta. Un volumen alto de estos eventos en poco tiempo indica actividad sospechosa que requiere investigación inmediata.</li>
+</ul>
+<h4>[TROUBLESHOOTING] Posibles Errores y Soluciones</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Causa Probable</th>
+<th style="text-align: left;">Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Permission denied</code> al leer logs</td>
+<td style="text-align: left;">El usuario actual no es Administrador.</td>
+<td style="text-align: left;">Ejecutar el Visor de Eventos como "Ejecutar como administrador".</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>No se muestran puertos</code></td>
+<td style="text-align: left;">Firewall está ocultando la información o puerto en uso.</td>
+<td style="text-align: left;">Asegurarse de ejecutar las herramientas con privilegios elevados (sudo/admin).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Filtro vacío</code></td>
+<td style="text-align: left;">El registro no contiene datos recientes.</td>
+<td style="text-align: left;">Revisar que el registro de seguridad esté habilitado (<code>auditpol /get /category:*</code>).</td>
+</tr>
+</tbody>
+</table>
+<h4>[RETO DE AMPLIACIÓN] Reto Extra Lab 05</h4>
+<p><strong>Desafío:</strong> Configura una <strong>Regla de Entrada en Firewall</strong> para bloquear específicamente el acceso al puerto 22 (SSH) desde una IP externa específica (<code>192.168.50.1</code>). Verifica que la conexión SSH desde esa IP falle tras aplicar la regla.</p>
+<hr />
+<h3>LAB 06: Gestión de Dominios y Servicios de Directorio (CE g)</h3>
+<p><strong>Objetivo:</strong> Consultar información del directorio activo utilizando herramientas gráficas nativas o utilidades de línea de comandos predefinidas, simulando la explotación de dominios sin código.</p>
+<h4>6.1. Consulta a Active Directory (ADUC / LDP.exe)</h4>
+<p><strong>Tarea:</strong> Conectarse al Controlador de Dominio y buscar usuarios por atributo utilizando herramientas oficiales de Microsoft.</p>
+<ol>
+<li>
+<p><strong>Método Gráfico (Active Directory Users and Computers):</strong></p>
+<ul>
+<li>Abrir <code>dsa.msc</code>.</li>
+<li>Navegar a la OU <code>Developers</code>.</li>
+<li>Hacer clic derecho en un usuario &gt; Propiedades.</li>
+<li>Revisar pestaña "Directorio" para ver los atributos LDAP básicos (CN, sAMAccountName).</li>
+</ul>
+</li>
+<li>
+<p><strong>Método CLI (dsquery):</strong></p>
+<ul>
+<li>Abrir CMD como Administrador en el cliente.</li>
+<li>Ejecutar la consulta: <code>dsquery user -name dev_*</code>.</li>
+<li>Analizar la salida de texto para listar todos los usuarios que comienzan por "dev".</li>
+</ul>
+</li>
+</ol>
+<h4>6.2. Verificación de Estructura de Directorio (LDP)</h4>
+<p><strong>Tarea:</strong> Utilizar <strong>LDP.exe</strong> para realizar una búsqueda LDAP básica y validar la jerarquía del árbol AD.</p>
+<ol>
+<li>Abrir <code>ldp.exe</code>.</li>
+<li>Conectar al controlador de dominio (<code>Connect</code> &gt; IP del DC).</li>
+<li>Vincularse con credenciales administrativas (<code>Bind</code>).</li>
+<li>Navegar por el árbol de directorio en el panel izquierdo.</li>
+<li>Realizar una búsqueda: <code>Search</code> &gt; Base DN (ej: <code>DC=solution,DC=local</code>) &gt; Filtro <code>(objectClass=user)</code>.</li>
+<li>Verificar que la columna "Attributes" muestra los campos esperados (mail, phone).</li>
+</ol>
+<h4>[AMPLIACIÓN DEL AUDITOR] Profundización Técnica y LDAP/AD</h4>
+<ul>
+<li><strong>Protocolo LDAP:</strong> Es el lenguaje estándar para acceder a directorios distribuidos. Active Directory usa LDAP sobre TCP/IP.</li>
+<li><strong>Árboles de Búsqueda (Scope):</strong> Las herramientas GUI permiten definir si buscar solo en la unidad actual o en toda la jerarquía (<code>Subtree</code>). <code>dsquery</code> permite especificar el ámbito de búsqueda mediante parámetros <code>-scope</code>.</li>
+</ul>
+<h4>[TROUBLESHOOTING] Posibles Errores y Soluciones</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error</th>
+<th style="text-align: left;">Causa Probable</th>
+<th style="text-align: left;">Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Server not found</code></td>
+<td style="text-align: left;">DNS no resuelve el nombre del DC o IP incorrecta.</td>
+<td style="text-align: left;">Verificar que la IP <code>192.168.50.5</code> es correcta y que los DNS están apuntando al servidor de dominio.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Invalid Credentials</code></td>
+<td style="text-align: left;">Usuario no tiene permisos para leer AD (Read-Only).</td>
+<td style="text-align: left;">Asegurarse de usar una cuenta con permisos de lectura en el directorio o Administrador del Dominio.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Connection Refused</code></td>
+<td style="text-align: left;">Servicio LDAP no está escuchando o firewall bloquea puerto 389/636.</td>
+<td style="text-align: left;">Verificar servicio "Active Directory Domain Services" en Windows Server y reglas del Firewall.</td>
+</tr>
+</tbody>
+</table>
+<h4>[RETO DE AMPLIACIÓN] Reto Extra Lab 06</h4>
+<p><strong>Desafío:</strong> Utiliza <strong>ADSI Edit</strong> para crear manualmente un nuevo objeto de usuario en una OU específica si la herramienta <code>dsa.msc</code> falla o no ofrece opciones avanzadas, y verifica que el objeto sea visible mediante <code>dsquery</code>.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">5. PROCEDIMIENTOS DE COMPILACIÓN Y PRUEBAS GENERALES</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para asegurar la calidad del trabajo entregado por los alumnos:</p>
+<ol>
+<li><strong>Control de Versiones (Git):</strong><ul>
+<li>Cada alumno debe subir sus notas, guías de configuración y capturas de pantalla a un repositorio privado.</li>
+<li>Commit message obligatorio: <code>fix: [RA6-LabXX] Descripción del cambio</code>.</li>
+</ul>
+</li>
+<li><strong>Pruebas Manuales:</strong><ul>
+<li>Para Lab 01 y Lab 05, incluir pruebas documentadas (capturas) que verifiquen si el puerto está cerrado en una IP inalcanzable mediante <code>Test-NetConnection</code> o <code>nc</code>.</li>
+</ul>
+</li>
+<li><strong>Validación de Entorno:</strong><ul>
+<li>El alumno debe demostrar que sus configuraciones funcionan tanto en Linux como en Windows (PowerShell/GUI).</li>
+</ul>
+</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">6. RÚBRICA DE EVALUACIÓN DEL RA6 (Laboratorio)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th style="text-align: left;">Criterio</th>
+<th style="text-align: center;">Puntuación Máxima</th>
+<th style="text-align: left;">Indicador de Cumplimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>CE a</strong> (Recursos Red)</td>
+<td style="text-align: center;">15 pts</td>
+<td style="text-align: left;">Configuración IP estática correcta y reporte de conectividad con herramientas nativas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE b</strong> (Seguridad USU)</td>
+<td style="text-align: center;">15 pts</td>
+<td style="text-align: left;">Creación de usuarios en ADUC y validación de políticas GPO mediante <code>gpresult</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE c</strong> (Servidores)</td>
+<td style="text-align: center;">20 pts</td>
+<td style="text-align: left;">Configuración correcta de permisos NTFS/Share y verificación de acceso mapeando unidad.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE d</strong> (Conexión Remota)</td>
+<td style="text-align: center;">15 pts</td>
+<td style="text-align: left;">Conexión SSH/RDP exitosa y ejecución de comandos remotos sin interacción manual.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE e/f</strong> (Seguridad Util)</td>
+<td style="text-align: center;">20 pts</td>
+<td style="text-align: left;">Escaneo de puertos con <code>netstat</code>/RMonitor y análisis de logs en Event Viewer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>CE g</strong> (Dominio)</td>
+<td style="text-align: center;">15 pts</td>
+<td style="text-align: left;">Consulta LDAP exitosa utilizando LDP.exe o dsquery para listar usuarios del dominio.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">7. CONCLUSIÓN DEL TUTOR</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Esta guía transforma los conceptos teóricos de administración de sistemas en competencias prácticas puras de operaciones. El alumno no solo configura un servidor, sino que <strong>gestiona</strong> el mismo mediante herramientas nativas, cumpliendo con el perfil profesional donde la capacidad de operar entornos complejos y asegurar recursos es vital para la integración con los sistemas operativos en red descritos en el RA6.</p>
+<p><strong>Nota Final:</strong> Todos los procedimientos deben ser documentados paso a paso en un informe técnico que explique las decisiones tomadas durante la configuración, asegurando la trazabilidad y cumplimiento de la normativa vigente (RGPD, LOPD) en cuanto al manejo de datos de usuarios.</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
