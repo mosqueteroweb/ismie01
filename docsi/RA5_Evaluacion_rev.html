@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion RA5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA5.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA5</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Evaluacion RA5</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">ÍNDICE DE CONTENIDOS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ol>
+<li><a href="#examen-tipo-test">Examen Tipo Test (15 Preguntas)</a></li>
+<li><a href="#caso-práctico-de-debugging-1">Caso Práctico de Debugging #1</a></li>
+<li><a href="#caso-práctico-de-debugging-2">Caso Práctico de Debugging #2</a></li>
+<li><a href="#solucionario-detalhado-para-el-docente-y-estudiante">Solucionario Detallado para el Docente y Estudiante</a></li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">1. EXAMEN TIPO TEST (15 PREGUNTAS DE ALTA DIFICULTAD)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Instrucciones:</strong> Selecciona la única respuesta correcta para cada pregunta. Cada pregunta vale 0,67 puntos sobre un total de 10 puntos.</p>
+<h3>Pregunta 1</h3>
+<p>En el modelo TCP/IP, ¿qué capa es responsable del direccionamiento lógico y el enrutamiento entre redes diferentes?</p>
+<p>A) Capa de Aplicación<br />
+B) Capa de Transporte<br />
+C) Capa de Red<br />
+D) Capa de Acceso a la Red</p>
+<hr />
+<h3>Pregunta 2</h3>
+<p>Al configurar una dirección IPv4 estática para un servidor web, ¿qué parámetro es fundamental para permitir que los dispositivos externos accedan al servicio?</p>
+<p>A) Dirección MAC del adaptador de red<br />
+B) Puerta de enlace predeterminada (Default Gateway)<br />
+C) Protocolo DHCP activado en el cliente<br />
+D) Dirección IP multicast</p>
+<hr />
+<h3>Pregunta 3</h3>
+<p>¿Qué protocolo se utiliza para la resolución automática de nombres de dominio a direcciones IP en una red TCP/IP?</p>
+<p>A) ARP<br />
+B) ICMP<br />
+C) DNS<br />
+D) NAT</p>
+<hr />
+<h3>Pregunta 4</h3>
+<p>En el contexto de seguridad inalámbrica, ¿cuál es el protocolo más seguro actualmente disponible para redes WLAN según los estándares IEEE 802.11?</p>
+<p>A) WEP<br />
+B) WPA<br />
+C) WPA2<br />
+D) WPA3</p>
+<hr />
+<h3>Pregunta 5</h3>
+<p>¿Qué dispositivo de red opera principalmente en la Capa 2 del modelo OSI y utiliza tablas MAC para dirigir el tráfico entre dispositivos en una LAN?</p>
+<p>A) Router<br />
+B) Hub<br />
+C) Switch<br />
+D) Repetidor</p>
+<hr />
+<h3>Pregunta 6</h3>
+<p>Un desarrollador necesita implementar comunicación UDP para un servicio de streaming de video. ¿Qué característica de UDP es más relevante para este caso de uso?</p>
+<p>A) Garantía de entrega ordenada de paquetes<br />
+B) Establecimiento de conexión previa antes del envío<br />
+C) Baja sobrecarga y transmisión sin confirmación<br />
+D) Control de flujo bidirectional</p>
+<hr />
+<h3>Pregunta 7</h3>
+<p>¿Cuál es el rango de puertos TCP/UDP reservados para servicios bien conocidos (Well-Known Ports)?</p>
+<p>A) 0 - 1023<br />
+B) 1024 - 49151<br />
+C) 49152 - 65535<br />
+D) 80 - 443</p>
+<hr />
+<h3>Pregunta 8</h3>
+<p>En una red corporativa con múltiples VLANs, ¿qué dispositivo es necesario para permitir la comunicación entre diferentes segmentos de red lógica?</p>
+<p>A) Switch Layer 2<br />
+B) Router o Switch Layer 3<br />
+C) Hub Ethernet<br />
+D) Repetidor Wi-Fi</p>
+<hr />
+<h3>Pregunta 9</h3>
+<p>¿Qué herramienta de diagnóstico utiliza el protocolo ICMP para verificar la conectividad básica entre dos nodos en una red IP?</p>
+<p>A) Tracert/Traceroute<br />
+B) Ping<br />
+C) Nslookup<br />
+D) Netstat</p>
+<hr />
+<h3>Pregunta 10</h3>
+<p>Al implementar un túnel SSH para acceso remoto seguro, ¿qué tipo de cifrado se utiliza principalmente para proteger los datos en tránsito?</p>
+<p>A) Cifrado asimétrico y simétrico combinado<br />
+B) Solo cifrado simétrico<br />
+C) Hashing MD5<br />
+D) Cifrado WEP</p>
+<hr />
+<h3>Pregunta 11</h3>
+<p>¿Qué significa el campo TTL (Time To Live) en un paquete IP?</p>
+<p>A) Tiempo máximo que la dirección IP es válida antes de expirar<br />
+B) Número máximo de saltos que puede realizar un paquete antes de ser descartado<br />
+C) Tiempo de espera para recibir confirmación del destino<br />
+D) Duración máxima de una sesión TCP</p>
+<hr />
+<h3>Pregunta 12</h3>
+<p>En el proceso DORA de DHCP, ¿qué significa la letra "R"?</p>
+<p>A) Request (Solicitud)<br />
+B) Release (Liberación)<br />
+C) Renewal (Renovación)<br />
+D) Reply (Respuesta)</p>
+<hr />
+<h3>Pregunta 13</h3>
+<p>¿Qué mecanismo permite que múltiples dispositivos de una red privada compartan una única dirección IP pública hacia Internet?</p>
+<p>A) NAT (Network Address Translation)<br />
+B) DNS Round Robin<br />
+C) Load Balancing<br />
+D) VLAN Tagging</p>
+<hr />
+<h3>Pregunta 14</h3>
+<p>Al programar un socket TCP en Java, ¿qué excepción se lanza cuando el puerto objetivo está cerrado o rechazando activamente la conexión?</p>
+<p>A) SocketTimeoutException<br />
+B) ConnectException<br />
+C) UnknownHostException<br />
+D) MalformedURLException</p>
+<hr />
+<h3>Pregunta 15</h3>
+<p>¿Qué tipo de firewall analiza el estado activo de las conexiones para permitir solo tráfico que sea respuesta a solicitudes legítimas iniciadas desde dentro de la red?</p>
+<p>A) Firewall de filtrado por paquetes (Packet Filtering)<br />
+B) Firewall Stateful Inspection<br />
+C) Proxy Application Layer<br />
+D) Firewall de estado estático</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">2. CASO PRÁCTICO DE DEBUGGING #1: Configuración TCP/IP y DNS en Aplicación Multiplataforma</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Escenario Profesional</p>
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Eres desarrollador senior en una empresa que crea aplicaciones multiplataforma para gestión logística. La aplicación debe conectarse a un servidor de bases de datos remoto para sincronizar inventarios. El equipo ha reportado fallos intermitentes de conexión en la versión móvil de la aplicación (Android/iOS).</p>
+<h3>Código Fuente con Errores (Java)</h3>
+<pre><code class="language-java">package com.logistica.red;
+
+import java.net.*;
+import java.io.IOException;
+
+/**
+ * Clase de configuración de red para la aplicación de logística.
+ * Contiene errores lógicos y de compilación que impiden la conectividad correcta.
+ */
+public class ConfiguracionRedLogistica {
+
+    private String servidorIP;
+    private int puertoBaseDatos;
+
+    // Constructor de la clase con errores
+    public ConfiguracionRedLogistica(String ip) {
+        this.servidorIP = ip;
+        this.puertoBaseDatos = 3306;
+
+        // Error 1: Validación incorrecta de IP (Sin manejo de excepciones en constructor)
+        validarDireccionIP(ip);
+    }
+
+    // Método con errores lógicos
+    public void validarDireccionIP(String direccion) {
+        try {
+            InetAddress addr = InetAddress.getByName(direccion);
+
+            if (addr.isLoopbackAddress()) {
+                System.out.println(&quot;Error: Dirección de loopback detectada&quot;);
+                return;
+            }
+
+            // Error 2: No se verifica si la IP es reachable realmente
+
+        } catch (UnknownHostException e) {
+            System.out.println(&quot;Host no encontrado&quot;);
+            // Error 3: La excepción no se maneja correctamente para reintentos
+        }
+    }
+
+    // Método con errores de sintaxis y lógica
+    public void conectarServidor() throws IOException {
+        Socket socket = new Socket();
+
+        // Error 4: Falta especificar el puerto en la conexión (Usa default)
+        InetAddress addr = InetAddress.getByName(this.servidorIP);
+
+        // Error 5: Timeout configurado de forma incorrecta (valor nulo)
+        socket.connect(addr, null);
+
+        System.out.println(&quot;Conexión establecida&quot;);
+    }
+
+    // Método DNS con errores
+    public String resolverDNS(String dominio) {
+        try {
+            InetAddress[] addresses = InetAddress.getAllByName(dominio);
+
+            // Error 6: Solo devuelve la primera IP encontrada sin verificar cual es correcta
+
+            return addresses[0].getHostAddress();
+        } catch (Exception e) {
+            // Error 7: No se diferencia entre error de DNS y error de red
+            System.out.println(&quot;Error genérico&quot;);
+            return null;
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        ConfiguracionRedLogistica config = new ConfiguracionRedLogistica(&quot;192.168.1.100&quot;);
+
+        // Error 8: No se verifica si la resolución DNS fue exitosa antes de conectar
+
+        String ipResuelta = config.resolverDNS(&quot;servidor-logistica.empresarial.com&quot;);
+        System.out.println(&quot;IP Resuelta: &quot; + ipResuelta);
+
+        config.conectarServidor();
+    }
+}</code></pre>
+
+<h3>Tarea del Alumno</h3>
+<ol>
+<li>Identifica y documenta <strong>al menos 5 errores</strong> en el código (lógicos, de compilación o de seguridad).</li>
+<li>Proporciona la solución corregida para cada error encontrado.</li>
+<li>Explica por qué el error afecta a la conectividad multiplataforma.</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">3. CASO PRÁCTICO DE DEBUGGING #2: Escaneo de Puertos y Seguridad en Aplicación Web</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Escenario Profesional</p>
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>La empresa ha desarrollado una API REST para gestión de inventarios que se ejecuta en servidores Linux. El equipo de seguridad ha reportado vulnerabilidades potenciales relacionadas con puertos abiertos innecesariamente. Debes crear una herramienta de auditoría de puertos y validar la configuración de seguridad SSL/TLS.</p>
+<h3>Código Fuente con Errores (Python)</h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;
+Herramienta de escaneo de puertos para auditoría de seguridad.
+Contiene errores críticos en gestión de recursos y seguridad.
+&quot;&quot;&quot;
+
+import socket
+import ssl
+from urllib.request import urlopen, Request
+
+class EscanerPuertos:
+
+    def __init__(self, host, timeout=2000):
+        self.host = host
+        # Error 1: Timeout configurado en milisegundos pero socket espera segundos
+
+    def escanear_puerto(self, puerto):
+        try:
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+            # Error 2: No se establece timeout antes de conectar
+
+            result = sock.connect_ex((self.host, puerto))
+
+            if result == 0:
+                print(f&quot;PUERTO {puerto}: ABIERTO&quot;)
+                return True
+            else:
+                print(f&quot;PUERTO {puerto}: CERRADO&quot;)
+                return False
+
+        except Exception as e:
+            # Error 3: Se captura toda la excepción sin diferenciar tipos
+
+            print(f&quot;Error: {e}&quot;)
+
+        finally:
+            pass  # Error 4: El socket no se cierra correctamente en todos los casos
+
+    def verificar_ssl(self, url):
+        try:
+            req = Request(url)
+
+            # Error 5: No se valida el certificado SSL explícitamente
+
+            response = urlopen(req, timeout=10)
+
+            if &#x27;https&#x27; in url.lower():
+                print(&quot;Protocolo HTTPS detectado&quot;)
+
+            return True
+
+        except Exception as e:
+            # Error 6: No se diferencia entre error de red y error de certificado
+
+            print(f&quot;Error SSL/Red: {e}&quot;)
+            return False
+
+    def cerrar_conexion(self):
+        pass  # Error 7: Método vacío sin implementación real
+
+
+# Código principal con errores
+def main():
+    scanner = EscanerPuertos(&quot;192.168.50.10&quot;)
+
+    puertos_a_verificar = [80, 443, 22, 3306]
+
+    for puerto in puertos_a_verificar:
+        # Error 8: No se manejan excepciones en el bucle principal
+
+        scanner.escanear_puerto(puerto)
+
+    # Error 9: No se verifica si la conexión HTTPS usa TLS 1.2 o superior
+
+    verificar_ssl(&quot;http://servidor-api.empresarial.com&quot;)
+
+    scanner.cerrar_conexion()
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+
+<h3>Tarea del Alumno</h3>
+<ol>
+<li>Identifica y documenta <strong>al menos 6 errores</strong> en el código (lógicos, de seguridad o de gestión de recursos).</li>
+<li>Proporciona la solución corregida para cada error encontrado.</li>
+<li>Explica cómo los errores afectan a la seguridad de la aplicación multiplataforma.</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">4. SOLUCIONARIO DETALLADO PARA EL DOCENTE Y ESTUDIANTE</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">PARTE A: EXAMEN TIPO TEST - SOLUCIONES Y JUSTIFICACIÓN TÉCNICA PROFUNDA</p>
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>En esta sección, no solo indicamos la respuesta correcta, sino que desglosamos la arquitectura de red subyacente para garantizar que el estudiante comprenda los conceptos teóricos y prácticos detrás de cada opción.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Respuesta Correcta</th>
+<th>Justificación Técnica Detallada (Estudio Expandido)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>C) Capa de Red</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es la <strong>Capa de Red</strong>. En el modelo TCP/IP, esta capa (equivalente a la Capa 3 del modelo OSI) se encarga fundamentalmente del direccionamiento lógico mediante direcciones IP y del enrutamiento. Su función principal es determinar la mejor ruta para enviar paquetes entre redes distintas (LAN a WAN). Los routers son los dispositivos que operan nativamente en esta capa, examinando el encabezado IP de cada paquete para decidir a qué interfaz de salida debe ser reenviado.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Capa de Aplicación:</strong> Opera en la parte superior (Capas 5-7 del OSI). Gestiona los datos que la aplicación necesita (HTTP, FTP), pero no se encarga del transporte físico ni lógico entre redes.&lt;br/&gt;• <strong>B) Capa de Transporte:</strong> Se enfoca en la comunicación extremo a extremo (puertos TCP/UDP). Aunque asegura la entrega o velocidad, no decide cómo cruzar una red intermedia.&lt;br/&gt;• <strong>D) Capa de Acceso a la Red:</strong> Es la interfaz física y lógica con el medio (Ethernet, WiFi). Gestiona direcciones MAC, pero no enrutamiento IP entre redes.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>B) Puerta de enlace predeterminada</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es la <strong>Puerta de Enlace Predeterminada</strong>. Cuando un dispositivo está configurado con una IP estática (ej. 192.168.1.50), sabe que pertenece a su red local. Sin embargo, para comunicarse con una IP externa (como <code>google.com</code> o un servidor en la nube), el sistema operativo necesita saber dónde enviar los paquetes que no son locales. La puerta de enlace es esa dirección IP (generalmente la del router) que actúa como salida hacia otras redes.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Dirección MAC:</strong> Es una identidad física única, pero solo funciona dentro del mismo dominio de broadcast local. No sirve para salir de la red.&lt;br/&gt;• <strong>C) Protocolo DHCP:</strong> Si configuramos IP estática, DHCP no debe estar activo en ese adaptador; además, DHCP es dinámico, no garantiza acceso externo sin gateway.&lt;br/&gt;• <strong>D) Dirección Multicast:</strong> Se usa para un grupo específico de receptores dentro de la misma red local, no para comunicación general hacia el exterior.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>C) DNS</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>DNS (Domain Name System)</strong>. Los humanos memorizamos nombres (ej. <code>www.google.com</code>), pero las máquinas necesitan direcciones numéricas (IP). El protocolo DNS actúa como una base de datos distribuida que traduce esos nombres legibles a direcciones IP, permitiendo la resolución automática.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) ARP:</strong> Se encarga de traducir una dirección IP <em>local</em> conocida a su correspondiente Dirección MAC. No resuelve nombres de dominio globales.&lt;br/&gt;• <strong>B) ICMP:</strong> Es un protocolo de control y diagnóstico (como ping), no de resolución de nombres.&lt;br/&gt;• <strong>D) NAT:</strong> Traduce direcciones privadas a públicas, pero no traduce nombres de texto a IP numérica.</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>D) WPA3</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>WPA3</strong>. Es el estándar más reciente (IEEE 802.11i actualizado) diseñado para proteger las redes inalámbricas contra ataques modernos. Introduce características clave como la protección individualizada de datos incluso en redes abiertas y una resistencia mejorada frente a ataques de fuerza bruta mediante el protocolo SAE (Simultaneous Authentication of Equals).&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) WEP:</strong> Es obsoleto, inseguro y se puede romper en minutos. Nunca debe usarse.&lt;br/&gt;• <strong>B) WPA / C) WPA2:</strong> Aunque más seguros que WEP, ambos tienen vulnerabilidades conocidas (como KRACK en WPA2). WPA3 es el estándar actual recomendado para entornos de alto seguridad.</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>C) Switch</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Switch</strong>. Los switches operan en la Capa 2 (Enlace de Datos) y utilizan tablas de conmutación CAM (Content Addressable Memory) que mapean direcciones MAC a puertos físicos. Esto permite enviar el tráfico directamente al destino correcto, optimizando el ancho de banda.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Router:</strong> Opera en Capa 3 (Red). Aunque puede hacer conmutación, su función principal es el enrutamiento entre redes diferentes.&lt;br/&gt;• <strong>B) Hub:</strong> Es un dispositivo antiguo que opera en física. Difunde datos a <em>todos</em> los puertos, creando colisiones y problemas de seguridad.&lt;br/&gt;• <strong>D) Repetidor:</strong> Solo amplifica la señal eléctrica para extender la distancia, no gestiona direcciones ni tráfico inteligente.</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>C) Baja sobrecarga y transmisión sin confirmación</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Baja sobrecarga</strong>. UDP (User Datagram Protocol) es un protocolo "connectionless" (sin conexión). No realiza el "handshake" de TCP ni envía acuses de recibo por cada paquete. Esto reduce significativamente la latencia y el tráfico de red, lo cual es vital para streaming en tiempo real donde es mejor perder un cuadro de video que esperar a retransmitir uno.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Garantía de entrega:</strong> Esta es una función de TCP, no UDP.&lt;br/&gt;• <strong>B) Establecimiento de conexión:</strong> TCP requiere tres vías (SYN-ACK-SYN), UDP no.&lt;br/&gt;• <strong>D) Control de flujo:</strong> TCP gestiona el control de flujo para evitar saturar al receptor; UDP asume que la red o el receptor pueden manejar el tráfico sin regulación estricta.</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>A) 0 - 1023</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>0 - 1023</strong>. Estos puertos se denominan "Well-Known Ports" (Puertos Bien Conocidos). Están reservados por la IANA para servicios estándar del sistema operativo y aplicaciones comunes. Para usar estos puertos en sistemas operativos modernos, generalmente se requieren privilegios de administrador o root.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>B) 1024 - 49151:</strong> Se llaman "Registered Ports", usados por aplicaciones de usuario registradas (ej. servidores web no estándar).&lt;br/&gt;• <strong>C) 49152 - 65535:</strong> Puertos dinámicos o privados, asignados temporalmente a procesos cliente.&lt;br/&gt;• <strong>D) 80 - 443:</strong> Son rangos específicos dentro del rango bien conocido (HTTP y HTTPS), no el rango completo.</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>B) Router o Switch Layer 3</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Router o Switch Layer 3</strong>. Las VLANs crean dominios de broadcast aislados lógicamente. Para que un dispositivo en la VLAN 10 pueda hablar con uno en la VLAN 20, se requiere routing (Capa 3). Un switch Layer 2 no tiene capacidad para reenviar paquetes entre subredes distintas.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Switch Layer 2:</strong> Solo entiende direcciones MAC y opera dentro del mismo dominio de broadcast/VLAN.&lt;br/&gt;• <strong>C) Hub Ethernet:</strong> No conoce VLANs ni IP, solo transmite señales eléctricas.&lt;br/&gt;• <strong>D) Repetidor Wi-Fi:</strong> Amplifica señal inalámbrica, no realiza routing lógico entre segmentos.</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>B) Ping</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Ping</strong>. El comando <code>ping</code> utiliza el protocolo ICMP (Internet Control Message Protocol) específicamente los mensajes de tipo "Echo Request" y "Echo Reply". Es la herramienta más básica para verificar si un nodo en la red IP está activo y responde a solicitudes.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Tracert/Traceroute:</strong> También usa ICMP, pero su función es mapear los saltos (rutas) que toma el paquete hasta el destino, no solo verificar si existe.&lt;br/&gt;• <strong>C) Nslookup:</strong> Se utiliza para consultar servidores DNS y obtener información de nombres de dominio, no para probar conectividad básica IP.&lt;br/&gt;• <strong>D) Netstat:</strong> Muestra estadísticas de conexiones activas y puertos en uso localmente.</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>A) Cifrado asimétrico y simétrico combinado</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Cifrado Híbrido</strong>. SSH utiliza un esquema híbrido para equilibrar seguridad y rendimiento. Inicialmente usa criptografía asimétrica (clave pública/privada, ej. RSA/Diffie-Hellman) para autenticar al servidor y negociar una clave de sesión secreta. Una vez acordada esta clave, cambia a cifrado simétrico (ej. AES) para el resto de la sesión porque es mucho más rápido para transmitir datos.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>B) Solo simétrico:</strong> Sería inseguro si las claves se compartieran por internet sin autenticación previa.&lt;br/&gt;• <strong>C) Hashing MD5:</strong> Es para integridad, no para cifrado de datos en tránsito. Además, MD5 es obsoleto e inseguro.&lt;br/&gt;• <strong>D) Cifrado WEP:</strong> Es para redes Wi-Fi antiguas y es vulnerable.</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>B) Número máximo de saltos</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es el <strong>Número máximo de saltos</strong>. El campo TTL (Time To Live) en la cabecera IP es un contador que se decrementa en 1 por cada router (salto) que procesa el paquete. Cuando llega a 0, el router descarta el paquete y envía una notificación ICMP "TTL Exceeded". Esto evita bucles infinitos de paquetes si hay errores de enrutamiento.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Tiempo máximo IP válida:</strong> La dirección IP no tiene fecha de caducidad por sí misma (aunque el DHCP tenga lease).&lt;br/&gt;• <strong>C) Tiempo de espera confirmación:</strong> Esto se refiere a timeouts de socket, no al campo TTL.&lt;br/&gt;• <strong>D) Duración sesión TCP:</strong> Se gestiona mediante keep-alive o tiempos de fin de conexión, no por TTL.</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td><strong>A) Request (Solicitud)</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Request</strong>. El proceso DORA describe cómo un cliente obtiene una IP:&lt;br/&gt;1. <strong>D</strong>iscover: Cliente busca servidor DHCP.&lt;br/&gt;2. <strong>O</strong>ffer: Servidor ofrece IP.&lt;br/&gt;3. <strong>R</strong>equest: Cliente solicita formalmente esa IP.&lt;br/&gt;4. <strong>A</strong>cknowledge: Servidor confirma la asignación.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>B) Release / C) Renewal:</strong> Son comandos DHCP válidos (liberar o renovar), pero no son parte del proceso inicial DORA.&lt;br/&gt;• <strong>D) Reply:</strong> No es un término estándar en el acrónimo DORA, aunque técnicamente el servidor "responde" a la solicitud.</td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td><strong>A) NAT (Network Address Translation)</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>NAT</strong>. El mecanismo de traducción de direcciones de red permite que múltiples dispositivos con IPs privadas internas (ej. 192.168.x.x) compartan una única IP pública externa al acceder a Internet. El router mantiene una tabla de mapeo para saber qué tráfico interno corresponde a cada conexión.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>B) DNS Round Robin:</strong> Es una técnica de balanceo de carga que asigna diferentes IPs de un mismo nombre, no traduce direcciones privadas.&lt;br/&gt;• <strong>C) Load Balancing:</strong> Distribuye tráfico entre servidores para evitar sobrecarga, pero no oculta las IPs internas detrás de una pública como NAT.&lt;br/&gt;• <strong>D) VLAN Tagging:</strong> Se usa para segmentar redes lógicas (802.1Q), no para traducción de direcciones hacia Internet.</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td><strong>B) ConnectException</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>ConnectException</strong>. En la API de Sockets de Java, esta excepción específica se lanza cuando el servidor rechaza explícitamente la conexión (puerto cerrado o servicio no escuchando). Indica que el destino está activo pero no acepta conexiones en ese puerto.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) SocketTimeoutException:</strong> Se lanza si la conexión tarda demasiado en establecerse, no necesariamente porque esté cerrada.&lt;br/&gt;• <strong>C) UnknownHostException:</strong> Indica que el nombre del host (DNS) no se pudo resolver a una IP.&lt;br/&gt;• <strong>D) MalformedURLException:</strong> Ocurre al intentar crear un objeto URL con una sintaxis incorrecta.</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td><strong>B) Firewall Stateful Inspection</strong></td>
+<td><strong>Justificación:</strong> La respuesta correcta es <strong>Firewall Stateful Inspection</strong>. Este tipo de firewall no solo filtra por puertos, sino que mantiene el estado de cada conexión (tabla de estados). Permite tráfico entrante solo si pertenece a una sesión iniciada legítimamente desde dentro. Esto bloquea automáticamente intentos de conexión no solicitados desde fuera.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A) Packet Filtering:</strong> Filtra solo por cabeceras (IP/Puerto) sin recordar el estado. Es menos seguro y más propenso a ataques de spoofing.&lt;br/&gt;• <strong>C) Proxy Application Layer:</strong> Opera en la capa 7. Aunque es muy seguro, es más lento y no es estrictamente lo que define "Stateful" en la capa de red/transporte.&lt;br/&gt;• <strong>D) Firewall estático:</strong> No existe como término técnico estándar para diferenciar de stateful; suele referirse al filtrado básico por paquetes.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>PARTE B: CASO PRÁCTICO DE DEBUGGING #1 - SOLUCIÓN DETALLADA Y RAZONAMIENTO LÓGICO</h3>
+<p>Este caso práctico simula un escenario real donde una aplicación Java falla en la conectividad de red debido a errores comunes de programación y gestión de excepciones. A continuación, se detalla el análisis paso a paso y la corrección técnica.</p>
+<h4>Error 1: Validación incorrecta de IP en Constructor (Manejo de Excepciones)</h4>
+<p><strong>Análisis del Problema:</strong> En el código original, <code>validarDireccionIP(ip)</code> se llama dentro del constructor sin un bloque <code>try-catch</code>. Si <code>InetAddress.getByName</code> falla (ej. string inválido), el constructor lanza una excepción no controlada (<code>UnknownHostException</code> o <code>RuntimeException</code>), impidiendo que la instancia de la clase se cree y provocando un fallo en cascada de la aplicación principal.
+<strong>Razonamiento Técnico:</strong> En Java, los constructores no deben dejar recursos en estado inconsistente ni propagar excepciones de validación de entrada sin manejarlas adecuadamente para evitar fallos silenciosos o cierres abruptos del programa.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-java">public ConfiguracionRedLogistica(String ip) {
+    this.servidorIP = ip;
+    this.puertoBaseDatos = 3306;
+
+    try {
+        validarDireccionIP(ip); // Llamada protegida ahora
+    } catch (UnknownHostException | IOException e) {
+        System.err.println(&quot;Error de configuración: IP inválida o inalcanzable&quot;);
+        throw new IllegalArgumentException(&quot;La dirección IP proporcionada es inválida&quot;, e);
+    }
+}</code></pre>
+
+<h4>Error 2: Falta verificación de Reachability (Conectividad Real)</h4>
+<p><strong>Análisis del Problema:</strong> <code>InetAddress.getByName()</code> solo resuelve el nombre DNS o valida la sintaxis de la IP. No garantiza que el host esté encendido, tenga conexión a red o sea accesible desde tu máquina local. Esto causa fallos intermitentes cuando la aplicación asume que "existe" porque tiene una IP válida.
+<strong>Razonamiento Técnico:</strong> En desarrollo multiplataforma (Android/iOS), las redes son inestables. La validación lógica debe incluir un chequeo de conectividad antes de intentar establecer sockets pesados.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-java">public void validarDireccionIP(String direccion) throws IOException {
+    InetAddress addr = InetAddress.getByName(direccion);
+
+    if (addr.isLoopbackAddress()) {
+        throw new SecurityException(&quot;Dirección de loopback detectada en entorno remoto&quot;);
+    }
+
+    // Validación crítica: ¿Puede el host responder a un ping?
+    if (!addr.isReachable(2000)) {  // Timeout de 2 segundos para no bloquear UI
+        throw new IOException(&quot;Host no reachable en la red actual (DNS ok pero Host offline)&quot;);
+    }
+}</code></pre>
+
+<h4>Error 3: Gestión Inadecuada de Excepciones para Reintentos</h4>
+<p><strong>Análisis del Problema:</strong> El código original solo imprime un mensaje (<code>System.out.println</code>). En una aplicación multiplataforma, la capa de presentación (UI) necesita saber que falló para mostrar un diálogo o reintentar automáticamente. Lanzar el error permite propagarlo a capas superiores (ej. ViewModel/MVVM).
+<strong>Razonamiento Técnico:</strong> El patrón "Fail Fast" es útil, pero en redes se suele preferir "Retry Logic". La excepción debe ser capturada y tratada adecuadamente para permitir estrategias de recuperación.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-java">catch (UnknownHostException e) {
+    System.out.println(&quot;Host no encontrado: &quot; + direccion);
+    // Lanzar una excepción personalizada o específica para que el cliente decida cómo actuar
+    throw new ConnectivityException(&quot;DNS Resolution Failed&quot;, e);
+}
+// Nota: Se asume la existencia de la clase ConnectivityException extendiendo IOException</code></pre>
+
+<h4>Error 4 y 5: Conexión sin Puerto Específico y Timeout Incorrecto</h4>
+<p><strong>Análisis del Problema:</strong> <code>socket.connect(addr)</code> usa el puerto por defecto (80) en lugar del configurado. Además, pasar <code>null</code> como timeout a <code>connect()</code> lanza una <code>NullPointerException</code> o comportamiento indefinido según la versión de Java. El timeout debe ser un entero positivo en milisegundos.
+<strong>Razonamiento Técnico:</strong> Para bases de datos MySQL (puerto 3306), conectarse al puerto por defecto resultará en "Connection Refused". Además, sin timeout, el hilo podría bloquearse indefinidamente si la red es lenta o está caída, congelando la interfaz del usuario.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-java">public void conectarServidor() throws IOException {
+    Socket socket = new Socket();
+
+    // Construcción explícita de la dirección con puerto correcto
+    InetAddress addr = InetAddress.getByName(this.servidorIP);
+    InetSocketAddress address = new InetSocketAddress(addr, this.puertoBaseDatos);
+
+    // Timeout configurado correctamente (5 segundos) para evitar bloqueos infinitos
+    socket.connect(address, 5000);
+
+    System.out.println(&quot;Conexión establecida correctamente en puerto &quot; + this.puertoBaseDatos);
+}</code></pre>
+
+<h4>Error 6 y 7: Resolución DNS Insegura y Manejo de Excepciones Genéricas</h4>
+<p><strong>Análisis del Problema:</strong> <code>getAllByName()</code> puede devolver múltiples IPs (Round Robin). Devolver la primera sin verificar si es reachable desperdicia recursos intentando conectar a un nodo caído. Además, capturar <code>Exception</code> genérico oculta errores específicos que son vitales para el debugging (ej. DNS timeout vs Network unreachable).
+<strong>Razonamiento Técnico:</strong> En entornos de alta disponibilidad (Load Balanced), la aplicación debe elegir una IP activa. El manejo de excepciones debe ser granular para saber si el problema es del proveedor DNS o de la red local.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-java">public String resolverDNS(String dominio) {
+    try {
+        InetAddress[] addresses = InetAddress.getAllByName(dominio);
+
+        // Búsqueda iterativa: probar cada IP hasta encontrar una reachable
+        for (InetAddress addr : addresses) {
+            if (addr.isReachable(1000)) {  // Timeout de 1 segundo por intento
+                return addr.getHostAddress();
+            }
+        }
+
+        throw new DNSResolutionException(&quot;Ninguna IP reachable encontrada tras revisar todas las respuestas DNS&quot;);
+
+    } catch (UnknownHostException e) {
+        System.err.println(&quot;Error crítico en resolución DNS: &quot; + e.getMessage());
+        throw new NetworkFailureException(&quot;DNS Resolution Failed&quot;, e); // Excepción específica
+    } catch (IOException e) {
+        System.err.println(&quot;Error de red durante la validación de IPs DNS: &quot; + e.getMessage());
+        throw e;
+    }
+}</code></pre>
+
+<h4>Error 8: Falta Validación Previa de Conexión</h4>
+<p><strong>Análisis del Problema:</strong> El <code>main</code> llama a <code>conectarServidor()</code> asumiendo que <code>resolverDNS</code> devolvió algo válido. Si devuelve <code>null</code>, el código lanza un NPE o intenta conectar con IP vacía.
+<strong>Razonamiento Técnico:</strong> La seguridad y robustez en programación dictan "Validate before Act". Nunca ejecutar operaciones de red sin verificar primero que los parámetros son válidos.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-java">public static void main(String[] args) {
+    ConfiguracionRedLogistica config = new ConfiguracionRedLogistica(&quot;192.168.1.100&quot;);
+
+    try {
+        String ipResuelta = config.resolverDNS(&quot;servidor-logistica.empresarial.com&quot;);
+
+        // Validación crítica: ¿Obtuvimos una IP válida?
+        if (ipResuelta == null || ipResuelta.isEmpty()) {
+            System.err.println(&quot;Fallo en resolución DNS: No se obtuvo IP válida. Abortando conexión.&quot;);
+            return;
+        }
+
+    } catch (Exception e) {
+        System.err.println(&quot;Error crítico pre-conexión: &quot; + e.getMessage());
+        return; // Salir del main para evitar excepciones no controladas en UI
+    }
+
+    try {
+        config.conectarServidor();  // Ahora seguro, IP validada y puerto correcto
+        System.out.println(&quot;Conexión exitosa&quot;);
+
+    } catch (IOException e) {
+        System.err.println(&quot;Error de conexión: &quot; + e.getMessage());
+    }
+}</code></pre>
+
+<hr />
+<h3>PARTE C: CASO PRÁCTICO DE DEBUGGING #2 - SOLUCIÓN DETALLADA Y RAZONAMIENTO LÓGICO</h3>
+<p>Este caso se centra en Python y la seguridad. Los errores aquí no son solo de funcionalidad, sino de gestión de recursos (fugas de memoria) y vulnerabilidades de seguridad (certificados SSL).</p>
+<h4>Error 1: Unidades de Tiempo Incorrectas (Timeout)</h4>
+<p><strong>Análisis del Problema:</strong> <code>timeout=2000</code> en el constructor sugiere milisegundos. Sin embargo, la API de sockets Python (<code>socket.settimeout</code>) acepta segundos como flotante. Esto causaría un timeout inmediato de 0.002 segundos o error si no se convierte explícitamente.
+<strong>Razonamiento Técnico:</strong> La consistencia en las unidades de tiempo es crítica para evitar "Race Conditions" programáticas donde el socket cierra antes de enviar la solicitud SYN.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-python">def __init__(self, host, timeout=2.0):  # Convertir explícitamente a segundos (float)
+    self.host = host
+    self.timeout = float(timeout) if isinstance(timeout, int) else timeout</code></pre>
+
+<h4>Error 2: Falta de Timeout en el Socket</h4>
+<p><strong>Análisis del Problema:</strong> Crear un socket y conectar sin establecer un límite de tiempo (<code>settimeout</code>) hará que el programa se bloquee indefinidamente si el firewall bloquea el puerto (DROP vs REJECT) o si la red está caída. Esto consume recursos del sistema operativo.
+<strong>Razonamiento Técnico:</strong> En seguridad, "Timeouts" limitan la ventana de oportunidad para DoS (Denial of Service). Nunca debe haber una conexión sin límite temporal en herramientas de auditoría.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-python">def escanear_puerto(self, puerto):
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # Establecer timeout ANTES de conectar para evitar bloqueos del hilo
+        sock.settimeout(self.timeout)
+
+        result = sock.connect_ex((self.host, puerto))
+
+        if result == 0:
+            print(f&quot;PUERTO {puerto}: ABIERTO&quot;)
+            return True
+        else:
+            print(f&quot;PUERTO {puerto}: CERRADO (código: {result})&quot;)
+            return False
+
+    except socket.timeout:
+        # Manejo específico de timeout para diferenciarlo de errores de red
+        print(f&quot;PUERTO {puerto}: TIEMPO DE ESPERA AGOTADO (FIREWALL PROBABLE)&quot;)
+        return None
+
+    finally:
+        sock.close()  # Asegurar cierre en todos los casos, incluido error</code></pre>
+
+<h4>Error 3 y 6: Captura Genérica de Excepciones vs Diferenciación</h4>
+<p><strong>Análisis del Problema:</strong> <code>except Exception</code> es peligroso porque captura errores no relacionados (ej. errores de lógica interna) y oculta la causa raíz. Además, en SSL, hay una diferencia crítica entre un error de red (<code>ConnectionRefused</code>) y un error de certificado (<code>SSLCertVerificationError</code>).
+<strong>Razonamiento Técnico:</strong> El debugging profesional requiere saber exactamente <em>qué</em> falló para no tener que adivinar. En seguridad, confundir un "Certificate Error" con un "Network Timeout" podría llevar a deshabilitar la validación SSL por accidente.
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-python">    except socket.timeout:
+        print(f&quot;Error de red en puerto {puerto}: Tiempo agotado&quot;)
+        return None
+
+    except socket.error as e:
+        # Captura específica para errores de socket (TCP/UDP)
+        print(f&quot;Error de red en puerto {puerto}: {e}&quot;)
+        return None
+
+def verificar_ssl(self, url):
+    try:
+        context = ssl.create_default_context()  # Contexto seguro por defecto
+
+        req = Request(url)
+        opener = build_opener(HTTPSHandler(context=context))
+
+        response = opener.open(req, timeout=10)
+
+        if &#x27;https&#x27; in url.lower():
+            print(&quot;Protocolo HTTPS detectado&quot;)
+            cert_info = response.getheader(&#x27;SSL-Protocol&#x27;)
+            if cert_info:
+                print(f&quot;Versión TLS/SSL: {cert_info}&quot;)
+
+        return True
+
+    except ssl.SSLCertVerificationError as e:  # Captura específica de seguridad
+        print(f&quot;ERROR CRÍTICO DE CERTIFICADO SSL: El certificado no es válido. {e}&quot;)
+        return False
+
+    except socket.timeout:
+         print(&quot;Tiempo agotado en conexión HTTPS&quot;)
+         return False</code></pre>
+
+<h4>Error 4 y 7: Gestión de Recursos (Cierre de Sockets)</h4>
+<p><strong>Análisis del Problema:</strong> El bloque <code>finally</code> vacío (<code>pass</code>) y el método <code>cerrar_conexion</code> vacío son errores graves. Los sockets consumen recursos del sistema (descriptores de archivo). Si no se cierran, la máquina puede agotar los puertos disponibles tras un escaneo masivo ("Port Exhaustion").
+<strong>Razonamiento Técnico:</strong> En Python, el uso del contexto <code>with</code> es preferible para auto-gestión de recursos. Si no se usa <code>with</code>, el cierre debe ser explícito en todos los caminos de ejecución (éxito o error).
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-python">    def cerrar_conexion(self):
+        &quot;&quot;&quot;Cerrar todos los sockets abiertos y limpiar recursos&quot;&quot;&quot;
+        # Si hubiéramos guardado referencias a sockets activos, se cerrarían aquí.
+        print(&quot;Limpieza de recursos finalizada&quot;)
+
+# Mejor práctica en escanear_puerto: Usar &#x27;with&#x27; para gestión automática del socket
+def escanear_puerto(self, puerto):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.settimeout(self.timeout)
+        result = sock.connect_ex((self.host, puerto))
+        # El socket se cierra automáticamente al salir del bloque &#x27;with&#x27;</code></pre>
+
+<h4>Error 8 y 9: Manejo de Excepciones en Bucle y Validación TLS</h4>
+<p><strong>Análisis del Problema:</strong> Si un escaneo falla en el bucle principal sin <code>try-catch</code>, la herramienta se detiene prematuramente. Además, detectar "HTTPS" no garantiza seguridad moderna; muchas webs usan TLS 1.0 obsoleto. Se debe verificar la versión del protocolo.
+<strong>Razonamiento Técnico:</strong> Una auditoría de seguridad debe ser robusta (no parar ante un error) y precisa (verificar versiones de protocolos criptográficos).
+<strong>Solución Corregida:</strong></p>
+<pre><code class="language-python">def main():
+    try:
+        scanner = EscanerPuertos(&quot;192.168.50.10&quot;)
+
+        puertos_a_verificar = [80, 443, 22, 3306]
+
+        for puerto in puertos_a_verificar:
+            try:
+                resultado = scanner.escanear_puerto(puerto)
+                print(f&quot;Resultado puerto {puerto}: {resultado}&quot;)
+
+            except Exception as e:
+                # Manejo de errores por puerto para que el escaneo continúe
+                print(f&quot;Error inesperado en puerto {puerto}, continuando...&quot;)
+
+        verificar_ssl(&quot;https://servidor-api.empresarial.com&quot;)
+
+    finally:
+        scanner.cerrar_conexion()  # Asegurar cierre en todos los casos
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">RÚBRICA DE EVALUACIÓN DEL ALUMNO (ACTUALIZADA)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntuación Máxima</th>
+<th>Indicadores de Desempeño Detallados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Test (15 preguntas)</strong></td>
+<td>10 puntos</td>
+<td>Respuestas correctas según solucionario. Cada pregunta vale 0,67 puntos. Se penaliza la omisión de justificación oral si se solicita defensa del examen.</td>
+</tr>
+<tr>
+<td><strong>Caso Práctico #1</strong></td>
+<td>20 puntos</td>
+<td><strong>Identificación (8 pts):</strong> Detectar los 5+ errores clave. &lt;br/&gt; <strong>Solución (8 pts):</strong> Código funcional que compila y gestiona excepciones correctamente. &lt;br/&gt; <strong>Explicación Técnica (4 pts):</strong> Justificar por qué el error afecta a la red/multiplataforma.</td>
+</tr>
+<tr>
+<td><strong>Caso Práctico #2</strong></td>
+<td>25 puntos</td>
+<td><strong>Identificación de Errores (10 pts):</strong> Detectar errores de seguridad y gestión de recursos. &lt;br/&gt; <strong>Solución Corregida (10 pts):</strong> Implementación con manejo de SSL/TLS y cierres de sockets. &lt;br/&gt; <strong>Análisis de Seguridad (5 pts):</strong> Explicar cómo la corrección mejora el perfil de seguridad de la API.</td>
+</tr>
+<tr>
+<td><strong>Documentación</strong></td>
+<td>10 puntos</td>
+<td>Código comentado, estructura clara, documentación técnica completa en Markdown.</td>
+</tr>
+<tr>
+<td><strong>Calidad del Código</strong></td>
+<td>20 puntos</td>
+<td>Sintaxis correcta (Java/Python), manejo de excepciones adecuado (<code>try-catch</code> granular), buenas prácticas (naming conventions, uso de <code>with</code>).</td>
+</tr>
+<tr>
+<td><strong>Presentación</strong></td>
+<td>15 puntos</td>
+<td>Formato Markdown correcto, tabla de contenido, orden lógico de secciones, ortografía impecable.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">NOTAS PARA EL DOCENTE Y RECOMENDACIONES PEDAGÓGICAS</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Criterios de Aprobación del RA5</p>
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ul>
+<li><strong>Nota mínima aprobatoria:</strong> 5/10 en el examen tipo test (se permite recuperar si se falla la práctica).</li>
+<li><strong>Caso práctico obligatorio:</strong> Al menos 4 errores identificados y corregidos correctamente por caso para obtener la máxima puntuación en esa sección.</li>
+<li><strong>Entregable final:</strong> Código funcional que compile sin errores (<code>javac</code>/<code>python3</code>) y documentación completa del solucionario.</li>
+</ul>
+<h3>Recomendaciones Pedagógicas Expandidas</h3>
+<ol>
+<li><strong>Antes del examen (Repaso Teórico):</strong> No basta con memorizar. El docente debe pedir al alumno que dibuje el modelo OSI explicando qué pasa en cada capa cuando se ejecuta un <code>ping</code>. Esto valida la comprensión profunda de las preguntas del test (ej. Pregunta 9, ICMP).</li>
+<li><strong>Durante la práctica:</strong> Permitir 3 horas para completar ambos casos prácticos. Fomentar el uso de IDEs con autocompletado y debuggers para que vean en tiempo real dónde falla el código.</li>
+<li><strong>Evaluación Oral Complementaria (Defensa):</strong> Preguntar al alumno: <em>"¿Por qué es peligroso capturar <code>Exception</code> genérico en Python?"</em> o <em>"¿Qué sucede si omitimos el TTL en un paquete IP?"</em>. Esto valida que no ha copiado el solucionario sin entenderlo.</li>
+<li><strong>Enfoque de Seguridad:</strong> Enfatizar que la seguridad (RA5, Criterio h) es transversal. Un error de timeout puede ser un vector de ataque DoS; un SSL mal validado puede exponer datos.</li>
+</ol>
+<h3>Observaciones Técnicas Importantes para el Docente</h3>
+<ul>
+<li>Los casos prácticos simulan escenarios reales del currículo DAM (Desarrollo de Aplicaciones Multiplataforma). Se recomienda usar entornos virtualizados (Docker/VM) si es posible para que los alumnos vean efectos reales, aunque el código puede correr en modo simulado.</li>
+<li>Se enfatiza la seguridad en redes como criterio transversal (CE h). Asegúrese de que el alumno entienda por qué <code>ssl.SSLCertVerificationError</code> es una excepción crítica y no debe ser ignorada (<code>pass</code>).</li>
+<li>La automatización mediante código es clave para el perfil profesional moderno (NetDevOps). El solucionario debe usarse como guía para enseñar a escribir scripts robustos, no solo para aprobar.</li>
+</ul>
+<hr />
+<p><em>Documento elaborado bajo estricta adherencia a la normativa curricular del módulo Sistemas Informáticos (FP DAM) y alineado con las competencias profesionales exigidas por el sector tecnológico.</em></p>
+<p><strong>Versión:</strong> 2.1<br />
+<strong>Fecha de última actualización:</strong> 2024-12-15</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

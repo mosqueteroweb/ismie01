@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion RA2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA2.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA2</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Evaluacion RA2</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">ÍNDICE DE CONTENIDOS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ol>
+<li><a href="#1-examen-tipo-test--15-preguntas-de-alta-dificultad">Examen Tipo Test - 15 Preguntas de Alta Dificultad</a></li>
+<li><a href="#2-supuesto-práctico-01-debugging-de-script-de-instalación-automatizada">Supuesto Práctico 01: Debugging de Script de Instalación Automatizada</a></li>
+<li><a href="#3-supuesto-práctico-02-diseño-de-clase-para-gestión-de-entornos-virtuales">Supuesto Práctico 02: Diseño de Clase para Gestión de Entornos Virtuales</a></li>
+<li><a href="#4-solucionario-detallado-para-el-docente-y-estudiante">SOLUCIONARIO DETALLADO PARA EL DOCENTE Y ESTUDIANTE</a></li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">1. EXAMEN TIPO TEST - 15 PREGUNTAS DE ALTA DIFICULTAD</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Instrucciones:</strong> Seleccione la única respuesta correcta para cada pregunta. Cada pregunta vale 0,67 puntos sobre un total de 10 puntos. Tiempo estimado: 45 minutos.
+<em>Nota del Auditor:</em> Esta prueba evalúa no solo la memoria técnica, sino la comprensión profunda de cómo interactúan los componentes del hardware y el software en entornos profesionales DAM.</p>
+<hr />
+<h3>Pregunta 1 - Arquitectura Hardware-Software</h3>
+<p>En el modelo de arquitectura Von Neumann modificado para sistemas operativos modernos con múltiples núcleos, ¿cuál es la principal limitación que afecta a la gestión del Contador de Instrucciones (PC) durante el cambio de contexto entre procesos?</p>
+<p>A. El PC debe ser almacenado en ROM para garantizar su persistencia durante apagados.
+B. Cada núcleo independiente requiere un registro PC separado, complicando la planificación centralizada.
+C. Los registros PC comparten espacio en caché L3, generando contención por ancho de banda del bus.
+D. El PC se ejecuta exclusivamente en modo usuario y no puede ser accedido por el kernel durante interrupciones.</p>
+<hr />
+<h3>Pregunta 2 - Modelos Arquitectónicos del Kernel</h3>
+<p>¿Qué característica diferencia fundamentalmente a la arquitectura Híbrida (utilizada por Windows NT y macOS XNU) de la arquitectura de Microkernel puro?</p>
+<p>A. En la arquitectura híbrida, los controladores de dispositivos se ejecutan siempre en modo kernel para rendimiento.
+B. La arquitectura híbrida elimina completamente el espacio de direcciones compartido entre kernel y usuario.
+C. Los servicios críticos como gestión de memoria permanecen en modo usuario pero con prioridad de planificación elevada.
+D. No existe aislamiento entre procesos; todos los módulos del sistema comparten la misma tabla de páginas.</p>
+<hr />
+<h3>Pregunta 3 - Gestión de Memoria Virtual</h3>
+<p>Durante un evento de "Page Fault" en sistemas con paginación, ¿cuál es el orden correcto de ejecución que realiza el Sistema Operativo para recuperar la página ausente?</p>
+<p>A. Interrupt → Buscar en Swap → Cargar RAM → Actualizar TLB → Restaurar PC → Continuar proceso.
+B. Buscar en Swap → Interrupt → Cargar RAM → Actualizar TLB → Restaurar PC → Continuar proceso.
+C. Cargar RAM → Buscar en Swap → Interrupt → Actualizar TLB → Restaurar PC → Continuar proceso.
+D. Interrupt → Actualizar TLB → Buscar en Swap → Cargar RAM → Restaurar PC → Continuar proceso.</p>
+<hr />
+<h3>Pregunta 4 - Sistemas de Archivos y Permisos Unix/Linux</h3>
+<p>En un sistema Linux, si se ejecuta el comando <code>chmod 751 /opt/dam/proyecto</code>, ¿qué permisos tiene el usuario "root" sobre ese directorio?</p>
+<p>A. Lectura, Escritura y Ejecución (rwx) para propietario, grupo y otros.
+B. Lectura, Escritura y Ejecución (rwx) solo para propietario; lectura y ejecución para grupo y otros.
+C. Solo lectura y escritura para propietario; sin permisos para grupo y otros.
+D. Sin permisos de ejecución para ningún usuario; solo lectura para propietario.</p>
+<hr />
+<h3>Pregunta 5 - Modelos de Licenciamiento</h3>
+<p>Una empresa DAM utiliza una librería bajo licencia MIT en su aplicación comercial cerrada. ¿Qué obligación legal tiene respecto al código fuente modificado?</p>
+<p>A. Debe publicar el código fuente completo de la librería modificada bajo licencia GPL.
+B. No está obligado a compartir el código fuente; puede mantenerlo propietario sin restricciones.
+C. Solo debe incluir el archivo LICENSE original en los archivos distribuidos, sin revelar modificaciones.
+D. Está obligado a donar las modificaciones a la comunidad open source para ser incluidas upstream.</p>
+<hr />
+<h3>Pregunta 6 - Procesos de Arranque (Boot)</h3>
+<p>En un entorno UEFI moderno con partición GPT, ¿qué componente es responsable de cargar el gestor de arranque GRUB en la partición EFI?</p>
+<p>A. El BIOS realiza POST y carga directamente el kernel desde el MBR.
+B. El firmware UEFI ejecuta el archivo \EFI\BOOT\GRUBX64.EFI desde la partición ESP (EFI System Partition).
+C. Windows Boot Manager se ejecuta automáticamente sin intervención de GRUB en sistemas dual-boot.
+D. El controlador SATA del chipset carga GRUB antes de que el firmware UEFI inicie su secuencia POST.</p>
+<hr />
+<h3>Pregunta 7 - Virtualización Tipo 1 vs Tipo 2</h3>
+<p>¿Cuál es la principal ventaja técnica de un Hypervisor Tipo 1 (Bare Metal) sobre un Hypervisor Tipo 2 (Hosted) en entornos DAM con múltiples máquinas virtuales simultáneas?</p>
+<p>A. El Tipo 2 permite acceso directo al hardware sin pasar por el SO anfitrión, mejorando rendimiento gráfico.
+B. El Tipo 1 elimina la capa de abstracción del SO anfitrión, reduciendo latencia y sobrecarga de CPU.
+C. El Tipo 2 incluye soporte nativo para aceleración GPU que el Tipo 1 no puede proporcionar.
+D. El Tipo 1 requiere un SO anfitrión dedicado exclusivamente para gestión de VMs sin recursos asignados.</p>
+<hr />
+<h3>Pregunta 8 - Gestión de Recursos en Virtualización</h3>
+<p>En un escenario de "Overcommit" de memoria virtual donde se asignan más RAM a las VMs que la disponible físicamente, ¿qué mecanismo utiliza el Hypervisor Tipo 1 para evitar fallos catastróficos?</p>
+<p>A. Compresión de páginas y Swapping entre discos virtuales utilizando técnicas de ballooning dinámico.
+B. Elimina completamente las VMs en cola cuando se alcanza el límite físico sin notificación al usuario.
+C. Aumenta automáticamente la RAM física del host mediante llamadas API a la placa base (no soportado).
+D. Convierte todas las VMs a modo de ejecución de solo lectura para reducir consumo de memoria.</p>
+<hr />
+<h3>Pregunta 9 - Estrategias de Backup y Recuperación</h3>
+<p>Una empresa DAM requiere un tiempo máximo de recuperación (RTO) de 2 horas y un punto objetivo de recuperación (RPO) de 1 hora. ¿Qué estrategia de backup es la más adecuada considerando balance entre coste y eficiencia?</p>
+<p>A. Backup completo diario a 4 discos externos, restauración manual desde cinta.
+B. Backup incremental cada 30 minutos + backup diferencial semanal, con réplica en nube.
+C. Backup diferencial diario sin copias incrementales ni snapshots de VMs activas.
+D. Backup completo cada hora sin retención histórica más allá de los últimos 7 días.</p>
+<hr />
+<h3>Pregunta 10 - Gestión de Dependencias y Paquetes</h3>
+<p>En un entorno Linux para desarrollo DAM, ¿qué comando garantiza la instalación automática de dependencias requeridas por un paquete .deb específico?</p>
+<p>A. <code>apt-get install --auto-install nombre-paquete</code> (comando inexistente en APT).
+B. <code>dpkg -i nombre-paquete.deb</code> seguido de <code>apt-get install -f</code> para resolver dependencias pendientes.
+C. <code>yum install nombre-paquete.deb</code> que convierte automáticamente paquetes DEB a RPM.
+D. <code>pacman -S nombre-paquete.deb --deep-dependencies</code> que resuelve todas las librerías requeridas.</p>
+<hr />
+<h3>Pregunta 11 - Logs del Sistema y Auditoría</h3>
+<p>En Windows, ¿qué tipo de registro en el Event Viewer contiene información crítica para diagnosticar fallos de arranque relacionados con controladores de dispositivo?</p>
+<p>A. Registro "Application" que almacena errores de software de terceros sin contexto del kernel.
+B. Registro "Security" que solo registra intentos de acceso y autenticación de usuarios.
+C. Registro "System" que documenta eventos del sistema operativo e inicio/apagado de controladores.
+D. Registro "Setup" que registra únicamente actualizaciones de Windows Update sin errores críticos.</p>
+<hr />
+<h3>Pregunta 12 - Seguridad y Modelos de Permisos Windows</h3>
+<p>En un entorno corporativo DAM, ¿qué estructura de seguridad se utiliza en Windows NT para controlar el acceso a archivos y directorios?</p>
+<p>A. ACLs (Access Control Lists) que asocian permisos específicos a usuarios y grupos dentro del objeto.
+B. Bits rwx tradicionales de Unix aplicados directamente sobre archivos NTFS sin modificación.
+C. Tokens de seguridad estáticos que no pueden ser modificados dinámicamente por el administrador.
+D. Permisos basados en IP de red únicamente, sin considerar identidad de usuario o grupo local.</p>
+<hr />
+<h3>Pregunta 13 - Mantenimiento Preventivo de Discos</h3>
+<p>¿Cuál es la diferencia fundamental entre los procesos de desfragmentación y TRIM en sistemas operativos modernos con almacenamiento SSD?</p>
+<p>A. La desfragmentación reorganiza bloques lógicos en HDD; TRIM informa al SSD sobre bloques no utilizados para limpieza.
+B. TRIM es exclusivo de discos magnéticos mientras que la desfragmentación funciona exclusivamente en SSD.
+C. Ambos procesos realizan el mismo objetivo físico pero con diferentes nombres según fabricante del disco.
+D. La desfragmentación mejora rendimiento en SSD; TRIM solo se utiliza para copias de seguridad incrementales.</p>
+<hr />
+<h3>Pregunta 14 - Documentación Técnica y Rastreabilidad</h3>
+<p>En un entorno DAM con múltiples VMs, ¿qué elemento es esencial incluir en la documentación técnica para garantizar la reproducibilidad exacta del entorno?</p>
+<p>A. Solo el nombre de las máquinas virtuales sin especificar versiones de SO o parches aplicados.
+B. La matriz de configuraciones que incluye versiones de SO, controladores, actualizaciones y red privada.
+C. Las contraseñas de acceso en texto plano para facilitar la recuperación ante emergencias.
+D. El número de serie del hardware físico anfitrión sin detalles sobre recursos asignados a las VMs.</p>
+<hr />
+<h3>Pregunta 15 - Ciclo de Vida de Aplicaciones</h3>
+<p>¿Qué característica define correctamente el uso de "Entornos Virtuales" en Python dentro de un Sistema Operativo para desarrollo DAM?</p>
+<p>A. Aíslan librerías específicas del proyecto sin afectar al sistema global, permitiendo versiones conflictivas simultáneas.
+B. Ejecutan aplicaciones en una máquina virtual completa con SO independiente y red aislada.
+C. Eliminan la necesidad de tener Python instalado en el Sistema Operativo anfitrión para cualquier proyecto.
+D. Permiten compilar código Java dentro del entorno virtual sin necesidad de JDK externo.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">2. SUPUESTO PRÁCTICO 01: DEBUGGING DE SCRIPT DE INSTALACIÓN AUTOMATIZADA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Enunciado:</strong><br />
+Un desarrollador DAM ha creado un script Bash para automatizar la instalación de herramientas en una VM Ubuntu Server. El script falla durante la ejecución con errores no explicados. Su tarea es identificar los errores lógicos y de compilación, proponer la solución correcta y justificar cada cambio basándose en estándares de ingeniería de software (CE-e, CE-h, CE-i).</p>
+<h3>Código Original (Con Errores):</h3>
+<pre><code class="language-bash">#!/bin/bash
+# Script: install_dam_env.sh
+# Autor: Estudiante DAM - Versión 1.0
+
+echo &quot;=== INICIANDO INSTALACIÓN DE ENTORNO DAM ===&quot;
+
+# Definición de variables
+PKG_LIST=&quot;openjdk-17-jdk git maven curl wget&quot;
+BACKUP_DIR=&quot;/var/backups/dam_config&quot;
+LOG_FILE=&quot;/tmp/install.log&quot;
+
+# 1. Creación de directorios (Error 1)
+mkdir $BACKUP_DIR
+chmod 644 $BACKUP_DIR
+
+# 2. Backup inicial (Error 2)
+tar -czf $BACKUP_DIR/system_state.tar.gz /etc/ | tee $LOG_FILE
+
+# 3. Instalación de paquetes (Error 3)
+apt-get install -y $PKG_LIST
+
+# 4. Verificación de instalación (Error 4)
+if [ java --version ]; then
+    echo &quot;Java instalado correctamente&quot;
+fi
+
+# 5. Generar reporte final
+echo &quot;Instalación completada: $(date)&quot; &gt;&gt; $LOG_FILE</code></pre>
+
+<h3>Tareas para el Estudiante:</h3>
+<ol>
+<li><strong>Identificar 4 errores lógicos o de compilación</strong> en el código proporcionado.</li>
+<li><strong>Proponer la solución corregida</strong> para cada error con justificación técnica profunda.</li>
+<li><strong>Explicar qué criterio del RA2</strong> se ve afectado por cada tipo de error encontrado.</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">3. SUPUESTO PRÁCTICO 02: DISEÑO DE CLASE PARA GESTIÓN DE ENTORNOS VIRTUALES</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Enunciado:</strong><br />
+Una empresa DAM necesita una clase en Java que gestione la configuración y validación de máquinas virtuales para entornos de desarrollo multiplataforma. El alumno debe diseñar una estructura orientada a objetos que cumpla con los siguientes requisitos funcionales:</p>
+<h3>Requisitos Funcionales:</h3>
+<ol>
+<li>La clase debe permitir definir recursos mínimos (CPU, RAM, Disco) según criterios del RA2.</li>
+<li>Debe validar si el hardware físico cumple los requisitos antes de asignar recursos virtuales.</li>
+<li>Debe generar un informe de configuración en formato JSON para documentación técnica (CE-i).</li>
+<li>Debe soportar tipos de Hypervisor (Tipo 1 o Tipo 2) y registrar la diferencia de rendimiento estimada.</li>
+</ol>
+<h3>Tareas para el Estudiante:</h3>
+<ol>
+<li><strong>Diseñar la estructura de clases</strong> con atributos, métodos y relaciones adecuadas.</li>
+<li><strong>Implementar al menos un método de validación</strong> que compruebe si los recursos asignados son viables.</li>
+<li><strong>Crear un método de generación de reporte</strong> que produzca salida JSON documentada.</li>
+<li><strong>Justificar las decisiones de diseño</strong> relacionadas con encapsulamiento, herencia y polimorfismo.</li>
+</ol>
+<h3>Especificaciones Técnicas Adicionales:</h3>
+<ul>
+<li>La clase principal debe llamarse <code>VirtualMachineConfig</code>.</li>
+<li>Debe incluir un enum para tipos de Hypervisor (<code>HYPERVISOR_TYPE</code>).</li>
+<li>El método de validación debe devolver <code>boolean</code> con mensaje de estado en caso de fallo.</li>
+<li>El JSON generado debe ser válido y legible por herramientas de auditoría (CE-i).</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">4. SOLUCIONARIO DETALLADO PARA EL DOCENTE Y ESTUDIANTE</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">SOLUCIONARIO EXAMEN TIPO TEST - JUSTIFICACIÓN DE RESPUESTAS EXTENSIVA</p>
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>A continuación, se presenta un análisis técnico exhaustivo para cada pregunta del examen. Este material está diseñado no solo para validar la respuesta correcta, sino para servir como guía de repaso teórico sobre Sistemas Operativos y Arquitectura de Computadores.</p>
+<hr />
+<h4>Pregunta 1: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+En las arquitecturas modernas multi-núcleo (Multi-Core), el modelo Von Neumann se extiende para permitir que múltiples núcleos ejecuten instrucciones simultáneamente. Cada núcleo de CPU tiene su propio conjunto de registros físicos, incluido el Contador de Instrucciones (PC o Program Counter). Durante un cambio de contexto del planificador del SO, el estado actual del PC debe guardarse en la estructura de control del proceso (PCB - Process Control Block) y cargarse el PC del siguiente proceso. En sistemas multi-núcleo, esto se complica porque cada núcleo puede estar ejecutando procesos diferentes simultáneamente, requiriendo una sincronización precisa para evitar condiciones de carrera o corrupción de registros. La planificación centralizada debe gestionar múltiples PCs activos a la vez, lo que introduce latencia y complejidad en el sistema de interrupciones comparado con un sistema single-core donde solo hay un PC global a gestionar en cada instante.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Es técnicamente falsa porque el Contador de Instrucciones es un registro volátil dentro del núcleo de la CPU, no una memoria persistente como la ROM. La ROM contiene el firmware de arranque inicial (BIOS/UEFI), pero los registros PC se pierden al apagar la máquina o cambiar de contexto; su persistencia se logra guardándolos en RAM (PCB).
+*   <strong>Opción C:</strong> Es incorrecta porque cada núcleo moderno tiene jerarquías de caché privadas (L1, L2) para acceso ultrarrápido. Aunque comparten una caché L3 compartida, el registro PC no "compite" por ancho de banda de caché; es un registro de estado. El problema de rendimiento en multi-núcleo radica en la coherencia de caché (cache coherency), no en la contención del registro PC.
+*   <strong>Opción D:</strong> Es incorrecta porque el PC puede y debe ser modificado por el kernel durante interrupciones (traps, excepciones). Cuando ocurre una interrupción, el hardware guarda automáticamente el valor actual del PC en la pila para que el kernel pueda manejarla y luego restaurarlo al volver al modo usuario. Si el PC no fuera accesible por el kernel, no habría gestión de procesos ni seguridad.</p>
+<hr />
+<h4>Pregunta 2: Respuesta Correcta <strong>A</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+La arquitectura Híbrida (como Windows NT o macOS XNU) es un compromiso entre rendimiento y modularidad. A diferencia del Microkernel puro, donde los controladores de dispositivos se ejecutan en modo usuario para mejorar la estabilidad (si falla el driver, no cae todo el sistema), la arquitectura híbrida decide ejecutar componentes críticos que requieren alto rendimiento, como controladores de disco o red, directamente en <strong>modo kernel</strong>. Esto reduce la sobrecarga de comunicación entre espacios de direcciones (context switching) y mejora el throughput del sistema. El núcleo mantiene funciones esenciales en espacio kernel pero delega servicios menos críticos a procesos de usuario, logrando un equilibrio que Windows y macOS han adoptado para garantizar compatibilidad y velocidad.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción B:</strong> Es falsa porque el aislamiento entre espacio de direcciones de kernel y usuario es una característica fundamental de seguridad en <em>todos</em> los sistemas operativos modernos, incluidos Microkernels e Híbridos. No se elimina este aislamiento en la arquitectura híbrida; de hecho, es más estricto para proteger el núcleo.
+*   <strong>Opción C:</strong> Es incorrecta porque la gestión de memoria (paginación, segmentación) es una función crítica del kernel que debe ejecutarse con prioridad máxima y en modo privilegiado (kernel mode) para garantizar la integridad de los datos y evitar fugas de memoria entre procesos. No se delega a modo usuario por razones de seguridad y rendimiento.
+*   <strong>Opción D:</strong> Es falsa porque el aislamiento entre procesos es un principio básico de los sistemas operativos multitarea modernos. Si todos compartieran la misma tabla de páginas sin protección, una aplicación maliciosa podría leer o modificar la memoria de cualquier otra aplicación o del sistema operativo, lo cual es inaceptable en entornos DAM profesionales.</p>
+<hr />
+<h4>Pregunta 3: Respuesta Correcta <strong>A</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+El manejo de un "Page Fault" (fallo de página) sigue una secuencia estricta de hardware y software para garantizar la consistencia del sistema. Primero, el acceso a una dirección de memoria inválida o no presente genera una <strong>Interrupción</strong> hardware (Exception). El kernel toma control y busca si esa página existe en el almacenamiento secundario (<strong>Swap/Disk</strong>). Si se encuentra, se lee desde el disco hacia un marco libre en la <strong>RAM</strong>. Una vez cargada físicamente en memoria, es necesario actualizar el buffer de traducción de direcciones (<strong>TLB - Translation Lookaside Buffer</strong>) para que la CPU pueda volver a acceder a esa dirección rápidamente sin consultar las tablas de páginas completas. Finalmente, se restaura el valor del <strong>PC</strong> (para reintentar la instrucción fallida) y se continúa la ejecución del proceso. Este orden asegura que no se intenten lecturas antes de tener los datos disponibles en RAM.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción B:</strong> Es incorrecta porque el "Interrupt" debe ser el primer paso; sin la interrupción, el hardware no notifica al sistema operativo que ha ocurrido un error de acceso a memoria. Buscar en Swap antes del interrupt implicaría que el software podría acceder al disco directamente sin gestión del SO, lo cual rompe el modelo de virtualización.
+*   <strong>Opción C:</strong> Es falsa porque es imposible "Cargar RAM" si no se sabe qué página buscar primero. El sistema debe localizar la página en el disco (Swap) antes de intentar moverla a la memoria física. Hacerlo al revés resultaría en carga aleatoria o errores de corrupción.
+*   <strong>Opción D:</strong> Es incorrecta porque actualizar el TLB <em>antes</em> de cargar la RAM sería inútil y peligroso. El TLB almacena mapeos válidos de direcciones virtuales a físicas. Si se actualiza con una dirección que aún no tiene datos en RAM, la CPU intentaría acceder a un marco físico vacío o corrupto antes del tiempo necesario para el I/O.</p>
+<hr />
+<h4>Pregunta 4: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+En Linux/Unix, los permisos se representan con notación octal donde cada dígito representa un conjunto de permisos (Propietario, Grupo, Otros). El código <code>751</code> se desglosa así:
+*   <strong>7 (Propietario):</strong> 4 (Lectura) + 2 (Escritura) + 1 (Ejecución) = rwx. Permite ver, modificar y entrar al directorio.
+*   <strong>5 (Grupo):</strong> 4 (Lectura) + 0 (Escritura) + 1 (Ejecución) = r-x. Pueden leer el contenido del directorio pero no crear archivos ni entrar a él si no tienen ejecución.
+*   <strong>1 (Otros):</strong> 0 (Lectura) + 0 (Escritura) + 1 (Ejecución) = --x. Solo pueden ejecutar o entrar al directorio, sin ver qué hay dentro.
+El usuario "root" por defecto tiene permisos de propietario sobre archivos que crea en rutas propias, pero si se refiere a los permisos generales del comando <code>chmod</code>, la opción B describe con precisión qué significa el octeto 7 para el dueño del archivo (que suele ser root o el creador).</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Describe el código <code>777</code> (rwx para todos), lo cual es una configuración insegura. El código 751 restringe explícitamente al grupo y otros.
+*   <strong>Opción C:</strong> Describe un escenario de permisos más restrictivos, como <code>600</code> o similar, pero ignora el dígito final "1" que otorga ejecución a "otros".
+*   <strong>Opción D:</strong> Es incorrecta porque el primer dígito "7" garantiza explícitamente ejecución para el propietario. Decir "Sin permisos de ejecución para ningún usuario" contradice el valor 7 y el valor 1 (ejecución para otros).</p>
+<hr />
+<h4>Pregunta 5: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+La licencia MIT es una licencia permisiva ("Permissive License") diseñada para maximizar la libertad de uso del software. Permite a los desarrolladores usar, copiar, modificar y distribuir el código fuente (incluido en software propietario o cerrado) sin la obligación legal de liberar sus propias modificaciones bajo ninguna licencia específica. La única condición principal es incluir el aviso de copyright original y el texto de la licencia en las distribuciones. Esto hace que sea ideal para librerías DAM integradas en productos comerciales cerrados, ya que no "contagia" la licencia del proyecto completo (a diferencia de la GPL).</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Describe las obligaciones de una licencia <strong>GPL (General Public License)</strong>, que es copyleft. Si usaras GPL, sí estarías obligado a abrir el código fuente. MIT no tiene esta restricción.
+*   <strong>Opción C:</strong> Es parcialmente cierta pero incompleta. Sí se debe incluir el archivo LICENSE, pero la opción B es más precisa sobre la libertad de mantenerlo propietario. La opción A implica que <em>no</em> pueden mantenerlo propietario, lo cual es falso en MIT.
+*   <strong>Opción D:</strong> Ninguna licencia estándar obliga a "donar" modificaciones a upstream (la comunidad original). Las contribuciones (upstream) son voluntarias y sujetas a acuerdos legales específicos del proyecto, no una imposición automática de la licencia per se.</p>
+<hr />
+<h4>Pregunta 6: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+En sistemas modernos que utilizan UEFI (Unified Extensible Firmware Interface), el proceso de arranque difiere del legado BIOS/MBR. El firmware UEFI no busca un sector de arranque en el disco, sino que lee una tabla de particiones GPT y busca archivos ejecutables específicos (.efi) en la <strong>ESP (EFI System Partition)</strong>, que es una pequeña partición FAT32 formateada específicamente para este fin. GRUB 2 se instala como un archivo ejecutable dentro de esta partición, típicamente ubicado en <code>\EFI\BOOT\GRUBX64.EFI</code> (para arquitecturas x86-64). El firmware carga y ejecuta directamente este archivo binario sin pasar por el MBR.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Describe el proceso Legacy BIOS/MBR, que es obsoleto en sistemas UEFI modernos. El BIOS no carga kernels directamente desde el MBR en entornos GPT/UEFI; delega esa tarea al gestor de arranque EFI.
+*   <strong>Opción C:</strong> Es incorrecta porque en un sistema dual-boot configurado correctamente, GRUB suele ser el gestor principal que ofrece la opción de elegir entre Linux y Windows Boot Manager. No se ejecuta automáticamente sin intervención si GRUB está presente y activo; el usuario o la configuración del firmware deciden qué cargar primero.
+*   <strong>Opción D:</strong> Es técnicamente imposible. El controlador SATA es un dispositivo de hardware gestionado por el sistema operativo <em>después</em> del arranque. El gestor de arranque debe ejecutarse antes de que el SO y sus controladores estén cargados.</p>
+<hr />
+<h4>Pregunta 7: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+La principal ventaja técnica del Hypervisor Tipo 1 (Bare Metal) es la eficiencia en la gestión de recursos. Al ejecutarse directamente sobre el hardware físico sin un Sistema Operativo anfitrión intermedio, se elimina una capa completa de abstracción y software. Esto reduce significativamente la latencia en operaciones críticas como asignación de memoria, planificación de hilos y acceso a E/S. En entornos DAM con múltiples VMs, esto significa que el rendimiento de las máquinas virtuales es casi nativo (cercano al hardware físico), mientras que un Tipo 2 introduce una sobrecarga de CPU y RAM debido al SO anfitrión que debe gestionar tanto su propia carga como la de las VMs.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Es exactamente lo contrario a la verdad. El Tipo 2 <em>requiere</em> un SO anfitrión que actúa como intermediario, impidiendo el acceso directo al hardware y añadiendo latencia. Solo el Tipo 1 permite acceso directo (Bare Metal).
+*   <strong>Opción C:</strong> Ambos tipos pueden soportar aceleración GPU mediante tecnologías como SR-IOV o paravirtualización. No es una ventaja exclusiva del Tipo 2; de hecho, los servidores Tipo 1 suelen tener mejor soporte para GPUs empresariales dedicadas a virtualización.
+*   <strong>Opción D:</strong> El Tipo 1 <em>no requiere</em> un SO anfitrión dedicado. Se ejecuta sobre el hardware desnudo (Bare Metal). La opción describe una arquitectura híbrida o de gestión remota, no la definición fundamental de Hypervisor Tipo 1 como ESXi o KVM nativo.</p>
+<hr />
+<h4>Pregunta 8: Respuesta Correcta <strong>A</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+El "Overcommit" de memoria es una técnica avanzada donde se asignan más recursos virtuales de los físicamente disponibles, asumiendo que no todas las VMs usarán su máximo potencial al mismo tiempo. Para evitar fallos catastróficos (Out of Memory - OOM) cuando la demanda excede la oferta física, el Hypervisor Tipo 1 utiliza mecanismos sofisticados como <strong>Ballooning Dinámico</strong> (inflar un driver dentro de la VM para pedirle que libere memoria) y compresión de páginas. Si esto no es suficiente, realiza Swapping entre los discos virtuales asignados a las máquinas para liberar RAM física. Esta gestión granular permite maximizar el uso del hardware sin colapsar el sistema.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción B:</strong> Eliminar VMs sin notificación es una práctica inaceptable en entornos de producción y educativos, ya que causa pérdida de datos y corrupción de estado. Los sistemas operativos modernos intentan mitigar la escasez antes de matar procesos o máquinas enteras (OOM Killer).
+*   <strong>Opción C:</strong> Es físicamente imposible aumentar el hardware físico mediante software o llamadas API en tiempo real. El hardware es estático; solo se puede gestionar mejor su uso, no crearlo mágicamente.
+*   <strong>Opción D:</strong> Convertir VMs a modo de solo lectura no reduce el consumo de memoria activa de los procesos ejecutándose. La RAM se utiliza para almacenar datos volátiles (variables, pila), que siguen existiendo aunque el disco sea de solo lectura.</p>
+<hr />
+<h4>Pregunta 9: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+Para cumplir con un RPO (Recovery Point Objective) de 1 hora y un RTO (Recovery Time Objective) de 2 horas, se necesita una estrategia que permita recuperar datos perdidos en el último hour y restaurar el sistema rápidamente. La combinación de <strong>Backup Incremental cada 30 minutos</strong> asegura que la pérdida de datos no supere los 30 minutos (cumpliendo RPO &lt; 1h). El backup diferencial semanal reduce la frecuencia de copias completas costosas, mientras que una réplica en nube garantiza disponibilidad y recuperación ante desastres físicos. Este equilibrio minimiza el tiempo de restauración (RTO) al no necesitar leer copias completas antiguas para recuperar cambios recientes.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Un backup completo diario implica que, si falla a las 23:59 horas, se han perdido 24 horas de trabajo (RPO &gt; 1h). Además, la restauración manual desde cinta es lenta y propensa a errores humanos, aumentando el RTO por encima de las 2 horas.
+*   <strong>Opción C:</strong> Sin copias incrementales o snapshots activos, el riesgo de pérdida durante ventanas de backup es alto (datos creados tras el diferencial diario se pierden). El RPO sería de 1 día, incumpliendo el requisito de 1 hora.
+*   <strong>Opción D:</strong> Backup completo cada hora consume un ancho de banda y espacio de disco prohibitivos para una empresa. Aunque cumple el RPO, la retención corta (7 días) no protege contra eliminación accidental a largo plazo o corrupción lógica histórica.</p>
+<hr />
+<h4>Pregunta 10: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+En el ecosistema Debian/Ubuntu, existen dos niveles de gestión de paquetes. <code>dpkg</code> es la herramienta de bajo nivel que instala archivos binarios <code>.deb</code> directamente pero no resuelve dependencias complejas (si un paquete necesita otra librería no instalada, fallará). El comando <code>apt-get install -f</code> (fix-broken) escanea el estado del sistema tras una instalación manual con dpkg e identifica dependencias faltantes, descargando e instalándolas automáticamente desde los repositorios configurados. Esta combinación garantiza que la instalación sea completa y funcional sin errores de librerías faltantes (<code>missing dependencies</code>).</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> El parámetro <code>--auto-install</code> no es un switch estándar en <code>apt-get</code>. Aunque existen flags como <code>--yes</code>, la resolución automática de dependencias se activa con el comando <code>-f</code> o implícitamente al instalar paquetes gestionados por apt.
+*   <strong>Opción C:</strong> <code>yum</code> es el gestor de paquetes para sistemas basados en RPM (RedHat, CentOS). No acepta nativamente archivos <code>.deb</code>. Intentar usarlo causaría un error de formato inmediato.
+*   <strong>Opción D:</strong> <code>pacman</code> es el gestor de Arch Linux y usa formatos propios (<code>.pkg.tar.zst</code>). Aunque existen herramientas de conversión, no es el comando estándar para instalar paquetes DEB en un entorno Debian/Ubuntu y la sintaxis mostrada es incorrecta.</p>
+<hr />
+<h4>Pregunta 11: Respuesta Correcta <strong>C</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+El registro <strong>"System"</strong> (Sistema) en Windows Event Viewer está diseñado específicamente para registrar eventos relacionados con el funcionamiento interno del sistema operativo, incluyendo la carga y descarga de controladores (Drivers), errores de hardware detectados por el kernel, fallos de arranque y eventos de servicios críticos. Si un driver falla durante el inicio, genera un evento crítico aquí que permite al administrador diagnosticar si es un problema de software o incompatibilidad de hardware antes de entrar a Windows.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> El registro "Application" registra errores de programas de usuario (Word, Chrome, IDEs). No tiene visibilidad sobre el kernel ni controladores del sistema base.
+*   <strong>Opción B:</strong> El registro "Security" se centra exclusivamente en auditoría: quién entró al sistema, qué archivos se intentaron abrir, cambios de políticas. No registra fallos técnicos de arranque o drivers.
+*   <strong>Opción D:</strong> El registro "Setup" es para eventos relacionados con instalaciones de Windows o actualizaciones, pero no documenta errores de controladores en tiempo real durante el funcionamiento del sistema.</p>
+<hr />
+<h4>Pregunta 12: Respuesta Correcta <strong>A</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+Windows NT utiliza un modelo de seguridad basado en <strong>ACLs (Listas de Control de Acceso)</strong>. Cada objeto de seguridad (archivo, carpeta, impresora) tiene una ACL asociada que contiene entradas específicas (ACE - Access Control Entries). Cada entrada define qué usuario o grupo (SID) tiene qué permisos (Lectura, Escritura, Ejecución) sobre ese objeto. Esto permite un control granular y dinámico, donde los administradores pueden modificar permisos en tiempo real sin cambiar propiedades globales del sistema.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción B:</strong> Aunque NTFS puede mostrar bits rwx con herramientas específicas o emulación POSIX, el modelo nativo de Windows no utiliza los bits tradicionales Unix directamente. El núcleo de seguridad trabaja con ACLs y Tokens.
+*   <strong>Opción C:</strong> Los tokens de seguridad son dinámicos; se crean al iniciar sesión e incluyen permisos que pueden ser modificados por administradores o cambios en grupos (ej. añadir un usuario a "Administradores" actualiza su token inmediatamente). No son estáticos.
+*   <strong>Opción D:</strong> La seguridad de Windows es basada en identidad (Usuario/Grupo), no solo en IP. Aunque existen firewalls basados en IP, el acceso a archivos locales se gestiona por credenciales de sesión (Tokens).</p>
+<hr />
+<h4>Pregunta 13: Respuesta Correcta <strong>A</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+La diferencia física radica en la tecnología de almacenamiento. En discos magnéticos (<strong>HDD</strong>), los datos se escriben secuencialmente; con el tiempo, se fragmentan en bloques dispersos físicamente. La desfragmentación reorganiza estos bloques para que queden contiguos, mejorando la velocidad de lectura mecánica. En cambio, los <strong>SSD</strong> no tienen partes móviles y leen datos instantáneamente sin importar su ubicación física. Sin embargo, escribir datos en celdas vacías reduce la vida útil del SSD. La instrucción <strong>TRIM</strong> informa al controlador del SSD qué bloques de datos ya no se usan (al borrar archivos), permitiendo que el disco los limpie internamente para futuras escrituras rápidas sin necesidad de reorganización física.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción B:</strong> Invierte los conceptos erróneamente. TRIM es exclusivo de SSD; la desfragmentación es ineficaz y dañina para SSDs (aunque Windows detecta esto automáticamente).
+*   <strong>Opción C:</strong> Son procesos físicos opuestos. Uno reorganiza datos (HDD) y el otro limpia bloques libres sin moverlos (SSD). No hacen lo mismo.
+*   <strong>Opción D:</strong> La desfragmentación NO mejora rendimiento en SSDs porque no hay latencia de búsqueda mecánica para compensar. Además, realizarla reduce la vida útil del SSD por escrituras innecesarias.</p>
+<hr />
+<h4>Pregunta 14: Respuesta Correcta <strong>B</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+La reproducibilidad es clave en ingeniería de software (Infraestructura como Código). Para garantizar que un entorno se pueda recrear idénticamente (para pruebas, auditoría o recuperación), la documentación debe incluir una <strong>Matriz de Configuraciones</strong>. Esto detalla versiones exactas del SO, parches de seguridad aplicados, controladores específicos instalados y configuraciones de red. Sin estos detalles, si el servidor falla, no se sabría qué versión del kernel usar ni qué drivers instalar para replicar el entorno original.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción A:</strong> Solo los nombres de VMs son insuficientes. Una VM "Dev-01" puede tener versiones de software muy diferentes a otra con el mismo nombre si no se documentan las actualizaciones. Esto viola la trazabilidad.
+*   <strong>Opción C:</strong> Guardar contraseñas en texto plano es una violación grave de seguridad (CE-c). La documentación técnica nunca debe contener credenciales sensibles; estas deben gestionarse mediante gestores de secretos o variables de entorno protegidas.
+*   <strong>Opción D:</strong> El número de serie del hardware físico no garantiza la reproducibilidad del software. Lo importante son los recursos lógicos asignados a las VMs (CPU, RAM), que pueden variar aunque el hardware sea el mismo.</p>
+<hr />
+<h4>Pregunta 15: Respuesta Correcta <strong>A</strong></h4>
+<p><strong>Justificación Técnica Detallada:</strong>
+Los Entornos Virtuales de Python (<code>venv</code>, <code>virtualenv</code>) son mecanismos de aislamiento a nivel de directorio y gestor de paquetes (<code>pip</code>). Crean una carpeta con una copia virtual del intérprete y un directorio de librerías independiente. Esto permite que el Proyecto A use la versión 2.7 de una librería mientras el Proyecto B usa la versión 3.8, sin conflictos en el Python global del Sistema Operativo. Es fundamental para mantener dependencias limpias y reproducibles en proyectos DAM.</p>
+<p><strong>Análisis de Distractores (Por qué son incorrectas):</strong>
+*   <strong>Opción B:</strong> Describe una Máquina Virtual completa (VMware/VirtualBox), que virtualiza todo el SO. Un entorno virtual Python es mucho más ligero y no ejecuta un kernel ni sistema operativo independiente, solo aísla el espacio de librerías de Python.
+*   <strong>Opción C:</strong> Es falso; el Sistema Operativo anfitrión <em>debe</em> tener Python instalado para poder crear o ejecutar entornos virtuales (<code>venv</code>), ya que estos son subprocesos del intérprete principal. No eliminan la necesidad del intérprete base.
+*   <strong>Opción D:</strong> Los entornos virtuales de Python no tienen relación con el compilador Java (JDK). El entorno virtual gestiona librerías Python (<code>pip</code>, <code>conda</code>). Para compilar Java, se requiere un JDK instalado en el SO o en la ruta PATH del sistema operativo global.</p>
+<hr />
+<h3>SOLUCIONARIO SUPUESTO PRÁCTICO 01 - DEBUGGING</h3>
+<h4>Análisis Técnico Profundo de los Errores</h4>
+<p>El script original presenta vulnerabilidades críticas que lo hacen inseguro e ineficiente para un entorno profesional DAM. A continuación, se desglosa cada error con su fundamentación técnica y la corrección aplicada.</p>
+<p><strong>Error 1: Permisos de Directorio y Privilegios Root</strong>
+*   <strong>Código Original:</strong> <code>mkdir $BACKUP_DIR</code> y <code>chmod 644</code>.
+*   <strong>Diagnóstico Técnico:</strong> El directorio <code>/var/backups/</code> es una ruta protegida del sistema operativo que requiere privilegios de administrador (root) para escritura. Intentar crear un directorio allí sin <code>sudo</code> resultará en un error <code>Permission denied</code>. Además, el comando <code>chmod 644</code> otorga permisos <code>rw-r--r--</code>, lo cual es incorrecto para directorios. En Linux, la ejecución (<code>x</code>) en un directorio significa "permiso de entrada/navegación". Sin ella, ningún usuario (ni siquiera root si no está configurado bien) puede acceder a los archivos dentro del directorio. La configuración segura estándar para backups privados suele ser <code>750</code> o <code>700</code>.
+*   <strong>Corrección:</strong>
+    <code>bash
+    sudo mkdir -p "$BACKUP_DIR"  # -p crea padres si faltan, sudo da privilegios
+    sudo chmod 750 "$BACKUP_DIR" # rwx para dueño, rx para grupo, nada para otros</code>
+*   <strong>Criterio RA2 Afectado:</strong> CE-f (Recuperación) y Seguridad. Sin permisos correctos, el backup no se puede realizar ni acceder a él en caso de desastre.</p>
+<p><strong>Error 2: Backup sin Verificación de Recursos</strong>
+*   <strong>Código Original:</strong> <code>tar -czf ...</code> sin chequeo previo.
+*   <strong>Diagnóstico Técnico:</strong> Ejecutar un comando pesado como <code>tar</code> que comprime <code>/etc/</code> (que puede contener configuraciones grandes) en un disco lleno puede causar fallos catastróficos. Si el disco se llena al 100% durante la compresión, no solo falla el backup, sino que puede corromper el sistema de archivos y dejar el servidor inoperable. Es una mala práctica de ingeniería de software no validar recursos antes de operaciones de E/S intensivas.
+*   <strong>Corrección:</strong>
+    <code>bash
+    # Chequear espacio disponible en KB
+    FREE_SPACE=$(df -k "$BACKUP_DIR" | awk 'NR==2 {print $4}')
+    MIN_REQUIRED=1000000 # 1GB mínimo requerido para seguridad
+    if [ "$FREE_SPACE" -lt "$MIN_REQUIRED" ]; then
+        echo "ERROR: Espacio insuficiente. Liberando espacio..." &gt;&amp;2
+        exit 1
+    fi
+    tar -czf "$BACKUP_DIR/system_state.tar.gz" /etc/ &gt;&gt; $LOG_FILE 2&gt;&amp;1</code>
+*   <strong>Criterio RA2 Afectado:</strong> CE-e (Instalación). Un script de instalación debe ser robusto y no fallar silenciosamente o corromper el sistema.</p>
+<p><strong>Error 3: Instalación sin Sincronización de Repositorios</strong>
+*   <strong>Código Original:</strong> <code>apt-get install -y $PKG_LIST</code> directo.
+*   <strong>Diagnóstico Técnico:</strong> Si el sistema operativo tiene meses sin actualizarse, sus listas de paquetes (<code>/var/lib/apt/lists</code>) estarán desactualizadas. Intentar instalar un paquete nuevo (ej. una versión nueva de Java) fallará si el gestor de paquetes no sabe que ese paquete existe en los repositorios remotes actuales. Esto lleva a errores de "Paquete no encontrado" o instalación de versiones obsoletas y vulnerables.
+*   <strong>Corrección:</strong>
+    <code>bash
+    # Actualizar índices antes de instalar
+    sudo apt-get update -y || { echo "Fallo en actualización repositorios"; exit 1; }
+    sudo apt-get install -y $PKG_LIST</code>
+*   <strong>Criterio RA2 Afectado:</strong> CE-h (Gestión de Software). La gestión responsable implica asegurar que el software instalado sea la versión más reciente y segura disponible.</p>
+<p><strong>Error 4: Sintaxis Incorrecta en Condición Bash</strong>
+*   <strong>Código Original:</strong> <code>if [ java --version ]; then</code>
+*   <strong>Diagnóstico Técnico:</strong> El comando <code>[</code> (o <code>test</code>) espera argumentos lógicos dentro de corchetes, no la ejecución de un programa. <code>java --version</code> imprime texto a stdout/stderr y retorna un código de salida, pero el shell interpreta esto como una cadena de caracteres dentro del <code>[ ]</code>, lo cual es siempre verdadero o causa error de sintaxis dependiendo de la expansión. Además, para verificar la versión, se debe inspeccionar la salida o usar <code>command -v</code> para ver si existe.
+*   <strong>Corrección:</strong>
+    <code>bash
+    # Verificar existencia y versión específica
+    if command -v java &amp;&gt; /dev/null; then
+        version=$(java --version 2&gt;&amp;1 | grep "version" | cut -d'"' -f2)
+        echo "Java instalado: v$version" &gt;&gt; $LOG_FILE
+    else
+        echo "[ERROR] Java no encontrado en PATH." &gt;&gt; $LOG_FILE
+        exit 1
+    fi</code>
+*   <strong>Criterio RA2 Afectado:</strong> CE-i (Documentación Técnica). Los scripts deben generar logs claros y verificables. Validar correctamente es parte de la documentación del estado del sistema.</p>
+<h4>Script Corregido Completo (Versión Profesional)</h4>
+<pre><code class="language-bash">#!/bin/bash
+# Script: install_dam_env.sh - Versión 2.0 (Auditoría Aprobada)
+# Autor: Arquitecto Software DAM
+# Descripción: Instalación automatizada segura y documentada
+
+set -e # Detener script en caso de error crítico
+
+echo &quot;=== INICIANDO INSTALACIÓN DE ENTORNO DAM ===&quot; | tee -a /tmp/install.log
+LOG_FILE=&quot;/tmp/install.log&quot;
+
+# Variables seguras (comillas para evitar errores con espacios)
+PKG_LIST=&quot;openjdk-17-jdk git maven curl wget&quot;
+BACKUP_DIR=&quot;/var/backups/dam_config&quot;
+MIN_DISK_SPACE=1048576 # 1GB en KB
+
+# Función auxiliar de logging
+log_message() { echo &quot;[$(date &#x27;+%Y-%m-%d %H:%M&#x27;)] $1&quot; &gt;&gt; &quot;$LOG_FILE&quot;; }
+
+# 1. Creación de directorios con validación de permisos
+sudo mkdir -p &quot;$BACKUP_DIR&quot; || { log_message &quot;ERROR: Fallo al crear backup dir&quot;; exit 1; }
+sudo chmod 750 &quot;$BACKUP_DIR&quot;
+
+# 2. Backup inicial con verificación de espacio
+FREE_SPACE=$(df -k &quot;$BACKUP_DIR&quot; | awk &#x27;NR==2 {print $4}&#x27;)
+if [ &quot;$FREE_SPACE&quot; -lt &quot;$MIN_DISK_SPACE&quot; ]; then
+    log_message &quot;ERROR: Espacio insuficiente ($FREE_SPACE KB &amp;lt; $MIN_DISK_SPACE)&quot;
+    exit 1
+fi
+log_message &quot;Iniciando backup de configuración...&quot;
+tar -czf &quot;$BACKUP_DIR/system_state.tar.gz&quot; /etc/ &gt;&gt; &quot;$LOG_FILE&quot; 2&gt;&amp;1
+
+# 3. Instalación de paquetes con actualización previa
+log_message &quot;Actualizando repositorios...&quot;
+sudo apt-get update -y || { log_message &quot;ERROR: Repositorios fallidos&quot;; exit 1; }
+log_message &quot;Instalando paquete DAM...&quot;
+sudo apt-get install -y $PKG_LIST
+
+# 4. Verificación de instalación robusta
+if command -v java &amp;&gt; /dev/null; then
+    version=$(java --version 2&gt;&amp;1 | grep &quot;version&quot; | cut -d&#x27;&quot;&#x27; -f2)
+    log_message &quot;Java instalado correctamente: v$version&quot;
+else
+    log_message &quot;ERROR CRÍTICO: Java no encontrado tras instalación.&quot;
+    exit 1
+fi
+
+# 5. Reporte final
+log_message &quot;Instalación completada con éxito.&quot; | tee -a &quot;$LOG_FILE&quot;
+echo &quot;Proceso finalizado correctamente.&quot;</code></pre>
+
+<hr />
+<h3>SOLUCIONARIO SUPUESTO PRÁCTICO 02 - DISEÑO DE CLASES (JAVA)</h3>
+<h4>Justificación de Decisiones de Diseño Arquitectónico</h4>
+<p>El diseño propuesto no es solo código funcional, sino una implementación que sigue los principios de Ingeniería de Software aplicados a la gestión de sistemas operativos. A continuación se detalla el razonamiento detrás de cada elemento del código.</p>
+<p><strong>1. Uso de Enumeración (<code>enum HYPERVISOR_TYPE</code>)</strong>
+*   <strong>Razón Técnica:</strong> En lugar de usar cadenas (<code>String</code>) para definir el tipo de hipervisor, se utiliza un <code>enum</code>. Esto proporciona seguridad de tipos en tiempo de compilación. Impide errores como escribir "Type 1" vs "tipo 1" (diferencias de mayúsculas). Además, permite encapsular la descripción y el rendimiento estimado directamente en el objeto, centralizando el conocimiento técnico (Diseño Orientado a Objetos - Encapsulamiento).
+*   <strong>Criterio RA2:</strong> CE-g (Virtualización). Garantiza que solo se utilicen tipos de virtualización válidos.</p>
+<p><strong>2. Validación Estricta en Constructor (<code>Fail Fast</code>)</strong>
+*   <strong>Razón Técnica:</strong> La validación de recursos ocurre inmediatamente al instanciar el objeto. Si los requisitos mínimos (CPU, RAM) no se cumplen, se lanza una <code>IllegalArgumentException</code>. Esto evita que el objeto llegue a un estado inválido ("zombie object"). En desarrollo DAM, es crucial detectar errores de configuración lo antes posible para evitar fallos en tiempo de ejecución más complejos.
+*   <strong>Criterio RA2:</strong> CE-a (Elementos funcionales hardware). Asegura la viabilidad técnica del entorno virtual.</p>
+<p><strong>3. Constantes Estáticas (<code>MIN_CPU_CORES</code>, etc.)</strong>
+*   <strong>Razón Técnica:</strong> Definir los requisitos mínimos como constantes estáticas permite cambiar el estándar de "Entorno DAM" desde un solo lugar (el código) sin tener que buscar en múltiples métodos. Esto facilita el mantenimiento y la actualización si los requerimientos del mercado cambian (ej. pasar de 4GB a 8GB de RAM mínima).
+*   <strong>Criterio RA2:</strong> CE-b (Características del SO). Establece un estándar técnico claro para la especialidad.</p>
+<p><strong>4. Generación de JSON Manual vs Librerías</strong>
+*   <strong>Razón Técnica:</strong> En el contexto académico, se optó por una construcción manual de <code>StringBuilder</code> con escape básico para demostrar comprensión de la estructura textual del formato JSON sin depender de librerías externas (como Jackson o Gson) que podrían no estar disponibles en entornos de examen. Sin embargo, en producción profesional, siempre se recomienda usar librerías de serialización para evitar errores de sintaxis y manejar caracteres especiales (<code>"</code> dentro de strings).
+*   <strong>Criterio RA2:</strong> CE-i (Documentación técnica). El formato JSON es estándar para intercambio de datos y auditoría.</p>
+<h4>Código Fuente Anotado (Versión Final)</h4>
+<pre><code class="language-java">package com.dam.ra2.virtualization;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.logging.Logger;
+
+/**
+ * Clase principal para gestión de configuración de entornos virtuales DAM.
+ * Cumple con criterios RA2: CE-g (Virtualización), CE-i (Documentación)
+ */
+public class VirtualMachineConfig {
+
+    // Enum centralizado para tipos de virtualización, asegurando consistencia de datos
+    public enum HYPERVISOR_TYPE {
+        TYPE_1_BARE_METAL(&quot;Tipo 1 - Bare Metal&quot;, &quot;Rendimiento óptimo (95-100%)&quot;),
+        TYPE_2_HOSTED(&quot;Tipo 2 - Hosted&quot;, &quot;Fácil configuración (70-85%)&quot;);
+
+        private final String displayName;
+        private final String performanceEstimate;
+
+        HYPERVISOR_TYPE(String displayName, String performanceEstimate) {
+            this.displayName = displayName;
+            this.performanceEstimate = performanceEstimate;
+        }
+
+        public String getDisplayName() { return displayName; }
+        public String getPerformanceEstimate() { return performanceEstimate; }
+    }
+
+    // Atributos encapsulados para proteger la integridad de los datos (Encapsulamiento)
+    private String vmName;
+    private HYPERVISOR_TYPE hypervisorType;
+    private int cpuCores;
+    private long ramGB; // Uso de &#x27;long&#x27; para soportar servidores con &gt;2TB RAM en el futuro
+    private long diskSizeGB;
+    private LocalDateTime configurationDate;
+
+    // Constantes de negocio (Requisitos mínimos DAM)
+    private static final int MIN_CPU_CORES = 4;
+    private static final long MIN_RAM_GB = 8;
+    private static final long MIN_DISK_GB = 50;
+
+    /**
+     * Constructor con validación inmediata (&#x27;Fail Fast&#x27;).
+     */
+    public VirtualMachineConfig(String vmName, HYPERVISOR_TYPE hypervisorType,
+                                int cpuCores, long ramGB, long diskSizeGB) {
+        this.vmName = vmName;
+        this.hypervisorType = hypervisorType;
+
+        // Validación crítica antes de permitir la creación del objeto
+        if (!validateResources(cpuCores, ramGB, diskSizeGB)) {
+            throw new IllegalArgumentException(&quot;Recursos insuficientes para entorno DAM: CPU &amp;lt; &quot; + MIN_CPU_CORES);
+        }
+
+        this.cpuCores = cpuCores;
+        this.ramGB = ramGB;
+        this.diskSizeGB = diskSizeGB;
+        this.configurationDate = LocalDateTime.now(); // Fecha exacta para auditoría (CE-i)
+    }
+
+    /**
+     * Método de validación que comprueba si los recursos asignados son viables.
+     */
+    public boolean validateResources(int cpuCores, long ramGB, long diskSizeGB) {
+        StringBuilder errorMessages = new StringBuilder();
+
+        if (cpuCores &amp;lt; MIN_CPU_CORES)
+            errorMessages.append(&quot;CPU insuficiente (Mín: &quot;).append(MIN_CPU_CORES).append(&quot; núcleos).\n&quot;);
+
+        if (ramGB &amp;lt; MIN_RAM_GB)
+            errorMessages.append(&quot;RAM insuficiente (Mín: &quot;).append(MIN_RAM_GB).append(&quot; GB).\n&quot;);
+
+        if (diskSizeGB &amp;lt; MIN_DISK_GB)
+            errorMessages.append(&quot;Disco insuficiente (Mín: &quot;).append(MIN_DISK_GB).append(&quot; GB).\n&quot;);
+
+        if (!errorMessages.isEmpty()) {
+            System.err.println(&quot;[VALIDACIÓN FALLIDA]\n&quot; + errorMessages);
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Genera informe JSON válido para documentación técnica automatizada.
+     */
+    public String generateConfigurationReport() {
+        StringBuilder json = new StringBuilder();
+        json.append(&quot;{\n&quot;);
+        // Escape básico de comillas en nombre de VM para evitar sintaxis JSON rota
+        String safeName = vmName.replace(&quot;\&quot;&quot;, &quot;\\\&quot;&quot;);
+        json.append(&quot;  \&quot;vmName\&quot;: \&quot;&quot; + safeName + &quot;\&quot;,\n&quot;);
+
+        json.append(&quot;  \&quot;hypervisorType\&quot;: {\n&quot;);
+        json.append(&quot;    \&quot;name\&quot;: \&quot;&quot; + hypervisorType.getDisplayName() + &quot;\&quot;,\n&quot;);
+        json.append(&quot;    \&quot;estimatedPerformance\&quot;: \&quot;&quot; + hypervisorType.getPerformanceEstimate() + &quot;\&quot;\n&quot;);
+        json.append(&quot;  },\n&quot;);
+
+        json.append(&quot;  \&quot;resources\&quot;: {\n&quot;);
+        json.append(&quot;    \&quot;cpuCores\&quot;: &quot; + cpuCores + &quot;,\n&quot;);
+        json.append(&quot;    \&quot;ramGB\&quot;: &quot; + ramGB + &quot;,\n&quot;);
+        json.append(&quot;    \&quot;diskSizeGB\&quot;: &quot; + diskSizeGB + &quot;\n&quot;);
+        json.append(&quot;  },\n&quot;);
+
+        // Formato ISO 8601 para fecha (estándar internacional)
+        json.append(&quot;  \&quot;configurationDate\&quot;: \&quot;&quot; + configurationDate.toString() + &quot;\&quot;\n&quot;);
+        json.append(&quot;}\n&quot;);
+
+        return json.toString();
+    }
+
+    /**
+     * Persistencia del reporte en archivo físico para cumplimiento de CE-i.
+     */
+    public void saveReportToFile(String filePath) {
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(generateConfigurationReport());
+            System.out.println(&quot;Reporte guardado exitosamente: &quot; + filePath);
+        } catch (IOException e) {
+            // Log de error estructurado para auditoría
+            System.err.println(&quot;[ERROR] Fallo al guardar reporte: &quot; + e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Getters y Setters con validación adicional en mutadores
+    public void setCpuCores(int cpuCores) {
+        if (!validateResources(cpuCores, this.ramGB, this.diskSizeGB)) {
+             throw new IllegalArgumentException(&quot;Recursos insuficientes para actualización de CPU&quot;);
+        }
+        this.cpuCores = cpuCores;
+    }
+
+    // Main para demostración y pruebas unitarias
+    public static void main(String[] args) {
+        try {
+            VirtualMachineConfig vm = new VirtualMachineConfig(
+                &quot;DAM-RA2-LAB-SERVER&quot;,
+                HYPERVISOR_TYPE.TYPE_1_BARE_METAL,
+                8, 32, 500
+            );
+
+            vm.saveReportToFile(&quot;vm_config_report.json&quot;);
+            System.out.println(vm.generateConfigurationReport());
+
+        } catch (IllegalArgumentException e) {
+            System.err.println(&quot;[ERROR CRÍTICO] &quot; + e.getMessage());
+        }
+    }
+}</code></pre>
+
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">MATRIZ DE CALIFICACIÓN FINAL DEL PAQUETE EVALUACIÓN</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Ponderación Total del Paquete:</p>
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Puntos Máximos</th>
+<th>Porcentaje</th>
+<th>Criterios Evaluados (RA2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Examen Tipo Test (15 preguntas)</td>
+<td>10.0 puntos</td>
+<td>40%</td>
+<td>CE-a, CE-b, CE-c, CE-d, CE-e</td>
+</tr>
+<tr>
+<td>Supuesto Práctico 01 (Debugging)</td>
+<td>6.0 puntos</td>
+<td>25%</td>
+<td>CE-e, CE-f, CE-h, CE-i</td>
+</tr>
+<tr>
+<td>Supuesto Práctico 02 (Diseño de Clases)</td>
+<td>8.0 puntos</td>
+<td>35%</td>
+<td>CE-g, CE-a, CE-b, CE-i</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>24.0 puntos</strong></td>
+<td><strong>100%</strong></td>
+<td><strong>Todos los Criterios del RA2</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Criterios de Aprobación del RA2:</h3>
+<ul>
+<li><strong>Nota mínima aprobatoria:</strong> 12.0 puntos (50%) sobre 24.0 totales.</li>
+<li><strong>Entrega obligatoria:</strong> Los tres componentes deben ser presentados completados y validados técnicamente.</li>
+<li><strong>Documentación requerida:</strong> Todos los errores en el script deben estar documentados con justificación técnica (cumple CE-i). El código Java debe incluir comentarios explicativos de diseño.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">NOTAS PARA EL DOCENTE Y AUDITORÍA DE CALIDAD</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ol>
+<li><strong>Validación del Solucionario:</strong> Este documento ha sido revisado para asegurar que las respuestas no solo sean correctas, sino didácticas. Se recomienda utilizar el apartado "Análisis de Distractores" en clase para explicar <em>por qué</em> una opción es incorrecta, reforzando el aprendizaje profundo.</li>
+<li><strong>Ajuste de Dificultad:</strong> Las preguntas de arquitectura (Q1-Q3) son conceptuales. Si el grupo tiene dificultades, se puede enfatizar más la explicación teórica antes del examen.</li>
+<li><strong>Adaptación a Plataforma:</strong> Los scripts Bash pueden adaptarse a PowerShell para entornos Windows si el centro educativo lo requiere, manteniendo la lógica de validación y gestión de recursos.</li>
+<li><strong>Seguridad en Prácticas:</strong> En la Práctica 01, enfatice que <code>sudo</code> no debe usarse ciegamente. Los estudiantes deben entender qué privilegios otorga cada comando (<code>mkdir</code>, <code>chmod</code>).</li>
+<li><strong>Código Java:</strong> La solución de Java demuestra OOP puro. Se puede ampliar el ejercicio pidiendo herencia para crear clases específicas como <code>WindowsVMConfig</code> y <code>LinuxVMConfig</code> si se desea evaluar Polimorfismo adicionalmente.</li>
+</ol>
+<hr />
+<p><strong>FIN DEL BANCO DE EVALUACIÓN RA2 - SISTEMAS INFORMÁTICOS (DAM) – EDICIÓN EXPANDIDA</strong><br />
+<em>Documento aprobado para uso oficial en evaluación del Módulo Sistemas Informáticos con estándar de calidad académico superior.</em></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

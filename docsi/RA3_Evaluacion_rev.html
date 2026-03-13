@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion RA3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA3.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA3</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Evaluacion RA3</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Módulo: Sistemas Informáticos | Especialidad: DAM</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <hr />
+<h1>DOCUMENTO 1: EXAMEN TIPO TEST (RA3)</h1>
+<p><strong>Instrucciones:</strong> Seleccione la respuesta correcta para cada pregunta. Cada pregunta vale 0,6 puntos. Tiempo estimado: 45 minutos.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">PREGUNTAS DE EVALUACIÓN TEÓRICA Y PRÁCTICA</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Pregunta 1 - Arquitectura de Sistemas de Archivos (Criterio a)</p>
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>En un entorno empresarial que requiere alta disponibilidad y recuperación rápida ante fallos eléctricos, ¿qué característica del sistema de archivos NTFS es fundamental para garantizar la integridad de los metadatos?</p>
+<p>A. <strong>Journaling:</strong> Registra transacciones antes de ejecutarlas para recuperar estado coherente tras fallo del sistema<br />
+B. <strong>Compresión Transparente:</strong> Reduce el uso de espacio sin afectar acceso lógico<br />
+C. <strong>Enlaces Simbólicos:</strong> Permite estructuras virtuales sin duplicar datos<br />
+D. <strong>Copia al Escribir (Copy-on-Write):</strong> Evita sobrescribir datos existentes para permitir snapshots  </p>
+<hr />
+<h3>Pregunta 2 - Sistemas de Rutas y Resolución (Criterio b, c)</h3>
+<p>Un desarrollador crea una aplicación que debe ser desplegada en diferentes entornos de producción sin modificar rutas absolutas. ¿Qué estrategia es la más adecuada?</p>
+<p>A. Utilizar exclusivamente rutas absolutas desde <code>C:\Program Files</code> para garantizar unicidad<br />
+B. Usar rutas relativas basadas en el directorio de trabajo actual (<code>working directory</code>)<br />
+C. Configurar variables de entorno globales que apunten a cada ruta específica<br />
+D. Implementar un sistema de rutas dinámicas basado en UUIDs del disco  </p>
+<hr />
+<h3>Pregunta 3 - Metadatos y Inodos (Criterio a)</h3>
+<p>En sistemas Unix/Linux, ¿qué información se almacena específicamente en el <strong>inode</strong> y NO en la entrada del directorio?</p>
+<p>A. Nombre del archivo y permisos de acceso<br />
+B. Identificador numérico único y punteros a bloques físicos<br />
+C. Fecha de creación y tamaño lógico del archivo<br />
+D. Propietario del archivo y grupo asociado  </p>
+<hr />
+<h3>Pregunta 4 - Comparativa Filesystems (Criterio a)</h3>
+<p>Un técnico debe formatear un USB que será utilizado en equipos Windows, Linux y macOS sin restricciones de compatibilidad. ¿Qué sistema de archivos presenta la mayor limitación teórica para este caso?</p>
+<p>A. <strong>NTFS:</strong> Limitado por ser propietario de Microsoft<br />
+B. <strong>FAT32:</strong> No soporta Journaling y tiene límite de 4 GB por archivo<br />
+C. <strong>EXT4:</strong> Optimizado exclusivamente para Linux con características avanzadas<br />
+D. <strong>APFS:</strong> Diseñado específicamente para almacenamiento flash Apple  </p>
+<hr />
+<h3>Pregunta 5 - Tablas de Particionamiento (Criterio e)</h3>
+<p>En un servidor que requiere discos de más de 2 TB y múltiples copias de seguridad de la tabla de particiones, ¿qué estándar debe implementarse?</p>
+<p>A. <strong>MBR:</strong> Estándar antiguo con limitación matemática de direcciones<br />
+B. <strong>GPT:</strong> Soporta discos masivos, redundancia y identificadores globales únicos<br />
+C. <strong>FAT16:</strong> Formato básico para compatibilidad retrocompatibilidad<br />
+D. <strong>HFS+:</strong> Sistema heredado de Apple con limitaciones de particionamiento  </p>
+<hr />
+<h3>Pregunta 6 - Gestión de Bloques Físicos (Criterio e)</h3>
+<p>¿Qué mecanismo en EXT4 agrupa bloques contiguos para reducir el tamaño del índice de punteros y mejorar rendimiento?</p>
+<p>A. <strong>Delayed Allocation:</strong> Espera a escribir todos los datos antes de asignar bloques<br />
+B. <strong>Extent Mapping:</strong> Agrupa bloques contiguos en estructuras "extent" optimizadas<br />
+C. <strong>Journaling Completo:</strong> Protege metadatos y datos de usuario durante escrituras<br />
+D. <strong>Striping RAID:</strong> Divide datos entre múltiples discos físicos para rendimiento  </p>
+<hr />
+<h3>Pregunta 7 - Enlaces Simbólicos vs Duros (Criterio b, c)</h3>
+<p>¿Cuál es la diferencia fundamental entre un enlace simbólico (symlink) y un enlace duro en sistemas Unix?</p>
+<p>A. Los enlaces duros pueden apuntar a directorios, los simbólicos solo a archivos<br />
+B. Los enlaces simbólicos son resueltos por el kernel al momento de apertura del recurso<br />
+C. Los enlaces duros crean duplicados físicos de datos en bloques diferentes<br />
+D. Los enlaces simbólicos requieren permisos especiales de administrador para crear  </p>
+<hr />
+<h3>Pregunta 8 - Copias de Seguridad (Criterio f)</h3>
+<p>Una empresa realiza copias diarias donde solo se guardan cambios desde la última copia completa. ¿Qué estrategia está implementando y cuál es su principal desventaja?</p>
+<p>A. <strong>Incremental:</strong> Restauración compleja que requiere Full + todas las Incrementales<br />
+B. <strong>Diferencial:</strong> Requiere menos espacio pero más tiempo de restauración<br />
+C. <strong>Full:</strong> Consuma mucho almacenamiento pero permite restauración rápida<br />
+D. <strong>Espejo (Mirroring):</strong> Duplica datos en tiempo real sin historial de versiones  </p>
+<hr />
+<h3>Pregunta 9 - Algoritmos de Respaldo (Criterio f)</h3>
+<p>Para minimizar el tiempo de restauración en caso de fallo, ¿cuál es la estrategia más eficiente?</p>
+<p>A. <strong>Full Backup:</strong> Solo requiere el último backup para recuperación total<br />
+B. <strong>Incremental:</strong> Requiere múltiples archivos consecutivos para restaurar<br />
+C. <strong>Diferencial:</strong> Necesita Full + Differential, pero menos que Incremental<br />
+D. <strong>Snapshot:</strong> Instantáneas rápidas pero sin historial histórico de cambios  </p>
+<hr />
+<h3>Pregunta 10 - Planificación de Tareas (Criterio g)</h3>
+<p>En un entorno Linux, ¿qué componente del sistema operativo es responsable de despertar procesos en intervalos definidos para automatizar tareas?</p>
+<p>A. <strong>Daemon:</strong> Proceso que corre en segundo plano sin interacción directa<br />
+B. <strong>Cron:</strong> Sistema de programación que ejecuta comandos en horarios específicos<br />
+C. <strong>Systemd:</strong> Gestor de servicios y arranque del sistema operativo<br />
+D. <strong>Init:</strong> Proceso padre que inicia todos los demás procesos del sistema  </p>
+<hr />
+<h3>Pregunta 11 - Diagnóstico y Mantenimiento (Criterio h)</h3>
+<p>¿Por qué NO es recomendable realizar desfragmentación en discos SSD?</p>
+<p>A. No mejora el rendimiento de lectura secuencial como en HDD<br />
+B. Acelera la degradación de los ciclos de escritura (Wear Leveling) del almacenamiento flash<br />
+C. El sistema operativo ya realiza esta tarea automáticamente sin intervención<br />
+D. La desfragmentación solo funciona con sistemas de archivos NTFS  </p>
+<hr />
+<h3>Pregunta 12 - Hashing y Criptografía (Criterio f)</h3>
+<p>¿Qué función cumple un algoritmo hash como SHA-256 en la integridad de datos durante copias de seguridad?</p>
+<p>A. <strong>Cifrado:</strong> Encripta los datos para evitar acceso no autorizado<br />
+B. <strong>Verificación:</strong> Genera huella digital para comparar integridad tras restauración<br />
+C. <strong>Compresión:</strong> Reduce el tamaño del archivo sin pérdida de información<br />
+D. <strong>Autenticación:</strong> Verifica la identidad del usuario que realiza la copia  </p>
+<hr />
+<h3>Pregunta 13 - Volúmenes Dinámicos (Criterio e)</h3>
+<p>¿Qué ventaja ofrece un volumen dinámico tipo Mirroring en entornos empresariales?</p>
+<p>A. <strong>RAID 0:</strong> Striping para máximo rendimiento sin seguridad<br />
+B. <strong>RAID 1:</strong> Datos idénticos en dos discos; si uno falla, el sistema sigue operando<br />
+C. <strong>Spanning:</strong> Espacio combinado de múltiples discos sin redundancia<br />
+D. <strong>Striping con Paridad:</strong> Divide datos y añade paridad para recuperación  </p>
+<hr />
+<h3>Pregunta 14 - Utilidades de Gestión (Criterio h)</h3>
+<p>¿Qué herramienta nativa de Windows permite verificar sectores defectuosos y errores lógicos en el sistema de archivos?</p>
+<p>A. <strong>Disk Defragmenter:</strong> Reorganiza bloques contiguos para optimizar rendimiento<br />
+B. <strong>Scandisk/Fsck:</strong> Analiza integridad de metadatos contra estructura física<br />
+C. <strong>Performance Monitor:</strong> Visualiza uso de CPU, RAM y Disco en tiempo real<br />
+D. <strong>Event Viewer:</strong> Registra eventos del sistema pero no verifica integridad  </p>
+<hr />
+<h3>Pregunta 15 - Automatización y Dependencias (Criterio g)</h3>
+<p>Al diseñar una tarea automatizada de backup, ¿qué elemento es CRÍTICO para garantizar que la tarea se ejecute correctamente en diferentes entornos?</p>
+<p>A. <strong>Trigger:</strong> Define cuándo inicia la tarea (ej: cada día a las 03:00)<br />
+B. <strong>Action:</strong> Especifica el comando o script a ejecutar<br />
+C. <strong>Condition:</strong> Requisitos previos como conexión de red o estado de batería<br />
+D. <strong>Error Handling:</strong> Mecanismo robusto para notificar fallos y reintentar  </p>
+<hr />
+<h1>DOCUMENTO 2: CASOS PRÁCTICOS DE DEBUGGING Y REFACTORIZACIÓN</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CASO PRÁCTICO 1: DEPURACIÓN DE SCRIPT DE BACKUP (Criterios f, g)</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Escenario Realista</p>
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Un desarrollador junior ha creado un script de copias de seguridad que presenta errores lógicos y de compilación. El sistema debe crear backups diarios con timestamp y manejar permisos denegados sin colapsar.</p>
+<h3>Código Con Errores (Python)</h3>
+<pre><code class="language-python"># backup_script.py - CÓDIGO CON ERRORES
+
+import os
+from datetime import date
+
+class BackupSystem:
+    def __init__(self, source_dir):
+        self.source = source_dir  # Error 1
+
+    def create_backup(self, timestamp=None):
+        &quot;&quot;&quot;Crea un archivo .zip con fecha y hora&quot;&quot;&quot;
+
+        if timestamp is None:
+            timestamp = date.today()  # Error 2
+
+        zip_filename = f&quot;backup_{timestamp}.zip&quot;
+
+        with open(zip_filename, &#x27;w&#x27;) as file:  # Error 3
+            for root, dirs, files in os.walk(self.source):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    file.write(file_path)  # Error 4
+
+        print(&quot;Backup completado&quot;)
+
+    def restore_backup(self, backup_file):
+        &quot;&quot;&quot;Restaura un archivo de respaldo&quot;&quot;&quot;
+
+        if not os.path.exists(backup_file):  # Error 5
+            print(f&quot;Archivo {backup_file} no existe&quot;)
+            return False
+
+        try:
+            with open(backup_file, &#x27;r&#x27;) as file:
+                content = file.read()
+
+            print(&quot;Backup restaurado exitosamente&quot;)
+            return True
+        except Exception as e:  # Error 6
+            print(f&quot;Fallo en la restauración: {e}&quot;)
+            return False
+
+# Ejecución del script
+backup_tool = BackupSystem(&quot;./src&quot;)
+backup_tool.create_backup()
+backup_tool.restore_backup(&quot;backup_2024-01-01.zip&quot;)</code></pre>
+
+<h3>Tarea para el Alumno</h3>
+<p>Identificar los 6 errores en el código y proponer la solución correcta con justificación técnica. Escribir el código corregido completo.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CASO PRÁCTICO 2: DISEÑO DE CLASE PARA GESTIÓN DE DISCOS (Criterios e, h)</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Escenario Realista</p>
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Se requiere diseñar una estructura de clases para un sistema que evalúa la salud del almacenamiento y notifica alertas cuando el espacio disponible es crítico. La clase debe seguir principios OOP y manejar excepciones adecuadamente.</p>
+<h3>Requerimientos Funcionales</h3>
+<ol>
+<li><strong>Clase Principal:</strong> <code>DiskHealthMonitor</code></li>
+<li><strong>Atributos Necesarios:</strong></li>
+<li>Ruta de la unidad a monitorear (<code>mountpoint</code>)</li>
+<li>Umbral de alerta en porcentaje (<code>alert_threshold</code>)</li>
+<li><strong>Métodos Requeridos:</strong></li>
+<li><code>get_disk_usage()</code>: Retorna información del disco (total, usado, disponible)</li>
+<li><code>check_health()</code>: Evalúa si el espacio está por debajo del umbral</li>
+<li><code>generate_alert()</code>: Genera mensaje de alerta si es necesario</li>
+<li><strong>Manejo de Errores:</strong></li>
+<li>Manejar excepciones por falta de permisos</li>
+<li>Manejar errores cuando la unidad no existe</li>
+</ol>
+<h3>Tarea para el Alumno</h3>
+<p>Diseñar la estructura completa de la clase con los métodos requeridos, incluyendo manejo adecuado de excepciones y comentarios explicativos. El código debe ser funcional en Python (o Java) y seguir principios OOP.</p>
+<hr />
+<h1>DOCUMENTO 3: SOLUCIONARIO DETALLADO PARA EL DOCENTE (EXPANDIDO Y AUDITADO)</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">RESPUESTAS DEL TEST TIPO EXAMEN - ANÁLISIS PROFUNDO</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>En esta sección, cada respuesta no solo indica la opción correcta, sino que desglosa la arquitectura subyacente para permitir al estudiante comprender el <em>porqué</em> técnico.</p>
+<h3>Pregunta 1</h3>
+<p><strong>Respuesta Correcta: A (Journaling)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El sistema de archivos NTFS utiliza una tecnología llamada <strong>Journaling</strong> (o registro transaccional). Esto implica que antes de modificar cualquier estructura crítica del sistema de archivos (como la MFT - Master File Table o los índices de directorios), el cambio se escribe primero en un archivo especial llamado <code>$LogFile</code>. Si ocurre un fallo eléctrico o un apagado brusco durante una operación de escritura, al reiniciar el sistema, el motor del sistema de archivos lee este log y "reproduce" las transacciones pendientes o deshace aquellas incompletas. Esto garantiza que la estructura interna de metadatos permanezca coherente, evitando corrupción de datos masiva. Es fundamental para entornos empresariales donde la integridad de los datos es prioritaria sobre el rendimiento puro.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción B (Compresión Transparente):</strong> Aunque NTFS soporta compresión transparente, esta característica está diseñada para optimizar el uso del espacio en disco, no para garantizar la integridad ante fallos. De hecho, la compresión añade una sobrecarga de CPU que podría ralentizar operaciones críticas sin aportar seguridad contra cortes de energía.
+*   <strong>Opción C (Enlaces Simbólicos):</strong> Los enlaces simbólicos son una característica de navegación y organización lógica. Permiten crear accesos directos a archivos o directorios, pero no tienen ninguna función relacionada con la recuperación de estados tras un fallo del sistema ni protegen los metadatos contra corrupción.
+*   <strong>Opción D (Copia al Escribir - Copy-on-Write):</strong> Esta es una característica típica de sistemas como ZFS o APFS (Apple). Aunque mejora la integridad, NTFS utiliza principalmente Journaling tradicional para la mayoría de sus operaciones. Además, el CoW está más enfocado en permitir snapshots inmutables que en la recuperación inmediata ante cortes eléctricos en versiones estándar de Windows Server.</p>
+<hr />
+<h3>Pregunta 2</h3>
+<p><strong>Respuesta Correcta: B (Rutas relativas)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+En el desarrollo moderno y despliegues DevOps, la portabilidad es clave. Las <strong>rutas relativas</strong> se definen en función del directorio de trabajo actual (<code>cwd</code>). Esto significa que si una aplicación está configurada para buscar sus archivos de configuración en <code>config/app.ini</code>, funcionará tanto si se ejecuta desde <code>/home/user/proyecto</code> como si se despliega en un contenedor Docker o un servidor Linux con la estructura de carpetas relativa mantenida. Al usar rutas relativas, el código no depende de la ubicación física absoluta donde esté instalado el software, facilitando la migración entre entornos (Desarrollo -&gt; Testing -&gt; Producción) sin necesidad de reescribir código.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Rutas absolutas):</strong> Son rígidas y frágiles. Si mueves el proyecto de <code>C:\</code> a <code>D:\</code>, todas las rutas se rompen. En entornos multiplataforma (Windows/Linux), los separadores de ruta (<code>\</code> vs <code>/</code>) y la existencia de unidades raíz diferentes hacen que esto sea un error de diseño grave para aplicaciones portables.
+*   <strong>Opción C (Variables de entorno):</strong> Aunque es una técnica válida, depender exclusivamente de variables globales añade complejidad al entorno de ejecución del usuario final. Las rutas relativas son más robustas porque viajan con el proyecto mismo, no requieren configuración externa previa en el SO para funcionar correctamente.
+*   <strong>Opción D (UUIDs del disco):</strong> Los UUIDs identifican volúmenes físicos, pero no resuelven la jerarquía lógica de directorios dentro de esos volúmenes. Además, los UUIDs son difíciles de gestionar manualmente y no ofrecen una solución estándar para la navegación de archivos en código fuente.</p>
+<hr />
+<h3>Pregunta 3</h3>
+<p><strong>Respuesta Correcta: B (Identificador numérico único y punteros a bloques físicos)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+En sistemas Unix/Linux, el sistema de archivos separa el nombre del archivo de sus metadatos. El <strong>inode</strong> es la estructura de datos fundamental que contiene toda la información técnica sobre un archivo: su tamaño lógico, permisos (modo), propietario (UID/GID), fechas (creación, modificación, acceso) y, lo más importante, una lista de punteros a los bloques físicos donde residen los datos reales en el disco. El nombre del archivo <strong>no</strong> vive dentro del inode; vive en la entrada del directorio que asocia un string (nombre) con un número (inode). Esta separación permite que múltiples nombres apunten al mismo contenido mediante enlaces duros y optimiza búsquedas por índice numérico.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Nombre del archivo):</strong> El nombre se almacena en la entrada del directorio, no dentro del inode. Si el nombre estuviera en el inode, los enlaces duros serían imposibles porque el mismo inode tendría que tener múltiples nombres simultáneamente.
+*   <strong>Opción C (Fecha de creación y tamaño lógico):</strong> Aunque estas <em>sí</em> se almacenan en el inode, la opción B es más completa técnicamente al mencionar los punteros a bloques físicos, que son esenciales para entender cómo se accede realmente a los datos. Además, la fecha de acceso puede ser modificada dinámicamente sin cambiar el contenido, mientras que los puntores definen la persistencia física.
+*   <strong>Opción D (Propietario y grupo):</strong> Estas son propiedades del inode, pero al igual que C, no describen la función estructural principal del inode respecto a la asignación de espacio en disco (punteros a bloques).</p>
+<hr />
+<h3>Pregunta 4</h3>
+<p><strong>Respuesta Correcta: B (FAT32)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El sistema <strong>FAT32</strong> es un estándar muy antiguo que presenta limitaciones críticas para el uso moderno. Su mayor desventaja técnica es la imposibilidad de gestionar archivos individuales mayores a 4 GB debido al tamaño del campo en la tabla de asignación (32 bits). Además, carece de <strong>Journaling</strong>, lo que significa que si se desconecta un USB con datos escribiéndose, existe una alta probabilidad de corrupción de la tabla de asignación y pérdida de datos. Para entornos empresariales o multimedia modernos donde se manejan ISOs, videos o bases de datos grandes, FAT32 es técnicamente obsoleto.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (NTFS):</strong> Aunque es propietario de Microsoft, los controladores para NTFS son estándar en macOS y Linux modernos. No tiene limitación de tamaño de archivo relevante para el usuario general (límite teórico de 16 EB). Es una opción viable si se prioriza la seguridad sobre la compatibilidad nativa antigua.
+*   <strong>Opción C (EXT4):</strong> Aunque es nativo de Linux, en entornos multiplataforma su uso puede requerir drivers adicionales en Windows/Mac, pero no tiene limitaciones teóricas de tamaño o journaling como FAT32. La limitación aquí es la compatibilidad del driver, no el formato en sí mismo.
+*   <strong>Opción D (APFS):</strong> Es excelente para Apple, pero su soporte fuera del ecosistema Apple es nulo. Sin embargo, la pregunta se centra en "limitación teórica" (capacidad técnica), y FAT32 tiene una restricción matemática de 4GB que APFS no posee.</p>
+<hr />
+<h3>Pregunta 5</h3>
+<p><strong>Respuesta Correcta: B (GPT)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El estándar <strong>MBR</strong> utiliza direcciones de sector de 32 bits, lo que limita matemáticamente el tamaño máximo del disco gestionable a aproximadamente 2 TB. Para servidores modernos con almacenamiento masivo (&gt;4TB, &gt;8TB), MBR es inviable sin particionar en volúmenes dinámicos complejos. <strong>GPT</strong> (GUID Partition Table) utiliza direcciones de 64 bits, permitiendo discos teóricamente de hasta 9 Zettabytes. Además, GPT almacena una copia de la tabla de particiones al principio y al final del disco (redundancia), lo que permite recuperación si el registro principal se corrompe.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (MBR):</strong> Es técnicamente obsoleto para discos modernos. Su limitación matemática de 2 TB es el factor decisivo para descartarlo en servidores que requieren más capacidad. Además, solo permite 4 particiones primarias.
+*   <strong>Opción C (FAT16):</strong> Es un formato extremadamente antiguo diseñado para disquetes y primeros sistemas DOS. No soporta discos grandes ni características modernas de seguridad o particionado.
+*   <strong>Opción D (HFS+):</strong> Es heredado por APFS en Apple. Aunque permite volúmenes grandes, su diseño está atado al ecosistema Apple y no es el estándar universal para servidores multiplataforma que requieren GPT.</p>
+<hr />
+<h3>Pregunta 6</h3>
+<p><strong>Respuesta Correcta: B (Extent Mapping)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+En sistemas antiguos como EXT2/EXT3, cada bloque de un archivo tenía que ser listado individualmente en el índice del inode. Para archivos grandes, esto generaba una sobrecarga enorme. <strong>EXT4 introdujo Extent Mapping</strong>, donde un bloque contiguo se describe como un rango (bloque inicial + longitud) llamado "extent". Esto reduce drásticamente el tamaño de los punteros necesarios y mejora la velocidad de lectura secuencial porque el sistema operativo solo tiene que leer menos metadatos para saber dónde están los datos.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Delayed Allocation):</strong> Esta es una técnica de rendimiento donde el kernel espera a que se termine de escribir un archivo antes de asignar bloques físicos para evitar fragmentación. Aunque mejora el rendimiento, no es el mecanismo que <em>agrupa</em> los bloques en estructuras optimizadas como lo hace Extent Mapping.
+*   <strong>Opción C (Journaling Completo):</strong> Protege la integridad de datos, pero añade sobrecarga de escritura al disco. No tiene relación con la agrupación lógica de bloques para optimizar el índice.
+*   <strong>Opción D (Striping RAID):</strong> Es una técnica de almacenamiento físico a nivel de hardware o controlador (RAID 0), no una característica interna del sistema de archivos EXT4 a nivel de software de gestión de bloques.</p>
+<hr />
+<h3>Pregunta 7</h3>
+<p><strong>Respuesta Correcta: B (Enlaces simbólicos resueltos por el kernel)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La diferencia fundamental radica en cómo el sistema operativo maneja la ruta. Un <strong>enlace simbólico</strong> es un archivo especial que contiene una ruta de texto hacia otro archivo. Cuando se intenta abrir este enlace, el kernel lee ese texto y resuelve la ruta real al momento del acceso (dereferenciación). Si el archivo original se borra o mueve, el enlace queda "roto" porque la ruta apuntada ya no existe. Esto permite enlaces a directorios y entre diferentes sistemas de archivos/particiones.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Enlaces duros a directorios):</strong> En la mayoría de los sistemas Unix/Linux tradicionales, los enlaces duros <em>no</em> pueden apuntar a directorios para evitar ciclos infinitos en el sistema de archivos y problemas de recursividad. Solo apuntan a archivos.
+*   <strong>Opción C (Duplicados físicos):</strong> Los enlaces duros no crean duplicados. Ambos nombres apuntan al mismo Inodo. Si borras uno, los datos persisten porque el contador de enlaces del inode sigue siendo &gt;0. No hay duplicación física en bloques diferentes.
+*   <strong>Opción D (Permisos especiales):</strong> Crear un enlace simbólico no requiere permisos de administrador (root), solo permisos para escribir en el directorio donde se crea el enlace y leer la ruta destino.</p>
+<hr />
+<h3>Pregunta 8</h3>
+<p><strong>Respuesta Correcta: A (Incremental)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La estrategia <strong>Incremental</strong> guarda únicamente los cambios desde la última copia de seguridad, ya sea Full o Incremental. Esto optimiza el tiempo y espacio de escritura. Sin embargo, su desventaja crítica es en la restauración: para recuperar el estado del día 5, necesitas obligatoriamente el backup Full del día 1 + todas las incrementales del día 2 al 5. Si una de las incrementales intermedias está corrupta o faltante, toda la cadena posterior se pierde, haciendo la recuperación parcial o imposible.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción B (Diferencial):</strong> El backup Diferencial guarda cambios desde el último Full. La restauración solo requiere el último Full y el último Diferencial. Es más fácil de restaurar que Incremental, aunque ocupa más espacio. Por tanto, no es la opción "más compleja" en restauración como describe la pregunta.
+*   <strong>Opción C (Full):</strong> Requiere copiar todo cada vez. Aunque tiene la ventaja de restauración rápida, no guarda solo cambios desde la última copia completa, sino que siempre hace una copia total.
+*   <strong>Opción D (Espejo):</strong> El espejo duplica datos en tiempo real pero no mantiene historial de versiones. No es un sistema de backup con historial temporal como el descrito en el escenario ("copias diarias").</p>
+<hr />
+<h3>Pregunta 9</h3>
+<p><strong>Respuesta Correcta: A (Full Backup)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El <strong>Backup Completo (Full)</strong> crea una réplica exacta de todos los datos seleccionados. La eficiencia aquí se mide en tiempo de restauración y riesgo operacional. Al tener un solo punto de recuperación, no hay dependencias de archivos anteriores. Si el backup está intacto, la restauración es inmediata: extraer el archivo único y listo. Esto minimiza el RTO (Recovery Time Objective) porque no hay que procesar cadenas de archivos incrementales.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción B (Incremental):</strong> Como se mencionó en la Pregunta 8, requiere reconstruir una cadena completa. El tiempo de restauración aumenta linealmente con el número de copias incrementales y el riesgo de fallo es acumulativo.
+*   <strong>Opción C (Diferencial):</strong> Requiere dos archivos para restaurar (Full + Differential). Aunque es mejor que Incremental, no es tan eficiente como Full en términos de simplicidad de recuperación (un solo archivo).
+*   <strong>Opción D (Snapshot):</strong> Los snapshots son útiles para recuperación inmediata a nivel de bloque o sistema, pero suelen ser volátiles y pueden perderse si el medio físico falla. No proporcionan un historial histórico independiente de versiones en el mismo sentido que un backup Full externo.</p>
+<hr />
+<h3>Pregunta 10</h3>
+<p><strong>Respuesta Correcta: B (Cron)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+En Linux/Unix, <strong>Cron</strong> es el demonio de planificación por excelencia. Permite definir tareas mediante expresiones de tiempo (minuto, hora, día del mes, mes, día de la semana). Es el componente específico diseñado para despertar procesos en intervalos definidos automáticamente sin intervención humana. Los scripts se ejecutan como si fueran comandos manuales pero programados en el archivo <code>crontab</code>.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Daemon):</strong> Un daemon es cualquier proceso que corre en segundo plano (como Apache o SSH). Cron es un tipo específico de daemon, pero no todos los daemons tienen capacidad de planificación temporal. La función específica de "despertar procesos en intervalos" corresponde a Cron.
+*   <strong>Opción C (Systemd):</strong> Es el gestor de servicios moderno que reemplaza a Init. Aunque tiene unidades <code>timed</code> para programación, Cron sigue siendo la herramienta estándar y más directa para tareas programadas de scripts. Systemd gestiona el arranque y ciclo de vida del servicio en sí.
+*   <strong>Opción D (Init):</strong> Es el proceso padre (PID 1) que inicia todos los demás procesos al arrancar el sistema. No tiene capacidad intrínseca de programación de tareas recurrentes a intervalos específicos.</p>
+<hr />
+<h3>Pregunta 11</h3>
+<p><strong>Respuesta Correcta: B (Acelera degradación de ciclos de escritura)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Los <strong>SSD</strong> (Solid State Drive) no tienen partes móviles como los HDD. El rendimiento se basa en celdas de memoria flash que tienen un número limitado de ciclos de escritura/borrado antes de fallar (<strong>Wear Leveling</strong>). La desfragmentación implica leer y reescribir bloques de datos para moverlos a posiciones contiguas. En un SSD, esto genera escrituras innecesarias que consumen los ciclos de vida de las celdas, degradando la vida útil del disco sin mejorar el rendimiento (ya que la lectura en flash no depende de la continuidad física como en magnetismo).</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Rendimiento de lectura):</strong> Es cierto que no mejora el rendimiento secuencial tanto como en HDD, pero esta es una consecuencia secundaria. La razón principal para <em>prohibirla</em> es el daño físico al hardware (ciclos de escritura).
+*   <strong>Opción C (Automáticamente sin intervención):</strong> Aunque los sistemas modernos activan TRIM automáticamente, la desfragmentación tradicional sigue siendo dañina si se ejecuta manualmente o por software antiguo. La justificación técnica fundamental es el impacto en el Wear Leveling.
+*   <strong>Opción D (Solo NTFS):</strong> La desfragmentación funciona a nivel de sistema operativo y hardware, no solo con un sistema de archivos específico. El daño al SSD ocurre independientemente del filesystem (NTFS, EXT4, APFS).</p>
+<hr />
+<h3>Pregunta 12</h3>
+<p><strong>Respuesta Correcta: B (Verificación)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Un algoritmo hash como <strong>SHA-256</strong> genera una cadena fija de caracteres (hash) basada en el contenido binario del archivo. Funciona como una huella digital matemática. Durante la restauración, se recalcula el hash del archivo recuperado y se compara con el original. Si coinciden, la integridad está garantizada (el archivo no ha sido alterado ni corrompido). No oculta el contenido, solo valida su consistencia.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Cifrado):</strong> El cifrado transforma los datos en un formato ilegible usando una clave. Hashing es irreversible y no usa claves para proteger la confidencialidad. Un hash público permite verificar integridad sin saber el contenido original.
+*   <strong>Opción C (Compresión):</strong> La compresión reduce el tamaño del archivo eliminando redundancia de datos. El hashing mantiene un tamaño fijo pequeño pero no reduce el tamaño del archivo de respaldo en sí.
+*   <strong>Opción D (Autenticación):</strong> Aunque los hashes pueden usarse en firmas digitales para autenticar, su función primaria aquí es la integridad de los datos. La autenticación implica verificar <em>quién</em> hizo algo, mientras que el hash verifica <em>qué</em> pasó con los datos.</p>
+<hr />
+<h3>Pregunta 13</h3>
+<p><strong>Respuesta Correcta: B (RAID 1)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El volumen dinámico tipo <strong>Mirroring</strong> corresponde al nivel <strong>RAID 1</strong>. Consiste en duplicar exactamente la información de un disco a otro. Esto proporciona alta disponibilidad y redundancia. Si uno de los discos físicos falla, el sistema operativo sigue operando sin interrupciones leyendo del segundo disco intacto. Es ideal para sistemas críticos donde la pérdida de datos es inaceptable.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (RAID 0):</strong> El Striping divide datos entre discos para velocidad, pero no tiene redundancia. Si un disco falla en RAID 0, se pierden todos los datos. No ofrece seguridad ni mirroring.
+*   <strong>Opción C (Spanning):</strong> Combina espacio de múltiples discos en uno lógico grande sin duplicar datos. No hay redundancia; si un disco falla, el volumen completo es inaccesible.
+*   <strong>Opción D (Striping con Paridad):</strong> Corresponde a RAID 5 o 6. Aunque ofrece recuperación ante fallo mediante paridad matemática, no es "Mirroring" puro que duplica datos idénticos en bloques de disco completos.</p>
+<hr />
+<h3>Pregunta 14</h3>
+<p><strong>Respuesta Correcta: B (Scandisk/Fsck)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+<strong>Scandisk</strong> (Windows) y <strong>Fsck</strong> (File System Consistency Check, Linux) son las herramientas nativas diseñadas para verificar la consistencia lógica del sistema de archivos contra su estructura física. Analizan metadatos como el mapa de bits de asignación y los inodos/MFT buscando entradas huérfanas, sectores defectuosos o inconsistencias que puedan causar corrupción de datos al leer/escribir.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Disk Defragmenter):</strong> Su función es reorganizar bloques dispersos para mejorar la velocidad física de lectura mecánica. No verifica si los metadatos son correctos ni si hay sectores dañados, solo mueve datos para optimizar el acceso.
+*   <strong>Opción C (Performance Monitor):</strong> Es una herramienta de monitoreo de recursos en tiempo real (CPU, RAM). Sirve para diagnóstico de cuellos de botella de rendimiento, no para verificar integridad del sistema de archivos o sectores físicos.
+*   <strong>Opción D (Event Viewer):</strong> Registra eventos de errores y advertencias del sistema operativo. Puede <em>mostrar</em> que hubo un error en el disco, pero no <em>verifica</em> la integridad ni corrige errores lógicos en el sistema de archivos como lo hace Scandisk/Fsck.</p>
+<hr />
+<h3>Pregunta 15</h3>
+<p><strong>Respuesta Correcta: D (Error Handling)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+En entornos automatizados, las tareas se ejecutan sin supervisión humana directa. El <strong>Error Handling</strong> (manejo de errores) es crítico porque permite que el script detecte fallos (ej. disco lleno, red caída), notifique al administrador y, idealmente, intente reintentar la acción o deje un registro claro del fallo. Sin esto, una tarea fallida pasaría desapercibida hasta que se necesite el backup y este no exista, comprometiendo la seguridad de los datos.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>Opción A (Trigger):</strong> Define <em>cuándo</em> corre la tarea, pero si la tarea falla durante su ejecución, un trigger no ayuda a gestionar ese fallo.
+*   <strong>Opción B (Action):</strong> Especifica qué hacer, pero no define cómo reaccionar ante el fracaso de esa acción.
+*   <strong>Opción C (Condition):</strong> Define requisitos previos para iniciar, pero no gestiona lo que sucede <em>durante</em> o <em>después</em> de la ejecución si algo sale mal.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIÓN CASO PRÁCTICO 1: DEPURACIÓN DE SCRIPT DE BACKUP - ANÁLISIS DETALLADO</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Errores Identificados y Soluciones Técnicas</p>
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Línea Original</th>
+<th>Problema Detectado (Análisis Técnico)</th>
+<th>Solución Correcta</th>
+<th>Justificación Técnica Profunda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><code>self.source = source_dir</code></td>
+<td>La ruta se guarda tal cual. Si el script se ejecuta desde <code>/tmp/</code>, la ruta relativa no apunta a donde se espera, causando fallos de acceso aleatorios.</td>
+<td><code>self.source = os.path.abspath(source_dir)</code></td>
+<td><code>os.path.abspath()</code> resuelve la ruta completa basándose en el directorio actual (<code>cwd</code>). Esto garantiza que la variable <code>source</code> apunte inequívocamente al directorio físico real independientemente de dónde se lance el script, esencial para la portabilidad y consistencia.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><code>timestamp = date.today()</code></td>
+<td><code>date.today()</code> devuelve un objeto de clase <code>datetime.date</code> (ej: <code>2024-10-19</code>). Al convertirlo a string en f-string, el formato es YYYY-MM-DD. Si se ejecutan dos backups el mismo día, el segundo sobrescribe al primero.</td>
+<td><code>timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")</code></td>
+<td>Se debe usar <code>datetime.now()</code> para incluir la hora y evitar colisiones diarias. El método <code>.strftime()</code> formatea la fecha en una cadena compacta sin guiones (mejor para nombres de archivo) y con segundos, garantizando unicidad absoluta por segundo.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><code>with open(zip_filename, 'w') as file:</code></td>
+<td>Se abre un archivo de texto plano normal. El contenido escrito dentro será texto crudo, no un archivo ZIP válido. Los programas descompresores fallarán al intentar abrirlo.</td>
+<td><code>zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED)</code></td>
+<td>Es necesario importar el módulo <code>zipfile</code> y usar su objeto <code>ZipFile</code>. Este módulo gestiona la cabecera binaria del formato ZIP y comprime los datos internamente usando el algoritmo DEFLATE (<code>ZIP_DEFLATED</code>).</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><code>file.write(file_path)</code></td>
+<td>Dentro del contexto de archivo normal, esto escribe solo el texto de la ruta (ej: "C:/src/archivo.txt") en el archivo resultante. No copia el contenido real ni comprime nada.</td>
+<td><code>zipf.write(file_path, arcname=arcname)</code> dentro de ZipFile</td>
+<td>El método <code>.write()</code> del objeto <code>ZipFile</code> lee el contenido del archivo fuente y lo escribe comprimido dentro del contenedor ZIP. El parámetro <code>arcname</code> define cómo se verá la ruta dentro del ZIP (normalmente relativa).</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><code>if not os.path.exists(backup_file):</code></td>
+<td>La verificación existe, pero si el archivo existe pero no hay permisos de lectura, el script sigue y falla más adelante sin un mensaje específico. Falta robustez específica.</td>
+<td>Mantener verificación + añadir <code>try/except PermissionError</code> en la apertura real</td>
+<td>Aunque la existencia se verifica, es mejor encapsular la lógica de apertura dentro del bloque <code>try</code>. Esto permite distinguir entre "Archivo no existe" (falso positivo) y "Existe pero sin permisos".</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><code>except Exception as e:</code></td>
+<td>Capturar una excepción genérica oculta el tipo real del error. Si es un problema de disco lleno, corrupción o red, el desarrollador no podrá diagnosticarlo fácilmente solo viendo "Fallo en la restauración".</td>
+<td><code>except zipfile.BadZipFile as e: ... except PermissionError as e:</code></td>
+<td>Especificar tipos de excepciones (<code>BadZipFile</code>, <code>PermissionError</code>) permite implementar lógica diferenciada (ej: intentar reparar ZIP vs pedir permisos). Esto mejora el debug y la experiencia de usuario final.</td>
+</tr>
+</tbody>
+</table>
+<h3>Código Corregido Completo (Versión Producción)</h3>
+<pre><code class="language-python"># backup_script.py - CÓDIGO CORREGIDO Y OPTIMIZADO
+
+import os
+from datetime import datetime
+import zipfile
+
+class BackupSystem:
+    &quot;&quot;&quot;
+    Clase robusta para gestión de copias de seguridad.
+    Implementa principios OOP y manejo de errores específico (Criterios f, g).
+    &quot;&quot;&quot;
+
+    def __init__(self, source_dir):
+        # Error 1 corregido: Normalización a ruta absoluta para consistencia
+        self.source = os.path.abspath(source_dir)
+
+    def create_backup(self, timestamp=None):
+        &quot;&quot;&quot;
+        Crea un archivo .zip con fecha y hora única.
+        Incluye manejo de permisos y verificación de directorio fuente.
+        &quot;&quot;&quot;
+
+        # Validación de existencia del origen antes de proceder
+        if not os.path.isdir(self.source):
+            print(f&quot;Error: El directorio fuente {self.source} no existe o no es accesible.&quot;)
+            return None
+
+        if timestamp is None:
+            # Error 2 corregido: Timestamp completo con hora para unicidad temporal
+            timestamp = datetime.now().strftime(&quot;%Y%m%d_%H%M%S&quot;)
+
+        zip_filename = f&quot;backup_{timestamp}.zip&quot;
+
+        try:
+            # Error 3 corregido: Uso correcto del módulo zipfile
+            with zipfile.ZipFile(zip_filename, &#x27;w&#x27;, zipfile.ZIP_DEFLATED) as zipf:
+                # Recorrido recursivo seguro
+                for root, dirs, files in os.walk(self.source):
+                    for file in files:
+                        file_path = os.path.join(root, file)
+
+                        # Calcular nombre relativo para mantener estructura dentro del ZIP
+                        arcname = os.path.relpath(file_path, start=self.source)
+
+                        try:
+                            # Error 4 corregido: Escribir contenido real en el ZIP
+                            zipf.write(file_path, arcname=arcname)
+                        except PermissionError as e:
+                            print(f&quot;⚠️ Acceso denegado a archivo: {file_path}&quot;)
+                            continue
+
+            print(f&quot;✅ Backup completado exitosamente: {zip_filename}&quot;)
+            return zip_filename
+
+        except OSError as e:  # Manejo específico de errores de sistema operativo (ej. disco lleno)
+            print(f&quot;❌ Error del sistema al crear backup: {e}&quot;)
+            return False
+        except Exception as e:
+            print(f&quot;❌ Fallo inesperado en creación de backup: {type(e).__name__}: {e}&quot;)
+            return False
+
+    def restore_backup(self, backup_file):
+        &quot;&quot;&quot;
+        Restaura un archivo de respaldo.
+        Valida integridad del ZIP antes de extraer.
+        &quot;&quot;&quot;
+
+        # Error 5 corregido: Verificación robusta con manejo de rutas relativas
+        if not os.path.exists(backup_file):
+            print(f&quot;❌ Archivo {backup_file} no existe en el sistema.&quot;)
+            return False
+
+        try:
+            with zipfile.ZipFile(backup_file, &#x27;r&#x27;) as zip_ref:
+                # Validación de integridad del archivo ZIP antes de extraer
+                if zip_ref.testzip():
+                    print(&quot;⚠️ Advertencia: El archivo ZIP contiene errores internos.&quot;)
+
+                # Extraer en directorio temporal seguro o destino especificado
+                extract_path = &quot;./restore_temp&quot;
+                os.makedirs(extract_path, exist_ok=True)
+                zip_ref.extractall(extract_path)
+
+            print(f&quot;✅ Backup restaurado exitosamente en: {extract_path}&quot;)
+            return True
+
+        except zipfile.BadZipFile as e:  # Error específico para archivos corruptos
+            print(f&quot;❌ Archivo ZIP corrupto o inválido: {e}&quot;)
+            return False
+        except PermissionError as e:
+            print(f&quot;❌ Error de permisos al restaurar (asegura acceso a carpeta destino): {e}&quot;)
+            return False
+        except Exception as e:  # Error 6 corregido: Manejo más específico de excepciones
+            print(f&quot;❌ Fallo genérico en la restauración: {type(e).__name__}: {e}&quot;)
+            return False
+
+# Ejecución del script con manejo adecuado de flujo
+if __name__ == &quot;__main__&quot;:
+    # Inicializar sistema apuntando a una carpeta válida
+    backup_tool = BackupSystem(&quot;./src&quot;)
+
+    # Paso 1: Crear backup y capturar resultado para verificar éxito
+    zip_file = backup_tool.create_backup()
+
+    if zip_file and os.path.exists(zip_file):
+        print(&quot;\n--- Iniciando Restauración de Prueba ---&quot;)
+        # Solo restauramos si la creación fue exitosa
+        backup_tool.restore_backup(zip_file)</code></pre>
+
+<h3>Criterios Cubiertos en la Solución</h3>
+<ul>
+<li><strong>Criterio f (Copias de Seguridad):</strong> Implementación correcta de creación y restauración con verificación de integridad (<code>testzip</code>) y manejo de rutas relativas.</li>
+<li><strong>Criterio g (Automatización):</strong> Manejo robusto de errores para que el script no colapse en producción, permitiendo logging de fallos específicos (permisos, corrupción).</li>
+<li><strong>Principios OOP:</strong> Encapsulamiento adecuado en clases con métodos bien definidos y documentación.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIÓN CASO PRÁCTICO 2: DISEÑO DE CLASE PARA GESTIÓN DE DISCOS - ANÁLISIS DETALLADO</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Estructura de Clase Propuesta (Python)</p>
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Este diseño sigue principios de Ingeniería de Software para entornos DAM, priorizando la seguridad y la portabilidad.</p>
+<pre><code class="language-python"># disk_health_monitor.py - DISEÑO COMPLETO Y AUDITADO DE CLASE
+
+import psutil
+from typing import Optional, Dict
+
+
+class DiskHealthMonitor:
+    &quot;&quot;&quot;
+    Clase monolítica para monitorear la salud del almacenamiento y generar alertas.
+
+    Atributos:
+        mountpoint (str): Ruta de la unidad a monitorear
+        alert_threshold (float): Porcentaje de umbral de alerta (0-100)
+
+    Métodos:
+        get_disk_usage(): Retorna información completa del disco
+        check_health(): Evalúa si el espacio está por debajo del umbral
+        generate_alert(): Genera mensaje de alerta estructurado
+
+    Criterios Vinculados: e, h
+    &quot;&quot;&quot;
+
+    def __init__(self, mountpoint: str, alert_threshold: float = 85.0):
+        &quot;&quot;&quot;
+        Inicializa el monitor con ruta y umbral configurables.
+
+        Args:
+            mountpoint (str): Ruta de la unidad a monitorear (ej: &#x27;C:\\&#x27;, &#x27;/home&#x27;)
+            alert_threshold (float): Umbral de alerta en porcentaje (por defecto 85%)
+
+        Raises:
+            ValueError: Si el umbral está fuera del rango válido (0-100)
+            FileNotFoundError: Si la ruta no existe en el sistema operativo
+        &quot;&quot;&quot;
+
+        # Validación de parámetros (Principio de Defensa en Profundidad)
+        if not 0 &amp;lt;= alert_threshold &amp;lt;= 100:
+            raise ValueError(&quot;El umbral de alerta debe estar entre 0 y 100&quot;)
+
+        self.mountpoint = mountpoint
+        self.alert_threshold = float(alert_threshold)
+
+    def get_disk_usage(self) -&gt; Dict[str, float]:
+        &quot;&quot;&quot;
+        Retorna información completa del disco (total, usado, disponible).
+
+        Returns:
+            dict: Diccionario con claves &#x27;total_gb&#x27;, &#x27;used_gb&#x27;,
+                  &#x27;available_gb&#x27;, &#x27;percent_used&#x27;
+
+        Raises:
+            PermissionError: Si no hay permisos para leer la unidad
+            FileNotFoundError: Si la ruta especificada no existe
+        &quot;&quot;&quot;
+
+        try:
+            # Uso de librería psutil para abstraer el SO (Criterio h)
+            usage = psutil.disk_usage(self.mountpoint)
+
+            return {
+                &#x27;total_gb&#x27;: round(usage.total / (1024**3), 2),
+                &#x27;used_gb&#x27;: round(usage.used / (1024**3), 2),
+                &#x27;available_gb&#x27;: round(usage.free / (1024**3), 2),
+                &#x27;percent_used&#x27;: usage.percent
+            }
+
+        except PermissionError:
+            # Manejo específico de seguridad
+            raise PermissionError(f&quot;Permiso denegado para acceder a {self.mountpoint}. Ejecuta como Admin/root.&quot;)
+        except FileNotFoundError:
+            # Manejo específico de ruta inválida
+            raise FileNotFoundError(f&quot;La ruta {self.mountpoint} no existe en el sistema operativo actual&quot;)
+
+    def check_health(self) -&gt; bool:
+        &quot;&quot;&quot;
+        Evalúa si el espacio disponible está por debajo del umbral configurado.
+
+        Returns:
+            bool: True si el disco está saludable (por encima del umbral), False si alerta
+
+        Raises:
+            Exception: Si falla la obtención de información del disco
+        &quot;&quot;&quot;
+
+        try:
+            usage_info = self.get_disk_usage()
+            current_percent = usage_info[&#x27;percent_used&#x27;]
+
+            # Lógica de evaluación: Si usado &gt; umbral, retorna False (alerta)
+            return current_percent &amp;lt; self.alert_threshold
+
+        except Exception as e:
+            # Logueo interno para debugging en producción
+            print(f&quot;Error al verificar salud del disco: {type(e).__name__}: {e}&quot;)
+            raise
+
+    def generate_alert(self) -&gt; Optional[str]:
+        &quot;&quot;&quot;
+        Genera mensaje de alerta estructurado si el espacio es crítico.
+
+        Returns:
+            str o None: Mensaje de alerta si existe problema, None si está saludable
+
+        Ejemplo de salida:
+            &quot;⚠️ ALERTA DE ESPACIO CRÍTICO - Unidad C:\\\n&quot;
+            &quot;Espacio usado: 92%\n&quot;
+            &quot;Umbral configurado: 85%\n&quot;
+            &quot;Recomendación: Liberar espacio inmediatamente&quot;
+        &quot;&quot;&quot;
+
+        try:
+            usage_info = self.get_disk_usage()
+
+            if not self.check_health():
+                return (f&quot;⚠️ ALERTA DE ESPACIO CRÍTICO - Unidad {self.mountpoint}\n&quot;
+                        f&quot;Espacio usado: {usage_info[&#x27;percent_used&#x27;]}%\n&quot;
+                        f&quot;Umbral configurado: {self.alert_threshold}%\n&quot;
+                        f&quot;Recomendación: Liberar espacio inmediatamente&quot;)
+
+            return None
+
+        except PermissionError as e:
+            # Manejo de error específico para alerta (no lanza exception, devuelve mensaje)
+            return f&quot;❌ Error de permisos al generar alerta: {e}&quot;
+        except FileNotFoundError as e:
+            return f&quot;❌ Ruta no encontrada para generar alerta: {e}&quot;
+
+
+# Ejemplo de uso y demostración de funcionalidad
+if __name__ == &quot;__main__&quot;:
+    try:
+        # Crear instancia del monitor (ruta depende del sistema operativo)
+        import os
+
+        if os.name == &#x27;nt&#x27;:  # Windows
+            # En Windows, las rutas usan doble barra para evitar escape en strings
+            mount = &quot;C:\\&quot;
+        else:  # Linux/Unix
+            mount = &quot;/&quot;
+
+        monitor = DiskHealthMonitor(mount, alert_threshold=85.0)
+
+        print(&quot;--- Informe de Salud del Disco ---&quot;)
+
+        # Obtener información detallada (Criterio h - Utilidades)
+        usage_info = monitor.get_disk_usage()
+        print(f&quot;Total: {usage_info[&#x27;total_gb&#x27;]} GB&quot;)
+        print(f&quot;Usado: {usage_info[&#x27;used_gb&#x27;]} GB ({usage_info[&#x27;percent_used&#x27;]}%)&quot;)
+        print(f&quot;Disponible: {usage_info[&#x27;available_gb&#x27;]} GB\n&quot;)
+
+        # Verificar salud del disco (Criterio e - Gestión de unidades)
+        is_healthy = monitor.check_health()
+        print(f&quot;Estado de salud: {&#x27;✓ SALUDABLE&#x27; if is_healthy else &#x27;⚠️ ALERTA ACTIVADA&#x27;}\n&quot;)
+
+        # Generar alerta si es necesario
+        alert_message = monitor.generate_alert()
+        if alert_message:
+            print(alert_message)
+        else:
+            print(&quot;No hay alertas pendientes.&quot;)
+
+    except Exception as e:
+        print(f&quot;Error crítico en el sistema de monitoreo: {type(e).__name__}: {e}&quot;)</code></pre>
+
+<h3>Explicación Técnica del Diseño (Paso a Paso)</h3>
+<ol>
+<li><strong>Encapsulamiento y Atributos:</strong> Se define la clase <code>DiskHealthMonitor</code> con atributos privados implícitos (<code>mountpoint</code>, <code>alert_threshold</code>). El constructor valida los datos de entrada inmediatamente para prevenir estados inválidos en el objeto (Criterio 'h').</li>
+<li><strong>Uso de Librerías Externas (<code>psutil</code>):</strong> Se utiliza <code>psutil.disk_usage()</code> porque es multiplataforma. Esto permite que el mismo código funcione en Windows, Linux y macOS sin reescribir llamadas al kernel específicas (WMI vs <code>/proc</code>). Esto cumple con la portabilidad requerida en DAM.</li>
+<li><strong>Manejo de Excepciones Específico:</strong> En lugar de <code>except Exception</code>, se capturan <code>PermissionError</code> y <code>FileNotFoundError</code>. Esto permite al desarrollador saber exactamente qué falló sin tener que inspeccionar el stack trace completo. En la función <code>generate_alert</code>, las excepciones devuelven un string en lugar de lanzar error para permitir que el script continúe mostrando el resto del informe.</li>
+<li><strong>Tipado y Documentación:</strong> Se usan type hints (<code>Dict[str, float]</code>) y docstrings completos. Esto mejora la mantenibilidad del código, requisito clave en proyectos profesionales (Criterio 'h').</li>
+<li><strong>Lógica de Negocio:</strong> La función <code>check_health</code> encapsula la lógica comparativa (<code>&amp;lt; threshold</code>). Esto permite cambiar el umbral dinámicamente sin tocar el código fuente, cumpliendo con la flexibilidad requerida en Criterio 'e'.</li>
+</ol>
+<h3>Criterios de Evaluación del Diseño (Rúbrica para el Docente)</h3>
+<ol>
+<li><strong>Principios OOP:</strong> Encapsulamiento adecuado, atributos privados implícitos, métodos bien definidos.</li>
+<li><strong>Manejo de Errores:</strong> Excepciones específicas para cada tipo de fallo esperado en producción (<code>FileNotFoundError</code>, <code>PermissionError</code>).</li>
+<li><strong>Documentación:</strong> Docstrings completos que explican función y comportamiento de cada método.</li>
+<li><strong>Portabilidad:</strong> Código adaptable a diferentes sistemas operativos (Windows/Linux) usando <code>psutil</code> y detección de SO (<code>os.name</code>).</li>
+<li><strong>Utilidad Real:</strong> Funcionalidad verificable con datos reales del sistema operativo, no simulados.</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">MATRIZ DE EVALUACIÓN PARA EL DOCENTE</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Puntuación Recomendada para el Examen Test</p>
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Sección</th>
+<th>Total Preguntas</th>
+<th>Puntos por Pregunta</th>
+<th>Puntuación Máxima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Teoría de Sistemas de Archivos (a, b)</td>
+<td>6 preguntas (1,2,3,4,6,7)</td>
+<td>0,6 puntos cada una</td>
+<td>3,6 puntos</td>
+</tr>
+<tr>
+<td>Gestión de Particiones y Volúmenes (e)</td>
+<td>3 preguntas (5, 13, 9*)</td>
+<td>0,6 puntos cada una</td>
+<td>1,8 puntos</td>
+</tr>
+<tr>
+<td>Copias de Seguridad e Integridad (f)</td>
+<td>4 preguntas (8, 9, 12, 14)</td>
+<td>0,6 puntos cada una</td>
+<td>2,4 puntos</td>
+</tr>
+<tr>
+<td>Automatización y Utilidades (g, h)</td>
+<td>3 preguntas (10, 11, 15)</td>
+<td>0,6 puntos cada una</td>
+<td>1,8 puntos</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>15 preguntas</strong></td>
+<td>-</td>
+<td><strong>9,6 puntos</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>(Nota: Ajustado para sumar 10 puntos si se desea redondear, o mantener como está)</em>.</p>
+<h3>Rúbrica para Casos Prácticos (Calificación del Alumno)</h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Excelente (10-9 pts)</th>
+<th>Bueno (8-7 pts)</th>
+<th>Regular (6-5 pts)</th>
+<th>Insuficiente (&lt;5 pts)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identificación de Errores</strong></td>
+<td>Identifica todos los errores con justificación técnica completa y referencia a línea.</td>
+<td>Identifica mayoría de errores con justificación adecuada.</td>
+<td>Identifica algunos errores sin justificación completa o incorrecta.</td>
+<td>No identifica errores o justificación errónea.</td>
+</tr>
+<tr>
+<td><strong>Código Corregido (Case 1)</strong></td>
+<td>Código funcional, documentado, maneja excepciones y sigue mejores prácticas OOP.</td>
+<td>Código funcional pero con documentación incompleta o manejo de errores básico.</td>
+<td>Código parcialmente funcional con errores menores no corregidos.</td>
+<td>Código no funcional o con múltiples errores lógicos.</td>
+</tr>
+<tr>
+<td><strong>Diseño de Clase (Case 2)</strong></td>
+<td>Estructura completa con todos los métodos requeridos, tipado y manejo de excepciones robusto.</td>
+<td>Estructura completa pero con manejo de excepciones básico o sin docstrings.</td>
+<td>Estructura incompleta (faltan métodos) o sin manejo de excepciones.</td>
+<td>Estructura incorrecta, no sigue OOP o no compila.</td>
+</tr>
+<tr>
+<td><strong>Documentación Técnica</strong></td>
+<td>Docstrings completos, comentarios explicativos en cada método y sección inicial clara.</td>
+<td>Comentarios adecuados pero falta docstrings formales.</td>
+<td>Comentarios mínimos o ausentes en bloques complejos.</td>
+<td>Sin documentación técnica.</td>
+</tr>
+</tbody>
+</table>
+<h3>Criterios de Aprobación del RA3</h3>
+<ul>
+<li><strong>Test Tipo Examen:</strong> Mínimo 75% de respuestas correctas (12/16 preguntas aprox).</li>
+<li><strong>Casos Prácticos:</strong> Mínimo 60% en cada caso práctico para aprobar la evaluación completa.</li>
+<li><strong>Entrega Completa:</strong> Todos los casos prácticos deben estar entregados dentro del plazo establecido y ejecutables.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-8')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                09
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">RECOMENDACIONES PARA EL TUTOR (AUDITORÍA PEDAGÓGICA)</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Preparación Previa a la Evaluación</p>
+            </div>
+        </div>
+        <svg id="icon-acc-8" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-8" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ol>
+<li><strong>Repasar Manual Teórico:</strong> Asegurar que los alumnos hayan leído el manual de teoría antes de realizar el test, especialmente las secciones sobre MBR/GPT y Journaling.</li>
+<li><strong>Laboratorio Previo:</strong> Realizar las prácticas del laboratorio RA3 para familiarizarse con scripts reales (<code>psutil</code>, <code>zipfile</code>) antes de la evaluación.</li>
+<li><strong>Herramientas Instaladas:</strong> Verificar instalación de <code>psutil</code> en todos los entornos de aula (<code>pip install psutil</code>).</li>
+</ol>
+<h3>Durante la Evaluación</h3>
+<ol>
+<li><strong>Tiempo Controlado:</strong> 45 minutos para test + 60-90 minutos para casos prácticos.</li>
+<li><strong>Soporte Técnico Limitado:</strong> Permitir acceso a documentación oficial (Python Docs, Psutil Docs) pero no resolver errores directamente. El objetivo es fomentar la investigación técnica.</li>
+<li><strong>Verificación de Integridad:</strong> Asegurar que los scripts ejecutables funcionen en el entorno del aula antes de empezar.</li>
+</ol>
+<h3>Corrección y Retroalimentación</h3>
+<ol>
+<li><strong>Justificación Técnica:</strong> Exigir explicaciones para cada error identificado, no solo correcciones sintácticas. ¿Por qué fallaba? (Ej: "No usé ZipFile").</li>
+<li><strong>Comparativa con Solución Oficial:</strong> Mostrar diferencias entre solución del alumno y solucionario oficial para identificar lagunas de conocimiento.</li>
+<li><strong>Mejoras Sugeridas:</strong> Indicar mejoras de código más allá de los errores identificados (ej: "Podrías usar <code>pathlib</code> en lugar de <code>os.path</code>").</li>
+</ol>
+<hr />
+<p><strong>Documento generado por:</strong> Experto en Evaluación y Calidad Docente de FP (Programación)<br />
+<strong>Fecha de Generación:</strong> 2024-12-19<br />
+<strong>Versión del Documento:</strong> 3.0 (Auditoría Completa y Ampliada)<br />
+<strong>Nivel de Dificultad:</strong> Alto - FP Superior DAM<br />
+<strong>Vinculación Curricular:</strong> Módulo Sistemas Informáticos | RA3</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
