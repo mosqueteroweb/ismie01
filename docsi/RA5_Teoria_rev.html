@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria RA5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA5.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA5</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Teoria RA5</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Módulo Profesional: Sistemas Informáticos | Resultado de Aprendizaje 5 (RA5)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Nivel:</strong> Formación Profesional Superior – Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)<br />
+<strong>Autoría Académica:</strong> Cátedra de Teoría de Desarrollo de Aplicaciones Multiplataforma y Redes<br />
+<strong>Versión:</strong> 2.0 (Expandida, Profundizada y Didáctica para Ingeniería de Software)</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">PRÓLOGO: LA IMPORTANCIA ESTRATÉGICA DE LA RED EN EL DESARROLLO MULTIPLATAFORMA</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">1.1. La Red como Sistema Nervioso del Software Moderno</p>
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Como futuros ingenieros, arquitectos de software y desarrolladores de aplicaciones multiplataforma (DAM), es imperativo comprender que las aplicaciones no operan en el vacío. El paradigma moderno de desarrollo ha evolucionado desde el "software monolítico" alojado localmente hacia sistemas distribuidos, microservicios y soluciones basadas en la nube (Cloud Computing). En este contexto, la aplicación de usuario final es solo una interfaz visual; la verdadera lógica reside en servidores que deben comunicarse a través de infraestructuras de red complejas.</p>
+<p>El <strong>Resultado de Aprendizaje 5 (RA5): "Interconecta sistemas en red configurando dispositivos y protocolos"</strong> no constituye meramente una competencia administrativa o de soporte técnico, sino la base fundamental sobre la cual se construye la conectividad de las soluciones tecnológicas que desarrollaremos. Un error de configuración en el direccionamiento IP puede impedir que un microservicio hable con su base de datos; una mala gestión de puertos puede bloquear una API REST; y una vulnerabilidad de seguridad en el protocolo de transporte puede exponer datos sensibles de usuarios reales.</p>
+<h3>1.2. Objetivos Pedagógicos del RA5 desde la Perspectiva DAM</h3>
+<p>Este manual aborda los conceptos teóricos, arquitectónicos y algorítmicos necesarios para dominar el RA5 desde una perspectiva de ingeniería de software. No nos centraremos en la sintaxis operativa de comandos específicos (aunque los mencionaremos para contexto), sino en la lógica subyacente, las estructuras de datos de red, los protocolos de comunicación y los principios de seguridad que garantizan la integridad del sistema en su conjunto.</p>
+<p><strong>¿Por qué un desarrollador debe estudiar esto?</strong>
+1.  <strong>Depuración (Debugging):</strong> Cuando una llamada a API falla con un <em>timeout</em> o un error de conexión, el problema no siempre está en el código. Puede ser un bloqueo de firewall, una ruta de red incorrecta o una resolución DNS fallida. Entender la red permite diagnosticar estos fallos sin depender exclusivamente del soporte de infraestructura.
+2.  <strong>Diseño de Arquitectura:</strong> Al diseñar una aplicación multiplataforma (Web, Móvil, Escritorio), el desarrollador debe decidir si las comunicaciones son síncronas o asíncronas, qué protocolos usar (HTTP/2 vs WebSocket vs gRPC) y cómo manejar la seguridad en tránsito.
+3.  <strong>Seguridad por Diseño:</strong> Como desarrolladores, somos responsables de asegurar nuestras aplicaciones. Conocer cómo funcionan los firewalls y el cifrado permite implementar medidas de defensa en profundidad (Defense in Depth) a nivel de aplicación.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 1: ARQUITECTURA DE PROTOCOLOS Y CONFIGURACIÓN TCP/IP</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterio de Evaluación a)</em></p>
+<h3>1.1. El Modelo de Referencia y el Stack TCP/IP: Abstracción y Capas</h3>
+<p>La interconexión de sistemas se rige por estándares que permiten la interoperabilidad entre hardware heterogéneo (ej. un servidor Linux en AWS) y software diverso (una aplicación Android desarrollada en Kotlin). En este contexto, <strong>TCP/IP</strong> (Transmission Control Protocol/Internet Protocol) no es solo un conjunto de protocolos, sino una arquitectura de pilas (<em>stacks</em>) que define cómo los datos fluyen a través de las capas del sistema.</p>
+<p>Aunque comúnmente se cita el modelo OSI (7 capas), en la práctica industrial y académica para DAM nos centraremos en el <strong>Modelo TCP/IP</strong>, que es más pragmático y coincide con la realidad de Internet:</p>
+<ol>
+<li><strong>Capa de Aplicación:</strong> Es donde residen nuestras aplicaciones multiplataforma. Aquí operan protocolos como HTTP, HTTPS, FTP, SMTP (correo), DNS (nombres) y SSH. Para el desarrollador, esta capa se traduce en las librerías de red que importamos en nuestro código (ej. <code>socket</code>, <code>requests</code> en Python).</li>
+<li><strong>Capa de Transporte:</strong> Gestión de extremo a extremo. Aquí ocurre la magia de la fiabilidad o la velocidad.<ul>
+<li><strong>TCP (Transmission Control Protocol):</strong> Orientado a conexión. Garantiza que los paquetes lleguen, se ordenen y sin errores. Esencial para datos críticos como transacciones bancarias o envío de archivos.</li>
+<li><strong>UDP (User Datagram Protocol):</strong> No orientado a conexión. Envía datos "de disparo" (<em>fire and forget</em>). Mayor velocidad, menor fiabilidad. Ideal para streaming de video en tiempo real o juegos online donde la latencia es más crítica que perder un paquete ocasional.</li>
+</ul>
+</li>
+<li><strong>Capa de Internet (Red):</strong> Enrutamiento lógico y direccionamiento. Define cómo los paquetes viajan a través de múltiples redes hasta llegar al destino final usando direcciones IP. El protocolo principal es IP (v4 o v6).</li>
+<li><strong>Capa de Acceso a la Red:</strong> Gestión física del medio. Incluye drivers, tarjetas de red (NIC), cables Ethernet y protocolos inalámbricos IEEE 802.11.</li>
+</ol>
+<p><strong>Ejemplo Didáctico: El Envío de un Correo Electrónico</strong>
+Imagina que escribes un correo en tu móvil (Capa de Aplicación).
+*   El sistema operativo encapsula el mensaje con una cabecera TCP (puerto destino 465 para SMTP seguro).
+*   Luego añade la dirección IP del servidor de correo y la tuya propia (Capa Internet).
+*   Finalmente, los datos se convierten en señales eléctricas u ópticas que viajan por la antena WiFi o el cable LAN (Capa Acceso).
+Al llegar al servidor destino, el proceso se invierte (<em>desencapsulamiento</em>) hasta que el correo queda en el buzón.</p>
+<h3>1.2. Esquemas de Direccionamiento Lógico: IPv4 e IPv6</h3>
+<p>La configuración del protocolo TCP/IP requiere una gestión precisa de identidades lógicas en la red. Sin direcciones únicas, los paquetes no sabrían a quién entregar.</p>
+<h4>Direcciones IP y Subredes</h4>
+<p>Una dirección IP es un identificador único asignado a cada interfaz de red dentro de una topología lógica. La arquitectura actual transita entre dos estándares:</p>
+<ul>
+<li><strong>IPv4:</strong> Utiliza direcciones de 32 bits, representadas habitualmente en notación decimal punteada (ej. <code>192.168.1.50</code>).<ul>
+<li><em>Limitaciones:</em> Solo permite ~4 mil millones de direcciones únicas.</li>
+<li><em>Máscaras de Subred:</em> La máscara define qué parte de la dirección IP es la <strong>Red</strong> y qué parte es el <strong>Host</strong>. Por ejemplo, en una red <code>192.168.1.0/24</code>, los primeros 24 bits identifican la red y los últimos 8 bits (256 combinaciones) identifican dispositivos.</li>
+<li><em>Cálculo de Subredes:</em> Para un desarrollador, entender esto es vital para configurar firewalls o bases de datos que solo deben ser accesibles desde ciertas subredes internas. Si una aplicación web se comunica con una API REST en <code>10.0.5.x</code> y el firewall de la red local permite tráfico solo hacia <code>192.168.x.x</code>, la conexión fallará aunque el código sea perfecto.</li>
+</ul>
+</li>
+<li><strong>IPv6:</strong> Surge como respuesta a la exhaustión de direcciones IPv4. Utiliza 128 bits, permitiendo una jerarquía de direccionamiento masiva (imaginemos $3.4 \times 10^{38}$ direcciones).<ul>
+<li><em>Autoconfiguración:</em> Facilita el protocolo SLAAC (Stateless Address Autoconfiguration), donde un dispositivo puede generar su propia dirección IP basándose en la identidad física de su tarjeta de red, sin necesidad de un servidor centralizado.</li>
+<li><em>Eliminación del NAT:</em> Al haber tantas direcciones, cada dispositivo podría tener una IP pública única, simplificando las conexiones P2P (Peer-to-Peer) y reduciendo la complejidad de los firewalls.</li>
+</ul>
+</li>
+</ul>
+<h4>Puerta de Enlace (Default Gateway)</h4>
+<p>Conceptualmente, la puerta de enlace es el nodo que actúa como router hacia otras redes. Para un cliente de red, configurar correctamente este parámetro es esencial para establecer comunicación fuera del dominio local (LAN).
+*   <em>Funcionamiento Algorítmico:</em> Cuando una aplicación intenta conectar a <code>google.com</code>, la resolución DNS devuelve una IP pública (ej. <code>142.250.80.46</code>). El sistema operativo del cliente calcula si esta IP pertenece a su red local (usando su máscara de subred).
+    *   Si <strong>SÍ</strong>: Envía el paquete directamente al dispositivo destino en la LAN.
+    *   Si <strong>NO</strong>: Envía el paquete a la dirección IP configurada como "Puerta de Enlace" (el router), quien se encargará de reenviarlo hacia Internet.</p>
+<h3>1.3. Mecanismos de Asignación: Estático vs. Dinámico</h3>
+<p>La configuración de direcciones puede realizarse mediante dos paradigmas distintos que afectan la administración y escalabilidad del sistema.</p>
+<ul>
+<li><strong>Configuración Estática:</strong> La dirección IP, máscara y gateway se definen manualmente en el sistema operativo (archivo <code>/etc/network/interfaces</code> en Linux o Panel de Control en Windows).<ul>
+<li><em>Ventajas:</em> Previsibilidad total. Ideal para servidores web, bases de datos o impresoras de red donde las direcciones no pueden cambiar. Permite configurar reglas de firewall fijas basadas en IPs específicas.</li>
+<li><em>Desventajas:</em> Propenso a errores humanos (IP duplicada). Si se añade un nuevo servidor y se elige una IP ya usada por otro dispositivo, se produce un conflicto de IP que puede dejar caídos ambos servicios. No escala bien en entornos con cientos de dispositivos móviles.</li>
+</ul>
+</li>
+<li><strong>Configuración Dinámica (DHCP):</strong> Se delega al cliente solicitar una configuración a un servidor centralizado mediante un protocolo de descubrimiento.<ul>
+<li><em>Proceso DORA:</em> El proceso técnico se divide en 4 pasos:<ol>
+<li><strong>Discover:</strong> El cliente grita "¿Hay algún servidor DHCP aquí?" (Broadcast).</li>
+<li><strong>Offer:</strong> Un servidor responde "Tengo esta IP disponible para ti".</li>
+<li><strong>Request:</strong> El cliente dice "Me quedo con esa IP, gracias".</li>
+<li><strong>Acknowledge:</strong> El servidor confirma la asignación y establece un tiempo de alquiler (<em>lease</em>).</li>
+</ol>
+</li>
+<li><em>Ventajas:</em> Reduce el error humano y permite la movilidad (roaming) de dispositivos dentro de la red. Si te mueves de una oficina a otra, tu portátil obtiene automáticamente una IP válida para esa nueva subred.</li>
+<li><em>Desventajas:</em> Dependencia del servicio DHCP. Si el servidor cae, los nuevos dispositivos no podrán conectarse. Además, las IPs cambian si se renueva la concesión, lo que complica el acceso remoto directo (SSH) sin usar nombres de dominio.</li>
+</ul>
+</li>
+</ul>
+<h3>1.4. Resolución de Nombres: El Sistema DNS</h3>
+<p>La capa de aplicación no utiliza direcciones IP directamente por razones de usabilidad humana. Es difícil recordar <code>93.184.216.34</code>, pero fácil recordar <code>ejemplo.com</code>. El <strong>Domain Name System (DNS)</strong> actúa como una base de datos distribuida jerárquica que mapea nombres legibles a direcciones lógicas.</p>
+<ul>
+<li><em>Funcionamiento:</em> Cuando escribes una URL en el navegador, tu sistema consulta primero su caché local, luego al servidor DNS configurado por tu ISP o empresa.</li>
+<li><em>Tipos de Registros:</em> Para un desarrollador es crucial saber leer estos registros:<ul>
+<li><strong>A (Address):</strong> Mapea nombre a IP IPv4.</li>
+<li><strong>AAAA:</strong> Mapea nombre a IP IPv6.</li>
+<li><strong>CNAME (Canonical Name):</strong> Un alias (ej. <code>www.ejemplo.com</code> apunta a <code>ejemplo.com</code>).</li>
+<li><strong>MX (Mail Exchange):</strong> Indica dónde deben enviarse los correos electrónicos del dominio.</li>
+</ul>
+</li>
+<li><em>Importancia en Desarrollo:</em> Si configuras mal el servidor DNS de tu cliente, la aplicación podrá conectarse por IP (<code>http://192.168.1.50</code>) pero fallará al usar nombres de servicio (<code>http://servidor-base-datos</code>). Además, problemas de TTL (<em>Time To Live</em>) en DNS pueden hacer que cambios de servidores no se reflejen inmediatamente, causando errores intermitentes.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 2: ARQUITECTURAS DE REDES LOCALES (LAN)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterios de Evaluación b y c)</em></p>
+<h3>2.1. Fundamentos Físicos y Lógicos de las LAN Cableadas</h3>
+<p>Una Red de Área Local (LAN) cableada se define por el uso de medios físicos guiados para transmitir datos entre dispositivos en un área geográfica limitada (oficina, edificio). La fiabilidad física es la base sobre la que se construye la lógica del software.</p>
+<h4>Topologías de Red</h4>
+<p>La topología determina la estructura lógica o física del cableado y cómo se gestionan los fallos:
+*   <strong>Estrella:</strong> Todos los nodos se conectan a un dispositivo central (Switch). Es la más común por su facilidad de mantenimiento y aislamiento de fallos. Si un cable falla, solo cae ese equipo; el resto sigue operando. Permite gestionar tráfico mediante VLANs fácilmente.
+    *   <em>Caso de Uso:</em> Oficina corporativa típica donde cada empleado tiene su PC conectada al switch del armario de comunicaciones.
+*   <strong>Bus y Anillo:</strong> Topologías históricas (como Ethernet coaxial antiguo o Token Ring). En el Bus, si se rompe un cable, la red entera puede colapsar. Actualmente relegadas a contextos específicos o legacy en industrias antiguas.
+    *   <em>Advertencia:</em> Nunca se deben diseñar nuevas redes modernas con topología de bus debido a su falta de escalabilidad y seguridad.</p>
+<h4>Medios Físicos y Conectores</h4>
+<p>La integridad de la señal depende del medio físico. En el desarrollo de aplicaciones IoT o industriales, elegir el medio correcto es crítico.
+*   <strong>Cableado Par Trenzado (UTP/STP):</strong> Utiliza pares de cobre trenzados para reducir interferencias electromagnéticas (<em>crosstalk</em>). El trenzado hace que ambas señales reciban la misma interferencia externa, permitiendo al receptor cancelar el ruido.
+    *   <em>Conectores:</em> RJ45 estandarizan el pinout según normas TIA/EIA-568 (A o B). Es vital usar cables correctamente crimpados; un cable cruzado (<em>crossover</em>) antiguo conectaba dos switches directamente, mientras que los modernos (Auto-MDIX) lo detectan automáticamente.
+    *   <em>Categorías:</em> Cat5e (hasta 1Gbps), Cat6 (hasta 10Gbps corto), Cat7/8 (entornos industriales de alta frecuencia). Usar un cable Cat5e en un entorno de 10Gbps limitará el rendimiento de tu aplicación a 1Gbps, causando cuellos de botella.
+*   <strong>Fibra Óptica:</strong> Transmite datos mediante luz (fotones), ofreciendo mayor ancho de banda y distancia (kilómetros sin repetidores) e inmunidad total a interferencias electromagnéticas. Esencial para enlaces troncales (<em>backbone</em>) entre edificios o racks de servidores en un Data Center.
+    *   <em>Tipos:</em> Monomodo (larga distancia, láser) vs Multimodo (corta distancia, LED).</p>
+<h4>Adaptadores de Red (NIC - Network Interface Card)</h4>
+<p>La tarjeta de interfaz de red es el componente hardware que traduce los bits del sistema operativo a señales eléctricas u ópticas en el medio físico. Cada NIC posee una dirección MAC única grabada en su ROM (<em>Read-Only Memory</em>), utilizada para la identificación en la capa 2 (Enlace de datos).
+*   <em>Importancia:</em> La dirección MAC es globalmente única. Aunque se puede cambiar con software (MAC Spoofing), sirve como firma digital del hardware en capas inferiores de seguridad y autenticación por huella (<em>MAC Filtering</em>).</p>
+<h3>2.2. Redes Inalámbricas (WLAN) y Estándares IEEE 802.11</h3>
+<p>La tecnología inalámbrica introduce desafíos adicionales relacionados con el medio compartido, la atenuación de señal y la seguridad física. Para una aplicación móvil, la conectividad WLAN es el principal punto de fallo en la red local.</p>
+<h4>Principio de Funcionamiento</h4>
+<p>Las redes WLAN utilizan ondas de radio (frecuencias 2.4GHz o 5GHz) para transmitir datos. A diferencia del cableado, donde existe un canal dedicado entre dos puntos, las redes inalámbricas son compartidas. Todos los dispositivos en el mismo <em>Access Point</em> comparten la misma "calle".
+*   <em>CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance):</em> Para evitar colisiones de paquetes, los dispositivos escuchan si el medio está libre antes de transmitir. Si hay tráfico, esperan un tiempo aleatorio. Esto añade latencia variable comparado con Ethernet cableado.</p>
+<h4>Seguridad en Capa 2 y 3</h4>
+<p>La seguridad en redes inalámbricas es crítica debido a la naturaleza abierta de la señal (cualquiera dentro del rango físico puede intentar capturar paquetes). Se implementan protocolos de cifrado progresivamente más robustos:
+*   <strong>WEP:</strong> Obsoleto e inseguro. Fue roto hace décadas y nunca debe usarse.
+*   <strong>WPA2:</strong> Utilizan algoritmos como AES (Advanced Encryption Standard) para cifrar el tráfico. Es el estándar actual en la mayoría de entornos empresariales. Implementa un "4-way handshake" para verificar contraseñas sin enviarlas por aire.
+*   <strong>WPA3:</strong> Introduce protección contra ataques de fuerza bruta y cifrado individualizado incluso en redes abiertas (Open Wi-Fi). Para una app multiplataforma, esto significa que los datos del usuario están protegidos incluso si se conectan a un WiFi público inseguro en el aeropuerto.
+*   <em>Consideración para Desarrolladores:</em> La conexión inalámbrica añade latencia variable e incertidumbre en la disponibilidad (ej. señal débil al entrar en un ascensor). El diseño de aplicaciones debe incluir <strong>reintentos automáticos</strong>, <strong>caché offline</strong> y <strong>gestión de estados de desconexión</strong>. No asumir que la red siempre está activa.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 3: DISPOSITIVOS DE INTERCONEXIÓN Y ENRUTAMIENTO</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterio de Evaluación d)</em></p>
+<h3>3.1. Conmutadores (Switches) y Capa de Enlace</h3>
+<p>Los switches operan principalmente en la <strong>Capa 2</strong> del modelo OSI (Enlace de Datos). A diferencia de los antiguos <em>hubs</em> que retransmitían datos a todos los puertos (como un megáfono), un switch es inteligente. Aprende las direcciones MAC de los dispositivos conectados y construye una tabla de conmutación (<em>Switching Table</em> o CAM Table).</p>
+<ul>
+<li><strong>Operación Detallada:</strong> Cuando recibe un <em>frame</em>, consulta su memoria si la dirección MAC destino existe en la tabla.<ul>
+<li>Si <strong>SÍ</strong>: Envía el tráfico solo al puerto correspondiente (Unicast). Esto reduce el ruido de red y mejora la seguridad (nadie más ve los datos).</li>
+<li>Si <strong>NO</strong> o es una difusión (<em>Broadcast</em>): Difunde (<em>flood</em>) el paquete a todos los puertos excepto al origen. Esto asegura que si no sabe dónde está, el destino recibirá el mensaje y podrá responder.</li>
+<li><em>Aging Time:</em> Las entradas de la tabla MAC caducan después de un tiempo (ej. 5 minutos) para evitar que dispositivos desconectados sigan ocupando memoria.</li>
+</ul>
+</li>
+<li><strong>VLANs (Virtual LAN):</strong> Para segmentar lógicamente una red física, los switches permiten configurar VLANs. Esto aísla dominios de broadcast. Por ejemplo, la VLAN 10 puede ser "Gerencia" y la VLAN 20 "Invitados". Un dispositivo en VLAN 20 no podrá enviar tráfico directo a uno en VLAN 10 sin pasar por un router (Capa 3).<ul>
+<li><em>Beneficio:</em> Mejora la seguridad (contención de ataques) y eficiencia del ancho de banda. Un desarrollador debe saber que si su servidor está en una VLAN diferente al cliente, se requerirá configuración de <em>inter-VLAN routing</em>.</li>
+</ul>
+</li>
+</ul>
+<h3>3.2. Enrutadores (Routers) y Capa de Red</h3>
+<p>Los routers operan en la <strong>Capa 3</strong> (Red). Su función principal es interconectar redes distintas (ej. LAN interna a WAN Internet o entre dos sedes geográficas). Utilizan tablas de enrutamiento para determinar la mejor ruta hacia un destino basándose en métricas (costo, ancho de banda, retraso).</p>
+<ul>
+<li><strong>Enrutamiento Estático vs. Dinámico:</strong><ul>
+<li><em>Estático:</em> Las rutas se definen manualmente por el administrador. Útil para redes pequeñas o rutas específicas de salida (Default Route <code>0.0.0.0/0</code>). Menos consumo de CPU, pero difícil de mantener si la red cambia.</li>
+<li><em>Dinámico:</em> Se utilizan protocolos como OSPF (Open Shortest Path First) o EIGRP. Los routers se "hablan" entre sí y negocian constantemente la topología para adaptarse a fallos (ej. si un cable se corta, el router encuentra una ruta alternativa).</li>
+</ul>
+</li>
+<li><strong>NAT (Network Address Translation):</strong> Los routers suelen realizar NAT para permitir que múltiples dispositivos internos compartan una única dirección IP pública hacia Internet.<ul>
+<li><em>Tipos:</em><ol>
+<li><strong>Source NAT (SNAT) / PAT:</strong> Traduce la IP privada del origen a la IP pública del router al salir. Es el caso típico de casa/empresa. Permite que 50 PCs usen 1 IP pública usando diferentes números de puerto.</li>
+<li><strong>Destination NAT (DNAT):</strong> Redirecciona tráfico entrante hacia un servidor interno (ej. redirigir tráfico del puerto 80 público al puerto 8080 de una web interna).</li>
+</ol>
+</li>
+<li><em>Impacto en Desarrollo:</em> El NAT rompe la conectividad P2P pura. Si quieres hacer VoIP o juegos online sin servidor central, el NAT es un obstáculo que a menudo requiere técnicas como <strong>NAT Traversal</strong> (STUN/TURN) para abrir huecos temporales en el firewall.</li>
+</ul>
+</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 4: ACCESO A REDES DE ÁREA EXTENSA (WAN)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterio de Evaluación e)</em></p>
+<h3>4.1. Tecnologías de Acceso WAN</h3>
+<p>La interconexión a largas distancias requiere infraestructuras operadas por proveedores de telecomunicaciones (ISP). Las tecnologías varían según la necesidad de ancho de banda, latencia y costo.</p>
+<ul>
+<li><strong>Líneas Dedicadas (Leased Lines):</strong> Conexiones punto a punto físicas con garantía de rendimiento (SLA - Service Level Agreement).<ul>
+<li><em>Uso:</em> Bancos o sedes corporativas que necesitan disponibilidad del 99.99%. Costo elevado, pero fiabilidad máxima.</li>
+</ul>
+</li>
+<li><strong>Tecnologías de Banda Ancha:</strong> ADSL (vía teléfono antigua), Fibra óptica hasta el hogar/empresa (FTTH), Cable coaxial (HFC).<ul>
+<li><em>Diferencia:</em> La velocidad suele ser asimétrica (más bajada que subida) en conexiones residenciales, lo cual afecta a servidores web o de aplicaciones que deben recibir muchos datos.</li>
+</ul>
+</li>
+<li><strong>Redes Móviles (4G/5G):</strong> Utilizan infraestructura celular para conectividad móvil.<ul>
+<li><em>Tendencia:</em> Cada vez más empresas usan routers 4G/5G como respaldo (<em>failover</em>) si falla la fibra principal, asegurando continuidad del negocio para sus aplicaciones en la nube.</li>
+</ul>
+</li>
+</ul>
+<h3>4.2. Configuración del Acceso Remoto y SD-WAN</h3>
+<p>Configurar el acceso a WAN implica establecer la conexión entre el router local y el modem o gateway del proveedor. Esto incluye protocolos de autenticación (como PPPoE - Point-to-Point Protocol over Ethernet), configuración de IPs públicas/dinámicas proporcionadas por el ISP y parámetros de encapsulamiento específicos para la tecnología de transporte utilizada.</p>
+<ul>
+<li><strong>SD-WAN (Software Defined WAN):</strong> Una evolución moderna donde la gestión del ancho de banda y las rutas se hace mediante software centralizado, permitiendo a los desarrolladores desplegar microservicios en múltiples ubicaciones sin preocuparse por la complejidad física de las líneas telefónicas o MPLS.</li>
+<li><strong>Conectividad Cloud:</strong> En el desarrollo DAM moderno, gran parte de la "WAN" es la conexión entre tu PC y servicios como AWS, Azure o Google Cloud. Entender cómo configurar una VPC (Virtual Private Cloud), subredes públicas/privadas y gateways de internet en estos entornos es equivalente a configurar una WAN física.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 5: GESTIÓN DE PUERTOS Y SERVICIOS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterio de Evaluación f)</em></p>
+<h3>5.1. El Concepto de Puerto en Redes</h3>
+<p>En el contexto del modelo TCP/IP, un <strong>puerto</strong> es una dirección lógica utilizada para multiplexar las conexiones de red sobre una única interfaz física. Imagina que tu IP es la dirección de un edificio y el puerto es el número de apartamento; así, múltiples servicios pueden vivir en la misma máquina sin mezclarse.</p>
+<ul>
+<li><strong>TCP y UDP:</strong> Son los protocolos principales que utilizan puertos.<ul>
+<li>TCP garantiza entrega (ej. Web).</li>
+<li>UDP prioriza velocidad (ej. VoIP).</li>
+</ul>
+</li>
+<li><strong>Rango de Puertos:</strong><ol>
+<li><strong>Well-Known Ports (0-1023):</strong> Reservados para servicios estándar del sistema operativo y requieren privilegios de administrador/root para ser usados. Ejemplos críticos: HTTP (80), HTTPS (443), SSH (22), FTP (21), DNS (53).</li>
+<li><strong>Registered Ports (1024-49151):</strong> Usados por aplicaciones de usuario o servicios específicos.</li>
+<li><strong>Dynamic/Private Ports (49152-65535):</strong> Asignados temporalmente a procesos cliente para recibir respuestas del servidor.</li>
+</ol>
+</li>
+</ul>
+<h3>5.2. Procesos y Servicios en Red</h3>
+<p>Los sistemas operativos gestionan la escucha de puertos a través de procesos denominados "daemons" o servicios (en Linux) o "Services" (en Windows). La gestión de puertos implica:</p>
+<ul>
+<li><strong>Asignación:</strong> Determinar qué aplicación se registra para escuchar en un puerto específico. En programación, esto suele hacerse con <code>listen(port)</code> en C/C++/Java o el equivalente en frameworks web.</li>
+<li><strong>Bloqueo/Permisos:</strong> Controlar qué aplicaciones tienen privilegios para abrir puertos bajos (&lt;1024). Por seguridad, los servicios modernos suelen ejecutarse como usuarios no privilegiados y usar puertos altos, redirigiendo luego las conexiones al puerto estándar mediante el sistema operativo.</li>
+<li><strong>Seguridad:</strong> Un puerto abierto es una puerta potencial a la red. La gestión implica cerrar servicios innecesarios que expongan vulnerabilidades al escaneo externo.<ul>
+<li><em>Caso de Uso:</em> Si desarrollas un juego online, debes asegurarte de que solo el puerto necesario para el juego esté abierto en el firewall del servidor, y no dejar abiertos puertos de depuración o SSH accesibles públicamente.</li>
+</ul>
+</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 6: DIAGNÓSTICO, MONITORIZACIÓN Y VERIFICACIÓN</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterio de Evaluación g)</em></p>
+<h3>6.1. Instrumentos de Diagnóstico Teórico y Práctico</h3>
+<p>La verificación del funcionamiento de la red no es aleatoria; se basa en protocolos de diagnóstico estandarizados que interactúan con las capas inferiores del stack TCP/IP. Como desarrolladores, debes saber interpretar estos resultados.</p>
+<ul>
+<li><strong>ICMP (Internet Control Message Protocol):</strong> Es la base de herramientas como <code>ping</code>. Permite solicitar y recibir mensajes de eco para verificar la conectividad de capa 3 entre dos nodos.<ul>
+<li><em>Tipos:</em> "Echo Request" (Pregunta) y "Echo Reply" (Respuesta). Si recibes "Request Timed Out", el paquete salió pero no hubo respuesta. Puede ser que el servidor esté apagado, o un firewall esté bloqueando ICMP.</li>
+</ul>
+</li>
+<li><strong>TTL (Time To Live):</strong> Utilizado por herramientas como <code>traceroute</code> (Linux/Mac) o <code>tracert</code> (Windows). Al decrementar el contador en cada router, permite mapear la trayectoria de los paquetes y detectar dónde se pierde la conectividad.<ul>
+<li><em>Análisis:</em> Si <code>traceroute</code> falla en el tercer salto, sabes que el problema está entre tu red local y el proveedor de servicios intermedio (ISP), no con el servidor final.</li>
+</ul>
+</li>
+</ul>
+<h3>6.2. Análisis de Logs y Monitorización</h3>
+<p>El sistema operativo registra eventos relacionados con red en archivos de log (ej. <code>/var/log/syslog</code> o Event Viewer). La monitorización implica analizar estos registros para identificar:
+*   Errores de enlace físico ("Link Down").
+*   Fallos de resolución DNS ("Server failure" en logs de <code>/etc/resolv.conf</code>).
+*   Intentos de conexión no autorizados (logs del firewall o SSH <code>auth.log</code> mostrando ataques de fuerza bruta).</p>
+<h3>6.3. Herramientas de Análisis de Tráfico (Sniffing)</h3>
+<p>A nivel teórico y profesional, las herramientas de análisis de paquetes permiten inspeccionar el contenido real del tráfico en tiempo real. El estándar industrial es <strong>Wireshark</strong>.
+*   <em>Uso para Desarrolladores:</em> Es fundamental para depurar aplicaciones multiplataforma que fallan al comunicarse con servidores remotos. Permite visualizar la estructura exacta de los headers TCP/IP y la secuencia de intercambio (Handshake).
+    *   <em>Escenario:</em> Una API devuelve error 401 (Unauthorized) a veces. Usando Wireshark puedes ver si el token de autenticación se está enviando correctamente en el header <code>Authorization</code> o si se corta durante la transmisión.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-8')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                09
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 7: SEGURIDAD EN LA INTERCONEXIÓN DE SISTEMAS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-8" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-8" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><em>(Correlación con Criterio de Evaluación h)</em></p>
+<h3>7.1. Principios de Seguridad en Redes</h3>
+<p>La seguridad no es un añadido, sino una propiedad intrínseca del diseño de red. Se basa en la tríada CID: <strong>Confidencialidad</strong> (solo el autorizado lee), <strong>Integridad</strong> (los datos no se modifican) y <strong>Disponibilidad</strong> (el servicio está activo).</p>
+<h4>Protocolos Seguros de Comunicación</h4>
+<p>Para proteger los datos en tránsito, se utilizan protocolos que integran cifrado y autenticación:
+*   <strong>SSH (Secure Shell):</strong> Reemplaza a Telnet para el acceso remoto seguro al sistema operativo. Utiliza criptografía asimétrica (clave pública/privada) para iniciar la sesión y simétrica para cifrar los datos de la sesión. Es vital configurar SSH con claves, no solo contraseñas, en servidores DAM.
+*   <strong>TLS/SSL (Transport Layer Security):</strong> Protege las comunicaciones web (HTTPS) y de correo. Asegura que los datos no sean interceptados ni modificados en tránsito mediante el uso de certificados digitales emitidos por una Autoridad Certificadora (CA).</p>
+<h3>7.2. Cortafuegos (Firewalls) y Filtrado de Paquetes</h3>
+<p>Un cortafuegos es un sistema de seguridad que actúa como barrera entre una red interna confiable y una externa no confiable. Opera filtrando paquetes entrantes y salientes basándose en reglas predefinidas:</p>
+<ul>
+<li><strong>Filtrado por Dirección IP:</strong> Permite o deniega tráfico basado en el origen o destino lógico (ej. "Bloquear todo de la IP X").</li>
+<li><strong>Filtrado por Puerto/Protocolo:</strong> Controla qué servicios (puertos) son accesibles desde fuera. Por defecto, un firewall seguro suele bloquear todo y abrir solo lo necesario ("Deny by default").</li>
+<li><strong>Stateful Inspection:</strong> Analiza el estado de la conexión para permitir solo respuestas a solicitudes legítimas iniciadas internamente. Esto evita que un atacante externo inicie una conexión no deseada hacia tu red interna, ya que el firewall sabe que esa conexión no fue solicitada por nadie dentro.</li>
+</ul>
+<h3>7.3. Seguridad en Autenticación y Permisos</h3>
+<p>La interconexión requiere validación estricta de identidad:
+*   <strong>Listas de Control de Acceso (ACL):</strong> Reglas aplicadas en routers o switches para restringir el acceso a recursos específicos antes incluso de que lleguen al firewall principal.
+*   <strong>Gestión de Cuentas:</strong> La seguridad de las contraseñas y la implementación de políticas robustas es vital, ya que un compromiso de credenciales puede anular todas las protecciones perimetrales (ej. si un atacante obtiene una clave SSH válida, el firewall no le importa).</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-9')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                10
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CONCLUSIÓN TÉCNICA Y PROYECCIÓN PROFESIONAL</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-9" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-9" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>El dominio del RA5 en el contexto del ciclo DAM no se limita a la capacidad operativa de configurar un router o asignar una IP. Requiere una comprensión profunda de <strong>arquitectura de sistemas distribuidos</strong>. Como desarrolladores, debemos construir aplicaciones que sean resilientes ante fallos de red, eficientes en su uso de ancho de banda y seguras frente a vulnerabilidades de protocolo.</p>
+<p>La configuración de dispositivos y protocolos es la infraestructura invisible sobre la cual se ejecuta el software. Un error en el diseño de direccionamiento (como una subred mal calculada), una mala gestión de puertos (exponer un servicio de debug) o un protocolo inseguro (usar HTTP en lugar de HTTPS) pueden comprometer toda la aplicación multiplataforma que desarrollemos, poniendo en riesgo a los usuarios finales y a la empresa.</p>
+<p>Por tanto, este manual establece las bases teóricas necesarias para abordar cualquier desafío de conectividad con rigor ingenieril. En el mercado laboral actual, un desarrollador que entiende cómo funciona una red por debajo del código (capa 4 y 5) tiene una ventaja competitiva enorme frente a uno que solo sabe escribir lógica de negocio en la capa 7. La interoperabilidad, el rendimiento y la seguridad son los tres pilares sobre los que debes cimentar tu carrera profesional en sistemas informáticos.</p>
+<hr />
+<p><em>Documento elaborado bajo estricta adherencia a la normativa curricular del módulo Sistemas Informáticos (FP DAM) y alineado con las competencias profesionales exigidas por el sector tecnológico.</em></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

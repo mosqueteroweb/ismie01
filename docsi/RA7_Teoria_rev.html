@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria RA7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA7.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA7</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Teoria RA7</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Elaboración de Documentación y Uso de Aplicaciones de Propósito General</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Módulo: Sistemas Informáticos | Especialidad: DAM (Desarrollo de Aplicaciones Multiplataforma)</p>
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Autor:</strong> Catedrático de Teoría de Desarrollo de Aplicaciones Multiplataforma<br />
+<strong>Nivel:</strong> Educación Profesional (FP) - Nivel Superior<br />
+<strong>Versión del Documento:</strong> 2.0 (Teórica, Conceptual y Expandida)<br />
+<strong>Fecha de Actualización:</strong> Octubre 2023</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">PRÓLOGO: EL RA7 EN EL CICLO DE VIDA DEL SOFTWARE Y LA REALIDAD PROFESIONAL</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Bienvenidos, futuros desarrolladores. A menudo, cuando os matriculáis en el ciclo de <strong>Desarrollo de Aplicaciones Multiplataforma (DAM)</strong>, vuestro foco mental se sitúa en la sintaxis del código, los patrones de diseño y las interfaces gráficas. Es natural. Queréis programar. Sin embargo, desde mi experiencia como docente y profesional con décadas en el sector, debo deciros una verdad fundamental que separa al aficionado del ingeniero: <strong>el software no es solo código; es un ecosistema.</strong></p>
+<p>El Resultado de Aprendizaje 7 (RA7), titulado <em>"Elabora documentación valorando y utilizando aplicaciones informáticas de propósito general"</em>, constituye un pilar fundamental en vuestra formación. A primera vista, podría parecer periférico al desarrollo puro de código; sin embargo, desde una perspectiva de ingeniería de software profesional, el RA7 aborda la <strong>gestión del conocimiento</strong>, la <strong>comunicación técnica</strong> y la <strong>operatividad del entorno</strong>.</p>
+<p>Imaginad que habéis diseñado una aplicación bancaria revolucionaria. El código es impecable, pero:
+1.  ¿Tenéis documentada la API para que otros desarrolladores la integren?
+2.  ¿Sabéis qué licencia usa la librería de terceros que habéis importado y si sois legales al distribuirla?
+3.  ¿Cómo transferís los binarios de producción a los servidores seguros sin exponer credenciales?
+4.  ¿Qué herramientas usáis para monitorear el rendimiento del sistema en tiempo real?</p>
+<p>Si no sabéis responder a esto, tenéis un problema arquitectónico grave. La industria del software actual valora tanto la capacidad de documentar y operar como la capacidad de codificar. Este manual aborda estos conceptos desde una óptica arquitectónica y teórica profunda, eliminando la instrucción procedural superficial para centrarse en el <em>porqué</em> y el <em>cómo funciona</em> a nivel lógico y sistémico.</p>
+<p><strong>Objetivo de este Manual:</strong>
+Transformar vuestro conocimiento sobre sistemas informáticos de un uso instrumental ("sé hacer clic aquí") a una comprensión arquitectónica ("entiendo qué sucede detrás del botón"). Al finalizar, no solo usaréis herramientas, comprenderéis su arquitectura para poder adaptarlas, solucionar sus fallos y elegir la correcta según el contexto empresarial.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 1: TAXONOMÍA DEL SOFTWARE Y MODELOS DE LICENCIA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para navegar con éxito en el entorno profesional, es imperativo categorizar el software no solo por su nombre comercial o interfaz gráfica, sino por su función arquitectónica dentro de un sistema computacional y su marco legal. Esta clasificación dicta cómo interactúan los componentes y qué responsabilidades asume cada capa.</p>
+<h3>1.1 Clasificación Funcional del Software: Una Visión Arquitectónica</h3>
+<p>El software se organiza jerárquicamente para gestionar la complejidad. Entender esta pirámide es crucial para un desarrollador DAM, ya que vuestro código vivirá en la parte superior de ella.</p>
+<h4><strong>Nivel 1: Firmware y Hardware Abstraction Layer (HAL)</strong></h4>
+<ul>
+<li><strong>Definición:</strong> Es el software más cercano al hardware físico. A menudo se encuentra grabado en memoria ROM o Flash. No es "software" en el sentido tradicional que instalamos, sino instrucciones permanentes que controlan componentes físicos específicos (controladora de disco, placa base, BIOS/UEFI).</li>
+<li><strong>Importancia para DAM:</strong> Aunque no lo programéis directamente, vuestros programas deben ser compatibles con la arquitectura del firmware. Por ejemplo, un sistema operativo de 64 bits necesita un CPU compatible con esa instrucción; si el firmware (BIOS) está en modo Legacy (16-bit), el sistema moderno no arrancará.</li>
+<li><strong>Caso Real:</strong> En desarrollo para dispositivos IoT o móviles, el "firmware" controla sensores. Si vuestro código de aplicación envía comandos erróneos al HAL, el dispositivo se bloqueará.</li>
+</ul>
+<h4><strong>Nivel 2: Software de Sistema (System Software)</strong></h4>
+<p>Es el intermediario crítico entre el hardware y las aplicaciones de usuario. Su propósito es gestionar recursos físicos (CPU, memoria, almacenamiento) y proveer servicios básicos.
+*   <strong>Kernel:</strong> El núcleo del sistema operativo. Gestiona la planificación de procesos, la memoria virtual y el acceso a dispositivos.
+    *   <em>Ejemplo Técnico:</em> Cuando llamáis a <code>System.out.println()</code> en Java o imprimís algo desde Python, esa llamada termina siendo una interrupción que el Kernel traduce para la tarjeta gráfica.
+*   <strong>Shell:</strong> La capa de interpretación de comandos (CLI). Es donde los administradores y desarrolladores avanzados interactúan con el sistema mediante texto (Bash en Linux, PowerShell/Command Prompt en Windows).
+    *   <em>Didáctica:</em> En desarrollo DAM, dominar la Shell es vital para automatizar despliegues. No podéis hacer clic en botones cuando queréis compilar 100 microservicios; necesitáis scripts de Bash o Python.
+*   <strong>Gestores de Arranque (Bootloaders):</strong> Como GRUB o Windows Boot Manager. Son los responsables de cargar el Kernel en memoria.</p>
+<h4><strong>Nivel 3: Software de Aplicación (Application Software)</strong></h4>
+<p>Programas diseñados para realizar tareas específicas que satisfacen necesidades del usuario final o empresarial. En vuestro ciclo, estas herramientas son vuestras aliadas diarias.
+*   <strong>Entornos de Desarrollo Integrados (IDE):</strong> Visual Studio Code, Android Studio, IntelliJ IDEA. No son solo editores; son sistemas completos que incluyen compiladores, depuradores y conectores a bases de datos.
+*   <strong>Aplicaciones de Productividad:</strong> Ofimática, diseño gráfico, gestión de proyectos.</p>
+<h4><strong>Nivel 4: Software de Desarrollo (Tools &amp; Frameworks)</strong></h4>
+<p>Herramientas destinadas a crear otros software. Incluyen compiladores, intérpretes, depuradores y librerías. Su arquitectura suele requerir acceso privilegiado al sistema para manipular memoria y procesos.
+*   <strong>Compiladores:</strong> Traducen código fuente de alto nivel (Java, C#) a máquina o bytecode.
+    *   <em>Detalle Técnico:</em> Un compilador realiza análisis léxico, sintáctico y semántico antes de generar el ejecutable. Entender esto ayuda a depurar errores complejos de memoria.</p>
+<blockquote>
+<p><strong>Nota del Profesor:</strong> No confundáis "Software Libre" con "Gratis". Podéis tener software libre que es muy caro (por servicios de soporte) o software gratuito pero cerrado (adware). La distinción legal y técnica es vital para vuestro futuro laboral.</p>
+</blockquote>
+<h3>1.2 Modelos de Licenciamiento y Propiedad Intelectual: El Coste Oculto del Código</h3>
+<p>La licencia de software define los derechos legales sobre el uso, modificación, distribución y propiedad del código. En ingeniería de sistemas, elegir entre modelos de licencia es una decisión arquitectónica que afecta a la escalabilidad, costes y cumplimiento normativo (Compliance). Como desarrolladores DAM, <strong>sois responsables legalmente</strong> de lo que integráis en vuestros proyectos.</p>
+<h4>1.2.1 Licencias Propietarias (Proprietary)</h4>
+<p>El código fuente está cerrado bajo secreto industrial. El usuario adquiere solo el derecho de ejecución bajo condiciones estrictas definidas por el propietario (EULA - End User License Agreement).
+*   <strong>Implicaciones Técnicas:</strong> Limitaciones en integración profunda mediante APIs que pueden cambiar sin aviso, dependencia del fabricante para actualizaciones y soporte, costes recurrentes o de licencia perpetua.
+*   <strong>Ventaja Empresarial:</strong> Garantía contractual de funcionamiento. Si el sistema falla, la empresa proveedora tiene obligación legal de resolverlo. Ideal para bancos o hospitales donde el coste de un fallo es inasumible.
+*   <strong>Ejemplo Práctico:</strong> Microsoft Windows Server. Pagáis por licencia de acceso (CALs) por cada usuario. No podéis modificar el kernel para hacerlo más rápido, pero tenéis soporte 24/7 de Microsoft.</p>
+<h4>1.2.2 Software Libre (Free Software)</h4>
+<p>Basado en filosofías éticas fundadas por Richard Stallman y la Free Software Foundation. Priorizan las <strong>cuatro libertades</strong>: ejecutar, estudiar, modificar y distribuir el software. La disponibilidad del código fuente es un requisito fundamental.
+*   <strong>Modelos de Distribución:</strong> A menudo se asocia con licencias <em>Copyleft</em> (ej. GPL - General Public License).
+    *   <em>Concepto Clave "Viral":</em> Si usáis código bajo licencia GPL en vuestro proyecto, y lo distribuís, <strong>también debéis liberar el código fuente de vuestro proyecto</strong> bajo la misma licencia. Esto es crucial para empresas que quieren mantener su código privado.
+*   <strong>Implicaciones:</strong> Mayor flexibilidad técnica para adaptar el software a necesidades específicas de desarrollo, pero requiere capacidad interna para mantenimiento y auditoría de código. No hay garantía de soporte oficial.</p>
+<h4>1.2.3 Código Abierto (Open Source)</h4>
+<p>Término comercialmente más amplio que "Software Libre". Se centra en la metodología de desarrollo colaborativo. Aunque suele estar disponible el código fuente, no siempre garantiza las mismas libertades filosóficas del Free Software.
+*   <strong>Licencias Permisivas:</strong> MIT y Apache 2.0. Permiten usar el código libremente, incluso integrarlo en software propietario sin liberar vuestro código.
+    *   <em>Comparativa:</em> Si usáis una librería de React (Apache/MIT) en un producto comercial, podéis mantener vuestro backend cerrado. Si usáis Linux (GPL), no os obliga a abrir todo si solo lo estáis usando internamente, pero sí si distribuyes el sistema operativo modificado.
+*   <strong>Arquitectura:</strong> Fomenta ecosistemas modulares donde múltiples actores contribuyen a la evolución del producto (ej. Linux Foundation).</p>
+<h4>1.2.4 Modelos de Distribución Comercial Alternativos</h4>
+<ul>
+<li><strong>Freeware:</strong> Software gratuito para uso, pero con código cerrado y restricciones en redistribución. Ejemplo: Skype versión básica.<ul>
+<li><em>Riesgo:</em> Si la empresa desaparece, el software puede dejar de funcionar o volverse inseguro.</li>
+</ul>
+</li>
+<li><strong>Shareware:</strong> Período de prueba o funcionalidad limitada hasta el pago (ej. antivirus).</li>
+<li><strong>SaaS (Software as a Service):</strong> El software no se instala localmente, sino que se consume como servicio vía red. La arquitectura cambia de cliente-servidor tradicional a arquitecturas web escalables en la nube.<ul>
+<li><em>Implicación para DAM:</em> En SaaS, el desarrollador no necesita preocuparse por las actualizaciones del servidor o la instalación del cliente; todo ocurre en la nube. Esto reduce el soporte técnico pero exige un diseño de arquitectura "Cloud-Native".</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Caso de Estudio Real:</strong> Una startup desarrolla una App de gestión de inventarios.
+*   <em>Escenario A:</em> Usa una librería gráfica propietaria (de pago). Coste inicial alto, pero estabilidad garantizada y sin riesgo legal.
+*   <em>Escenario B:</em> Usa una librería Open Source GPL. Coste cero, pero si lanzan su App al mercado público con el código integrado, podrían ser demandados por no liberar su propio código fuente.
+<strong>Lección:</strong> Antes de importar cualquier paquete en vuestro IDE (npm, pip, maven), leed la licencia (<code>LICENSE</code> file).</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 2: INGENIERÍA DE REQUISITOS EN ENTORNOS PRODUCTIVOS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>El criterio de evaluación vinculado al análisis de necesidades implica traducir requisitos empresariales a especificaciones técnicas de software. No se trata simplemente de "instalar programas", sino de evaluar la idoneidad técnica del hardware y el software para un contexto específico. Un desarrollador que no entiende los requisitos del entorno donde corre su aplicación, está condenado a crear código ineficiente o inseguro.</p>
+<h3>2.1 Análisis de Necesidades Tecnológicas: El Contexto es Rey</h3>
+<h4>2.1.1 Matriz de Requisitos por Entorno</h4>
+<p>La selección de software depende intrínsecamente del entorno operativo. No existes un "sistema ideal", existe el sistema <em>adecuado para la tarea</em>.</p>
+<ul>
+<li>
+<p><strong>Entorno Doméstico:</strong></p>
+<ul>
+<li><em>Prioridades:</em> Facilidad de uso, coste cero (o bajo), compatibilidad con periféricos estándar.</li>
+<li><em>Seguridad:</em> Responsabilidad del usuario (higiene digital). El sistema está expuesto a amenazas sin un firewall corporativo centralizado.</li>
+<li><em>Ejemplo:</em> Un estudiante desarrollando una web local en su portátil. Usa Windows/MacOS personal, no necesita Active Directory ni copias de seguridad automatizadas complejas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Entorno Empresarial/Corporativo:</strong></p>
+<ul>
+<li><em>Prioridades:</em> Gestión centralizada (GPO - Group Policy), auditoría de accesos, recuperación ante desastres (DRP), cumplimiento normativo (RGPD, ISO 27001) y escalabilidad.</li>
+<li><em>Integración:</em> El software debe integrarse en directorios activos (AD/LDAP) para que un usuario solo tenga que loguearse una vez y acceder a todos los recursos.</li>
+<li><em>Caso Real:</em> En un banco, un desarrollador no puede instalar cualquier herramienta de depuración sin permiso del CISO (Chief Information Security Officer), ya que podría interceptar datos sensibles de clientes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Entorno Educativo:</strong></p>
+<ul>
+<li><em>Prioridades:</em> Gestión de perfiles masivos, control de contenido (filtrado web) y aislamiento de sesiones de usuario para garantizar la integridad académica.</li>
+<li><em>Técnica:</em> Uso de "Thin Clients" (ordenadores delgados que dependen de un servidor central) para reducir costes y mantenimiento.</li>
+</ul>
+</li>
+</ul>
+<h3>2.2 Consideraciones de Seguridad e Infraestructura: Requisitos No Funcionales (NFRs)</h3>
+<p>Antes del despliegue de cualquier aplicación, debe realizarse un análisis de riesgos que determine los requisitos de seguridad. Estos son requisitos no funcionales críticos para el RA7.</p>
+<ul>
+<li><strong>Confidencialidad:</strong> ¿Qué datos se procesan?<ul>
+<li><em>Técnica:</em> Esto dicta si se requieren cifrados en reposo (AES-256 en la base de datos) y tránsito (TLS 1.3). Si sois desarrolladores DAM, debéis implementar HTTPS por defecto.</li>
+</ul>
+</li>
+<li><strong>Integridad:</strong> Mecanismos para asegurar que la documentación o el código no sea alterado sin autorización.<ul>
+<li><em>Técnica:</em> Firmas digitales (GPG) y hashes de verificación (SHA-256). Antes de descargar un paquete, verificáis su hash contra el publicado por los desarrolladores oficiales para evitar "Supply Chain Attacks".</li>
+</ul>
+</li>
+<li><strong>Disponibilidad:</strong> El software debe soportar los tiempos de actividad requeridos por el negocio (uptime), lo que influye en la elección entre soluciones monolíticas o distribuidas.<ul>
+<li><em>Ejemplo:</em> Un servicio de venta de entradas de conciertos no puede caerse durante un lanzamiento. Requiere arquitectura redundante (Load Balancers, Clusters).</li>
+</ul>
+</li>
+</ul>
+<h3>2.3 Requisitos del Sistema Operativo y Hardware: Más allá del "Sí/No"</h3>
+<p>La compatibilidad no es binaria. Se deben evaluar matices técnicos que determinan el rendimiento final de la aplicación DAM.</p>
+<ul>
+<li><strong>Arquitectura del Procesador:</strong> x86_64 (Intel/AMD) vs ARM (Apple Silicon, Raspberry Pi, Móviles).<ul>
+<li><em>Impacto en DAM:</em> Si desarrolláis una App Android nativa o para iOS, estáis en ARM. Si hacéis desarrollo Web Backend en servidor Linux, puede ser x86_64. El código compilado no es portable entre arquitecturas sin recompilación.</li>
+</ul>
+</li>
+<li><strong>Gestión de Memoria:</strong> Requerimientos de RAM para aplicaciones pesadas o virtualización.<ul>
+<li><em>Detalle:</em> Una JVM (Java Virtual Machine) necesita reservar memoria "Heap". Si el sistema operativo limita la RAM, la aplicación fallará con un <code>OutOfMemoryError</code>. Como técnicos, debéis saber ajustar estos parámetros (<code>-Xmx</code>).</li>
+</ul>
+</li>
+<li><strong>Espacio en Disco y Sistemas de Archivos:</strong> Necesidades de almacenamiento temporal versus persistente.<ul>
+<li><em>Comparativa:</em> NTFS (Windows) soporta permisos ACL complejos. ext4 (Linux) es más rápido para I/O secuencial pero menos compatible con Windows nativo. APFS (Apple) optimiza para SSDs. Elegir el sistema de archivos incorrecto puede ralentizar la base de datos en un 30-50%.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Didáctica del Profesor:</strong> Cuando diseñéis una aplicación, preguntad siempre: "¿En qué SO correrá esto?" y "¿Qué recursos tiene el servidor?". No programéis para vuestro portátil potente; programad para el entorno de producción real, que suele ser más limitado.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 3: LA DOCUMENTACIÓN COMO ACTIVO DE INGENIERÍA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>En ingeniería de software, la documentación es un artefacto vivo que acompaña al código desde el diseño hasta el mantenimiento post-despliegue. Un error en la documentación puede costar más que un bug en el código debido a la dificultad de propagación del conocimiento erróneo. <strong>El código habla con las máquinas; la documentación habla con los humanos.</strong></p>
+<h3>3.1 El Ciclo de Vida de la Documentación</h3>
+<p>La documentación no se escribe al final ("cuando acabe de programar"). Se escribe y actualiza en paralelo.
+*   <strong>Fase de Diseño:</strong> Diagramas, especificaciones de API (Swagger/OpenAPI).
+*   <strong>Fase de Desarrollo:</strong> Comentarios en el código (Javadoc, Docstrings), Changelogs.
+*   <strong>Fase de Mantenimiento:</strong> Manuales de usuario, guías de troubleshooting, wikis internas.</p>
+<h4>3.1.1 Tipos de Documentación Técnica Detallados</h4>
+<ul>
+<li><strong>Documentación Funcional:</strong> Describe <em>qué hace el sistema</em>. Incluye casos de uso y especificaciones de requisitos. Es lo que el cliente lee para validar si la aplicación cumple su contrato.<ul>
+<li><em>Ejemplo:</em> "El usuario puede restablecer su contraseña mediante un correo electrónico".</li>
+</ul>
+</li>
+<li><strong>Documentación Estructural:</strong> Describe <em>cómo está construido</em>. Arquitectura, diagramas UML (Clases, Secuencia), diseño de bases de datos (ERD). Es vital para que otros desarrolladores entiendan vuestra lógica.<ul>
+<li><em>Herramienta:</em> PlantUML o Draw.io son estándares en equipos ágiles.</li>
+</ul>
+</li>
+<li><strong>Documentación de Usuario:</strong> Manuales operativos para el usuario final. Debe ser lenguaje claro, sin tecnicismos, con capturas de pantalla y flujos paso a paso.<ul>
+<li><em>Error Común:</em> Usar jerga técnica ("Haga clic en el botón de submit"). Mejor: "Presione el botón verde que dice 'Enviar'".</li>
+</ul>
+</li>
+<li><strong>Documentación Técnica/Administrativa:</strong> Guías de instalación, configuración de servidores y resolución de incidencias (Logs, Troubleshooting). Es para vosotros y vuestros compañeros.</li>
+</ul>
+<h3>3.2 Herramientas Ofimáticas como Plataformas de Datos: Más allá del Texto</h3>
+<p>Más allá del procesamiento de texto, las herramientas ofimáticas modernas operan sobre estructuras XML y metadatos complejos. Como técnicos DAM, debéis entender esto para gestionar versiones y seguridad.</p>
+<ul>
+<li><strong>Formatos de Archivo:</strong> La diferencia entre formatos binarios propietarios (.docx, .pdf) y abiertos (.odt, .xml).<ul>
+<li><em>Problema:</em> Los formatos cerrados requieren el software original para abrirse correctamente en todas sus funciones (problema de interoperabilidad a largo plazo).</li>
+<li><em>Solución:</em> En entornos colaborativos y legales, los formatos abiertos garantizan la portabilidad a largo plazo (preservación digital). El PDF/A es un estándar para archivos a prueba de futuro.</li>
+</ul>
+</li>
+<li><strong>Metadatos y Propiedades:</strong> Información incrustada en archivos sobre autoría, versiones y fechas de modificación. Es crucial para el control de cambios y auditorías legales.<ul>
+<li><em>Seguridad:</em> Cuidado con los metadatos de seguridad (ej. en un documento Word antes de enviarlo a un cliente, asegurad que no haya "Autor: Juan Pérez" si es confidencial).</li>
+</ul>
+</li>
+</ul>
+<h3>3.3 Paradigmas del Trabajo Colaborativo: La Era Cloud</h3>
+<p>El trabajo en equipo moderno trasciende la edición secuencial de documentos. Se basa en modelos asíncronos y sincrónicos.</p>
+<ul>
+<li><strong>Control de Versiones Documental:</strong> Al igual que el código fuente, los documentos deben soportar <em>branching</em>, <em>merging</em> y trazabilidad de cambios (historial de versiones). Herramientas como Git pueden usarse para guardar documentación (Docs-as-Code usando Markdown).<ul>
+<li><em>Ejemplo:</em> En GitHub/GitLab, podéis tener un repositorio <code>docs</code> separado del código. Si alguien cambia una URL en la documentación, el sistema detecta el cambio y avisa al equipo.</li>
+</ul>
+</li>
+<li><strong>Edición Concurrente:</strong> Mecanismos de bloqueo optimista (cada uno edita su copia) o pessimista (bloquear archivo para otros). Google Docs usa sincronización en tiempo real mediante WebSockets.<ul>
+<li><em>Beneficio:</em> Elimina la necesidad de enviar archivos por correo ("Documento_Final_v2_REAL.docx") que generan versiones desactualizadas y conflictos.</li>
+</ul>
+</li>
+</ul>
+<h3>3.4 Gestión de Registros y Logs como Documentación Automática</h3>
+<p>Los sistemas operativos y aplicaciones generan registros automáticos (<em>logs</em>) durante su ejecución. Estos son documentos técnicos críticos para el diagnóstico, generados sin intervención humana.</p>
+<ul>
+<li><strong>Estructura del Log:</strong> Generalmente consisten en una secuencia temporal con <code>timestamp</code>, <code>nivel de severidad</code> (INFO, WARN, ERROR, FATAL), <code>código de error</code> y <code>mensaje descriptivo</code>.<ul>
+<li><em>Formato Común:</em> JSON o Syslog.</li>
+</ul>
+</li>
+<li><strong>Análisis Forense:</strong> La capacidad de leer estos registros permite reconstruir la cadena de eventos que llevó a una incidencia.<ul>
+<li><em>Caso Real:</em> Un servidor web deja de responder. El log muestra: <code>ERROR: Connection refused on port 8080</code>. Sabéis inmediatamente que el servicio no está escuchando, no es un problema de red externa.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Nota del Profesor:</strong> En vuestro portfolio profesional, incluir ejemplos de documentación (diagramas, manuales técnicos) vale tanto como el código. Un desarrollador que documenta bien su código ahorra semanas de trabajo a sus sucesores.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 4: ARQUITECTURA DE SISTEMAS DE COMUNICACIÓN (CORREO Y MENSAJERÍA)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>El correo electrónico y la mensajería son los sistemas nerviosos de cualquier organización. Entender su arquitectura no es opcional para un desarrollador DAM, ya que muchas aplicaciones requieren integración con estos servicios (envío de alertas, notificaciones, autenticación).</p>
+<h3>4.1 El Modelo Cliente-Servidor en Correo Electrónico</h3>
+<p>El correo electrónico es uno de los primeros sistemas distribuidos de la historia de Internet. Su arquitectura conceptual se basa en protocolos estandarizados para el intercambio de mensajes entre dominios distintos (RFCs del IETF).</p>
+<h4>4.1.1 Protocolos de Envío y Recepción: Profundización Técnica</h4>
+<ul>
+<li><strong>SMTP (Simple Mail Transfer Protocol):</strong><ul>
+<li><em>Puerto:</em> 25 (sin cifrar), 587 (con cifrado STARTTLS), 465 (SSL/TLS nativo).</li>
+<li><em>Función:</em> Orientado al <em>envío</em>. Opera bajo un modelo "push". El cliente de correo envía el mensaje al servidor remitente, quien lo retransmite hasta el servidor destinatario.</li>
+<li><em>Limitación:</em> No gestiona la lectura del usuario. Una vez entregado a la bandeja del destino, SMTP se retira. No permite borrar mensajes del servidor desde el cliente.</li>
+</ul>
+</li>
+<li><strong>POP3 (Post Office Protocol version 3):</strong><ul>
+<li><em>Puerto:</em> 110 (sin cifrar), 995 (SSL/TLS).</li>
+<li><em>Función:</em> Para <em>descarga</em>. Descarga los mensajes desde el servidor remoto a la máquina local y, por defecto, <strong>suele eliminarlos del servidor</strong>.</li>
+<li><em>Uso:</em> Ideal para usuarios antiguos que requieren almacenamiento exclusivo en una sola estación. No recomendado hoy en día para móviles o acceso multi-dispositivo, ya que perderíais correos si cambiáis de PC.</li>
+</ul>
+</li>
+<li><strong>IMAP (Internet Message Access Protocol):</strong><ul>
+<li><em>Puerto:</em> 143 (sin cifrar), 993 (SSL/TLS).</li>
+<li><em>Función:</em> Para <em>sincronización</em>. Mantiene los mensajes en el servidor. Permite acceder al mismo buzón desde múltiples dispositivos con estado sincronizado (carpetas, lecturas, borrado).</li>
+<li><em>Ventaja Técnica:</em> Los cambios se reflejan en todos los dispositivos conectados. Es el estándar actual en entornos empresariales y móviles.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Ejemplo Práctico:</strong> Configuráis un cliente de correo como Thunderbird o Outlook. Si elegís IMAP, al borrar un email en el móvil, desaparece del PC. Si usáis POP3, en el móvil se borra pero sigue estando en el PC. Como desarrolladores DAM, si integráis una API de correo, debéis saber qué protocolo soporta para diseñar la interfaz correcta.</p>
+</blockquote>
+<h3>4.2 Seguridad en la Comunicación: La Guerra Invisible</h3>
+<p>La transmisión de datos sensibles requiere capas de seguridad adicionales sobre los protocolos base. Sin esto, vuestros usuarios son vulnerables.</p>
+<ul>
+<li><strong>TLS/SSL (Transport Layer Security / Secure Sockets Layer):</strong> Cifrado del transporte que asegura que no haya intermediarios (Man-in-the-Middle) leyendo el contenido entre cliente y servidor.<ul>
+<li><em>Detalle:</em> Cuando veis el candado verde en el navegador, es TLS 1.3 asegurando la conexión. En correo, esto se activa mediante STARTTLS o SSL nativo. Sin él, un atacante en la misma red Wi-Fi puede leer vuestros correos "en texto plano".</li>
+</ul>
+</li>
+<li><strong>Autenticación:</strong> Uso de credenciales o certificados digitales para verificar la identidad del remitente y receptor, evitando suplantación de identidad (Spoofing).<ul>
+<li><em>Tecnologías:</em> SPF, DKIM, DMARC. Estos son registros DNS que dicen "¿Este servidor tiene permiso para enviar correos en nombre de esta empresa?". Si no están configurados, vuestro correo llegará a Spam.</li>
+</ul>
+</li>
+</ul>
+<h3>4.3 Mensajería Instantánea y Protocolos Propietarios</h3>
+<p>A diferencia del correo electrónico que es asíncrono por naturaleza (puede tardar minutos), la mensajería instantánea busca latencia mínima (milisegundos).</p>
+<ul>
+<li><strong>Arquitecturas:</strong> Pueden ser centralizadas (servidor de control como Slack o Teams) o descentralizadas (protocolos federados como XMPP o Matrix, similares a Email pero en tiempo real).<ul>
+<li><em>Implicación DAM:</em> Integrar una API de Chatbot requiere entender si el proveedor tiene un servidor propio o usa estándares abiertos.</li>
+</ul>
+</li>
+<li><strong>Encriptación de Extremo a Extremo (E2EE):</strong> Garantiza que solo los dispositivos finales puedan descifrar el mensaje, ni siquiera el proveedor del servicio tiene acceso al contenido.<ul>
+<li><em>Ejemplo:</em> WhatsApp y Signal usan E2EE. Esto implica que si perdéis la clave de recuperación, no existe "olvidé contraseña" para recuperar mensajes antiguos; están cifrados con una clave que solo vosotros tenéis.</li>
+</ul>
+</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 5: PROTOCOLOS DE TRANSFERENCIA DE DATOS Y SERVICIOS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>La capacidad de mover datos entre sistemas heterogéneos es una función fundamental de la infraestructura TI. No se trata solo de "copiar y pegar", sino de gestionar integridad, autenticación y persistencia. En desarrollo DAM, esto es esencial para el despliegue de aplicaciones (CI/CD).</p>
+<h3>5.1 La Transferencia de Ficheros como Servicio: Protocolos Comparados</h3>
+<h4>5.1.1 FTP (File Transfer Protocol)</h4>
+<p>Es un protocolo clásico cliente-servidor diseñado específicamente para transferencia de archivos.
+*   <strong>Conexión Dual:</strong> Utiliza dos canales TCP separados: uno de control (puerto 21, comandos) y otro de datos (puerto 20 o dinámico). Esta separación es clave en su arquitectura pero compleja a través de firewalls (NAT), ya que el firewall debe permitir conexiones entrantes dinámicas.
+*   <strong>Modos de Transferencia:</strong>
+    *   <em>ASCII:</em> Para texto plano. Convierte saltos de línea (<code>\n</code> vs <code>\r\n</code>) para adaptarse al sistema operativo destino. Si subís una web con esto a un servidor Linux desde Windows, puede corromperse la sintaxis del código.
+    *   <em>Binario (Image/Hex):</em> Preserva el byte exacto. <strong>Crucial</strong> para archivos ejecutables, imágenes o bases de datos. Nunca usar ASCII para binarios.</p>
+<h4>5.1.2 SFTP y SSH File Transfer Protocol</h4>
+<p>Evolución segura basada en Secure Shell (SSH). No es FTP sobre SSL. Es un protocolo totalmente diferente.
+*   <strong>Ventaja Técnica:</strong> En lugar de usar puertos separados, encapsula todo el tráfico dentro del túnel cifrado de SSH (puerto 22). Elimina la necesidad de abrir múltiples puertos en el firewall, reduciendo drásticamente la superficie de ataque.
+*   <strong>Seguridad:</strong> La autenticación se realiza mediante claves SSH o contraseñas cifradas antes de establecer la conexión de datos.</p>
+<h4>5.1.3 HTTP/HTTPS para Transferencia</h4>
+<p>Aunque originalmente diseñado para web, se utiliza comúnmente para transferencia de ficheros mediante servicios REST o descargas directas (ej. Google Drive, Dropbox).
+*   <strong>Ventaja:</strong> Compatibilidad universal con navegadores y proxies corporativos (que suelen bloquear FTP pero permiten HTTPS).
+*   <strong>Desventaja:</strong> Carece de algunas características nativas de gestión de sesiones que tiene FTP, como listar directorios complejos o reanudar descargas interrumpidas fácilmente (aunque HTTP Range Requests ayudan aquí).</p>
+<h4>5.1.4 Tabla Comparativa Rápida para Examen</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Protocolo</th>
+<th style="text-align: left;">Seguridad</th>
+<th style="text-align: left;">Puertos</th>
+<th style="text-align: left;">Uso Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>FTP</strong></td>
+<td style="text-align: left;">Baja (Texto plano)</td>
+<td style="text-align: left;">20, 21</td>
+<td style="text-align: left;">Sistemas antiguos internos sin seguridad crítica.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>SFTP</strong></td>
+<td style="text-align: left;">Alta (Cifrado SSH)</td>
+<td style="text-align: left;">22</td>
+<td style="text-align: left;">Despliegues de producción, transferencia segura.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>HTTPS</strong></td>
+<td style="text-align: left;">Alta (TLS/SSL)</td>
+<td style="text-align: left;">443</td>
+<td style="text-align: left;">Descargas web, APIs modernas, almacenamiento en nube.</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 Servicios Cloud y Sincronización: El Futuro es Continuo</h3>
+<p>La evolución moderna de la transferencia de ficheros se ha movido hacia modelos de sincronización continua en lugar de transferencias puntuales ("Subir archivo").</p>
+<ul>
+<li><strong>Modelo de Estado Compartido:</strong> El archivo reside en un repositorio central (nube) y los clientes locales mantienen una copia espejo.<ul>
+<li><em>Mecanismo:</em> Los cambios se propagan mediante <em>webhooks</em> o mecanismos de polling. Si editáis un documento en el móvil, el sistema detecta el cambio (hash del archivo) y envía solo los bytes modificados (Delta Update), no todo el archivo, ahorrando ancho de banda.</li>
+<li><em>Conflictos:</em> ¿Qué pasa si dos personas editan el mismo archivo al mismo tiempo? Los sistemas modernos usan "Locking" o "Versionado" para fusionar cambios o pedir resolución manual.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Caso Real DAM:</strong> Estáis desplegando una actualización de vuestra App a 10,000 servidores.
+*   <em>Opción A:</em> FTP. Subís 5GB manualmente. Riesgo de error humano y lentitud.
+*   <em>Opción B:</em> SFTP con Script Automatizado + Hash Check. Verificáis que el archivo no se corrompió al llegar.
+*   <em>Opción C:</em> Servicio Cloud Sync (ej. AWS S3). Usáis la API para poner la versión en un bucket y los servidores la bajan automáticamente.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 6: METODOLOGÍAS DE BÚSQUEDA E INFORMACIÓN TÉCNICA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>En el desarrollo profesional, la capacidad de localizar documentación fiable es tan importante como la codificación misma. El "ruido" en internet requiere filtrado crítico. Un desarrollador no experto busca en Google; un experto sabe <em>cómo</em> buscar para encontrar la solución oficial en segundos.</p>
+<h3>6.1 La Búsqueda como Habilidad Técnica: Google Dorks y Estrategias</h3>
+<p>Los motores de búsqueda son herramientas de ingeniería inversa del conocimiento humano. Deben dominar los operadores booleanos y filtros avanzados.</p>
+<h4>6.1.2 Operadores de Búsqueda y Estrategias Avanzadas</h4>
+<ul>
+<li><strong>Búsqueda Semántica vs. Lexical:</strong> Comprender cómo los motores indexan conceptos frente a palabras exactas. Google intenta entender la <em>intención</em>, pero para código técnico, la precisión es vital.<ul>
+<li><em>Tip:</em> Usad comillas <code>"ERROR: NullPointerException"</code> para buscar el error exacto, no palabras sueltas que pueden dar resultados irrelevantes.</li>
+</ul>
+</li>
+<li><strong>Filtros Avanzados (Dorks):</strong><ul>
+<li><code>site:</code>: Restringe búsqueda a un dominio. Ej: <code>java exception site:stackoverflow.com</code>. Busca soluciones verificadas por la comunidad en foros técnicos oficiales, evitando blogs personales no verificados.</li>
+<li><code>filetype:</code>: Busca documentos específicos. Ej: <code>pdf site:.edu "base de datos"</code>. Útil para encontrar documentación académica o papers sobre algoritmos.</li>
+<li><code>-</code>: Excluye términos. Ej: <code>python -tutorial</code>. Para buscar soluciones prácticas, no guías básicas.</li>
+</ul>
+</li>
+</ul>
+<h4>6.1.3 Búsqueda Técnica Específica en Fuentes Oficiales</h4>
+<p>Antes de preguntar a un foro, buscad en la documentación oficial del lenguaje o framework.
+*   <strong>Ejemplo:</strong> Si tenéis un error en Android Studio, no busquéis solo "error android". Buscad <code>site:developer.android.com "error android"</code>. La documentación oficial tiene la respuesta actualizada y correcta, mientras que StackOverflow puede tener respuestas de hace 5 años que ya no funcionan.</p>
+<h3>6.2 Evaluación de Fuentes y Credibilidad: Pensamiento Crítico</h3>
+<p>Antes de integrar una solución encontrada en la web (un snippet de código), se debe evaluar rigurosamente:</p>
+<ul>
+<li><strong>Autoría:</strong> ¿Quién publica la información? (Comunidad oficial, blog personal, empresa). Un tutorial de un Senior Developer reconocido vale más que uno anónimo.</li>
+<li><strong>Fecha:</strong> La tecnología evoluciona rápidamente; documentación obsoleta puede llevar a errores de compatibilidad. Revisad siempre la fecha de publicación y los comentarios recientes.<ul>
+<li><em>Ejemplo:</em> Un tutorial de PHP del 2015 usa <code>mysql_*</code> que ya es inseguro e inexistente en versiones modernas (se usa PDO o MySQLi).</li>
+</ul>
+</li>
+<li><strong>Consistencia:</strong> Verificar si múltiples fuentes independientes coinciden en el procedimiento o la explicación técnica. Si solo un blog dice algo extraño, desconfiad.</li>
+</ul>
+<h3>6.3 Gestión del Conocimiento: La Base de Datos Personal</h3>
+<p>Una vez encontrada la información, debe ser almacenada y estructurada para uso futuro (Knowledge Base). Esto implica crear índices propios de soluciones recurrentes.
+*   <strong>Herramientas:</strong> Notion, Obsidian, OneNote o un repositorio Git privado (<code>my-solutions</code>).
+*   <strong>Beneficio:</strong> Evitáis rebuscar problemas ya resueltos. Si resolvéis un problema de configuración de Apache hoy, documentadlo para que dentro de 3 años (o cuando vuestro compañero lo necesite) no tengáis que volver a investigar desde cero.</p>
+<blockquote>
+<p><strong>Nota del Profesor:</strong> En la entrevista técnica, me preguntan más sobre <em>cómo encontrasteis</em> una solución compleja que por qué código escribisteis. La capacidad de autoformación es la competencia clave en IT.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-8')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                09
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CAPÍTULO 7: UTILIDADES DEL SISTEMA Y MANTENIMIENTO DE INFRAESTRUCTURA</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-8" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-8" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>El mantenimiento no es solo reparación correctiva (cuando algo falla), sino actividades planificadas para evitar fallos y optimizar el rendimiento. Las utilidades de propósito general son los instrumentos que permiten esta gestión a nivel de sistema operativo. Como técnicos DAM, debéis ser capaces de "limpiar" vuestro entorno para garantizar que vuestras aplicaciones corran fluidamente.</p>
+<h3>7.1 Filosofía del Mantenimiento Preventivo: La Salud del Sistema</h3>
+<p>El mantenimiento preventivo es más barato y seguro que el correctivo.
+*   <strong>Actualizaciones:</strong> Mantener el SO y las librerías actualizadas cierra vulnerabilidades de seguridad conocidas (CVEs).
+    *   <em>Advertencia:</em> En entornos productivos, nunca actualicéis sin probar primero en un entorno de Staging/QA para evitar "Breaking Changes".</p>
+<h4>7.1.1 Gestión de Almacenamiento y Archivos: Profundización Técnica</h4>
+<ul>
+<li><strong>Particionamiento:</strong> División lógica de un disco físico en volúmenes independientes para aislar sistemas operativos, datos de usuario o particiones de recuperación.<ul>
+<li><em>Ventaja:</em> Si el sistema operativo se corrompe (Windows Update falla), los datos están seguros en otra partición y podéis reinstalar el SO sin perder información. Afecta a la seguridad (aislamiento) y al rendimiento (fragmentación).</li>
+</ul>
+</li>
+<li><strong>Sistemas de Archivos:</strong> Diferencias críticas entre FAT32, NTFS, ext4, APFS.<ul>
+<li><em>NTFS:</em> Soporta permisos ACLs complejos, cifrado EFS, archivos grandes (&gt;4GB), ideal para Windows Server.</li>
+<li><em>ext4:</em> Estándar en Linux, rápido, pero requiere herramientas específicas para reparación (<code>fsck</code>).</li>
+<li><em>FAT32:</em> Obsoleto para datos modernos (límite de 4GB por archivo), usado solo para USBs compatibles con todo.</li>
+</ul>
+</li>
+<li><strong>Desfragmentación:</strong> Optimización lógica de la ubicación física de los datos en discos magnéticos (HDD) para reducir la latencia de lectura (menos movimiento del cabezal).<ul>
+<li><em>Nota Técnica:</em> En SSDs modernos, la desfragmentación es dañina y no necesaria debido a su arquitectura electrónica (acceso aleatorio instantáneo). Los sistemas modernos lo detectan automáticamente.</li>
+</ul>
+</li>
+</ul>
+<h4>7.1.2 Seguridad del Sistema y Antimalware: La Defensa en Profundidad</h4>
+<p>Las herramientas antivirus no son simples escaneos, sino arquitecturas complejas que incluyen múltiples capas de defensa.
+*   <strong>Heurística:</strong> Detección basada en comportamiento sospechoso (patrones de ejecución) más que solo firmas conocidas. Detectan virus nuevos ("Zero-day") analizando si un programa intenta modificar el registro del sistema de forma anómala.
+    *   <em>Dilema:</em> A veces marca software legítimo como falso positivo porque su comportamiento "parece" sospechoso (ej. scripts de instalación). Como técnicos, debéis saber distinguir para no bloquear vuestras herramientas de desarrollo.
+*   <strong>Actualización de Firmas:</strong> Mecanismos de descarga segura para mantener la base de datos de amenazas actualizada diariamente.</p>
+<h3>7.3 Monitorización y Diagnóstico: Ojos en el Sistema</h3>
+<p>El uso de herramientas gráficas (Task Manager, Activity Monitor) y líneas de comandos (CLI) permite acceder a métricas internas del sistema.</p>
+<ul>
+<li><strong>Uso de Recursos:</strong> CPU, RAM, Disco, Red en tiempo real. Permite identificar cuellos de botella antes de que colapse el servicio.<ul>
+<li><em>Ejemplo:</em> Si vuestra App consume el 100% de la CPU, ¿es un bucle infinito en vuestro código o es una tarea del sistema? Usando <code>top</code> (Linux) o <code>Resource Monitor</code> (Windows), podéis ver qué proceso es responsable.</li>
+</ul>
+</li>
+<li><strong>Gestión de Procesos:</strong> Visualización y control de procesos en ejecución (prioridad, terminación forzada). Fundamental para aislar aplicaciones mal comportadas sin reiniciar todo el sistema.<ul>
+<li><em>Comando Clave:</em> <code>kill -9 &amp;lt;PID&gt;</code> o <code>taskkill /F</code>. Saber usar esto evita tener que apagar el ordenador si una app se congela.</li>
+</ul>
+</li>
+</ul>
+<h3>7.4 Recuperación de Datos: El Plan B</h3>
+<p>En caso de corrupción lógica (virus, error humano) o física (disco roto):</p>
+<ul>
+<li><strong>Copia de Seguridad (Backup):</strong> Estrategia "3-2-1".<ul>
+<li><strong>3</strong> copias totales del dato.</li>
+<li><strong>2</strong> medios diferentes (ej. Disco duro local + Nube/Servidor externo).</li>
+<li><strong>1</strong> copia fuera del sitio (protección contra incendios/robos).</li>
+</ul>
+</li>
+<li><strong>Restauración:</strong> Capacidad de revertir el estado del sistema a un punto anterior conocido como estable ("System Restore" en Windows, Snapshots en Linux/Virtualización).</li>
+</ul>
+<blockquote>
+<p><strong>Caso Real DAM:</strong> Un desarrollador borra accidentalmente la base de datos de producción. Si tenía backups diarios automáticos (3-2-1), puede restaurar los datos con 5 minutos de pérdida. Si no, el cliente pierde dinero y reputación. La gestión de datos es responsabilidad del técnico.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-9')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                10
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CONCLUSIONES Y SÍNTESIS DE COMPETENCIAS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-9" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-9" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>El RA7 no se limita al uso instrumental de herramientas ofimáticas o navegadores web. Desde la perspectiva de la ingeniería de software y el perfil DAM, este resultado de aprendizaje consolida las competencias necesarias para operar en un entorno digital profesional:</p>
+<ol>
+<li><strong>Conciencia Legal y Ética:</strong> Entender que el software es propiedad intelectual sujeta a marcos legales (licencias). Un desarrollador que ignora esto puede exponer a su empresa a demandas millonarias.</li>
+<li><strong>Visión Sistémica:</strong> Comprender cómo la documentación, el correo y los servicios de archivos se integran en la arquitectura global del negocio. No vivís en un vacío; vuestro código afecta al flujo de trabajo de toda la organización.</li>
+<li><strong>Eficiencia Operativa:</strong> Saber seleccionar las herramientas correctas para maximizar la productividad sin comprometer la seguridad o el cumplimiento normativo (RGPD). Elegir entre SaaS, On-Premise o Open Source es una decisión técnica y financiera.</li>
+<li><strong>Autonomía Técnica:</strong> Capacidad para investigar, diagnosticar y documentar soluciones utilizando los servicios de Internet como extensión del conocimiento técnico. No esperaréis a que alguien os enseñe cada herramienta; buscaréis la documentación oficial y aprenderéis por vosotros mismos.</li>
+</ol>
+<p>El dominio conceptual de estos temas permite al profesional no solo "usar" un ordenador, sino gestionarlo como una plataforma que soporta proyectos de desarrollo complejos, garantizando la integridad de la información y la continuidad operativa del servicio. Recordad: <strong>Un código perfecto en un sistema mal configurado o sin documentación es un fracaso técnico.</strong></p>
+<hr />
+<p><em>Fin del Manual Teórico Expandido RA7 - Sistemas Informáticos (DAM)</em><br />
+<em>Documento bajo licencia para uso educativo en el marco curricular de FP.</em></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

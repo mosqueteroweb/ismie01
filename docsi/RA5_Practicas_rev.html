@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas RA5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA5.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA5</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Practicas RA5</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Módulo Profesional: Sistemas Informáticos | Ciclo Formativo: DAM (Desarrollo de Aplicaciones Multiplataforma)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <hr />
+<h3>1. INTRODUCCIÓN Y OBJETIVOS PEDAGÓGICOS</h3>
+<p>Bienvenido al laboratorio virtual del RA5. Como Administrador de Sistemas, este diseño no busca que escribas programas para gestionar la red, sino que <strong>domines la infraestructura</strong> mediante configuraciones nativas, protocolos establecidos y herramientas de sistema operativos. Esto cumple con el perfil profesional necesario: un desarrollador debe comprender profundamente cómo se comunican los sistemas antes de intentar interactuar con ellos a nivel de aplicación.</p>
+<p><strong>Objetivo General:</strong>
+Implementar soluciones de configuración, monitorización y seguridad de redes (LAN/WAN) utilizando las herramientas nativas del sistema operativo, sin dependencia de código fuente externo. Cubre los Criterios de Evaluación (CE) a-h del RA5 mediante la gestión directa de recursos.</p>
+<p><strong>Cobertura de Criterios de Evaluación (RA5):</strong>
+*   <strong>a)</strong> Configuración TCP/IP (Manual y Automática).
+*   <strong>b) &amp; d)</strong> Redes LAN Cableadas y Dispositivos (Configuración física y lógica).
+*   <strong>c) &amp; h)</strong> Redes Inalámbricas y Seguridad (Firewalls y Cifrado).
+*   <strong>e)</strong> Acceso WAN (Túneles SSH y Conexiones Remotas).
+*   <strong>f)</strong> Gestión de Puertos (Escaneo y Servicios).
+*   <strong>g)</strong> Verificación y Diagnóstico (Herramientas de sistema).</p>
+<blockquote>
+<p><strong>Nota del Administrador:</strong> En el entorno profesional, no basta con configurar una IP manualmente en Windows. Un administrador debe saber diagnosticar por qué la red falla usando herramientas del kernel. Este módulo elimina las capas intermedias de software para que comprendas la red en su estado puro: paquetes, direcciones y servicios.</p>
+</blockquote>
+<hr />
+<h3>2. REQUISITOS PREVIOS DE SOFTWARE Y ENTORNO</h3>
+<p>Para garantizar la reproducibilidad y el control de versiones (Git), se requiere configurar un entorno virtualizado. No se recomienda realizar prácticas en la red física del instituto sin supervisión directa.</p>
+<h4>2.1. Hardware Recomendado</h4>
+<ul>
+<li><strong>CPU:</strong> Mínimo 4 núcleos / 8 GB RAM (para VirtualBox). <em>Explicación:</em> Las máquinas virtuales consumen recursos de memoria y CPU reales del host. Si tienes menos, el sistema puede volverse inestable durante las pruebas de tráfico de red simulado.</li>
+<li><strong>Disco:</strong> 50 GB libres para máquinas virtuales.</li>
+</ul>
+<h4>2.2. Software Base</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Herramienta</th>
+<th style="text-align: left;">Versión Mínima</th>
+<th style="text-align: left;">Propósito en el RA5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sistema Operativo</strong></td>
+<td style="text-align: left;">Windows 10/11, Linux (Ubuntu Server) o macOS</td>
+<td style="text-align: left;">Host para las prácticas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Virtualización</strong></td>
+<td style="text-align: left;">VirtualBox v7.x + Extension Pack</td>
+<td style="text-align: left;">Creación de VMs aisladas para redes LAN/WAN simuladas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Terminal / Consola</strong></td>
+<td style="text-align: left;">PowerShell, Bash, CMD</td>
+<td style="text-align: left;">Ejecución de comandos nativos de red y gestión del sistema.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Navegador Web</strong></td>
+<td style="text-align: left;">Chrome / Firefox (Última versión)</td>
+<td style="text-align: left;">Verificación de protocolos seguros (HTTPS/SSL) en el cliente.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Control de Versiones</strong></td>
+<td style="text-align: left;">Git + GitHub/GitLab</td>
+<td style="text-align: left;">Gestión de archivos de configuración y documentación técnica. <em>Nota:</em> Se versionan los scripts de despliegue o configuraciones <code>.conf</code>, no código lógico.</td>
+</tr>
+</tbody>
+</table>
+<h4>2.3. Escenario Virtual Diseñado</h4>
+<p>Deberás desplegar la siguiente topología en VirtualBox:
+1.  <strong>Router NAT:</strong> Máquina virtual con Ubuntu Server (Actúa como Gateway/DHCP). <em>Explicación:</em> Simula el router doméstico o empresarial que asigna IPs y conecta a Internet.
+2.  <strong>Cliente 1:</strong> Máquina virtual Windows/Linux (Configuración TCP/IP). <em>Explicación:</em> El dispositivo cliente donde realizarás los diagnósticos de red.
+3.  <strong>Servidor Web:</strong> Máquina virtual Linux (Para pruebas de conectividad WAN/PUERTO). <em>Explicación:</em> Simula un servicio externo al cual conectar tu aplicación.</p>
+<hr />
+<h3>3. DESARROLLO DE LAS PRÁCTICAS</h3>
+<h4>PRÁCTICA 1: Configuración y Verificación del Stack TCP/IP (CE a, g)</h4>
+<p><strong>Objetivo:</strong> Configurar manualmente interfaces de red y verificar la conectividad utilizando herramientas nativas del sistema operativo sin intermedia de programación.</p>
+<p><strong>Lógica Técnica Profundizada:</strong>
+Para cumplir con el criterio <strong>a)</strong>, es necesario entender cómo el Sistema Operativo asigna direcciones IP. Usaremos comandos nativos (<code>ip</code>, <code>ifconfig</code>) para manipular la tabla de red del kernel y verificar la configuración física (MAC) vs lógica (IP).
+*   <strong>Under the Hood:</strong> Al ejecutar un comando de red, se interactúa directamente con las tablas de enrutamiento del SO. La distinción entre IPv4 e IPv6 es crucial porque el protocolo de red moderno transita hacia IPv6, y tu configuración debe ser agnóstica a la versión para ser robusta.</p>
+<p><strong>Procedimiento:</strong>
+1.  <strong>Acceso al Sistema:</strong> Abre una terminal (Bash en Linux o PowerShell/CMD en Windows) con privilegios de administrador/root.
+2.  <strong>Visualización de Interfaces:</strong> Ejecuta el comando <code>ip addr show</code> (Linux) o <code>ipconfig /all</code> (Windows). Observa las direcciones MAC y los estados "UP/DOWN".
+3.  <strong>Asignación Estática (Manual):</strong> Configura una IP estática en la interfaz principal del Cliente 1 para salir al Router NAT.</p>
+<p><strong>Comandos de Configuración (Linux - Ubuntu Server):</strong></p>
+<pre><code class="language-bash"># Verificar nombre de interfaz
+ip link show
+
+# Asignar IP estática, máscara y gateway temporalmente
+sudo ip addr add 192.168.50.10/24 dev eth0
+sudo ip route add default via 192.168.50.1
+
+# Verificar que la IP se ha aplicado correctamente
+ip addr show eth0</code></pre>
+
+<p><strong>Comandos de Configuración (Windows - PowerShell):</strong></p>
+<pre><code class="language-powershell"># Listar interfaces de red
+Get-NetIPConfiguration
+
+# Configurar IP Estática (Reemplazar con los valores del laboratorio)
+New-NetIPAddress -InterfaceAlias &quot;Ethernet&quot; -IPAddress 192.168.50.10 -PrefixLength 24 -DefaultGateway 192.168.50.1
+
+# Verificar configuración
+Get-NetIPConfiguration</code></pre>
+
+<p><strong>Verificación (CE g):</strong>
+*   Ejecuta <code>ping 192.168.50.1</code> (El Gateway). Debe responder con eco.
+*   Compara la salida de los comandos anteriores con la configuración que aparece en el panel de red del sistema operativo para asegurar consistencia.</p>
+<p><strong>Entregable:</strong> Captura de pantalla de la terminal mostrando la asignación exitosa y un archivo de texto (<code>diagnostico_red.txt</code>) con la salida de <code>ip addr</code> o <code>ipconfig</code>.</p>
+<blockquote>
+<p><strong>Posibles Errores y Soluciones (Troubleshooting):</strong>
+*   <strong>Error: <code>Network is unreachable</code>:</strong> Ocurre si la máscara no coincide con el rango del Gateway. <em>Solución:</em> Verifica que ambos dispositivos estén en la misma subred (ej. /24).
+*   <strong>Error: <code>Permission denied</code>:</strong> Falta de privilegios para modificar red. <em>Solución:</em> Ejecutar los comandos precedidos por <code>sudo</code> (Linux) o como Administrador (Windows).</p>
+</blockquote>
+<hr />
+<h4>PRÁCTICA 2: Gestión de Puertos y Escaneo (CE f)</h4>
+<p><strong>Objetivo:</strong> Verificar la apertura o cierre de puertos utilizando herramientas de red estándar y gestionar el tráfico mediante reglas de firewall.</p>
+<p><strong>Lógica Técnica Profundizada:</strong>
+El criterio <strong>f)</strong> exige gestionar estos puertos a nivel de sistema. Usaremos herramientas como <code>nmap</code>, <code>nc</code> (netcat) y <code>telnet</code> para detectar si servicios están escuchando, sin escribir programas para ello.
+*   <strong>Under the Hood:</strong> Al intentar conectar, el sistema operativo del cliente envía un paquete SYN. Si la aplicación en el destino responde con SYN-ACK, el puerto está abierto. Si responde RST, está cerrado o bloqueado por firewall.</p>
+<p><strong>Procedimientos de Prueba:</strong>
+1.  <strong>Iniciar un servicio:</strong> En una terminal del Servidor Web, ejecutar <code>python -m http.server 8000</code> (solo como proceso de fondo) o instalar Apache/Nginx para usar puertos estándar.
+2.  <strong>Ejecutar Escáner:</strong> Desde el Cliente 1, utilizar la herramienta <code>nmap</code>.</p>
+<p><strong>Comandos de Escaneo y Diagnóstico:</strong></p>
+<pre><code class="language-bash"># Escanear un puerto específico en localhost (Cliente)
+nc -zv localhost 8000
+
+# Escanear rango de puertos desde remoto (Servidor Web)
+nmap -p 1-1000 &amp;lt;IP_DEL_SERVIDOR&gt;
+
+# Verificar qué procesos están escuchando en el servidor
+netstat -tulpn | grep :&amp;lt;PUERTO&gt;</code></pre>
+
+<p><strong>Gestión del Firewall:</strong>
+*   Para cumplir con la seguridad, es necesario configurar reglas explícitas.
+*   <strong>Ubuntu (UFW):</strong> <code>sudo ufw allow 80/tcp</code> y <code>sudo ufw status</code>.
+*   <strong>Windows Defender:</strong> Crear una regla de entrada para permitir tráfico TCP en el puerto específico.</p>
+<p><strong>Nota Técnica:</strong> Este ejercicio demuestra la gestión de puertos a nivel de sistema operativo, esencial para entender cómo las aplicaciones se exponen al exterior (DAM).</p>
+<blockquote>
+<p><strong>Posibles Errores y Soluciones (Troubleshooting):</strong>
+*   <strong>Error: <code>Connection refused</code>:</strong> El puerto está cerrado o el servicio no está corriendo. <em>Solución:</em> Verifica que el servidor web esté activo en la consola del Servidor Web.
+*   <strong>Timeout:</strong> Si el firewall bloquea el paquete sin responder, la herramienta tardará hasta agotar el tiempo de espera. Esto indica una regla de "DROP" activa.</p>
+</blockquote>
+<p><strong>Reto de Ampliación:</strong>
+*   Configura un Firewall (UFW o iptables) que bloquee todas las conexiones entrantes salvo en el puerto 22 (SSH) y 80 (HTTP). Verifica que <code>nmap</code> muestre solo esos puertos abiertos.</p>
+<hr />
+<h4>PRÁCTICA 3: Seguridad y Protocolos (CE c, h)</h4>
+<p><strong>Objetivo:</strong> Configurar un servidor web con HTTPS utilizando certificados SSL/TLS y verificar la seguridad de la conexión mediante herramientas nativas.</p>
+<p><strong>Lógica Técnica Profundizada:</strong>
+El criterio <strong>h)</strong> exige aplicar protocolos seguros. Para ello, configuraremos el servicio Web para usar cifrado real. La validación se realiza mediante inspección del certificado en el navegador o línea de comandos (<code>openssl</code>).
+*   <strong>Under the Hood:</strong> El "Handshake TLS" implica intercambiar certificados digitales. Si el certificado no es válido (auto-firmado o caducado), el navegador mostrará una advertencia, lo cual es un indicador clave de seguridad para el administrador.</p>
+<p><strong>Procedimiento:</strong>
+1.  <strong>Generación de Certificado:</strong> En el Servidor Web, generar un certificado auto-firmado usando OpenSSL.</p>
+<p><strong>Comandos de Generación y Configuración (OpenSSL):</strong></p>
+<pre><code class="language-bash"># Generar Key Privada
+openssl genrsa -out server.key 2048
+
+# Generar Certificate Signing Request (CSR)
+openssl req -new -key server.key -out server.csr
+
+# Crear Certificado Auto-firmado (Válido por 365 días)
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt</code></pre>
+
+<ol>
+<li><strong>Configuración del Servidor Web:</strong> Editar el archivo de configuración de Apache o Nginx para apuntar a estos archivos (ej: <code>ssl_certificate</code> y <code>ssl_certificate_key</code>).</li>
+<li><strong>Verificación:</strong> Acceder desde el Cliente 1 a <code>https://&amp;lt;IP_DEL_SERVIDOR&gt;</code>.</li>
+</ol>
+<p><strong>Comandos de Verificación SSL:</strong></p>
+<pre><code class="language-bash"># Comprobar certificado remoto
+openssl s_client -connect &amp;lt;IP_DEL_SERVIDOR&gt;:443 -showcerts
+
+# Verificar la fecha de caducidad y emisor
+openssl x509 -in server.crt -text -noout | grep -A 1 &quot;Validity&quot;</code></pre>
+
+<p><strong>Criterios Cubiertos:</strong>
+*   <strong>c) WLAN / h) Seguridad:</strong> Aunque este ejemplo usa HTTP/HTTPS, la lógica aplica para validar configuraciones de Wi-Fi (WPA2 vs WEP) mediante análisis de configuración en el router.</p>
+<blockquote>
+<p><strong>Posibles Errores y Soluciones (Troubleshooting):</strong>
+*   <strong>Error: <code>SSL Handshake Failure</code>:</strong> Ocurre si las versiones de OpenSSL no coinciden o el protocolo está deshabilitado. <em>Solución:</em> Verificar la versión del Nginx/Apache y los módulos SSL instalados (<code>apt install libapache2-mod-ssl</code>).
+*   <strong>Advertencia en el navegador:</strong> Es normal con certificados auto-firmados. Debes aceptar manualmente el riesgo para probar la conexión, simulando un entorno de producción donde se usaría una CA real.</p>
+</blockquote>
+<p><strong>Reto de Ampliación:</strong>
+*   Configurar un certificado válido (Let's Encrypt) usando <code>certbot</code> y verificar que el navegador no muestre advertencias de seguridad.</p>
+<hr />
+<h4>PRÁCTICA 4: Topología LAN y Dispositivos (CE b, d)</h4>
+<p><strong>Objetivo:</strong> Simular una topología de red cableada gestionando direcciones IP estáticas y dinámicas mediante servicios nativos del sistema operativo.</p>
+<p><strong>Lógica Técnica Profundizada:</strong>
+Para cumplir con <strong>b)</strong> y <strong>d)</strong>, configuraremos manualmente las IPs en los clientes y simularemos la asignación dinámica instalando un servidor DHCP en Linux, sin depender de scripts externos.
+*   <strong>Under the Hood:</strong> El servicio DHCP utiliza el protocolo BOOTP sobre UDP. Al instalar y configurar el servicio <code>isc-dhcp-server</code>, el sistema operativo actúa como la autoridad que asigna recursos de red a los clientes (VMs).</p>
+<p><strong>Procedimiento de Ejecución:</strong>
+1.  <strong>Configuración del Servidor DHCP:</strong> En la máquina virtual "Router", instalar y configurar el servidor.</p>
+<p><strong>Comandos de Instalación y Configuración (Ubuntu):</strong></p>
+<pre><code class="language-bash"># Instalar servicio DHCP
+sudo apt install isc-dhcp-server
+
+# Editar configuración principal
+sudo nano /etc/dhcp/dhcpd.conf</code></pre>
+
+<p><strong>Contenido del archivo <code>dhcpd.conf</code> (Ejemplo Declarativo):</strong></p>
+<pre><code class="language-text">subnet 192.168.50.0 netmask 255.255.255.0 {
+    range 192.168.50.100 192.168.50.200;
+    option routers 192.168.50.1;
+    option domain-name-servers 8.8.8.8;
+}</code></pre>
+
+<ol>
+<li><strong>Configuración de la Interfaz:</strong> Definir en <code>/etc/default/isc-dhcp-server</code> la interfaz <code>eth0</code>.</li>
+<li><strong>Verificación en Cliente:</strong> En el "Cliente 1", configurar la tarjeta de red para obtener IP automáticamente ("Obtener dirección IP automáticamente" en Windows o DHCP en Linux).</li>
+</ol>
+<p><strong>Validación de Conectividad (CE g):</strong>
+*   Ejecutar <code>ipconfig /all</code> (Windows) o <code>dhclient -v</code> (Linux) para ver si el cliente recibe la IP del rango definido.
+*   Realizar un <code>ping</code> entre todas las máquinas virtuales de la red LAN.</p>
+<blockquote>
+<p><strong>Posibles Errores y Soluciones (Troubleshooting):</strong>
+*   <strong>Error: <code>No DHCP offers received</code>:</strong> El servicio DHCP no está corriendo o bloqueado por firewall. <em>Solución:</em> Verificar estado del servicio con <code>systemctl status isc-dhcp-server</code> y abrir puertos UDP 67/68 en el firewall.
+*   <strong>IP Duplicada:</strong> Conflictos de IP en la red. <em>Solución:</em> Asegurar que las IPs estáticas estén fuera del rango dinámico DHCP definido en <code>dhcpd.conf</code>.</p>
+</blockquote>
+<p><strong>Reto de Ampliación:</strong>
+*   Configurar un servidor DNS local (Bind9) y asignarlo como opción de dominio en el archivo <code>dhcpd.conf</code> para resolver nombres internos.</p>
+<hr />
+<h4>PRÁCTICA 5: Acceso WAN y Túneles (CE e)</h4>
+<p><strong>Objetivo:</strong> Configurar acceso remoto seguro mediante SSH utilizando claves criptográficas y túneles de red.</p>
+<p><strong>Lógica Técnica Profundizada:</strong>
+El criterio <strong>e)</strong> trata sobre redes de área extensa (WAN). La forma más segura de acceder remotamente es mediante SSH (Secure Shell), que cifra el tráfico sin necesidad de instalar software adicional en el cliente, ya que está nativo en Linux y Windows 10+.
+*   <strong>Under the Hood:</strong> SSH utiliza criptografía asimétrica al inicio. El administrador debe gestionar las claves públicas/privadas manualmente (<code>ssh-keygen</code>) para evitar contraseñas en texto plano.</p>
+<p><strong>Procedimiento de Ejecución:</strong>
+1.  <strong>Instalación del Servidor SSH:</strong> Asegurar que el servicio OpenSSH Server esté activo en la VM remota (Router o Cliente).
+    <code>bash
+    sudo apt install openssh-server
+    sudo systemctl enable ssh
+    sudo systemctl start ssh</code></p>
+<ol>
+<li><strong>Generación de Claves (Puente Seguro):</strong> En la máquina local, generar un par de claves RSA/Ed25519 que no lleven contraseña para acceso automatizado seguro.</li>
+</ol>
+<p><strong>Comandos de Generación y Copia de Clave:</strong></p>
+<pre><code class="language-bash"># Generar nueva clave en el cliente local
+ssh-keygen -t ed25519 -C &quot;usuario@laboratorio&quot; -f ~/.ssh/id_rsa_lab
+
+# Copiar la clave pública al servidor remoto (Autorización)
+ssh-copy-id usuario@&amp;lt;IP_DEL_SERVIDOR&gt;</code></pre>
+
+<ol>
+<li><strong>Configuración de Túnel Puente:</strong> Crear un túnel inverso para acceder a un servicio local desde el remoto sin exponer puertos en el firewall público.</li>
+</ol>
+<p><strong>Comando de Ejecución de Túnel (CLI):</strong></p>
+<pre><code class="language-bash"># Sintaxis: ssh -N -L [puerto_local]:localhost:[puerto_remoto] usuario@host
+ssh -N -L 8080:localhost:3000 usuario@&amp;lt;IP_DEL_SERVIDOR&gt;</code></pre>
+
+<p><strong>Verificación de Acceso:</strong>
+*   Desde el Servidor Remoto, intentar acceder a <code>http://127.0.0.1:3000</code>. Debería redirigirse al servicio local del Cliente 1.</p>
+<blockquote>
+<p><strong>Posibles Errores y Soluciones (Troubleshooting):</strong>
+*   <strong>Error: <code>Permission denied (publickey)</code>:</strong> La clave pública no se copió correctamente en <code>/home/usuario/.ssh/authorized_keys</code>. <em>Solución:</em> Verificar permisos de archivos (<code>chmod 600 authorized_keys</code>).
+*   <strong>Timeout:</strong> El firewall de la máquina remota bloquea el puerto 22. <em>Solución:</em> Configurar reglas de entrada en VirtualBox o dentro del sistema operativo Linux (<code>ufw allow 22</code>).</p>
+</blockquote>
+<p><strong>Reto de Ampliación:</strong>
+*   Deshabilitar el acceso por contraseña en <code>/etc/ssh/sshd_config</code> (<code>PasswordAuthentication no</code>) y forzar el uso exclusivo de claves SSH para asegurar la infraestructura.</p>
+<hr />
+<h3>4. PROCEDIMIENTOS DE COMPILACIÓN Y PRUEBAS FINALES</h3>
+<p>Para aprobar el RA5 mediante estas prácticas administrativas, debes seguir el siguiente flujo de control de calidad:</p>
+<ol>
+<li><strong>Validación de Comandos:</strong><ul>
+<li>Asegurar que todos los comandos <code>ip</code>, <code>nmap</code>, <code>openssl</code> ejecutan sin errores en la terminal del sistema operativo.</li>
+</ul>
+</li>
+<li><strong>Ejecución de Servicios:</strong><ul>
+<li>Verificar que los servicios (SSH, DHCP, HTTP) están corriendo (<code>systemctl status &amp;lt;servicio&gt;</code>).</li>
+</ul>
+</li>
+<li><strong>Pruebas de Integración:</strong><ul>
+<li>Ejecutar el escáner <code>nmap</code> contra el puerto del servidor web levantado en la VM. Si detecta el puerto y responde correctamente con <code>OPEN</code>, se valida la gestión de puertos (CE f).</li>
+</ul>
+</li>
+<li><strong>Control de Versiones (Git):</strong><ul>
+<li>Inicializar repositorio: <code>git init</code>.</li>
+<li>Commit final de configuración: <code>git commit -m "Configuración RA5: Infraestructura red y seguridad"</code>.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Nota del Administrador:</strong> El uso de Git en este contexto es para versionar tus archivos de configuración (<code>dhcpd.conf</code>, <code>sshd_config</code>, scripts de despliegue) y documentación. Cada cambio que hagas debe tener una razón documentada (ej. "Actualización reglas firewall", "Nueva subred DHCP"). Esto facilita la auditoría y mantenimiento futuro.</p>
+</blockquote>
+<hr />
+<h3>5. CRITERIOS DE EVALUACIÓN DEL LABORATORIO (RÚBRICA)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Criterio</th>
+<th style="text-align: left;">Indicador de Desempeño Puntuación Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>a) TCP/IP</strong></td>
+<td style="text-align: left;">La configuración manual de IP y máscara es coherente con la topología y permite comunicación. (10%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>b) LAN Cableada</strong></td>
+<td style="text-align: left;">El servicio DHCP asigna IPs correctamente a las VMs clientes en el laboratorio virtual. (15%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>c) WLAN / h) Seguridad</strong></td>
+<td style="text-align: left;">La configuración SSL/TLS es válida y OpenSSL identifica correctamente los certificados. (10%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>d) Dispositivos</strong></td>
+<td style="text-align: left;">El comando <code>nmap</code> o <code>netstat</code> identifica correctamente interfaces y puertos activos sin colapsar la VM. (10%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>e) WAN</strong></td>
+<td style="text-align: left;">La conexión SSH con claves criptográficas es exitosa y el túnel permite acceso a servicios locales. (15%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>f) Puertos</strong></td>
+<td style="text-align: left;">El escaneo de puertos devuelve "ABIERTO" o "CERRADO/RECHAZADO" de forma precisa según el firewall. (20%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>g) Verificación</strong></td>
+<td style="text-align: left;">Se utilizan comandos nativos del sistema (<code>ping</code>, <code>ip addr</code>, <code>netstat</code>) para validar la red sin herramientas externas no instaladas. (15%)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Presentación</strong></td>
+<td style="text-align: left;">Archivos de configuración documentados y versionados en Git con comentarios claros. (5%)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>6. CONCLUSIÓN TÉCNICA</h3>
+<p>Esta guía integra los contenidos de "Conexión de sistemas en red" con las competencias profesionales del Administrador de Sistemas dentro del desarrollo DAM. Al configurar la infraestructura manualmente, el alumno no solo aprende <em>qué</em> es una IP o un puerto, sino <em>cómo interactuar</em> con ellos mediante herramientas del sistema operativo. Esto asegura la cobertura exhaustiva del RA5 bajo un enfoque profesional donde la estabilidad y seguridad (Hardening) son claves.</p>
+<p><strong>Nota del Administrador:</strong> Recuerda que la seguridad en el laboratorio es primordial. Nunca ejecutes scripts de escaneo o configuración IP en redes públicas ni sin permiso explícito de tu instructor. El conocimiento adquirido aquí te permite construir sistemas más robustos, pero también conlleva la responsabilidad ética de no dañar infraestructuras ajenas.</p>
+<hr />
+<p><em>Documento elaborado bajo estricta adherencia a la normativa curricular del módulo Sistemas Informáticos (FP DAM) y alineado con las competencias profesionales exigidas por el sector tecnológico.</em></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion RA7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 5000px; /* Arbitrary large number to allow content to expand */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA7.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA7</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">Evaluacion RA7</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Elaboración de Documentación y Uso de Aplicaciones de Propósito General</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Módulo:</strong> Sistemas Informáticos | <strong>Especialidad:</strong> DAM<br />
+<strong>Nivel:</strong> Educación Profesional - Nivel Superior<br />
+<strong>Versión del Documento:</strong> 3.0 (Auditoría y Ampliación Pedagógica)<br />
+<strong>Estado:</strong> Validado por Auditoría de Calidad FP</p>
+<hr />
+<h1>PARTE I: EXAMEN TIPO TEST (15 PREGUNTAS DE ALTA DIFICULTAD)</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Instrucciones</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ul>
+<li>Tiempo estimado: 45 minutos</li>
+<li>Cada pregunta tiene una única respuesta correcta</li>
+<li>Valoración: 2 puntos por pregunta (Total: 30 puntos)</li>
+<li>Se requiere 70% de aciertos para aprobar esta sección</li>
+</ul>
+<hr />
+<h3>PREGUNTA 1 - Modelos de Licenciamiento y Propiedad Intelectual</h3>
+<p><strong>En un entorno corporativo multiplataforma, se debe seleccionar software para desarrollo que cumpla con los siguientes requisitos: código fuente accesible, capacidad de modificación interna, obligación legal de mantener la misma licencia en obras derivadas y distribución gratuita. ¿Qué modelo de licencia cumple TODOS estos criterios?</strong></p>
+<p>A) Propietaria<br />
+B) Freeware<br />
+C) Open Source (MIT)<br />
+D) Copyleft (GPL v3)</p>
+<hr />
+<h3>PREGUNTA 2 - Protocolos de Correo Electrónico</h3>
+<p><strong>Una empresa requiere que sus empleados puedan acceder al mismo buzón de correo desde múltiples dispositivos simultáneamente, manteniendo sincronizada la lectura/lectura de mensajes y las carpetas. Además, deben poder eliminar mensajes del cliente sin afectar su presencia en el servidor. ¿Qué protocolo debe implementarse?</strong></p>
+<p>A) POP3<br />
+B) SMTP<br />
+C) IMAP4<br />
+D) MIME</p>
+<hr />
+<h3>PREGUNTA 3 - Transferencia Segura de Ficheros</h3>
+<p><strong>En un entorno con firewall corporativo restrictivo que solo permite tráfico cifrado en puerto 22, ¿qué protocolo de transferencia de ficheros debe seleccionarse para mantener la seguridad y compatibilidad?</strong></p>
+<p>A) FTP tradicional<br />
+B) SFTP sobre SSH<br />
+C) HTTP/HTTPS genérico<br />
+D) TFTP</p>
+<hr />
+<h3>PREGUNTA 4 - Documentación Técnica y UML</h3>
+<p><strong>Al diseñar la arquitectura de una aplicación multiplataforma, se requiere documentar las interacciones entre objetos en un escenario específico de uso. ¿Qué tipo de diagrama UML es el más adecuado para este propósito?</strong></p>
+<p>A) Diagrama de Clases<br />
+B) Diagrama de Componentes<br />
+C) Diagrama de Secuencia<br />
+D) Diagrama de Despliegue</p>
+<hr />
+<h3>PREGUNTA 5 - Metadatos y Control de Versiones Documental</h3>
+<p><strong>En un entorno colaborativo, se detecta que múltiples desarrolladores han modificado simultáneamente el mismo documento técnico sin control de cambios. ¿Qué mecanismo debería haberse implementado para prevenir sobrescrituras?</strong></p>
+<p>A) Bloqueo optimista (locking)<br />
+B) Compresión ZIP del archivo<br />
+C) Copias manuales con fecha en nombre<br />
+D) Guardado automático cada 5 minutos</p>
+<hr />
+<h3>PREGUNTA 6 - Análisis de Logs y Diagnóstico</h3>
+<p><strong>Al analizar un log de sistema, se encuentra la siguiente entrada: <code>2024-01-15T14:32:18.456Z [ERROR] ModuleAuth.java:127 - NullPointerException at validateToken()</code> ¿Qué información NO proporciona esta línea?</strong></p>
+<p>A) Timestamp exacto del evento<br />
+B) Nivel de severidad de la incidencia<br />
+C) Línea específica del código fuente donde ocurrió el error<br />
+D) Solución propuesta para corregir el problema</p>
+<hr />
+<h3>PREGUNTA 7 - Sistemas de Archivos y Permisos ACLs</h3>
+<p><strong>En un servidor Linux con sistema de archivos ext4, se requiere implementar permisos granulares para diferentes grupos de usuarios sobre la misma carpeta. ¿Qué característica del sistema de archivos permite esto?</strong></p>
+<p>A) Sistema de particionamiento RAID<br />
+B) Listas de Control de Acceso (ACLs)<br />
+C) Desfragmentación automática<br />
+D) Cifrado a nivel de disco completo</p>
+<hr />
+<h3>PREGUNTA 8 - Operadores de Búsqueda Técnica Avanzada</h3>
+<p><strong>Un desarrollador necesita encontrar documentación oficial sobre Java en sitios educativos sin incluir resultados de foros comerciales. ¿Qué operador de búsqueda debería utilizar?</strong></p>
+<p>A) <code>site:edu "Java" -forum</code><br />
+B) <code>filetype:pdf "Java tutorial"</code><br />
+C) <code>inurl:"java.com" "tutorial"</code><br />
+D) <code>"Java documentation" AND "tutorial"</code></p>
+<hr />
+<h3>PREGUNTA 9 - Modelos de Distribución Comercial</h3>
+<p><strong>Una startup selecciona una solución de gestión documental que no requiere instalación local, se accede vía navegador web y el proveedor gestiona todas las actualizaciones. ¿Qué modelo de distribución representa esta arquitectura?</strong></p>
+<p>A) Freeware<br />
+B) Shareware<br />
+C) SaaS (Software as a Service)<br />
+D) Open Source</p>
+<hr />
+<h3>PREGUNTA 10 - Seguridad en Protocolos de Transferencia</h3>
+<p><strong>Al configurar una conexión FTP segura, se requiere que los datos y comandos viajen cifrados. ¿Qué combinación de puertos y protocolos garantiza esto?</strong></p>
+<p>A) Puerto 21 (control) + Puerto 20 (datos) sin cifrado<br />
+B) Puerto 990 (FTPS) con TLS/SSL en ambos canales<br />
+C) Puerto 80 (HTTP) con compresión ZIP<br />
+D) Puerto 443 (HTTPS) solo para archivos de texto</p>
+<hr />
+<h3>PREGUNTA 11 - Gestión de Procesos y Monitorización</h3>
+<p><strong>Un sistema operativo reporta alto uso de CPU pero no se identifica el proceso responsable. ¿Qué herramienta CLI permite identificar procesos por su consumo de recursos en tiempo real?</strong></p>
+<p>A) <code>dir</code> / <code>ls</code><br />
+B) <code>top</code> / <code>htop</code> (Linux) o Task Manager (Windows)<br />
+C) <code>ping</code> / <code>tracert</code><br />
+D) <code>ipconfig</code> / <code>ifconfig</code></p>
+<hr />
+<h3>PREGUNTA 12 - Estrategia de Copias de Seguridad (Backup)</h3>
+<p><strong>Según la estrategia "3-2-1" recomendada para recuperación ante desastres, ¿cuántas copias y en cuántos medios diferentes se deben mantener como mínimo?</strong></p>
+<p>A) 2 copias en 1 medio<br />
+B) 3 copias en 2 medios diferentes (1 fuera del sitio)<br />
+C) 5 copias en 1 servidor en la nube<br />
+D) 1 copia local + 1 en USB portátil</p>
+<hr />
+<h3>PREGUNTA 13 - Formatos de Archivo y Preservación Digital</h3>
+<p><strong>Para garantizar la portabilidad a largo plazo de documentación técnica empresarial, ¿qué formato de archivo es más recomendable según estándares abiertos?</strong></p>
+<p>A) .docx (formato binario propietario Microsoft)<br />
+B) .odt (OpenDocument Format)<br />
+C) .rtf (Rich Text Format antiguo)<br />
+D) .pdf/a (PDF para Archivo a largo plazo)</p>
+<hr />
+<h3>PREGUNTA 14 - Protocolos de Mensajería y Encriptación E2EE</h3>
+<p><strong>En un servicio de mensajería empresarial, se requiere que ni siquiera el proveedor del servicio pueda leer los mensajes entre usuarios. ¿Qué característica de seguridad debe implementarse?</strong></p>
+<p>A) TLS/SSL en transporte<br />
+B) Autenticación OAuth2<br />
+C) Encriptación de Extremo a Extremo (E2EE)<br />
+D) Firewall perimetral</p>
+<hr />
+<h3>PREGUNTA 15 - Mantenimiento Preventivo y SSDs</h3>
+<p><strong>En un equipo con almacenamiento SSD, ¿qué acción de mantenimiento tradicional es menos relevante o potencialmente dañina?</strong></p>
+<p>A) Actualización de firmas antivirus<br />
+B) Desfragmentación periódica<br />
+C) Verificación de espacio en disco (df/du)<br />
+D) Limpieza de archivos temporales</p>
+<hr />
+<h1>PARTE II: CASOS PRÁCTICOS DE DEBUGGING Y REFACTORIZACIÓN</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Caso Práctico 1: Debugging de Script de Transferencia FTP</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Escenario</p>
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Como desarrollador DAM, debes revisar un script Python que automatiza la transferencia de documentación técnica a un servidor FTP corporativo. El script presenta múltiples errores lógicos y de compilación que impiden su ejecución correcta.</p>
+<pre><code class="language-python"># archivo: transferencia_documentacion.py
+import ftplib
+import os
+
+def transferir_archivo(archivo_local, ruta_servidor):
+    &quot;&quot;&quot;Transfiere un archivo a servidor FTP&quot;&quot;&quot;
+
+    # Configuración del servidor
+    HOST = &quot;ftp.empresa.com&quot;
+    USUARIO = sys.user_name  # Error 1
+    CONTRASEÑA = &quot;password123&quot;  # Error 2
+
+    try:
+        ftp = ftplib.FTP(HOST)
+        ftp.login(USUARIO, CONTRASEÑA)
+
+        # Cambio de directorio en servidor
+        ftp.cwd(ruta_servidor)  # Error 3
+
+        with open(archivo_local, &#x27;rb&#x27;) as archivo:
+            ftp.storbinary(f&#x27;STOR {archivo}&#x27;, archivo)  # Error 4
+
+    except Exception as e:
+        print(&quot;Error:&quot;, str(e))
+
+    return True
+
+if __name__ == &quot;__main&quot;:  # Error 5
+    transferir_archivo(&quot;documentacion.pdf&quot;, &quot;/public/docs&quot;)</code></pre>
+
+<h3>Tareas para el Alumno</h3>
+<ol>
+<li><strong>Identificar y corregir los 5 errores</strong> marcados en el código (3 puntos)</li>
+<li><strong>Proponer una mejora de seguridad</strong> para la gestión de credenciales (1 punto)</li>
+<li><strong>Añadir manejo de excepciones específico</strong> para errores de conexión FTP (1 punto)</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Caso Práctico 2: Diseño de Clase para Documentación Técnica</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Escenario</p>
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Se requiere diseñar una estructura de clases en Python que gestione la documentación técnica de un proyecto DAM. La clase debe soportar versiones, metadatos y control de cambios básico.</p>
+<pre><code class="language-python"># archivo_inicial.py - Código incompleto con errores de diseño
+class Documentacion:
+    def __init__(self):
+        self.titulo = &quot;&quot;
+        self.autor = &quot;&quot;
+
+    def set_titulo(self, titulo):
+        self.titulo = titulo
+
+    def set_autor(self, autor):
+        self.autor = autor
+
+# Uso incorrecto de la clase
+doc = Documentacion()
+doc.set_titulo(&quot;API v1&quot;)
+doc.set_autor(&quot;DevTeam&quot;)
+print(doc)  # No muestra información útil</code></pre>
+
+<h3>Tareas para el Alumno</h3>
+<ol>
+<li><strong>Diseñar una estructura de clases mejorada</strong> que incluya: versión, fecha creación, estado, y método <code>__str__</code> adecuado (3 puntos)</li>
+<li><strong>Implementar control básico de versiones</strong> con incrementación automática (1 punto)</li>
+<li><strong>Añadir validación de datos</strong> en los setters (métodos de asignación) (1 punto)</li>
+</ol>
+<hr />
+<h1>PARTE III: SOLUCIONARIO DETALLADO PARA EL DOCENTE Y ESTUDIANTE</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">A) EXAMEN TIPO TEST - RESPUESTAS Y JUSTIFICACIONES EXPANDIDAS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>A continuación, se presenta el análisis exhaustivo de cada ítem. Este apartado está diseñado no solo para validar la respuesta correcta, sino para explicar los fundamentos arquitectónicos y técnicos que sustentan la elección, así como para desmontar las falacias en las opciones incorrectas. Esto servirá como material de repaso profundo para el alumno.</p>
+<h3>PREGUNTA 1 - Modelos de Licenciamiento</h3>
+<p><strong>Respuesta Correcta: D (Copyleft GPL v3)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La opción <strong>D</strong> es la única que satisface integralmente los requisitos del enunciado bajo un marco legal y técnico riguroso. La licencia <em>General Public License</em> versión 3 (GPLv3) es el estándar de oro para el software "Copyleft". Cumple con el requisito de "código fuente accesible" porque obliga a la distribución del código fuente junto con los binarios. Permite la "capacidad de modificación interna" ya que otorga libertad al usuario de estudiar y alterar el programa. La clave distintiva es la "obligación legal de mantener la misma licencia en obras derivadas": esto es el principio del Copyleft, diseñado para garantizar que las mejoras realizadas sobre un software libre sigan siendo libres, evitando su privatización por terceros. Finalmente, se distribuye bajo términos gratuitos (gratuidad en el uso y redistribución, aunque no necesariamente exenta de costes de servicio).</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) Propietaria:</strong> Es incorrecta porque las licencias propietarias (EULA) restringen explícitamente la modificación interna y el acceso al código fuente. El usuario solo adquiere una licencia de uso, no de propiedad intelectual sobre el código.
+*   <strong>B) Freeware:</strong> Aunque es "distribución gratuita", el término freeware se refiere a software gratuito pero con código cerrado (proprietario). No cumple con la exigencia de acceso al código fuente ni permite modificaciones internas legales.
+*   <strong>C) Open Source (MIT):</strong> La licencia MIT es permisiva y sí permite acceso al código y modificación, pero NO obliga a mantener la misma licencia en obras derivadas. Si usas una librería MIT en tu software comercial, puedes distribuir ese software como propietario sin liberar su código fuente. Por tanto, falla el criterio de "obligación legal de mantener la misma licencia".</p>
+<hr />
+<h3>PREGUNTA 2 - Protocolos de Correo Electrónico</h3>
+<p><strong>Respuesta Correcta: C (IMAP4)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El protocolo <strong>IMAP4</strong> (Internet Message Access Protocol versión 4) es el estándar arquitectónico para la sincronización en entornos multi-dispositivo. A diferencia de otros protocolos, IMAP mantiene el estado del buzón centralizado en el servidor. Esto significa que las acciones realizadas en un cliente (marcar como leído, mover a carpeta, borrar) se reflejan inmediatamente en todos los demás clientes conectados al mismo buzón. El requisito de "eliminar mensajes del cliente sin afectar su presencia en el servidor" se refiere a la capacidad de gestionar vistas locales (como carpetas de borrado) mientras el servidor mantiene una copia persistente hasta que se decide eliminarla definitivamente desde cualquier punto, o mediante sincronización de estados.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) POP3:</strong> Es incorrecto porque su modelo es de descarga ("Download and Delete"). Tradicionalmente, POP3 descarga los mensajes al cliente local y elimina la copia del servidor para ahorrar espacio. Esto impide el acceso simultáneo consistente desde múltiples dispositivos; si borras un email en tu móvil, seguirá existiendo en tu ordenador (o viceversa) dependiendo de la configuración de retención.
+*   <strong>B) SMTP:</strong> Es incorrecto porque Simple Mail Transfer Protocol es exclusivamente para el <em>envío</em> de correos del cliente al servidor o entre servidores. No tiene capacidad de gestión, lectura o almacenamiento de buzón por parte del usuario final.
+*   <strong>D) MIME:</strong> Es incorrecto porque Multipurpose Internet Mail Extensions no es un protocolo de transporte ni acceso, sino un estándar de formato para codificar el contenido (imágenes, adjuntos, texto multilingüe) dentro de los mensajes de correo.</p>
+<hr />
+<h3>PREGUNTA 3 - Transferencia Segura de Ficheros</h3>
+<p><strong>Respuesta Correcta: B (SFTP sobre SSH)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La opción <strong>B</strong> es la solución técnica óptima para restricciones de firewall modernas basadas en seguridad. SFTP (SSH File Transfer Protocol) encapsula toda la comunicación dentro de un túnel cifrado SSH, que opera nativamente en el puerto 22. Al utilizar este protocolo, se cumple con el requisito del firewall restrictivo ("solo permite tráfico cifrado en puerto 22") y garantiza la confidencialidad e integridad de los datos mediante criptografía asimétrica/simétrica durante la transmisión. No requiere abrir puertos adicionales ni exponer canales de control y datos separados.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) FTP tradicional:</strong> Es incorrecto porque utiliza el puerto 21 para comandos y el 20 para datos, operando en texto plano (sin cifrar). Un firewall corporativo restrictivo bloquearía esto por defecto debido al riesgo de interceptación de credenciales y datos.
+*   <strong>C) HTTP/HTTPS genérico:</strong> Aunque HTTPS es seguro, no está diseñado específicamente para la transferencia interactiva de directorios complejos como FTP/SFTP. Además, muchas políticas de firewall corporativo restringen el tráfico web a puertos específicos (80/443) y pueden bloquear el uso de HTTP para transferencias de archivos por motivos de seguridad o control de ancho de banda.
+*   <strong>D) TFTP:</strong> Es incorrecto porque Trivial FTP no soporta autenticación ni cifrado alguno. Su diseño es minimalista para entornos de arranque en red (PXE), siendo extremadamente inseguro para transferencias corporativas.</p>
+<hr />
+<h3>PREGUNTA 4 - Documentación Técnica y UML</h3>
+<p><strong>Respuesta Correcta: C (Diagrama de Secuencia)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El <strong>Diagrama de Secuencia</strong> es la herramienta de modelado UML diseñada específicamente para visualizar interacciones dinámicas a lo largo del tiempo. En el contexto de una aplicación multiplataforma, cuando se requiere documentar "interacciones entre objetos en un escenario específico", este diagrama permite trazar el flujo de mensajes (llamadas a métodos, eventos) desde el objeto iniciador hasta los objetos receptores, respetando la secuencia temporal de ejecución. Es fundamental para entender el comportamiento del sistema antes de codificar.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) Diagrama de Clases:</strong> Muestra la estructura estática (atributos, métodos, relaciones), no las interacciones dinámicas ni temporales entre objetos en una ejecución específica.
+*   <strong>B) Diagrama de Componentes:</strong> Se enfoca en la arquitectura de alto nivel, mostrando módulos, librerías y sus dependencias, pero no detalla el flujo de mensajes entre instancias de objetos durante un caso de uso.
+*   <strong>D) Diagrama de Despliegue:</strong> Describe la infraestructura física (servidores, nodos, redes), no las interacciones lógicas del software a nivel de código o objeto.</p>
+<hr />
+<h3>PREGUNTA 5 - Metadatos y Control de Versiones Documental</h3>
+<p><strong>Respuesta Correcta: A (Bloqueo optimista)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El <strong>Bloqueo Optimista</strong> es el mecanismo estándar en sistemas colaborativos modernos para evitar sobrescrituras sin bloquear recursos innecesariamente. Funciona verificando si un documento ha sido modificado desde que fue leído por el usuario antes de guardar los cambios (mediante un número de versión o hash). Si la versión coincide, se guarda; si no, se alerta al usuario y se resuelve el conflicto. Esto previene las sobrescrituras mientras permite la colaboración asíncrona sin bloquear permanentemente a otros usuarios.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>B) Compresión ZIP:</strong> Es incorrecto porque comprimir reduce el tamaño del archivo pero no ofrece ningún control lógico sobre quién edita qué contenido ni previene conflictos de escritura simultánea.
+*   <strong>C) Copias manuales con fecha en nombre:</strong> Es una práctica ineficiente y propensa a errores humanos ("v3_final_real.docx"). No es un mecanismo técnico de prevención, sino un parche manual que no resuelve el conflicto real durante la edición.
+*   <strong>D) Guardado automático cada 5 minutos:</strong> Aunque evita pérdida por fallos, no controla conflictos concurrentes. Si dos usuarios guardan al mismo tiempo, uno sobrescribirá a otro sin aviso previo, perdiendo datos.</p>
+<hr />
+<h3>PREGUNTA 6 - Análisis de Logs y Diagnóstico</h3>
+<p><strong>Respuesta Correcta: D (Solución propuesta para corregir el problema)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Los sistemas de registro (<em>logging</em>) están diseñados para ser herramientas de <strong>observabilidad</strong>, no de resolución automática. La línea proporcionada contiene metadatos del evento (timestamp, nivel, ubicación), lo cual es vital para la auditoría forense y el diagnóstico del ingeniero. Sin embargo, el log registra el <em>síntoma</em> (el error ocurrido) pero nunca prescribencia la <em>cura</em>. La solución depende de la lógica de negocio, el contexto del estado de la aplicación y las decisiones arquitectónicas que el desarrollador debe tomar manualmente tras analizar el registro.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) Timestamp exacto:</strong> El log sí proporciona esto (<code>2024-01-15T14:32:18.456Z</code>), permitiendo correlacionar eventos en cascada.
+*   <strong>B) Nivel de severidad:</strong> El log incluye <code>[ERROR]</code>, lo cual clasifica la gravedad del incidente para priorizar la respuesta.
+*   <strong>C) Línea específica:</strong> La notación <code>ModuleAuth.java:127</code> indica con precisión dónde falló el código, facilitando la depuración (debugging).</p>
+<hr />
+<h3>PREGUNTA 7 - Sistemas de Archivos y Permisos ACLs</h3>
+<p><strong>Respuesta Correcta: B (Listas de Control de Acceso - ACLs)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Las <strong>ACLs</strong> (Access Control Lists) en sistemas ext4 (y NTFS en Windows) extienden el modelo tradicional de permisos propietario/grupo/otros. Permiten definir reglas granulares específicas para usuarios o grupos adicionales que no sean los propietarios del archivo, otorgando permisos de lectura, escritura o ejecución independientes. Esto es esencial en entornos corporativos donde la estructura organizativa no coincide exactamente con la jerarquía clásica de Unix.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) RAID:</strong> Es una tecnología de redundancia física de discos para disponibilidad y rendimiento, no tiene relación con la gestión lógica de permisos de usuarios sobre archivos.
+*   <strong>C) Desfragmentación:</strong> Optimiza la ubicación física de los datos en el disco para mejorar la velocidad de lectura (en HDDs), pero no altera quién puede acceder a qué archivo.
+*   <strong>D) Cifrado a nivel de disco:</strong> Protege la confidencialidad de los datos si el hardware es robado, pero una vez desbloqueado el sistema, los permisos internos siguen siendo gestionados por el usuario/grupo estándar o ACLs, no por el cifrado per se.</p>
+<hr />
+<h3>PREGUNTA 8 - Operadores de Búsqueda Técnica Avanzada</h3>
+<p><strong>Respuesta Correcta: A (<code>site:edu "Java" -forum</code>)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Este operador combina filtrado por dominio y exclusión de términos para refinar resultados. <code>site:edu</code> restringe la búsqueda exclusivamente a dominios educativos (.edu), garantizando fuentes académicas o institucionales oficiales. El operador <code>-</code> funciona como un "NOT", excluyendo resultados que contengan la palabra "forum". Esto elimina foros comerciales, blogs personales y sitios de soporte no verificados, dejando solo documentación técnica oficial de instituciones educativas, ideal para investigación académica.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>B) <code>filetype:pdf</code>:</strong> Filtra el formato pero no garantiza la fuente ni excluye foros. Un PDF en un foro comercial aparecería igual que uno educativo.
+*   <strong>C) <code>inurl:"java.com"</code>:</strong> Limita la búsqueda a un dominio específico (<code>java.com</code>), ignorando toda la documentación educativa alojada en universidades o repositorios académicos que no usen ese dominio.
+*   <strong>D) <code>"Java documentation" AND "tutorial"</code>:</strong> Es una búsqueda booleana básica que puede devolver resultados de cualquier sitio web, incluyendo foros y blogs sin verificar, ya que no filtra por tipo de dominio.</p>
+<hr />
+<h3>PREGUNTA 9 - Modelos de Distribución Comercial</h3>
+<p><strong>Respuesta Correcta: C (SaaS - Software as a Service)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El modelo <strong>SaaS</strong> describe una arquitectura donde el software se aloja en la nube y se consume como servicio vía internet, sin necesidad de instalación local. El proveedor gestiona la infraestructura, las actualizaciones, la seguridad y el mantenimiento. Esto se alinea perfectamente con el escenario descrito: "no requiere instalación local", "acceso vía navegador" y "proveedor gestiona actualizaciones". Reduce la carga operativa para la startup (DevOps externo).</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) Freeware:</strong> Se refiere a software gratuito, pero generalmente implica una instalación local o ejecución en el dispositivo del usuario. No describe necesariamente el modelo de gestión en la nube ni la ausencia de instalación.
+*   <strong>B) Shareware:</strong> Es un modelo de prueba limitada ("try before you buy") que requiere descarga e instalación.
+*   <strong>D) Open Source:</strong> Se refiere a la disponibilidad del código fuente, no al modelo de negocio o distribución (un software puede ser Open Source y SaaS, pero el término "SaaS" describe específicamente la arquitectura de entrega descrita).</p>
+<hr />
+<h3>PREGUNTA 10 - Seguridad en Protocolos de Transferencia</h3>
+<p><strong>Respuesta Correcta: B (Puerto 990 con TLS/SSL en ambos canales)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Esta opción describe correctamente <strong>FTPS</strong> (FTP sobre SSL/TLS) en modo implícito. El puerto <strong>990</strong> es el estándar para la conexión de control segura de FTPS. Al usar TLS/SSL, tanto los comandos de control como los datos transferidos se cifran, protegiendo las credenciales y el contenido del tráfico de red. Es la alternativa segura al FTP tradicional cuando se necesita compatibilidad con protocolos específicos de transferencia de directorios que HTTPS no soporta nativamente de la misma manera.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) Puerto 21 + 20 sin cifrado:</strong> Describe el FTP estándar, donde las credenciales y datos viajan en texto plano, siendo vulnerables a sniffing en redes corporativas.
+*   <strong>C) Puerto 80 (HTTP):</strong> HTTP no es seguro por defecto y no gestiona sesiones de transferencia complejas como FTP. Aunque se puede usar para subir archivos, no garantiza cifrado ni autenticación robusta sin HTTPS.
+*   <strong>D) Puerto 443 (HTTPS):</strong> Aunque es seguro, está diseñado para web, no específicamente para transferencias FTP. Además, la opción menciona "solo para archivos de texto", lo cual es incorrecto; HTTPS puede transferir cualquier tipo de archivo binario cifrado.</p>
+<hr />
+<h3>PREGUNTA 11 - Gestión de Procesos y Monitorización</h3>
+<p><strong>Respuesta Correcta: B (<code>top</code> / <code>htop</code> o Task Manager)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+Las herramientas <strong>CLI de monitorización de procesos</strong> como <code>top</code>, <code>htop</code> (Linux) o el Administrador de Tareas (Windows) están diseñadas específicamente para leer las métricas del kernel en tiempo real. Permiten visualizar qué proceso está consumiendo recursos de CPU, memoria y E/S, ordenando la lista dinámicamente por uso. Esto es esencial para identificar cuellos de botella donde una aplicación podría estar causando un bucle infinito o una fuga de memoria.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) <code>dir</code> / <code>ls</code>:</strong> Son comandos de listado de archivos en el sistema de archivos, no muestran métricas de rendimiento del procesador ni gestión de procesos activos.
+*   <strong>C) <code>ping</code> / <code>tracert</code>:</strong> Son herramientas de diagnóstico de red (capa 3/4), útiles para verificar conectividad y latencia entre nodos, pero no miden el uso local de CPU.
+*   <strong>D) <code>ipconfig</code> / <code>ifconfig</code>:</strong> Muestran la configuración de interfaces de red (IP, MAC, máscara), irrelevantes para el diagnóstico de consumo de recursos del sistema operativo.</p>
+<hr />
+<h3>PREGUNTA 12 - Estrategia de Copias de Seguridad</h3>
+<p><strong>Respuesta Correcta: B (3 copias en 2 medios diferentes - 1 fuera del sitio)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La regla <strong>3-2-1</strong> es el estándar de la industria para recuperación ante desastres (DRP). Significa: mantener <strong>3</strong> copias totales de los datos, almacenadas en <strong>2</strong> medios diferentes (ej. Disco Local + Nube o NAS), con al menos <strong>1</strong> copia guardada fuera del sitio físico principal (para protegerse contra incendios, robos o desastres naturales). Esta redundancia garantiza que la pérdida de un medio no resulte en pérdida total de datos.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) 2 copias en 1 medio:</strong> Incumple la regla de medios diferentes y cantidad mínima. Si el medio falla, se pierden las dos copias.
+*   <strong>C) 5 copias en 1 servidor en la nube:</strong> Aunque hay muchas copias, todas están en "un solo medio" (la infraestructura del proveedor). Si el servicio de nube falla o es atacado, todos los datos se pierden simultáneamente (viola el principio de medios diferentes/ubicación física).
+*   <strong>D) 1 copia local + 1 en USB portátil:</strong> Solo suma 2 copias totales y ambos medios suelen estar físicamente cerca (en la oficina), fallando el criterio de "fuera del sitio".</p>
+<hr />
+<h3>PREGUNTA 13 - Formatos de Archivo y Preservación Digital</h3>
+<p><strong>Respuesta Correcta: D (.pdf/a)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+El estándar <strong>PDF/A</strong> (ISO 19005) está diseñado específicamente para la preservación digital a largo plazo. A diferencia del PDF normal, PDF/A incrusta todos los recursos necesarios (fuentes, metadatos, perfiles de color) dentro del archivo, eliminando dependencias externas que podrían dejar el documento ilegible en el futuro si se pierden las fuentes o software específico. Es el formato preferido para archivos legales y técnicos institucionales.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) .docx:</strong> Aunque es un estándar abierto (Office Open XML), sigue dependiendo de la interpretación del renderizador de Microsoft u otros, y puede tener problemas de compatibilidad visual a décadas vista si las especificaciones cambian. Además, el formato binario original de Office (.doc) es propietario.
+*   <strong>B) .odt:</strong> Es un formato abierto excelente para edición, pero menos universal que PDF para la <em>visualización</em> definitiva. Para preservar "cómo se ve" el documento exactamente, PDF/A es superior.
+*   <strong>C) .rtf:</strong> Es un formato antiguo con limitaciones en soporte moderno de fuentes y diseño complejo. No tiene estándares de preservación robustos como ISO 19005.</p>
+<hr />
+<h3>PREGUNTA 14 - Protocolos de Mensajería y Encriptación E2EE</h3>
+<p><strong>Respuesta Correcta: C (Encriptación de Extremo a Extremo - E2EE)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La <strong>E2EE</strong> garantiza que los datos se cifran en el dispositivo del remitente y solo se descifran en el dispositivo del receptor. Las claves privadas nunca salen de los dispositivos finales, lo que implica técnicamente que ni siquiera el servidor intermediario (el proveedor del servicio) tiene la capacidad criptográfica para leer el contenido de los mensajes. Esto cumple estrictamente con el requisito de "ni siquiera el proveedor pueda leer".</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) TLS/SSL en transporte:</strong> Cifra la conexión entre el cliente y el servidor, pero una vez que el mensaje llega al servidor para ser reenviado, se descifra aquí. El proveedor del servicio podría acceder a los datos en este punto (ej. Google puede leer correos SMTP no E2EE).
+*   <strong>B) Autenticación OAuth2:</strong> Es un protocolo de autorización para permitir acceso seguro a APIs, no un método de cifrado de contenido de mensajes.
+*   <strong>D) Firewall perimetral:</strong> Protege la red contra accesos externos, pero no encripta el contenido interno que viaja entre usuarios legítimos del servicio.</p>
+<hr />
+<h3>PREGUNTA 15 - Mantenimiento Preventivo y SSDs</h3>
+<p><strong>Respuesta Correcta: B (Desfragmentación periódica)</strong></p>
+<p><strong>Justificación Técnica Detallada:</strong>
+La <strong>desfragmentación</strong> es una técnica diseñada para discos duros mecánicos (HDD) donde los datos se almacenan en pistas magnéticas. Al mover fragmentos de archivos contiguamente, se reduce el movimiento del cabezal de lectura y mejora el rendimiento. En <strong>SSDs</strong>, no hay partes móviles; el acceso a cualquier celda es instantáneo. Además, la desfragmentación genera escrituras innecesarias que consumen los ciclos de escritura limitados del SSD, reduciendo su vida útil. Los sistemas modernos detectan esto automáticamente y ejecutan TRIM en lugar de defrag.</p>
+<p><strong>Análisis de Distractores:</strong>
+*   <strong>A) Actualización de firmas antivirus:</strong> Siempre necesaria para proteger contra malware, independientemente del tipo de disco.
+*   <strong>C) Verificación de espacio en disco:</strong> Útil para evitar fallos por falta de espacio en el sistema operativo, aplicable a cualquier almacenamiento.
+*   <strong>D) Limpieza de archivos temporales:</strong> Mejora el rendimiento general y libera espacio, recomendado tanto para HDD como SSD.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">B) SOLUCIONES CASOS PRÁCTICOS DE DEBUGGING Y REFACTORIZACIÓN (EXPANSIÓN PEDAGÓGICA)</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">CASO PRÁCTICO 1: SCRIPT FTP - CORRECCIONES Y ARQUITECTURA SEGURA</p>
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <h4>Análisis Detallado de los Errores y Razonamiento Técnico</h4>
+<p><strong>Error 1: Referencia a módulo no importado (<code>sys.user_name</code>)</strong>
+*   <strong>Razón del Error:</strong> El script intenta acceder al nombre de usuario del sistema operativo actual, pero la librería <code>sys</code> no ha sido importada. Además, el atributo correcto para obtener el nombre de usuario en Python suele ser <code>os.getlogin()</code> o variables de entorno.
+*   <strong>Solución Técnica:</strong> Importar los módulos necesarios (<code>os</code>, <code>sys</code>) y preferiblemente usar variables de entorno (<code>os.environ</code>) para evitar hardcodear credenciales. Esto separa la configuración del código.</p>
+<p><strong>Error 2: Credenciales Hardcodeadas (Vulnerabilidad Crítica)</strong>
+*   <strong>Razón del Error:</strong> La contraseña <code>"password123"</code> está escrita en texto plano dentro del script. Si el repositorio de código se comparte, cualquiera puede verla. Además, es inseguro cambiar la contraseña sin editar el código fuente cada vez.
+*   <strong>Solución Técnica:</strong> Implementar gestión segura de secretos usando variables de entorno o herramientas como <code>python-dotenv</code>. En un entorno real, esto debería integrarse con un gestor de secretos (AWS Secrets Manager, HashiCorp Vault).</p>
+<p><strong>Error 3: Falta de Manejo de Directorios (<code>ftp.cwd</code>)</strong>
+*   <strong>Razón del Error:</strong> El comando <code>cwd</code> intenta cambiar al directorio especificado. Si el directorio no existe en el servidor FTP, la conexión lanzará una excepción y el script fallará silenciosamente o se cortará.
+*   <strong>Solución Técnica:</strong> Implementar un bloque <code>try-except</code> alrededor de <code>cwd</code>. Si falla con error de permisos o no encontrado (<code>ftplib.error_perm</code>), crear el directorio usando <code>ftp.mkd()</code> antes de intentar acceder a él nuevamente.</p>
+<p><strong>Error 4: Formato Incorrecto en <code>storbinary</code></strong>
+*   <strong>Razón del Error:</strong> El método <code>storbinary</code> espera el nombre del archivo remoto como primer argumento (string) y el objeto archivo abierto como segundo. En el código original, se pasa una f-string con la variable de archivo (<code>archivo</code>) dentro del comando, lo cual es sintácticamente incorrecto para FTP (no debe enviarse la ruta local al servidor).
+*   <strong>Solución Técnica:</strong> Utilizar <code>os.path.basename(archivo_local)</code> para extraer solo el nombre del archivo y pasarlo como string al comando STOR.</p>
+<p><strong>Error 5: Sintaxis de Python (<code>__name__</code>)</strong>
+*   <strong>Razón del Error:</strong> En la línea <code>if __name__ == "__main":</code>, falta un guion bajo final. La variable mágica en Python es <code>__main__</code>. El error de sintaxis evitará que el script se ejecute directamente como programa independiente.</p>
+<h4>Solución Completa y Mejora de Seguridad (Código Refactorizado)</h4>
+<pre><code class="language-python"># archivo: transferencia_documentacion_segura.py
+import ftplib
+import os
+import sys
+from dotenv import load_dotenv  # Requiere instalar python-dotenv
+
+# Cargar variables de entorno desde .env (seguridad mejorada)
+load_dotenv()
+
+def transferir_archivo(archivo_local, ruta_servidor):
+    &quot;&quot;&quot;Transfiere un archivo a servidor FTP con manejo seguro de errores&quot;&quot;&quot;
+
+    HOST = os.getenv(&#x27;FTP_HOST&#x27;, &#x27;ftp.empresa.com&#x27;)
+    # Obtener credenciales desde entorno en lugar de hardcodear
+    USUARIO = os.getenv(&#x27;FTP_USER&#x27;)
+    CONTRASEÑA = os.getenv(&#x27;FTP_PASSWORD&#x27;)
+
+    if not USUARIO or not CONTRASEÑA:
+        print(&quot;Error: Credenciales no encontradas en variables de entorno.&quot;)
+        return False
+
+    try:
+        ftp = ftplib.FTP(HOST, timeout=10)
+
+        # Login seguro (las credenciales vienen de memoria, no del texto plano)
+        ftp.login(user=USUARIO, passwd=CONTRASEÑA)
+
+        # Intentar cambiar directorio, crear si no existe
+        try:
+            ftp.cwd(ruta_servidor)
+        except ftplib.error_perm:
+            print(f&quot;Directorio {ruta_servidor} no existe. Creando...&quot;)
+            ftp.mkd(ruta_servidor)
+            ftp.cwd(ruta_servidor)
+
+        # Extraer solo el nombre del archivo para subirlo al servidor
+        nombre_archivo = os.path.basename(archivo_local)
+
+        with open(archivo_local, &#x27;rb&#x27;) as archivo:
+            # Corregido: Pasar string con nombre remoto y objeto de archivo
+            ftp.storbinary(f&#x27;STOR {nombre_archivo}&#x27;, archivo)
+
+        print(&quot;Transferencia exitosa.&quot;)
+        return True
+
+    except ftplib.error_perm as e:
+        print(f&quot;Error de permisos FTP: {e}&quot;)
+        return False
+    except ConnectionRefusedError:
+        print(&quot;No se pudo conectar al servidor FTP. Verifique HOST y red.&quot;)
+        return False
+    except FileNotFoundError:
+        print(f&quot;El archivo local &#x27;{archivo_local}&#x27; no existe.&quot;)
+        return False
+    except Exception as e:
+        # Logging de error genérico (en producción usar logging module)
+        print(f&quot;Error inesperado: {e}&quot;)
+        return False
+
+if __name__ == &quot;__main__&quot;:  # Corregido: doble guion bajo al final
+    # Validación básica de archivos antes de ejecutar
+    if os.path.exists(&quot;documentacion.pdf&quot;):
+        transferir_archivo(&quot;documentacion.pdf&quot;, &quot;/public/docs&quot;)
+    else:
+        print(&quot;Archivo no encontrado en el directorio local.&quot;)</code></pre>
+
+<h4>Explicación de Mejoras Arquitectónicas</h4>
+<ol>
+<li><strong>Seguridad de Credenciales:</strong> Se eliminó <code>password = "texto"</code> y se reemplazó por <code>os.getenv()</code>. Esto permite cambiar la contraseña sin tocar el código, cumpliendo con estándares de seguridad DevOps (Secrets Management).</li>
+<li><strong>Manejo Robusto de Errores:</strong> En lugar de un <code>except Exception</code> genérico que oculta detalles, se han creado bloques específicos (<code>error_perm</code>, <code>ConnectionRefusedError</code>). Esto facilita el debugging en producción al saber exactamente qué tipo de fallo ocurrió.</li>
+<li><strong>Validación de Archivos:</strong> Se verificó la existencia del archivo antes de intentar abrirlo para evitar excepciones por <code>FileNotFoundError</code> dentro del bloque principal, mejorando la experiencia del usuario.</li>
+</ol>
+<hr />
+<h3>CASO PRÁCTICO 2: DISEÑO DE CLASE PARA DOCUMENTACIÓN TÉCNICA (REFACORIZACIÓN)</h3>
+<h4>Razonamiento de Diseño Orientado a Objetos (OOD)</h4>
+<p>El código original presenta un diseño frágil basado en atributos públicos directos y setters básicos. Para una aplicación DAM profesional, debemos aplicar los principios de encapsulamiento, inmutabilidad donde sea posible y tipado estricto.</p>
+<ol>
+<li><strong>Encapsulamiento:</strong> Los atributos <code>titulo</code> y <code>autor</code> deben ser privados (<code>_titulo</code>) para controlar su acceso mediante propiedades (getters/setters). Esto permite validar datos antes de asignarlos.</li>
+<li><strong>Tipos Seguros:</strong> Usar un <code>Enum</code> para el estado del documento evita errores por cadenas mal escritas ("APROBADO" vs "Aprobado").</li>
+<li><strong>Trazabilidad:</strong> Se añaden metadatos automáticos (<code>fecha_creacion</code>, <code>version_actual</code>) que son críticos en gestión documental técnica (Control de Versiones).</li>
+</ol>
+<h4>Solución Completa con Patrones de Diseño</h4>
+<pre><code class="language-python">from datetime import datetime
+from enum import Enum, auto
+
+# Patrón: Enum para estados definidos y seguros
+class EstadoDocumento(Enum):
+    BORRADOR = &quot;Borrador&quot;
+    REVISION = &quot;En Revisión&quot;
+    APROBADO = &quot;Aprobado&quot;
+    PUBLICADO = &quot;Publicado&quot;
+
+# Patrón: Clase Separada para Versiones (Single Responsibility)
+class Version:
+    def __init__(self, major=1, minor=0):
+        self.major = major
+        self.minor = minor
+
+    def increment(self, minor_only=True):
+        &quot;&quot;&quot;Incrementa la versión según estrategia SemVer&quot;&quot;&quot;
+        if minor_only:
+            self.minor += 1
+        else:
+            self.major += 1
+            self.minor = 0
+        return f&quot;{self.major}.{self.minor}&quot;
+
+class DocumentacionTecnica:
+    def __init__(self, titulo, autor=&quot;Desconocido&quot;):
+        # Validación en constructor (Fail Fast)
+        if not isinstance(titulo, str) or len(titulo.strip()) == 0:
+            raise ValueError(&quot;El título no puede estar vacío&quot;)
+
+        self._titulo = titulo.strip()
+        self._autor = autor.strip() if isinstance(autor, str) else &quot;Desconocido&quot;
+
+        # Metadatos de trazabilidad (RA7 - Documentación Técnica)
+        self.version_actual = Version(1, 0)
+        self.fecha_creacion = datetime.now()
+        self.fecha_ultima_modificacion = None
+        self.estado = EstadoDocumento.BORRADOR
+
+    @property
+    def titulo(self):
+        return self._titulo
+
+    @titulo.setter
+    def titulo(self, valor):
+        &quot;&quot;&quot;Setter con validación de integridad&quot;&quot;&quot;
+        if not isinstance(valor, str) or len(valor.strip()) == 0:
+            raise ValueError(&quot;El título debe ser un string no vacío&quot;)
+
+        # Registrar hora de modificación para auditoría
+        self.fecha_ultima_modificacion = datetime.now()
+        self._titulo = valor.strip()
+
+    @property
+    def autor(self):
+        return self._autor
+
+    @autor.setter
+    def autor(self, valor):
+        if not isinstance(valor, str) or len(valor.strip()) == 0:
+            raise ValueError(&quot;El autor debe ser un string no vacío&quot;)
+        self._autor = valor.strip()
+
+    def actualizar_version(self, minor=True):
+        &quot;&quot;&quot;Gestiona la evolución del documento&quot;&quot;&quot;
+        nueva_versao = self.version_actual.increment(minor)
+        self.estado = EstadoDocumento.REVISION # Cambia estado automáticamente
+        return f&quot;Versión actualizada a {nueva_versao}&quot;
+
+    def aprobar_documento(self):
+        &quot;&quot;&quot;Valida y cambia el estado del documento&quot;&quot;&quot;
+        if self.fecha_ultima_modificacion is None:
+            raise ValueError(&quot;Debe haber modificaciones antes de aprobar&quot;)
+        self.estado = EstadoDocumento.APROBADO
+
+    # Patrón: Representación legible para logs/diagnóstico
+    def __str__(self):
+        return (f&quot;=== Documento Técnico ===\n&quot;
+                f&quot;Título: {self._titulo}\n&quot;
+                f&quot;Autor:  {self._autor}\n&quot;
+                f&quot;Versión: {self.version_actual.major}.{self.version_actual.minor}\n&quot;
+                f&quot;Estado:  {self.estado.value}\n&quot;
+                f&quot;Creado:  {self.fecha_creacion.strftime(&#x27;%Y-%m-%d %H:%M&#x27;)}\n&quot;
+                f&quot;Modif.:  {self.fecha_ultima_modificacion.strftime(&#x27;%Y-%m-%d %H:%M&#x27;) if self.fecha_ultima_modificacion else &#x27;Nunca&#x27;}&quot;)
+
+# Uso Corregido y Validado
+if __name__ == &quot;__main__&quot;:
+    try:
+        doc = DocumentacionTecnica(titulo=&quot;API v1 - Autenticación&quot;, autor=&quot;DevTeam DAM&quot;)
+
+        # Modificación controlada
+        doc.titulo = &quot;API v2.0 - Autenticación y Seguridad&quot;
+
+        print(doc)  # Uso de __str__ para impresión legible
+
+        # Ciclo de vida del documento (RA7)
+        nueva_ver = doc.actualizar_version(minor=True)
+        print(f&quot;\n{doc}&quot;)
+
+    except ValueError as e:
+        print(f&quot;Error de validación: {e}&quot;)</code></pre>
+
+<h4>Justificación Técnica de las Mejoras para RA7</h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Propósito Técnico</th>
+<th>Beneficio para el Ciclo de Vida del Software (SDLC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clase <code>Version</code> Separada</strong></td>
+<td>Encapsula la lógica numérica de versiones.</td>
+<td>Permite reutilizar la lógica de versionado en otros módulos y facilita pruebas unitarias.</td>
+</tr>
+<tr>
+<td><strong>Enum para Estado</strong></td>
+<td>Define un conjunto cerrado de estados posibles.</td>
+<td>Elimina errores de <em>typos</em> ("publicad" vs "Publicado") que causarían fallos lógicos en flujos de trabajo automatizados.</td>
+</tr>
+<tr>
+<td><strong>Propiedades @property</strong></td>
+<td>Controla el acceso y modificación de atributos.</td>
+<td>Permite añadir lógica (como registrar la hora de modificación) cada vez que se cambia un dato, asegurando auditoría sin exponer datos privados.</td>
+</tr>
+<tr>
+<td><strong>Validación en Setters</strong></td>
+<td>Garantiza integridad de los datos ingresados.</td>
+<td>Previene la creación de objetos "basura" con títulos vacíos o autores nulos, manteniendo el estado válido del sistema documentacional.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>PARTE IV: CRITERIOS DE EVALUACIÓN Y RÚBRICA GLOBAL (AUDITADA)</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Rúbrica de Evaluación RA7 - Banco de Preguntas (30 puntos)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+<th>Descripción Detallada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conocimiento Teórico</strong></td>
+<td>15 pts</td>
+<td>Respuestas correctas en test. Se valora la comprensión profunda de protocolos y licencias, no solo memoria.</td>
+</tr>
+<tr>
+<td><strong>Análisis Técnico</strong></td>
+<td>15 pts</td>
+<td>Capacidad para identificar errores en código y justificar soluciones basadas en estándares (RA7).</td>
+</tr>
+</tbody>
+</table>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Rúbrica de Evaluación Casos Prácticos (40 puntos)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+<th>Descripción Detallada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identificación de Errores</strong></td>
+<td>20 pts</td>
+<td>Detectar bugs lógicos, sintácticos y de seguridad en el código proporcionado.</td>
+</tr>
+<tr>
+<td><strong>Propuesta de Solución</strong></td>
+<td>10 pts</td>
+<td>Código corregido funcional, seguro (sin credenciales hardcodeadas) y robusto.</td>
+</tr>
+<tr>
+<td><strong>Mejora Arquitectónica</strong></td>
+<td>10 pts</td>
+<td>Diseño de clases con patrones adecuados (OOP), validación de datos y documentación interna.</td>
+</tr>
+</tbody>
+</table>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-8')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                09
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Rúbrica Global RA7 (30 puntos restantes)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-8" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-8" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+<th>Descripción Detallada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentación Técnica</strong></td>
+<td>10 pts</td>
+<td>Calidad del informe final, uso correcto de formatos y estructura lógica.</td>
+</tr>
+<tr>
+<td><strong>Uso de Herramientas</strong></td>
+<td>10 pts</td>
+<td>Aplicación práctica de CLI, Git y herramientas ofimáticas según el entorno DAM.</td>
+</tr>
+<tr>
+<td><strong>Seguridad y Cumplimiento</strong></td>
+<td>10 pts</td>
+<td>Implementación de buenas prácticas (E2EE, Backups, Licencias) en las soluciones propuestas.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>NOTAS FINALES PARA EL DOCENTE Y AUDITORÍA DE CALIDAD</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-9')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                10
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Recomendaciones de Implementación Pedagógica</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-9" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-9" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ol>
+<li><strong>Adaptabilidad:</strong> Este banco de evaluación puede dividirse en dos exámenes parciales (Teoría + Práctica) o mantenerse como evaluación única final, dependiendo del ritmo del curso.</li>
+<li><strong>Nivel de Dificultad:</strong> Las preguntas del test están diseñadas para distinguir entre conocimiento superficial y comprensión arquitectónica profunda. Se recomienda ajustar tiempos según el rendimiento medio del grupo en sesiones prácticas previas.</li>
+<li><strong>Casos Prácticos:</strong> Los errores en los casos deben ser visibles pero no obvios, requiriendo análisis técnico real. El solucionario ampliado debe usarse como guía para la retroalimentación en clase, explicando <em>por qué</em> falló el código original y <em>cómo</em> se construye uno seguro.</li>
+<li><strong>Solucionario Expandido:</strong> Este documento ha sido diseñado para servir como material de estudio autónomo. Los estudiantes pueden utilizar las justificaciones detalladas para repasar conceptos antes de exámenes finales o certificaciones profesionales.</li>
+<li><strong>Actualización Continua:</strong> El banco debe revisarse anualmente (versión 202X) para mantenerse actualizado con versiones recientes de protocolos (TLS 1.3), lenguajes (Python 3.12+) y estándares de seguridad.</li>
+</ol>
+<hr />
+<p><strong>Documento generado bajo licencia educativa FP-DAM</strong><br />
+<strong>Versión del Evaluación: 3.0 (Auditoría Expandida)</strong> | <strong>Fecha:</strong> Octubre 2024<br />
+<em>Fin del Banco de Evaluación RA7 - Sistemas Informáticos (DAM)</em></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
