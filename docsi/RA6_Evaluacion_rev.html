@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BANCO DE EVALUACIÓN RA6: OPERACIÓN DE SISTEMAS EN RED Y SEGURIDAD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 999999px; /* Huge limit to prevent text cut-off */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA6.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA6</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">BANCO DE EVALUACIÓN RA6: OPERACIÓN DE SISTEMAS EN RED Y SEGURIDAD</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Módulo: Sistemas Informáticos | Especialidad: DAM (Grado Superior)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Documento Oficial de Evaluación para el Resultado de Aprendizaje 6</strong><br />
+<strong>Versión:</strong> 3.0 (Auditoría y Expansión Didáctica) | <strong>Autor:</strong> Auditor Exhaustivo de Evaluación y Calidad de FP-DAM<br />
+<strong>Fecha:</strong> Enero 2025<br />
+<strong>Estado:</strong> Validado y Ampliado para Estudio Profundo</p>
+<hr />
+<h1>PARTE 1: EXAMEN TIPO TEST DE ALTA DIFICULTAD (15 PREGUNTAS)</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Instrucciones para el Alumno</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Tiempo Estimado:</strong> 45 minutos<br />
+<strong>Puntuación Máxima:</strong> 30 puntos (2 puntos por pregunta)<br />
+<strong>Instrucciones:</strong> Seleccione la única opción correcta. Cada respuesta incorrecta resta 0.5 puntos a la puntuación total.</p>
+<hr />
+<h3>CUESTIONARIO DE EVALUACIÓN TEÓRICO-PRÁCTICA RA6</h3>
+<p><em>(Texto optimizado para claridad técnica y precisión según Manual Enciclopédico)</em></p>
+<p><strong>1. En el contexto de gestión de memoria virtual en sistemas operativos modernos, ¿cuál es el impacto directo de utilizar un algoritmo de paginación con "thrashing" extremo?</strong></p>
+<p>A) Aumenta la velocidad de respuesta del sistema al priorizar procesos interactivos<br />
+B) Reduce drásticamente el rendimiento debido a la sobrecarga de operaciones de I/O en disco<br />
+C) Mejora la seguridad al cifrar automáticamente las páginas no utilizadas en memoria RAM<br />
+D) Permite ejecutar más aplicaciones simultáneamente sin límite físico de RAM  </p>
+<p><strong>2. Un administrador de sistemas observa que un servidor Linux presenta errores de permisos al acceder a archivos compartidos vía NFS. ¿Cuál es el identificador fundamental que el sistema operativo utiliza para controlar estos accesos?</strong></p>
+<p>A) Nombre de usuario en texto plano<br />
+B) UID/GID (User/Group Identifier numérico)<br />
+C) Dirección MAC del cliente conectado<br />
+D) Contraseña temporal generada por el servicio de directorio  </p>
+<p><strong>3. En el modelo TCP/IP, cuando se realiza un análisis forense de red y se identifica tráfico UDP en el puerto 53 sin conexión previa establecida, ¿qué servicio está operando?</strong></p>
+<p>A) Servicio de resolución DNS en modo síncrono<br />
+B) Transferencia de archivos FTP con autenticación obligatoria<br />
+C) Correo electrónico SMTP con cifrado TLS<br />
+D) Conexión remota SSH con autenticación por clave pública  </p>
+<p><strong>4. ¿Cuál es la diferencia crítica entre un Hypervisor Tipo 1 y un Hipervisor Tipo 2 en el contexto de virtualización para entornos DAM?</strong></p>
+<p>A) El Tipo 1 se ejecuta sobre un SO anfitrión, mientras que el Tipo 2 ejecuta directamente sobre hardware<br />
+B) Ambos ofrecen idéntico rendimiento sin diferencias arquitectónicas significativas<br />
+C) El Tipo 1 ofrece mayor rendimiento al ejecutar directamente sobre hardware; el Tipo 2 es una aplicación del SO host<br />
+D) El Tipo 2 permite contenedores Docker, mientras que el Tipo 1 solo soporta máquinas virtuales completas  </p>
+<p><strong>5. En Windows Server, ¿qué estructura de datos única e inmutable se asigna a cada cuenta de usuario y grupo para garantizar la trazabilidad en auditorías de seguridad?</strong></p>
+<p>A) UID (User Identifier numérico)<br />
+B) SID (Security Identifier binario único)<br />
+C) MAC Address (Dirección física de red)<br />
+D) GID (Group Identifier numérico)  </p>
+<p><strong>6. Al configurar una subred IPv4 con máscara 255.255.255.0, ¿cuántas direcciones IP utilizables hay para hosts en esa subred?</strong></p>
+<p>A) 256 direcciones totales<br />
+B) 255 direcciones utilizables (1 reservada para broadcast)<br />
+C) 254 direcciones utilizables (1 para red y 1 para broadcast)<br />
+D) 253 direcciones utilizables (1 para router, 1 para DNS, 1 para broadcast)  </p>
+<p><strong>7. ¿Qué mecanismo de seguridad permite aplicar configuraciones uniformes a cientos de equipos dentro de un dominio Active Directory sin intervención manual en cada estación?</strong></p>
+<p>A) Listas de Control de Acceso DAC individuales<br />
+B) Directivas de Grupo (GPO - Group Policy Objects)<br />
+C) Contraseñas temporales por usuario<br />
+D) Cifrado de disco completo individual  </p>
+<p><strong>8. En el contexto de la triada CIA de seguridad informática, ¿qué propiedad se garantiza mediante la implementación de firmas digitales y hashes criptográficos?</strong></p>
+<p>A) Confidencialidad<br />
+B) Disponibilidad<br />
+C) Integridad<br />
+D) Autenticación no repudiable  </p>
+<p><strong>9. Cuando un firewall realiza "Inspección de Estado" (Stateful Inspection), ¿qué información mantiene para filtrar el tráfico de red?</strong></p>
+<p>A) Solo las direcciones IP de origen y destino<br />
+B) El estado de cada conexión activa (establecida, en espera, cerrada)<br />
+C) El contenido completo del paquete en texto plano<br />
+D) Las contraseñas de los usuarios conectados  </p>
+<p><strong>10. ¿Qué protocolo criptográfico se utiliza actualmente para asegurar la comunicación remota a consolas de servidores Linux, reemplazando completamente a Telnet?</strong></p>
+<p>A) RDP (Remote Desktop Protocol)<br />
+B) SSH (Secure Shell)<br />
+C) FTPS (FTP Seguro)<br />
+D) SNMPv3  </p>
+<p><strong>11. En la gestión de backups corporativos, ¿cuál es la principal ventaja de utilizar copias diferenciales frente a las incrementales?</strong></p>
+<p>A) Requieren menos espacio de almacenamiento total<br />
+B) La restauración es más rápida ya que solo se necesitan dos juegos de datos (completo + último diferencial)<br />
+C) Se realizan automáticamente cada hora sin intervención humana<br />
+D) No requieren verificación de integridad de los datos  </p>
+<p><strong>12. ¿Qué función cumple el servicio DNS en una red corporativa cuando falla la resolución de nombres pero la conectividad IP es funcional?</strong></p>
+<p>A) El tráfico de red continúa sin problemas porque se usa solo dirección IP<br />
+B) Los usuarios no pueden acceder a recursos por nombre aunque puedan conectar por IP directa<br />
+C) El firewall bloquea todo el tráfico automáticamente<br />
+D) Los servicios de correo electrónico dejan de funcionar inmediatamente  </p>
+<p><strong>13. En Linux, ¿qué comando permite verificar qué procesos están utilizando un puerto específico en la capa de transporte?</strong></p>
+<p>A) <code>netstat -anp</code> o <code>ss -tulpn</code><br />
+B) <code>ping -c 4 gateway</code><br />
+C) <code>ifconfig eth0</code><br />
+D) <code>ls -la /etc/network/</code>  </p>
+<p><strong>14. ¿Cuál es el riesgo principal al utilizar contraseñas en texto plano durante la autenticación de servicios de red?</strong></p>
+<p>A) Aumento del tiempo de respuesta del servidor<br />
+B) Interceptación por sniffers que pueden obtener credenciales legítimas<br />
+C) Reducción del ancho de banda disponible<br />
+D) Incremento del uso de CPU en el cliente  </p>
+<p><strong>15. En un entorno de microservicios, ¿qué tecnología permite aislar espacios de usuario compartiendo el kernel del SO host sin virtualización completa?</strong></p>
+<p>A) Máquinas Virtuales con Hypervisor Tipo 2<br />
+B) Contenedores (Docker, Kubernetes)<br />
+C) Cifrado de disco completo BitLocker<br />
+D) Red privada virtual (VPN) site-to-site  </p>
+<hr />
+<h1>PARTE 2: CASOS PRÁCTICOS DE DEBUGGING Y REFACTORIZACIÓN</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Instrucciones para el Alumno</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Tiempo Estimado:</strong> 60 minutos por caso práctico<br />
+<strong>Puntuación Máxima:</strong> 40 puntos (20 puntos por caso)<br />
+<strong>Instrucciones:</strong> Analice el fragmento de código proporcionado, identifique los errores lógicos y/o de compilación, proponga la solución correcta y explique las razones técnicas.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CASO PRÁCTICO #1: DEBUGGING DE SCRIPT DE CONEXIÓN REMOTA (20 PUNTOS)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Contexto:</strong> Un desarrollador DAM ha creado un script en Python para verificar la conectividad con servidores de ficheros compartidos antes de iniciar una aplicación Java crítica. El sistema falla en producción y el equipo de operaciones reporta errores intermitentes.</p>
+<h3>Fragmento de Código Original (CON ERRORES):</h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+# Script: network_check_v1.py
+# Autor: Desarrollador Junior
+# Fecha: 2025-01-15
+
+import socket
+
+def check_server_connectivity(target_ip, target_port=445):
+    &quot;&quot;&quot;Verifica si un servidor de ficheros está accesible&quot;&quot;&quot;
+
+    # Crear socket TCP
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+    # Intentar conectar sin timeout definido
+    result = sock.connect_ex((target_ip, target_port))
+
+    if result == 0:
+        print(f&quot;[OK] Servidor {target_ip}:{target_port} accesible&quot;)
+        return True
+    else:
+        print(f&quot;[ERROR] Conexión fallida a {target_ip}&quot;)
+        return False
+
+    # Intentar cerrar el socket en un bloque finally
+    sock.close()
+
+def main():
+    servers = [
+        (&quot;192.168.50.20&quot;, 445),
+        (&quot;192.168.50.30&quot;, 3389),
+        (&quot;192.168.50.40&quot;, 22)
+    ]
+
+    for server in servers:
+        check_server_connectivity(server[0], server[1])
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+
+<h3>Tareas para el Alumno:</h3>
+<p><strong>A)</strong> Identifique al menos <strong>TRES errores técnicos o de lógica</strong> en el código proporcionado. (6 puntos)</p>
+<p><strong>B)</strong> Proponga una versión corregida del código que solucione los problemas identificados. (8 puntos)</p>
+<p><strong>C)</strong> Explique por qué cada corrección es necesaria desde el punto de vista de seguridad y estabilidad del sistema operativo. (6 puntos)</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CASO PRÁCTICO #2: DISEÑO DE CLASE PARA GESTIÓN DE PERMISOS EN RED (20 PUNTOS)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Contexto:</strong> Una aplicación multiplataforma necesita gestionar accesos a recursos compartidos en red de forma segura. El desarrollador debe crear una estructura de clases que implemente el principio de menor privilegio y valide permisos antes de acceder a archivos remotos.</p>
+<h3>Especificación Requerida:</h3>
+<ol>
+<li><strong>Clase <code>PermisoRed</code>:</strong> Debe almacenar información sobre permisos (lectura, escritura, ejecución)</li>
+<li><strong>Clase <code>RecursoRed</code>:</strong> Representa un recurso compartido en la red con ruta UNC/IP</li>
+<li><strong>Clase <code>GestorAccesoRed</code>:</strong> Valida si un usuario puede acceder a un recurso según sus permisos</li>
+</ol>
+<h3>Fragmento de Código Inicial (PARCIALMENTE CORRECTO):</h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+# Script: red_access_manager.py
+# Versión 1.0 - Necesita refactorización
+
+class PermisoRed:
+    def __init__(self, usuario):
+        self.usuario = usuario
+
+    def puede_leer(self):
+        return True
+
+    def puede_escribir(self):
+        return False
+
+
+class RecursoRed:
+    def __init__(self, ruta):
+        self.ruta = ruta
+
+
+class GestorAccesoRed:
+    def verificar_acceso(self, usuario, recurso):
+        # Verificación básica de permisos
+        if usuario.puede_leer():
+            print(f&quot;Acceso concedido a {recurso.ruta}&quot;)
+            return True
+        else:
+            print(&quot;Acceso denegado&quot;)
+            return False
+
+# Uso del sistema
+usuario = PermisoRed(&quot;dev_user_01&quot;)
+archivo = RecursoRed(&quot;\\\\192.168.50.20\\RecursosCompartidos\\datos.txt&quot;)
+gestor = GestorAccesoRed()
+
+if gestor.verificar_acceso(usuario, archivo):
+    print(&quot;Operación permitida&quot;)</code></pre>
+
+<h3>Tareas para el Alumno:</h3>
+<p><strong>A)</strong> Identifique <strong>TRES fallos de diseño o seguridad</strong> en la implementación actual. (6 puntos)</p>
+<p><strong>B)</strong> Reescriba el código con al menos las siguientes mejoras:
+- Implementar permisos específicos por recurso (no globales)
+- Añadir validación de rutas UNC válidas
+- Implementar el principio de menor privilegio correctamente (8 puntos)</p>
+<p><strong>C)</strong> Proponga una implementación adicional que registre en logs los intentos de acceso denegado para auditoría de seguridad. (6 puntos)</p>
+<hr />
+<h1>PARTE 3: SOLUCIONARIO DETALLADO PARA EL DOCENTE</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Justificación Técnica y Criterios de Evaluación</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <blockquote>
+<p><strong>Nota del Auditor:</strong> Este solucionario ha sido expandido drásticamente. Cada respuesta incluye una justificación teórica basada en el Manual Enciclopédico RA6, un análisis profundo de por qué la opción es correcta, y una explicación detallada sobre por qué cada distractor (opción incorrecta) representa un error conceptual común. Este material sirve como estudio autónomo avanzado.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIONARIO EXAMEN TIPO TEST (15 PREGUNTAS)</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Respuestas Correctas con Justificación Técnica Expandida</p>
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>#</th>
+<th>Opción</th>
+<th>Justificación Detallada para el Docente y Alumno</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> El "thrashing" (intercambio excesivo) ocurre cuando el Sistema Operativo dedica más tiempo a mover páginas entre memoria RAM y disco (Swap/Pagefile) que a ejecutar instrucciones. Según el Módulo 2 del Manual, esto sucede cuando hay demanda de memoria superior a la física disponible. La sobrecarga provienen de las operaciones intensivas de E/S (Input/Output) en el disco duro, que es orders de magnitud más lento que la RAM. Esto degrada el rendimiento hasta casi detener la ejecución.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Es incorrecto porque el thrashing <em>reduce</em> la velocidad de respuesta; el sistema se congela esperando datos del disco, no priorizando interactividad.&lt;br/&gt;• <strong>C)</strong> El cifrado de páginas es una función de seguridad (BitLocker/LUKS) pero no mejora el rendimiento ni resuelve el problema de falta de memoria física.&lt;br/&gt;• <strong>D)</strong> Es falso; el thrashing indica que se ha excedido el límite físico y virtual, impidiendo ejecutar más aplicaciones eficientemente.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> En Linux (Módulo 2), los permisos no se gestionan por nombres de usuario porque los nombres pueden cambiar o duplicarse en directorios distribuidos. El kernel utiliza identificadores numéricos enteros: UID para usuarios y GID para grupos. Estos identificadores son lo que el sistema operativo verifica realmente al controlar accesos a archivos (NFS/SMB).&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Los nombres en texto plano son solo una capa de abstracción (alias) creada por <code>/etc/passwd</code>, no la clave interna del kernel.&lt;br/&gt;• <strong>C)</strong> La MAC Address es para identificación física de red a nivel de Capa 2, no tiene relación con permisos de archivos a nivel de sistema operativo.&lt;br/&gt;• <strong>D)</strong> Las contraseñas son para autenticación (verificar identidad), pero una vez autenticado, el SO usa UID/GID para autorizar acciones.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>A</strong></td>
+<td><strong>Justificación de la Correcta:</strong> DNS utiliza UDP en el puerto 53 por defecto para consultas rápidas y síncronas. No requiere establecer una conexión TCP persistente (sin "handshake" previo como en TCP). Si se ve tráfico UDP/53, es resolución de nombres.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>B)</strong> FTP usa puertos 20 y 21, y generalmente opera sobre TCP para asegurar la transferencia de datos.&lt;br/&gt;• <strong>C)</strong> SMTP (Correo) opera en el puerto 25 o 465/587 (TLS), siempre sobre TCP por fiabilidad.&lt;br/&gt;• <strong>D)</strong> SSH usa el puerto 22, pero es estrictamente un protocolo orientado a conexión que requiere establecer un túnel seguro antes de transferir datos.</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>C</strong></td>
+<td><strong>Justificación de la Correcta:</strong> Según Módulo 2 (Virtualización), un Hypervisor Tipo 1 ("Bare Metal") se instala directamente sobre el hardware físico, eliminando la capa del SO anfitrión y ofreciendo máximo rendimiento para servidores de producción. Un Tipo 2 (ej. VirtualBox) vive como una aplicación dentro de un SO existente.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Es la definición invertida; el Tipo 1 es "Bare Metal", no sobre un SO anfitrión.&lt;br/&gt;• <strong>B)</strong> El rendimiento difiere significativamente debido a las capas de abstracción en el Tipo 2.&lt;br/&gt;• <strong>D)</strong> Ambos tipos pueden soportar máquinas virtuales completas. Los contenedores (Docker) son una forma distinta de virtualización ligera que no depende estrictamente del tipo de hypervisor, aunque suelen correr sobre un SO anfitrión Linux/Windows.</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> En Windows NT y versiones posteriores, cada cuenta tiene un SID (Security Identifier) único en formato binario. Este valor es inmutable durante la vida del objeto; si se clona un disco sin Sysprep, los SIDs cambian y rompen la seguridad. Es esencial para auditorías porque identifica al usuario más allá de su nombre.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> UID es el equivalente en Linux/Unix, no Windows.&lt;br/&gt;• <strong>C)</strong> MAC Address es física de red, irrelevante para la gestión de identidad lógica del sistema operativo.&lt;br/&gt;• <strong>D)</strong> GID es específico de Unix/Linux para grupos.</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>C</strong></td>
+<td><strong>Justificación de la Correcta:</strong> Una máscara /24 (255.255.255.0) deja 8 bits para hosts ($2^8 = 256$). Sin embargo, dos direcciones son reservadas: la primera es la Dirección de Red y la última es la Dirección de Broadcast. Por tanto: $256 - 2 = 254$ direcciones utilizables.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Cuenta todas las direcciones totales sin restar las reservadas.&lt;br/&gt;• <strong>B)</strong> Solo resta una (broadcast), olvidando la dirección de red.&lt;br/&gt;• <strong>D)</strong> Resta direcciones para router/DNS, pero estas se asignan <em>dentro</em> del rango usable, no son un descuento automático de la capacidad total.</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> Las GPO (Group Policy Objects) permiten centralizar la configuración de seguridad, software y entorno en Active Directory. Se aplican jerárquicamente (Dominio &gt; OU &gt; Sitio), garantizando coherencia sin tocar máquinas individuales.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> DAC es un modelo de permisos local por objeto, no una herramienta de gestión centralizada masiva.&lt;br/&gt;• <strong>C)</strong> Contraseñas temporales son para autenticación, no para configuración de sistema.&lt;br/&gt;• <strong>D)</strong> El cifrado individual requiere intervención en cada máquina o herramientas de gestión específicas (como BitLocker Management), pero GPO es el mecanismo nativo de AD para políticas.</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>C</strong></td>
+<td><strong>Justificación de la Correcta:</strong> Dentro de la Triada CIA, los hashes y firmas digitales protegen contra alteraciones no autorizadas. Si el hash del archivo recibido coincide con el original, se garantiza que el contenido es idéntico (Integridad).&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Confidencialidad se logra mediante cifrado, no hashing.&lt;br/&gt;• <strong>B)</strong> Disponibilidad se asegura con redundancia y backups.&lt;br/&gt;• <strong>D)</strong> Aunque la firma digital aporta "No Repudio" (responsabilidad), el hash en sí mismo es primariamente una herramienta de integridad. La opción C es la definición más directa de la función del hash.</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> La inspección stateful (con estado) mantiene una tabla de conexiones activas. Permite el tráfico entrante solo si pertenece a una conexión iniciada por un host interno, bloqueando intentos de conexión "puerta trasera" no solicitados.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Filtrado de paquetes básico (Stateless) usa solo IP/Puerto, sin contexto de estado.&lt;br/&gt;• <strong>C)</strong> Los firewalls no ven el contenido completo a menos que sea un Firewall de Aplicación (WAF/Proxy), lo cual es más costoso y complejo.&lt;br/&gt;• <strong>D)</strong> Un firewall filtra tráfico de red, no gestiona credenciales de usuario; esto corresponde al servicio de autenticación.</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> SSH (Secure Shell) cifra toda la sesión (comandos y salida), reemplazando Telnet que envía todo en texto plano. Es el estándar para administración remota segura.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> RDP es para escritorio gráfico, principalmente Windows.&lt;br/&gt;• <strong>C)</strong> FTPS es para transferencia de archivos, no consola remota completa.&lt;br/&gt;• <strong>D)</strong> SNMPv3 es para gestión de dispositivos (monitoreo), no acceso a consola.</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> En una estrategia diferencial, se guarda todo lo cambiado desde el último backup <em>completo</em>. Para restaurar, solo necesitas el último completo y el último diferencial. Esto es más rápido que incremental (que requiere encadenar todos los backups), aunque ocupa más espacio.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Ocupan <em>más</em> espacio que incrementales (guardan todo desde el full, no solo cambios desde el último backup).&lt;br/&gt;• <strong>C)</strong> La frecuencia depende de la configuración, no del tipo de backup.&lt;br/&gt;• <strong>D)</strong> La verificación es crítica en cualquier estrategia para asegurar integridad.</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> DNS traduce nombres a IPs. Si el servicio falla, las aplicaciones que dependen de resolución de nombre (navegadores, clientes de correo) no pueden iniciar la conexión lógica, aunque la red física y la IP estén operativas.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Falso; muchas aplicaciones requieren nombres, no IPs directas por usabilidad o configuración virtual host.&lt;br/&gt;• <strong>C)</strong> El firewall no bloquea tráfico automáticamente por fallo DNS; es un servicio de resolución.&lt;br/&gt;• <strong>D)</strong> El correo podría funcionar si usa IP directa, pero la mayoría requiere MX records (DNS).</td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td><strong>A</strong></td>
+<td><strong>Justificación de la Correcta:</strong> <code>netstat -anp</code> o <code>ss -tulpn</code> listan conexiones activas y los procesos asociados a puertos específicos en TCP/UDP. Es la herramienta estándar de diagnóstico.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>B)</strong> <code>ping</code> verifica conectividad ICMP, no mapeo de puertos/procesos.&lt;br/&gt;• <strong>C)</strong> <code>ifconfig</code> muestra configuración de interfaz IP/MAC, no conexiones activas.&lt;br/&gt;• <strong>D)</strong> <code>ls</code> solo lista archivos del sistema, no estado de red.</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> En texto plano, cualquier herramienta "sniffer" (como Wireshark) en el mismo segmento de red puede capturar los paquetes y leer las credenciales directamente, permitiendo suplantación de identidad.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> El tiempo de respuesta no aumenta significativamente por cifrado/des-cifrado; la seguridad es prioridad sobre rendimiento marginal.&lt;br/&gt;• <strong>C)</strong> El ancho de banda se ve minimamente afectado (overhead pequeño).&lt;br/&gt;• <strong>D)</strong> El uso de CPU es para el cifrado, pero el riesgo crítico es la interceptación.</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td><strong>B</strong></td>
+<td><strong>Justificación de la Correcta:</strong> Los contenedores (Módulo 2) comparten el kernel del host pero aíslan procesos y sistemas de archivos mediante namespaces y cgroups. Son más ligeros que VMs porque no virtualizan hardware.&lt;br/&gt;&lt;br/&gt;<strong>Análisis de Distractores:</strong>&lt;br/&gt;• <strong>A)</strong> Las VMs virtualizan hardware, consumiendo más recursos.&lt;br/&gt;• <strong>C)</strong> BitLocker es cifrado a nivel de disco, no aislamiento de ejecución.&lt;br/&gt;• <strong>D)</strong> VPN cifra tráfico en tránsito, no aísla espacios de usuario dentro del SO.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIONARIO CASO PRÁCTICO #1: DEBUGGING DE SCRIPT DE CONEXIÓN REMOTA</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">**A) Tres Errores Técnicos Identificados y Profundización**</p>
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Descripción Técnica Detallada</th>
+<th>Impacto en Producción (RA6 CE e/f)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Bloque <code>finally</code> mal ubicado / Lógica de Flujo</strong></td>
+<td>El código <code>sock.close()</code> está indentado <em>después</em> del bloque <code>if/else</code>, pero <em>antes</em> de ser ejecutado en caso de retorno o error. En realidad, el flujo salta al final de la función si se retorna <code>True</code> o <code>False</code>, dejando el socket abierto permanentemente. Además, no hay un bloque <code>try...finally</code> estructural para garantizar ejecución.</td>
+<td><strong>Fuga de Recursos (Resource Leak):</strong> El SO mantiene abiertos descriptores de archivo (sockets). En producción, esto agota los puertos disponibles (TIME_WAIT) o memoria del kernel, provocando caídas masivas del servicio tras miles de conexiones fallidas.</td>
+</tr>
+<tr>
+<td><strong>2. Ausencia de Timeout (<code>settimeout</code>)</strong></td>
+<td><code>sock.connect_ex()</code> sin timeout bloqueará indefinidamente si el servidor destino no responde (ej. cable desconectado, firewall silencioso). El hilo se queda "zombie" esperando respuesta TCP que nunca llega.</td>
+<td><strong>Condición de Carrera / Bloqueo:</strong> La aplicación principal se congela o consume CPU en espera inútil. En un entorno distribuido, esto causa cuellos de botella y tiempos de respuesta inaceptables (Deadlock potencial).</td>
+</tr>
+<tr>
+<td><strong>3. Manejo de Excepciones Incompleto</strong></td>
+<td>No hay bloques <code>try/except</code> para capturar fallos de red (<code>socket.timeout</code>, <code>socket.error</code>). Si ocurre un fallo de hardware o red, el script lanza una excepción no manejada y se detiene abruptamente sin registro.</td>
+<td><strong>Falta de Auditoría:</strong> El equipo de operaciones no sabe qué falló (¿Timeout? ¿Refused?). Sin logs estructurados, es imposible investigar incidentes forenses post-mortem.</td>
+</tr>
+</tbody>
+</table>
+<h3><strong>B) Versión Corregida del Código con Explicación Paso a Paso</strong></h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+# Script: network_check_v2.py (CORREGIDO - Nivel Auditoría RA6)
+import socket
+import logging
+from datetime import datetime
+
+# 1. CONFIGURACIÓN DE LOGGING PARA AUDITORÍA (RA6 CE e/f)
+logging.basicConfig(
+    level=logging.INFO,
+    format=&#x27;%(asctime)s [%(levelname)s] %(message)s&#x27;,
+    handlers=[
+        logging.FileHandler(&#x27;network_audit.log&#x27;), # Persistencia de logs
+        logging.StreamHandler()                   # Salida a consola
+    ]
+)
+logger = logging.getLogger(__name__)
+
+def check_server_connectivity(target_ip, target_port=445, timeout=2):
+    &quot;&quot;&quot;
+    Verifica conectividad con manejo robusto de recursos.
+
+    CORRECCIONES APLICADAS:
+    - Timeout definido para evitar bloqueos indefinidos (Seguridad RA6)
+    - Bloque try/finally para liberar sockets siempre
+    - Logging estructurado para auditoría forense
+    &quot;&quot;&quot;
+    sock = None  # Inicializar a None para seguridad en finally
+
+    try:
+        logger.info(f&quot;Intentando conectar a {target_ip}:{target_port}...&quot;)
+
+        # Crear socket TCP (Capa de Transporte - Módulo 3)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+        # IMPORTANTE: Definir timeout para evitar bloqueos indefinidos (Seguridad RA6 CE d)
+        # Esto evita que el hilo espere eternamente si hay un firewall silencioso.
+        sock.settimeout(timeout)
+
+        # Intentar conectar con manejo de excepciones
+        result = sock.connect_ex((target_ip, target_port))
+
+        if result == 0:
+            logger.info(f&quot;[OK] Servidor {target_ip}:{target_port} accesible&quot;)
+            return True
+
+    except socket.timeout as e:
+        # Captura específica para timeout (RA6 CE d - Gestión de Puertos)
+        logger.warning(f&quot;[TIMEOUT] La solicitud superó el tiempo límite ({timeout}s) para {target_ip}&quot;)
+
+    except socket.error as e:
+        # Captura genérica de errores de red (ej. Connection Refused, Network Unreachable)
+        logger.error(f&quot;[SOCKET_ERROR] Error de red detectado en {target_ip}: {e}&quot;)
+
+    finally:
+        # IMPORTANTE: Cerrar siempre en finally para liberar recursos del SO
+        # Esto previene fugas de memoria y agotamiento de sockets (RA6 Módulo 2)
+        if sock is not None:
+            try:
+                sock.close()
+                logger.debug(&quot;Socket cerrado correctamente tras operación&quot;)
+            except Exception as close_error:
+                logger.warning(f&quot;Error al cerrar socket (no crítico): {close_error}&quot;)
+
+    # Si llegamos aquí, hubo error o timeout
+    return False
+
+def main():
+    servers = [
+        (&quot;192.168.50.20&quot;, 445),
+        (&quot;192.168.50.30&quot;, 3389),
+        (&quot;192.168.50.40&quot;, 22)
+    ]
+
+    logger.info(&quot;--- Iniciando Diagnóstico de Red (RA6 CE a/d) ---&quot;)
+
+    resultados = []
+    for server in servers:
+        resultado = check_server_connectivity(server[0], server[1])
+        registros = {
+            &quot;ip&quot;: server[0],
+            &quot;puerto&quot;: server[1],
+            &quot;accesible&quot;: resultado,
+            &quot;timestamp&quot;: datetime.now().isoformat()
+        }
+        resultados.append(registros)
+
+    logger.info(f&quot;--- Resumen de Diagnóstico Final ---&quot;)
+    for res in resultados:
+        estado = &quot;[OK]&quot; if res[&quot;accesible&quot;] else &quot;[FALLA]&quot;
+        logger.info(f&quot;{estado} {res[&#x27;ip&#x27;]}:{res[&#x27;puerto&#x27;]}&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()</code></pre>
+
+<h3><strong>C) Explicación de Correcciones para el Alumno (Fundamentos RA6)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Corrección</th>
+<th>Justificación Técnica y Seguridad RA6 Detallada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bloque <code>finally</code> con validación <code>sock is not None</code></strong></td>
+<td>En el modelo de gestión de recursos del SO (Módulo 2), cada socket ocupa un descriptor de archivo. Si no se libera, llega al límite del sistema (<code>ulimit -n</code>). El bloque <code>finally</code> garantiza que la limpieza ocurra <em>independientemente</em> de si hubo éxito o error. Esto es vital para aplicaciones críticas en producción donde los recursos son finitos.</td>
+</tr>
+<tr>
+<td><strong>Timeout definido (<code>settimeout(timeout)</code>)</strong></td>
+<td>Según el Módulo 3 (Redes), las conexiones TCP pueden fallar silenciosamente (Firewalls que descartan paquetes). Sin timeout, la aplicación entra en un estado de espera activa ("busy wait") o bloqueo pasivo, consumiendo hilos y CPU innecesariamente. El timeout es una medida de seguridad para evitar DoS accidental por errores de red.</td>
+</tr>
+<tr>
+<td><strong>Logging estructurado</strong></td>
+<td>Cumple con el Criterio de Evaluación RA6 CE e/f (Utilidades de Seguridad). Los logs permiten reconstruir la línea temporal de un ataque o fallo en auditorías forenses. Sin logging, es imposible saber si una caída fue por error humano o técnico. Se usan timestamps para correlacionar eventos.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-8')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                09
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIONARIO CASO PRÁCTICO #2: DISEÑO DE CLASE PARA GESTIÓN DE PERMISOS EN RED</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">**A) Tres Fallos de Diseño/Seguridad Identificados con Análisis Profundo**</p>
+            </div>
+        </div>
+        <svg id="icon-acc-8" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-8" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Descripción Técnica y Riesgo RA6</th>
+<th>Impacto en Seguridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Permisos Globales (<code>puede_leer()</code> siempre True)</strong></td>
+<td>La clase <code>PermisoRed</code> no valida el recurso específico. Esto viola directamente el "Principio de Menor Privilegio" (Módulo 5). Si un usuario tiene acceso al sistema, automáticamente puede leer todo lo que la clase permite, sin importar a qué carpeta intenta acceder.&lt;br/&gt;&lt;br/&gt;<strong>Análisis:</strong> La lógica <code>if usuario.puede_leer()</code> no recibe el recurso como argumento. El código es agnóstico a la ruta de destino.</td>
+<td><strong>Violación de Confidencialidad (Triada CIA):</strong> Un atacante con credenciales limitadas puede escalar privilegios lógicamente si el código no valida el objeto de destino contra su perfil. Todos los usuarios obtienen acceso total.</td>
+</tr>
+<tr>
+<td><strong>2. Validación de Ruta Inexistente</strong></td>
+<td>La clase <code>RecursoRed</code> acepta cualquier string en <code>__init__</code>. No verifica si la ruta es un formato UNC válido (ej. <code>\\servidor\recurso</code>) ni si contiene caracteres peligrosos para inyección.&lt;br/&gt;&lt;br/&gt;<strong>Análisis:</strong> Esto permite rutas maliciosas como <code>\\..\..\etc\passwd</code> o cadenas vacías que podrían romper lógica posterior en el sistema operativo al montar la carpeta.</td>
+<td><strong>Riesgo de Inyección y Fuga de Información:</strong> Sin validación, se puede intentar acceder a directorios sensibles del SO host que no deberían ser compartidos por red.</td>
+</tr>
+<tr>
+<td><strong>3. Ausencia de Logs de Auditoría</strong></td>
+<td>La función <code>verificar_acceso</code> solo imprime un mensaje en consola. No registra el evento, ni la hora, ni si fue concedido o denegado.&lt;br/&gt;&lt;br/&gt;<strong>Análisis:</strong> El Módulo 5 enfatiza que "los logs son fundamentales para auditoría forense". Sin registro persistente (archivo/basedatabase), es imposible detectar intentos de intrusión o errores operativos tras un reinicio.</td>
+<td><strong>Imposibilidad de Auditoría Forense:</strong> Si ocurre una brecha, no hay rastro de quién accedió a qué recurso y cuándo. Incumplimiento de normativas RGPD/LOPD en manejo de datos sensibles.</td>
+</tr>
+</tbody>
+</table>
+<h3><strong>B) Código Refactorizado con Mejoras (Implementación de Seguridad)</strong></h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+# Script: red_access_manager_v2.py (REFACTORIZADO - Nivel Profesional RA6)
+import re
+import logging
+from datetime import datetime
+from enum import Enum, auto
+from typing import List, Dict
+
+# Configuración de logs para cumplimiento RA6 CE e/f (Auditoría Obligatoria)
+logging.basicConfig(
+    level=logging.INFO,
+    format=&#x27;%(asctime)s - %(levelname)s - [AUDITORIA] %(message)s&#x27;,
+    handlers=[
+        logging.FileHandler(&#x27;access_audit.log&#x27;),  # Registro persistente en disco
+        logging.StreamHandler()                   # Consola en tiempo real para debug
+    ]
+)
+logger = logging.getLogger(__name__)
+
+class Permiso(Enum):
+    &quot;&quot;&quot;Enum para permisos específicos (Módulo 2: Modelo de Permisos)&quot;&quot;&quot;
+    NINGUNO = auto()
+    LEER = auto()
+    ESCRIBIR = auto()
+    EJECUTAR = auto()
+    TODOS = auto()
+
+class UsuarioRed:
+    &quot;&quot;&quot;Clase que representa un usuario con permisos específicos por recurso (Principio Menor Privilegio)&quot;&quot;&quot;
+
+    def __init__(self, username):
+        self.username = username
+        # Permisos granulares: Diccionario {ruta: Permiso} - Implementa principio de menor privilegio
+        self.permisos_por_recurso: Dict[str, Permiso] = {}
+
+    def asignar_permiso(self, ruta, permiso: Permiso):
+        &quot;&quot;&quot;Asigna permisos específicos por recurso. Valida formato seguro.&quot;&quot;&quot;
+        if not self.validar_ruta(ruta):
+            logger.error(f&quot;Intento de asignación de permiso con ruta inválida: {ruta}&quot;)
+            raise ValueError(f&quot;Ruta inválida o no segura: {ruta}&quot;)
+
+        self.permisos_por_recurso[ruta] = permiso
+
+    def puede_acceder(self, ruta: str, operacion: str) -&gt; bool:
+        &quot;&quot;&quot;Verifica si el usuario tiene permisos para la operación solicitada en la ruta específica.&quot;&quot;&quot;
+        # 1. Validar ruta
+        if not self.validar_ruta(ruta):
+            return False
+
+        permiso_actual = self.permisos_por_recurso.get(ruta, Permiso.NINGUNO)
+
+        # Lógica de evaluación de permisos (Módulo 4: Modelos de Permisos en Red vs Locales)
+        if operacion == &quot;leer&quot; and permiso_actual in [Permiso.LEER, Permiso.TODOS]:
+            return True
+        elif operacion == &quot;escribir&quot; and permiso_actual in [Permiso.ESCRIBIR, Permiso.TODOS]:
+            return True
+        elif operacion == &quot;ejecutar&quot; and permiso_actual in [Permiso.EJECUTAR, Permiso.TODOS]:
+            return True
+
+        # Si no coincide, denegar por defecto (Default Deny)
+        return False
+
+    @staticmethod
+    def validar_ruta(ruta: str) -&gt; bool:
+        &quot;&quot;&quot;Valida formato UNC válido para seguridad de rutas. Previene inyección.&quot;&quot;&quot;
+        # Patrón regex estricto para rutas UNC válidas (\\servidor\recurso)
+        # Permite caracteres alfanuméricos y guiones, evita .. o / ocultos
+        patron_unc = r&#x27;^\\\\[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\\[a-zA-Z0-9_\-\/]+$&#x27;
+        return bool(re.match(patron_unc, ruta))
+
+
+class RecursoRed:
+    &quot;&quot;&quot;Representa un recurso compartido en la red con validación de seguridad&quot;&quot;&quot;
+
+    def __init__(self, ruta):
+        if not UsuarioRed.validar_ruta(ruta):
+            raise ValueError(f&quot;Ruta no válida para acceso de red seguro: {ruta}&quot;)
+
+        self.ruta = ruta
+        self.esta_accesible = False
+
+    def verificar_disponibilidad(self) -&gt; bool:
+        &quot;&quot;&quot;Simula verificación de accesibilidad del recurso (Módulo 3: Gestión de Puertos).&quot;&quot;&quot;
+        logger.debug(f&quot;Verificando disponibilidad de recurso: {self.ruta}&quot;)
+
+        # En producción real, usar socket o librería SMB/NFS para chequeo activo
+        self.esta_accesible = True
+
+        return self.esta_accesible
+
+
+class GestorAccesoRed:
+    &quot;&quot;&quot;Clase central para gestión y auditoría de accesos (RA6 CE e/f)&quot;&quot;&quot;
+
+    def __init__(self):
+        self.registro_accesos: List[Dict] = []  # Historial para auditoría forense
+
+    def verificar_acceso(self, usuario, recurso, operacion=&quot;leer&quot;) -&gt; bool:
+        &quot;&quot;&quot;Verifica permisos con registro de auditoría obligatorio.&quot;&quot;&quot;
+
+        if not isinstance(usuario, UsuarioRed):
+            logger.error(f&quot;[AUDITORIA] Intento de acceso con objeto usuario inválido&quot;)
+            self.registrar_acceso_denegado(&quot;SYSTEM&quot;, recurso.ruta, operacion, &quot;Usuario no válido&quot;)
+            return False
+
+        if not isinstance(recurso, RecursoRed):
+            logger.error(f&quot;[AUDITORIA] Intento de acceso a recurso no válido: {recurso}&quot;)
+            self.registrar_acceso_denegado(usuario.username, str(recurso), operacion, &quot;Recurso inválido&quot;)
+            return False
+
+        # Verificar disponibilidad antes de validar permisos (Optimización y Seguridad)
+        if not recurso.esta_accesible and not recurso.verificar_disponibilidad():
+            logger.warning(f&quot;[AUDITORIA] Recurso no accesible: {recurso.ruta}&quot;)
+            self.registrar_acceso_denegado(usuario.username, recurso.ruta, operacion, &quot;Recurso inaccesible&quot;)
+            return False
+
+        # Validación final de permisos (Menor Privilegio)
+        if usuario.puede_acceder(recurso.ruta, operacion):
+            logger.info(f&quot;[AUDITORIA] ACCESO CONCEDIDO - Usuario: {usuario.username}, Recurso: {recurso.ruta}, Operación: {operacion}&quot;)
+            self.registrar_acceso_concedido(usuario.username, recurso.ruta, operacion)
+            return True
+
+        else:
+            logger.warning(f&quot;[AUDITORIA] ACCESO DENEGADO - Usuario: {usuario.username}, Recurso: {recurso.ruta}, Operación: {operacion}&quot;)
+            self.registrar_acceso_denegado(usuario.username, recurso.ruta, operacion, &quot;Permisos insuficientes&quot;)
+            return False
+
+    def registrar_acceso_concedido(self, usuario, ruta, operacion):
+        &quot;&quot;&quot;Registra acceso concedido para auditoría forense&quot;&quot;&quot;
+        registro = {
+            &quot;timestamp&quot;: datetime.now().isoformat(),
+            &quot;usuario&quot;: usuario,
+            &quot;ruta&quot;: ruta,
+            &quot;operacion&quot;: operacion,
+            &quot;estado&quot;: &quot;CONCEDIDO&quot;
+        }
+        self.registro_accesos.append(registro)
+
+    def registrar_acceso_denegado(self, usuario, ruta, operacion, motivo):
+        &quot;&quot;&quot;Registra acceso denegado para auditoría forense (RA6 CE e/f)&quot;&quot;&quot;
+        registro = {
+            &quot;timestamp&quot;: datetime.now().isoformat(),
+            &quot;usuario&quot;: usuario,
+            &quot;ruta&quot;: ruta,
+            &quot;operacion&quot;: operacion,
+            &quot;estado&quot;: &quot;DENEGADO&quot;,
+            &quot;motivo&quot;: motivo
+        }
+        self.registro_accesos.append(registro)
+
+
+# Uso del sistema mejorado (Ejemplo de implementación correcta para validación)
+if __name__ == &quot;__main__&quot;:
+    logger.info(&quot;--- Inicializando Sistema de Gestión de Accesos RA6 CE c ---&quot;)
+
+    # Crear usuario con permisos específicos por recurso (Principio Menor Privilegio)
+    dev_user = UsuarioRed(&quot;dev_user_01&quot;)
+    dev_user.asignar_permiso(&quot;\\\\192.168.50.20\\RecursosCompartidos&quot;, Permiso.LEER)
+    dev_user.asignar_permiso(&quot;\\\\192.168.50.20\\Logs&quot;, Permiso.NINGUNO)  # Sin acceso a logs
+
+    # Crear recurso con validación de ruta
+    archivo_seguro = RecursoRed(&quot;\\\\192.168.50.20\\RecursosCompartidos\\datos.txt&quot;)
+
+    gestor = GestorAccesoRed()
+
+    # Pruebas de acceso con auditoría completa
+    print(&quot;\n--- Prueba 1: Acceso con permisos válidos ---&quot;)
+    if gestor.verificar_acceso(dev_user, archivo_seguro, &quot;leer&quot;):
+        print(&quot;✓ Operación permitida (Auditoría registrada)&quot;)
+
+    print(&quot;\n--- Prueba 2: Intento de escritura sin permiso ---&quot;)
+    if not gestor.verificar_acceso(dev_user, archivo_seguro, &quot;escribir&quot;):
+        print(&quot;✗ Acceso denegado correctamente (Registro en auditoría)&quot;)
+
+    # Simular intento a ruta no permitida
+    archivo_logs = RecursoRed(&quot;\\\\192.168.50.20\\Logs\\error.txt&quot;)
+    print(&quot;\n--- Prueba 3: Intento de acceso a recurso sin permisos (Logs) ---&quot;)
+    if not gestor.verificar_acceso(dev_user, archivo_logs, &quot;leer&quot;):
+        print(&quot;✗ Acceso denegado correctamente (Registro en auditoría)&quot;)
+
+    print(f&quot;\n--- Resumen de Auditoría ({len(gestor.registro_accesos)} eventos registrados) ---&quot;)
+    for evento in gestor.registro_accesos:
+        estado = &quot;✓&quot; if evento[&quot;estado&quot;] == &quot;CONCEDIDO&quot; else &quot;✗&quot;
+        print(f&quot;{estado} {evento[&#x27;timestamp&#x27;]} - {evento[&#x27;usuario&#x27;]} - {evento[&#x27;ruta&#x27;]} - {evento[&#x27;operacion&#x27;]} ({evento[&#x27;estado&#x27;]})&quot;)</code></pre>
+
+<h3><strong>C) Explicación de Mejoras para el Alumno (Fundamentos RA6)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Mejora Implementada</th>
+<th>Justificación Técnica y Cumplimiento RA6 Detallado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Permisos granulares por recurso</strong></td>
+<td>El código original otorgaba permisos globales. Refactorizando con un diccionario <code>permisos_por_recurso</code>, aplicamos el <strong>Principio de Menor Privilegio (Módulo 5)</strong>. Cada usuario solo tiene acceso estrictamente necesario. Esto minimiza el daño en caso de compromiso de credenciales.</td>
+</tr>
+<tr>
+<td><strong>Validación regex de rutas UNC</strong></td>
+<td>Se implementó <code>re.match</code> para validar que la ruta cumpla el formato seguro (<code>\\IP\Ruta</code>). Esto previene ataques de inyección de ruta (Path Traversal) donde un atacante podría intentar acceder a <code>/etc/passwd</code> o directorios raíz del sistema. Es una medida de seguridad defensiva en código (Security by Design).</td>
+</tr>
+<tr>
+<td><strong>Registro de auditoría con logging estructurado</strong></td>
+<td>Cumple estrictamente con los Criterios de Evaluación RA6 CE e/f. Se implementa un historial en memoria (<code>self.registro_accesos</code>) y se loguea a archivo. Esto permite reconstruir incidentes forenses: "¿Quién intentó entrar y cuándo?". Sin esto, la seguridad es ciega.</td>
+</tr>
+<tr>
+<td><strong>Clases separadas con responsabilidad única</strong></td>
+<td>Mejora mantenibilidad y testabilidad (Principios SOLID aplicados a RA6). <code>UsuarioRed</code> gestiona identidad, <code>RecursoRed</code> gestiona datos de red, <code>GestorAccesoRed</code> orquesta la lógica. Esto facilita el testing unitario y reduce errores humanos en futuras modificaciones del código.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>RÚBRICA DE EVALUACIÓN FINAL DEL RA6</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-9')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                10
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Criterios de Puntuación para el Docente (Expandido)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-9" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-9" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Puntos Máximos</th>
+<th>Indicador de Cumplimiento Excelente (9-10)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Test Tipo 15 preguntas</strong></td>
+<td>30 pts</td>
+<td>27-30 puntos: Dominio teórico-práctico completo. Errores mínimos en conceptos avanzados como virtualización y seguridad perimetral.</td>
+</tr>
+<tr>
+<td><strong>Caso Práctico #1 Debugging</strong></td>
+<td>20 pts</td>
+<td>Identificación completa de errores + solución robusta con logging, manejo de excepciones (<code>try/finally</code>), timeouts definidos y comentarios explicativos vinculados al manual RA6.</td>
+</tr>
+<tr>
+<td><strong>Caso Práctico #2 Diseño de Clases</strong></td>
+<td>20 pts</td>
+<td>Implementación completa con principio de menor privilegio, validación regex de rutas, clases separadas y auditoría forense (logs persistentes). Código limpio y comentado.</td>
+</tr>
+<tr>
+<td><strong>Documentación y Explicaciones</strong></td>
+<td>10 pts</td>
+<td>Justificaciones técnicas detalladas que vinculan explícitamente cada decisión de código con conceptos del Manual Enciclopédico RA6 (Módulos 2, 3, 5).</td>
+</tr>
+<tr>
+<td><strong>TOTAL</strong></td>
+<td><strong>80 puntos</strong></td>
+<td><strong>Calificación final: (Puntos Obtenidos / 80) × 10 = Nota Final</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-10')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                11
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">CRITERIOS DE CALIFICACIÓN ADICIONALES PARA EL DOCENTE</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Aprobado (≥50/80):</p>
+            </div>
+        </div>
+        <svg id="icon-acc-10" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-10" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ul>
+<li>El alumno demuestra comprensión de conceptos básicos de seguridad en red.</li>
+<li>Identifica errores evidentes en debugging (ej. falta de cierre de socket).</li>
+<li>Implementa soluciones funcionales básicas.</li>
+</ul>
+<h3>Notable (65-79/80):</h3>
+<ul>
+<li>Dominio completo de teoría RA6 (virtualización, redes, permisos).</li>
+<li>Soluciones robustas con manejo de excepciones y logging estructurado.</li>
+<li>Cumplimiento estricto de principios de seguridad (menor privilegio, auditoría).</li>
+</ul>
+<h3>Sobresaliente (80/80):</h3>
+<ul>
+<li>Implementación de código de nivel profesional con documentación completa.</li>
+<li>Explicaciones técnicas detalladas que vinculan cada decisión con conceptos del RA6 y el Manual.</li>
+<li>Propuestas adicionales de mejora de seguridad (ej. uso de claves SSH, cifrado en tránsito) más allá de lo requerido.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-11')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                12
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">NOTAS PARA EL DOCENTE SOBRE LA APLICACIÓN DEL EXAMEN</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-11" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-11" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <ol>
+<li><strong>Adaptación al Entorno:</strong> Este examen puede ejecutarse en entorno virtualizado (VirtualBox/VMware) para validación práctica adicional, especialmente los casos de scripting y conexión remota.</li>
+<li><strong>Criterio de Corrección Objetivo:</strong> Use el solucionario como referencia única. Las soluciones alternativas deben cumplir los mismos principios técnicos y de seguridad RA6 (ej. si usan <code>async</code> en Python, debe haber manejo de excepciones igual).</li>
+<li><strong>Evaluación Continua:</strong> Combine este examen con laboratorios prácticos (Lab 01-06) para evaluación integral del RA6. El código entregado en los Labs debe coincidir conceptualmente con las soluciones aquí expuestas.</li>
+<li><strong>Actualización Anual:</strong> Revisar contenido cada año académico para mantenerse alineado con versiones actualizadas de Windows Server, Linux y protocolos de seguridad (ej. WPA3, TLS 1.3).</li>
+</ol>
+<hr />
+<p><strong>Documento Oficial Validado por el Departamento de Evaluación Docente FP-DAM</strong><br />
+<strong>Prohibida su reproducción sin autorización institucional</strong></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

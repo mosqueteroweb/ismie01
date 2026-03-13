@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUÍA DE PRÁCTICAS AMPLIADA Y AUDITADA: RA7 - ELABORACIÓN DE DOCUMENTACIÓN Y UTILIZACIÓN DE APLICACIONES INFORMÁTICAS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 999999px; /* Huge limit to prevent text cut-off */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA7.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA7</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">GUÍA DE PRÁCTICAS AMPLIADA Y AUDITADA: RA7 - ELABORACIÓN DE DOCUMENTACIÓN Y UTILIZACIÓN DE APLICACIONES INFORMÁTICAS</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">1. INTRODUCCIÓN Y OBJETIVOS DEL LABORATORIO (AUDITADO)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Título del Proyecto:</strong> <em>Gestión Documental, Activos Digitales y Configuración de Servicios en Entorno Profesional</em></p>
+<p>En el rol de <strong>Administrador de Sistemas</strong>, la capacidad de documentar infraestructuras, gestionar activos de software y comunicar estados mediante servicios configurados no es secundaria; es operativa. Sin una documentación precisa y una configuración robusta, los sistemas fallan. Este laboratorio simula un escenario real donde un administrador debe preparar la documentación técnica, gestionar el entorno de software (sin programarlo), configurar servicios de red y transferir datos de forma segura utilizando las herramientas estándar del sector.</p>
+<p><strong>Objetivos de Aprendizaje (Profundizados):</strong>
+1.  <strong>Clasificación de Software (CE a):</strong> Identificar licencias y tipos de software instalados mediante comandos nativos del SO (<code>dpkg</code>, <code>wmic</code>).
+2.  <strong>Análisis de Entorno (CE b):</strong> Evaluar necesidades de hardware y red según requisitos técnicos, utilizando herramientas de diagnóstico integradas en el Sistema Operativo.
+3.  <strong>Documentación Colaborativa (CE c):</strong> Generar documentación técnica usando Markdown y control de versiones (Git) para trazabilidad de cambios en la infraestructura ("Docs-as-Code").
+4.  <strong>Comunicación y Transferencia (CE d, e):</strong> Configurar clientes de correo (SMTP/IMAP) manualmente y transferir archivos mediante protocolos seguros (<code>scp</code>, <code>sftp</code>) sin uso de scripts de automatización.
+5.  <strong>Búsqueda y Mantenimiento (CE f, g):</strong> Utilizar herramientas CLI para diagnóstico y configuración de tareas programadas del sistema (Cron/Tareas Programadas).</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">2. REQUISITOS PREVIOS DE SOFTWARE Y ENTORNO (AUDITADO)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para completar estas prácticas, el entorno de trabajo debe incluir las siguientes herramientas instaladas y configuradas. <strong>Nota:</strong> Estas versiones son mínimas para garantizar compatibilidad con APIs modernas y seguridad actualizada.</p>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Herramienta</th>
+<th>Versión Mínima</th>
+<th>Propósito Técnico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Editor de Texto</strong></td>
+<td>VS Code, Notepad++ o Sublime Text</td>
+<td>2023.x</td>
+<td>Edición de documentación Markdown y configuración de archivos de texto plano.</td>
+</tr>
+<tr>
+<td><strong>Sistema Operativo</strong></td>
+<td>Linux (Ubuntu/Debian) o Windows 10/11</td>
+<td>Actual</td>
+<td>Entorno nativo para ejecución de comandos CLI (<code>bash</code>, <code>cmd</code> / <code>powershell</code>).</td>
+</tr>
+<tr>
+<td><strong>Control Versión</strong></td>
+<td>Git CLI</td>
+<td>2.40+</td>
+<td>Colaboración y trazabilidad. Necesario para el historial de commits documentales.</td>
+</tr>
+<tr>
+<td><strong>Ofimática</strong></td>
+<td>LibreOffice o MS Office</td>
+<td>2021/365</td>
+<td>CE c: Elaboración de informes finales (formatos .docx, .xlsx).</td>
+</tr>
+<tr>
+<td><strong>Red / Transferencia</strong></td>
+<td>Clientes CLI (<code>scp</code>, <code>sftp</code>) y GUI (FileZilla)</td>
+<td>-</td>
+<td>CE e: Conexión FTP/SFTP manual. Uso de puertos específicos.</td>
+</tr>
+<tr>
+<td><strong>Terminal</strong></td>
+<td>PowerShell (Windows) / Bash (Linux/Mac)</td>
+<td>-</td>
+<td>CE f/g: Comandos de sistema (<code>df</code>, <code>top</code>), diagnóstico y configuración de tareas.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">3. PRÁCTICA 1: AUDITORÍA DE SOFTWARE Y LICENCIAS (CE a, b)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario:</strong> Eres el encargado tecnológico de una startup. Debes auditar la instalación actual del servidor de desarrollo para seleccionar las herramientas adecuadas para un nuevo proyecto web. Debes justificar tu elección basándote en licencias y propósito del software mediante análisis nativo.</p>
+<h4>3.1 Procedimiento Actualizado</h4>
+<ol>
+<li><strong>Investigación de Activos:</strong> Utiliza los comandos nativos de tu sistema operativo para listar el software instalado (ej: <code>dpkg -l</code> en Linux o <code>Get-InstalledPackage</code> en PowerShell). Identifica 5 herramientas críticas (IDE, DB, Web Server, etc.).</li>
+<li><strong>Análisis de Licencias:</strong> Para cada herramienta identificada, consulta su documentación oficial o repositorio público para determinar su tipo de licencia (Propietaria, Open Source, Freeware).</li>
+<li><strong>Reporte Manual:</strong> Genera un archivo CSV manualmente o mediante copiado de datos desde el explorador de archivos, importando luego los resultados en Excel/LibreOffice Calc para crear una tabla de control.</li>
+</ol>
+<h4>3.2 Explicación Profunda: Arquitectura del Sistema y Gestión de Paquetes</h4>
+<p>El software instalado no es invisible; reside en directorios específicos del sistema de archivos gestionados por gestores de paquetes.
+*   <strong>Gestores de Paquetes (<code>dpkg</code>, <code>rpm</code>):</strong> Son bases de datos locales que registran metadatos de cada software instalado (versión, estado, dependencias). No requieren programación, solo lectura y escritura de registros de sistema.
+*   <strong>Clasificación Lógica:</strong> En un entorno real, esto se cruza con políticas de cumplimiento legal (Compliance). Saber si una licencia es "Viral" (GPL) afecta qué software puedes compilar junto a tu código propietario.</p>
+<h4>3.3 Ejemplo de Comandos de Diagnóstico (Lectura Exclusiva)</h4>
+<p>Estos comandos <strong>no generan scripts</strong>, solo muestran información del estado actual:</p>
+<p><strong>Para Entorno Linux:</strong></p>
+<pre><code class="language-bash"># Listar paquetes instalados con su versión y estado
+dpkg -l | grep &quot;ii&quot;
+
+# Ver detalles específicos de un paquete (ej: git)
+dpkg -s git </code></pre>
+
+<p><strong>Para Entorno Windows (PowerShell):</strong></p>
+<pre><code class="language-powershell"># Obtener lista de programas instalados
+Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher
+
+# O usar la herramienta nativa de gestión
+systeminfo</code></pre>
+
+<h4>3.4 Compilación y Ejecución (Procedimiento Manual)</h4>
+<ol>
+<li>Abrir terminal con privilegios de usuario estándar o administrador según sea necesario.</li>
+<li>Ejecutar los comandos de listados anteriores.</li>
+<li><strong>Verificación:</strong> Copiar la salida relevante en un archivo <code>.txt</code> o directamente a Excel. Verificar que las columnas coincidan con el formato del informe final (<code>Nombre</code>, <code>Versión</code>, <code>Licencia</code>).</li>
+</ol>
+<h4>⚠️ Posibles Errores y Soluciones (Troubleshooting)</h4>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Raíz Técnica</th>
+<th>Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comando no encontrado (<code>command not found</code>)</td>
+<td>El gestor de paquetes no está instalado o la ruta PATH es incorrecta.</td>
+<td>Instalar el paquete <code>apt</code> (Debian/Ubuntu) o verificar la instalación del sistema operativo base.</td>
+</tr>
+<tr>
+<td>Permisos denegados al leer metadatos</td>
+<td>Intentar leer archivos de sistema protegidos sin privilegios root/admin.</td>
+<td>Ejecutar la terminal con permisos elevados (<code>sudo</code> en Linux, "Ejecutar como administrador" en Windows).</td>
+</tr>
+<tr>
+<td>Salida muy extensa</td>
+<td>El comando devuelve cientos de paquetes instalados.</td>
+<td>Usar filtros (<code>grep</code>) para buscar solo el software relevante (ej: <code>dpkg -l | grep "python"</code>).</td>
+</tr>
+</tbody>
+</table>
+<h4>🚀 Reto de Ampliación: Auditoría de Versiones Obsoletas</h4>
+<p><strong>Objetivo:</strong> Identificar riesgos de seguridad por desactualización.
+<strong>Instrucción:</strong> Utiliza la herramienta de actualización del sistema para listar paquetes que tienen actualizaciones disponibles (<code>apt list --upgradable</code> o <code>systeminfo</code>). Compara esta lista con el inventario generado en el paso 1 y justifica cuáles requieren prioridad de mantenimiento antes del despliegue.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">4. PRÁCTICA 2: DOCUMENTACIÓN TÉCNICA Y COLABORACIÓN (CE c)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario:</strong> Debes documentar la configuración de un servidor interno para que otros administradores lo puedan mantener. Se requiere un <code>README.md</code> estructurado y un informe ejecutivo en formato Word/Docs.</p>
+<h4>4.1 Procedimiento Actualizado</h4>
+<ol>
+<li><strong>Markdown:</strong> Crear el archivo <code>README.md</code> con encabezados, listas de requisitos y bloques de configuración (sin lógica de programación).</li>
+<li><strong>Colaboración (Git):</strong> Inicializar repositorio, hacer commit inicial y simular un fork/merge para resolver conflictos documentales.</li>
+<li><strong>Ofimática:</strong> Copiar la estructura del README a Word para generar el informe formal (CE c).</li>
+</ol>
+<h4>4.2 Explicación Profunda: Gestión de Versiones Documental ("Docs-as-Code")</h4>
+<p>El Markdown no es solo "texto bonito". Es un formato plano que permite control de versiones granular.
+*   <strong>Git Commits:</strong> Cada línea en el historial tiene un hash SHA1 único. Esto permite saber <em>quién</em>, <em>cuándo</em> y <em>qué</em> cambió exactamente en la documentación, fundamental para auditorías legales o de cumplimiento (CE c).
+*   <strong>Markdown vs Word:</strong> El Markdown es ideal para desarrolladores/administradores (fácil de editar, versionar). El Word es ideal para clientes (formato WYSIWYG). La práctica obliga a entender que ambos formatos sirven a audiencias distintas.</p>
+<h4>4.3 Plantilla de Documentación (Contenido Texto/Configuración)</h4>
+<p>Este contenido <strong>no contiene código ejecutable</strong>, solo texto descriptivo y configuraciones estáticas:</p>
+<pre><code class="language-markdown"># DOCUMENTACIÓN DE SERVIDOR: Infraestructura de Autenticación v1.0
+
+## 1. Descripción General
+Este servidor gestiona la autenticación de usuarios mediante servicios LDAP.
+**Licencia:** Propietaria (SO) / Open Source (Servicios)
+**Entorno:** Producción / Desarrollo
+
+## 2. Requisitos Previos (CE b)
+- Servidor Linux Ubuntu 22.04 LTS
+- 4 GB RAM Mínimo
+- Conexión de red estable
+
+## 3. Configuración del Entorno
+Utilizar el siguiente comando para verificar la conexión SSH:
+</code></pre>
+<p>ssh usuario@192.168.1.50</p>
+<pre><code class="language-none">
+## 4. Endpoints Principales (Red)
+| Protocolo | Puerto | Descripción |
+|--------|------|-------------|
+| HTTPS   | 443  | Acceso Web Seguro |
+| SSH     | 22   | Acceso Remoto Admin |
+
+&gt; **Nota:** Este documento es parte de la documentación técnica obligatoria (CE c).</code></pre>
+
+<h4>4.4 Procedimiento de Compilación, Ejecución y Pruebas (Git)</h4>
+<p><strong>Paso A: Inicialización del Repositorio</strong></p>
+<pre><code class="language-bash"># 1. Crear directorio y entrar
+mkdir doc-lab-RA7 &amp;&amp; cd doc-lab-RA7
+
+# 2. Inicializar Git
+git init
+
+# 3. Añadir archivo de documentación
+echo &quot;# DOCUMENTACIÓN DE SERVIDOR&quot; &gt; README.md
+# (Copiar el resto del contenido Markdown anterior)
+
+# 4. Staging y Commit inicial
+git add .
+git commit -m &quot;Initial commit: Documentación básica de servidor&quot;</code></pre>
+
+<p><strong>Paso B: Simulación Colaborativa (Merge)</strong>
+1.  Crear una rama <code>feature/nuevas-reglas</code>.
+2.  Añadir una regla nueva en el README sobre seguridad.
+3.  Volver a <code>main</code> y hacer merge para resolver conflictos simulados de documentación.</p>
+<p><strong>Paso C: Exportación Ofimática</strong>
+1.  Copiar el contenido del <code>README.md</code>.
+2.  Pegar en <strong>Microsoft Word</strong> o <strong>Google Docs</strong>.
+3.  Aplicar estilos de título (H1, H2) y generar un Índice Automático.
+4.  Guardar como <code>.docx</code> con nombre <code>Informe_Tecnico_RA7.docx</code>.</p>
+<h4>⚠️ Posibles Errores y Soluciones (Troubleshooting)</h4>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Raíz Técnica</th>
+<th>Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conflictos de Merge (<code>CONFLICT</code>)</td>
+<td>Dos ramas modificaron la misma línea del README.</td>
+<td>Usar un editor de texto para resolver manualmente los marcadores <code>&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;</code> y <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Guardar solo una versión coherente antes de hacer el commit final.</td>
+</tr>
+<tr>
+<td>Markdown no renderiza en Word</td>
+<td>Copiar y pegar directo a veces pierde formato.</td>
+<td>Usar un conversor online o guardar primero como PDF/HTML desde VS Code y luego importar, o usar la función "Insertar Objeto" de Word.</td>
+</tr>
+<tr>
+<td><code>git config user not found</code></td>
+<td>Git necesita saber quién eres para firmar commits.</td>
+<td>Ejecutar: <code>git config --global user.name "Tu Nombre"</code> y <code>git config --global user.email "tu@email.com"</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4>🚀 Reto de Ampliación: Generación de PDF Automático</h4>
+<p><strong>Objetivo:</strong> Automatizar la entrega al cliente.
+<strong>Instrucción:</strong> Investiga una herramienta CLI (como <code>pandoc</code> o extensión de VS Code) que convierta el archivo <code>.md</code> directamente a <code>.pdf</code>. Ejecuta el comando en terminal para generar el documento final sin abrir Word.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">5. PRÁCTICA 3: COMUNICACIÓN Y TRANSFERENCIA DE FICHEROS (CE d, e)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario:</strong> Al finalizar la documentación, debes notificar al equipo de QA manualmente mediante configuración de cliente de correo y subir los archivos del proyecto a un servidor FTP externo para su revisión.</p>
+<h4>5.1 Procedimiento Actualizado</h4>
+<ol>
+<li><strong>Correo Electrónico:</strong> Configurar un cliente de correo (Thunderbird, Outlook o Mail) con credenciales SMTP/IMAP manuales. No se usarán scripts. Se verificará la conexión mediante puertos.</li>
+<li><strong>Transferencia:</strong> Conectar a un servidor FTP/SFTP y subir los archivos generados (<code>.docx</code>, <code>.md</code>) utilizando herramientas de línea de comandos (<code>scp</code>, <code>sftp</code>) para garantizar seguridad.</li>
+</ol>
+<h4>5.2 Explicación Profunda: Protocolos de Transporte y Seguridad</h4>
+<ul>
+<li><strong>SMTP/IMAP:</strong> Opera en puertos específicos (587, 993). La configuración manual obliga a entender que la contraseña del correo debe ser segura; por eso, se recomienda usar "App Passwords" o variables de entorno en el cliente, nunca texto plano visible.</li>
+<li><strong>FTP vs SFTP/SCP:</strong> FTP clásico envía credenciales en texto plano. SFTP/SCP usa SSH (puerto 22), cifrando toda la sesión. La práctica pide usar comandos CLI para visualizar cómo funciona el protocolo de forma segura.</li>
+</ul>
+<h4>5.3 Procedimiento de Configuración de Correo Manual</h4>
+<p>Para cumplir con el criterio <strong>CE d</strong> de forma visual y técnica:
+1.  Abrir cliente de correo (ej: Thunderbird).
+2.  Ir a <strong>Configuración de Cuenta &gt; Información Básica</strong>.
+3.  Introducir manualmente los datos del servidor SMTP (<code>smtp.gmail.com</code>, puerto <code>587</code>) e IMAP (<code>imap.gmail.com</code>, puerto <code>993</code>).
+4.  Activar la opción <strong>"Certificado seguro (TLS/SSL)"</strong> en la configuración avanzada para garantizar el cifrado de la conexión.
+5.  <strong>Verificación:</strong> Enviar un correo de prueba y verificar que aparece en "Enviados" con estado correcto.</p>
+<h4>5.4 Procedimiento de Transferencia Segura (CLI)</h4>
+<p>Para cumplir con el criterio <strong>CE e</strong> mediante comandos:
+1.  Abrir terminal.
+2.  Conectarse al servidor mediante SSH/SFTP usando la sintaxis estándar:
+    ```bash
+    # Sintaxis SCP para copiar archivo local a remoto
+    scp Informe_Tecnico_RA7.docx usuario@servidor.dam.edu:/home/usuario/docs</p>
+<pre><code># O usar SFTP interactivo
+sftp usuario@servidor.dam.edu
+&gt; put Informe_Tecnico_RA7.docx
+```
+</code></pre>
+<ol>
+<li><strong>Verificación:</strong> Comprobar que el archivo aparece en el servidor con permisos de lectura mediante comandos <code>ls</code> en el servidor remoto.</li>
+</ol>
+<h4>⚠️ Posibles Errores y Soluciones (Troubleshooting)</h4>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Raíz Técnica</th>
+<th>Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autenticación fallida (<code>Authentication Failed</code>)</td>
+<td>Contraseña incorrecta o bloqueo por seguridad del proveedor.</td>
+<td>Activar la verificación en dos pasos y generar una <strong>App Password</strong> específica para este cliente de correo/servidor.</td>
+</tr>
+<tr>
+<td>Conexión denegada (Connection Refused)</td>
+<td>El firewall local bloquea los puertos 20/21 o 22.</td>
+<td>Cambiar a modo pasivo en el cliente o verificar que el puerto SSH (22) esté abierto en la red.</td>
+</tr>
+<tr>
+<td>Archivos corruptos al subir</td>
+<td>Modos de transferencia incorrectos (ASCII vs Binario).</td>
+<td>En <code>sftp</code>, asegurarse de usar comandos binarios (<code>binary</code>) antes del <code>put</code> para archivos <code>.docx</code>.</td>
+</tr>
+</tbody>
+</table>
+<h4>🚀 Reto de Ampliación: Validación de Puertos</h4>
+<p><strong>Objetivo:</strong> Verificar la apertura de puertos manualmente.
+<strong>Instrucción:</strong> Utiliza el comando <code>telnet</code> o <code>nc</code> (Netcat) para probar la conectividad al servidor SMTP antes de configurar el cliente completo. Ejemplo: <code>telnet smtp.gmail.com 587</code>. Si no se conecta, indica bloqueo de red.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">6. PRÁCTICA 4: BÚSQUEDA TÉCNICA Y UTILIDADES DEL SISTEMA (CE f, g)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario:</strong> El sistema presenta una alerta de bajo espacio en disco y necesitas buscar la documentación oficial para optimizar la partición antes del despliegue.</p>
+<h4>6.1 Procedimiento Actualizado</h4>
+<ol>
+<li><strong>Diagnóstico CLI:</strong> Ejecutar comandos nativos para ver estado del disco y memoria (CE g). Sin escribir scripts, solo ejecutar comandos de diagnóstico.</li>
+<li><strong>Búsqueda Web (CE f):</strong> Buscar en Google/StackOverflow la solución técnica específica usando operadores de búsqueda avanzada para encontrar documentación oficial.</li>
+<li><strong>Mantenimiento:</strong> Configurar una tarea programada nativa del sistema operativo para limpieza automática sin escribir código personalizado, utilizando las herramientas integradas (Cron o Programador de Tareas).</li>
+</ol>
+<h4>6.2 Explicación Profunda: Diagnóstico y Búsqueda Avanzada</h4>
+<ul>
+<li><strong>CLI (<code>df</code>, <code>top</code>):</strong> Estos comandos leen directamente archivos del sistema de archivos para obtener métricas sin consumir mucha RAM, a diferencia de las interfaces gráficas. Son herramientas fundamentales para el administrador.</li>
+<li><strong>Google Dorks:</strong> El uso de operadores como <code>site:</code> o <code>filetype:</code> reduce el ruido. Buscar en la documentación oficial (<code>developer.android.com</code>, <code>docs.microsoft.com</code>) es más fiable que buscar en un blog personal, reduciendo riesgos de integrar configuración obsoleta.</li>
+</ul>
+<h4>6.3 Comandos de Diagnóstico y Configuración (Ejecución Directa)</h4>
+<p>Estos son comandos a ejecutar en consola para obtener el estado del sistema:</p>
+<p><strong>Para Entorno Linux:</strong></p>
+<pre><code class="language-bash"># Verificar espacio en disco (Human readable)
+df -h /
+
+# Ver proceso que más consume RAM/CPU
+top -b -n 1 | head -20
+
+# Buscar archivos grandes en la carpeta de usuario
+du -ah --max-depth=1 | sort -hr | head -10</code></pre>
+
+<p><strong>Para Entorno Windows (PowerShell/CMD):</strong></p>
+<pre><code class="language-powershell"># Verificar espacio en disco
+Get-PSDrive | Where-Object {$_.Provider.Name -eq &quot;FileSystem&quot;} | Select-Object Name, Used, Free
+
+# Ejecutar limpieza de disco integrada (Disk Cleanup)
+cleanmgr /sagerun:1 </code></pre>
+
+<h4>6.4 Procedimiento de Configuración de Mantenimiento</h4>
+<p><strong>Paso A: Linux (Cron)</strong>
+1.  Abrir editor de crontab: <code>crontab -e</code>.
+2.  Añadir una línea para ejecutar la limpieza si el espacio es bajo (usando comando nativo, no script propio):
+    <code>bash
+    # Limpiar /tmp cada domingo a las 3 AM
+    0 3 * * 0 find /tmp -type f -mtime +7 -delete</code></p>
+<p><strong>Paso B: Windows (Programador de Tareas)</strong>
+1.  Abrir <strong>Panel de Control &gt; Programador de Tareas</strong>.
+2.  Crear tarea básica que ejecute <code>cleanmgr.exe</code> con parámetros de configuración predefinida (<code>/sagerun</code>).
+3.  Configurar el desencadenante (cada domingo a las 3:00 AM).</p>
+<h4>⚠️ Posibles Errores y Soluciones (Troubleshooting)</h4>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa Raíz Técnica</th>
+<th>Solución Propuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Permission denied</code> al leer logs o limpiar</td>
+<td>El usuario estándar no tiene acceso a carpetas de sistema.</td>
+<td>Ejecutar el comando con <code>sudo</code> (Linux) o "Ejecutar como administrador" (Windows).</td>
+</tr>
+<tr>
+<td>Comando no reconocido (<code>command not found</code>)</td>
+<td>La terminal no reconoce la ruta del comando en PATH.</td>
+<td>Usar la ruta completa del comando (ej: <code>/usr/bin/df</code>) o añadir la carpeta al PATH.</td>
+</tr>
+<tr>
+<td>Tarea programada no se ejecuta</td>
+<td>El servicio de tareas está detenido.</td>
+<td>Verificar que el servicio <code>cron</code> (Linux) o <code>Task Scheduler</code> (Windows) esté corriendo en segundo plano.</td>
+</tr>
+</tbody>
+</table>
+<h4>🚀 Reto de Ampliación: Automatización de Alertas</h4>
+<p><strong>Objetivo:</strong> Configurar notificación visual del sistema.
+<strong>Instrucción:</strong> Configura la herramienta de monitoreo nativa (<code>htop</code> o Monitor de Recursos) para que, al detectar una carga de CPU superior al 90%, lance un mensaje en pantalla (usando el comando <code>notify-send</code> en Linux) sin escribir un script personalizado, solo configurando las reglas visuales del entorno.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">7. EVALUACIÓN Y CRITERIOS DE VERIFICACIÓN (AUDITADO)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Para aprobar el módulo RA7, se evaluará la siguiente evidencia entregable con un enfoque en la calidad técnica y la comprensión profunda de sistemas:</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Evidencia Requerida</th>
+<th>Ponderación</th>
+<th>Detalles de Auditoría</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CE a</strong></td>
+<td>Informe manual con clasificación de licencias generado desde comandos CLI (<code>dpkg</code>, <code>wmic</code>).</td>
+<td>15%</td>
+<td>Verificar que los datos provienen del sistema, no de un script externo.</td>
+</tr>
+<tr>
+<td><strong>CE b</strong></td>
+<td>Justificación escrita en el informe Word sobre la selección del software y requisitos técnicos (RAM, SO).</td>
+<td>10%</td>
+<td>Debe mencionar requisitos técnicos y legales basados en la investigación CLI.</td>
+</tr>
+<tr>
+<td><strong>CE c</strong></td>
+<td>Repositorio Git con commits y archivo <code>.docx</code> bien formateado.</td>
+<td>25%</td>
+<td>El historial de Git debe mostrar evolución real, no un solo commit masivo.</td>
+</tr>
+<tr>
+<td><strong>CE d</strong></td>
+<td>Captura de pantalla del cliente de correo configurado manualmente (ventana de propiedades SMTP/IMAP).</td>
+<td>15%</td>
+<td>Debe mostrarse el uso de cifrado STARTTLS/SSL en la configuración visible.</td>
+</tr>
+<tr>
+<td><strong>CE e</strong></td>
+<td>Captura de pantalla de la sesión SFTP/SCP exitosa (terminal con comandos <code>put</code> o <code>scp</code>).</td>
+<td>10%</td>
+<td>Verificar que se usó conexión segura, no FTP plano.</td>
+</tr>
+<tr>
+<td><strong>CE f</strong></td>
+<td>URL guardada o captura de búsqueda avanzada Google realizada (<code>site:</code>, <code>filetype:</code>).</td>
+<td>10%</td>
+<td>Usar operadores demuestra competencia técnica en recuperación de información.</td>
+</tr>
+<tr>
+<td><strong>CE g</strong></td>
+<td>Output del comando CLI mostrando uso de disco/logs y configuración de Cron/Tareas Programadas.</td>
+<td>15%</td>
+<td>La tarea programada debe estar configurada en el sistema operativo nativo.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-7')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                08
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">8. CONCLUSIONES Y RECOMENDACIONES DEL ADMINISTRADOR DE SISTEMAS</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-7" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-7" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Como Administrador de Sistemas, he diseñado esta guía para que no solo cumplas con el currículo, sino que adquieras competencias reales de infraestructura:
+1.  <strong>Herramientas Nativas:</strong> No dependes de scripts externos; confías en las capacidades nativas del Sistema Operativo (<code>dpkg</code>, <code>cron</code>, <code>scp</code>). Esto garantiza portabilidad y seguridad.
+2.  <strong>Documentación Viva:</strong> Usa Markdown y Git como base. El Word es para la entrega final al cliente/no técnico. La documentación debe ser mantenible y versionable.
+3.  <strong>Seguridad por Diseño:</strong> Al configurar el correo SMTP en la práctica 3, recuerda nunca hardcodear contraseñas en configuraciones visibles (usa las opciones de gestión de credenciales del cliente). Esto protege tus credenciales si subes capturas a un repositorio público.</p>
+<p><strong>Nota Final:</strong> Esta guía cubre integralmente los Criterios de Evaluación del RA7 dentro del contexto de desarrollo profesional DAM, pero desde la perspectiva estricta de <strong>Sistemas Informáticos</strong>. Asegúrate de guardar todas las pruebas en tu portafolio personal (GitHub/Bitbucket) antes de entregarlas al tutor. <strong>Recuerda: La documentación es el contrato entre el desarrollador y el futuro.</strong></p>
+<hr />
+<p><em>Fin de la Guía Práctica Revisada y Ampliada - RA7 (DAM)</em><br />
+<em>Documento bajo licencia para uso educativo en el marco curricular de FP.</em></p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

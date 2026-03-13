@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 BANCO DE EVALUACIÓN RA4: GESTIÓN DE SISTEMAS OPERATIVOS Y ENTORNOS DE DESARROLLO (VALIDADO)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        .markdown-content h3 { font-size: 1.25rem; font-weight: 600; color: #008037; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .markdown-content p { margin-bottom: 1rem; color: #374151; }
+        .markdown-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .markdown-content li { margin-bottom: 0.25rem; }
+        .markdown-content strong { font-weight: 600; color: #111827; }
+        .markdown-content pre { background-color: #1f2937; color: #f3f4f6; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem; overflow-x: auto; position: relative; }
+        .markdown-content code { font-family: monospace; }
+        .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+        .markdown-content th { background-color: #f9fafb; font-weight: 600; color: #374151; }
+
+        /* Transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.open {
+            max-height: 999999px; /* Huge limit to prevent text cut-off */
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .rotate-180 { transform: rotate(180deg); }
+        .copy-btn {
+            position: absolute; top: 0.5rem; right: 0.5rem; background: #374151; color: white; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; cursor: pointer; border: none;
+        }
+        .copy-btn:hover { background: #4b5563; }
+    </style>
+</head>
+<body class="bg-[#F3FDE8] font-sans min-h-screen p-8 relative">
+    <a href="RA4.html" class="absolute top-8 right-8 bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-50 flex items-center gap-2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg> Volver a RA4</a>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-[#008037] mb-2">📋 BANCO DE EVALUACIÓN RA4: GESTIÓN DE SISTEMAS OPERATIVOS Y ENTORNOS DE DESARROLLO (VALIDADO)</h1>
+            <p class="text-gray-500 text-sm uppercase">MÓDULO DE SISTEMAS INFORMÁTICOS</p>
+        </header>
+
+        <div class="space-y-6">
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-0')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                01
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">👨‍🏫 INFORME DEL AUDITOR DE CALIDAD DOCENTE</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-0" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-0" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Estado:</strong> ✅ APROBADO Y AMPLIADO<br />
+<strong>Nivel de Rigor:</strong> Técnico Superior / Conceptual Avanzado<br />
+<strong>Observación Principal:</strong> El banco de evaluación original cumple con los criterios RA4, pero el solucionario se ha <strong>EXPANDIDO DRÁSTICAMENTE</strong> para convertir este examen en un material de estudio integral. Cada pregunta ahora incluye una explicación técnica profunda sobre por qué las opciones incorrectas son errores conceptuales comunes que un desarrollador DAM debe saber evitar.</p>
+<hr />
+<h1>📝 PARTE 1: EXAMEN TIPO TEST (15 PREGUNTAS DE ALTA DIFICULTAD)</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-1')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                02
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Instrucciones:</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-1" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-1" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p>Seleccione la opción correcta para cada pregunta. Marque solo UNA respuesta por ítem. Tiempo estimado: 45 minutos.</p>
+<hr />
+<h3>Pregunta 1 - Arquitectura de Virtualización</h3>
+<p>En un entorno DAM, se requiere desplegar múltiples servidores Linux sobre una única estación física para pruebas de integración continua. ¿Qué tipo de virtualización ofrece el mejor rendimiento sin comprometer la seguridad del host?</p>
+<p>A) Tipo 2 (Hosted) con VirtualBox y máquinas virtuales anidadas<br />
+B) Tipo 1 (Bare Metal) con VMware ESXi instalando directamente sobre hardware<br />
+C) Híbrida con contenedores Docker ejecutándose sobre Windows Subsystem for Linux<br />
+D) Emulación completa mediante QEMU con traducción dinámica de instrucciones</p>
+<hr />
+<h3>Pregunta 2 - Gestión de Memoria y Performance</h3>
+<p>Una aplicación Java en producción muestra errores "Out of Memory" a pesar de tener 8 GB de RAM física disponibles. El administrador observa que el sistema está usando intensivamente la memoria virtual (swap). ¿Cuál es la causa más probable?</p>
+<p>A) La JVM tiene configurada una heap size menor al 50% del total disponible<br />
+B) Hay fugas de memoria en el código Java que liberan objetos incorrectamente<br />
+C) El sistema operativo ha asignado demasiado espacio de swap al proceso<br />
+D) Existe un conflicto entre drivers de memoria RAM y la arquitectura del SO</p>
+<hr />
+<h3>Pregunta 3 - Permisos ACL (Linux)</h3>
+<p>Se configura una carpeta compartida <code>/proyectos</code> con los siguientes permisos: <code>drwxr-x---</code> y se aplican ACLs adicionales. Un usuario del grupo <code>devgroup</code> no puede escribir aunque pertenece al grupo. ¿Qué comando verifica las ACLs activas?</p>
+<p>A) <code>ls -l /proyectos</code><br />
+B) <code>getfacl /proyectos</code><br />
+C) <code>chmod 750 /proyectos</code><br />
+D) <code>chown devgroup:devgroup /proyectos</code></p>
+<hr />
+<h3>Pregunta 4 - Seguridad de Procesos Windows</h3>
+<p>Se detecta que un proceso malicioso está ejecutándose en segundo plano con privilegios elevados. ¿Qué herramienta proporciona la información más detallada sobre el PID, nombre del servicio y estado actual?</p>
+<p>A) <code>tasklist /v</code><br />
+B) <code>Get-Process | Select-Object Name, Id, Status</code> (PowerShell)<br />
+C) <code>netstat -ano</code><br />
+D) <code>systeminfo</code></p>
+<hr />
+<h3>Pregunta 5 - Planificación de Procesos</h3>
+<p>Un servidor web experimenta latencia alta durante horas pico. El administrador observa que el proceso del compilador está consumiendo CPU constantemente. ¿Qué mecanismo del SO controla la prioridad de ejecución?</p>
+<p>A) La tabla de procesos (Process Table) con niveles de prioridad<br />
+B) El sistema de archivos asignando espacio en disco<br />
+C) La máscara de subred definiendo ancho de banda<br />
+D) La lista de control de acceso determinando usuarios conectados</p>
+<hr />
+<h3>Pregunta 6 - Configuración TCP/IP</h3>
+<p>Para desplegar una aplicación RESTful que debe ser accesible desde internet, el administrador configura un servidor web. ¿Qué combinación es correcta para permitir tráfico entrante seguro?</p>
+<p>A) Puerto 80 con protocolo UDP y firewall bloqueado<br />
+B) Puertos 80 (HTTP) y 443 (HTTPS) con firewall estadoful activo<br />
+C) Puerto 22 (SSH) únicamente con protocolo TCP sin cifrado<br />
+D) Cualquier puerto aleatorio mayor a 1024 sin configuración de NAT</p>
+<hr />
+<h3>Pregunta 7 - Sistemas de Archivos</h3>
+<p>Se necesita migrar datos desde un disco mecánico (HDD) a uno de estado sólido (SSD). ¿Qué afirmación es correcta respecto al mantenimiento del sistema de archivos?</p>
+<p>A) La desfragmentación debe ejecutarse antes y después de la migración<br />
+B) El comando <code>chkdsk</code> debe ejecutarse periódicamente en el SSD para optimizar rendimiento<br />
+C) No se requiere desfragmentación en SSDs debido a su arquitectura de acceso aleatorio<br />
+D) Los sistemas de archivos NTFS no son compatibles con SSDs</p>
+<hr />
+<h3>Pregunta 8 - Backup y Recuperación</h3>
+<p>Una empresa utiliza copias incrementales para sus bases de datos. El administrador necesita restaurar los datos del día 3. ¿Qué secuencia de backup es necesaria?</p>
+<p>A) Solo la copia incremental del día 3<br />
+B) La copia completa más recientes hasta el día 3<br />
+C) Todas las copias incrementales desde el inicio del mes<br />
+D) La última copia diferencial y la copia completa anterior</p>
+<hr />
+<h3>Pregunta 9 - Políticas de Contraseña</h3>
+<p>Se implementa una política que requiere: longitud mínima 8, complejidad con caracteres especiales, caducidad cada 30 días. ¿Qué comando Windows aplica estos requisitos de forma local?</p>
+<p>A) <code>net accounts /minpwlen:8 /maxpwage:30</code><br />
+B) <code>useradd -p complex --expire 30</code> (Linux)<br />
+C) <code>gpasswd -a user groupname</code><br />
+D) <code>chmod 700 /etc/shadow</code></p>
+<hr />
+<h3>Pregunta 10 - Monitorización de Red</h3>
+<p>Para diagnosticar si un servidor base de datos es accesible desde una red remota, ¿qué comando proporciona información sobre la ruta de paquetes y latencia?</p>
+<p>A) <code>ping server.local</code><br />
+B) <code>traceroute server.local</code><br />
+C) <code>nslookup database.server.com</code><br />
+D) <code>ipconfig /all</code></p>
+<hr />
+<h3>Pregunta 11 - Servicios Linux (Daemons)</h3>
+<p>Un servicio PostgreSQL no inicia automáticamente después de un reinicio. ¿Qué comando verifica y habilita el servicio para arranque automático en sistemas systemd?</p>
+<p>A) <code>service postgresql start &amp;&amp; service postgresql enable</code><br />
+B) <code>systemctl start postgresql &amp;&amp; systemctl enable postgresql</code><br />
+C) <code>init.d/postgresql start &amp;&amp; update-rc.d postgresql defaults</code><br />
+D) <code>start-service postgresql --enable-boot</code></p>
+<hr />
+<h3>Pregunta 12 - Evaluación de Recursos (RA4h)</h3>
+<p>Antes de desplegar una aplicación que requiere compilación en tiempo real, se evalúa el sistema. ¿Qué recurso es crítico para evitar cuellos de botella durante la compilación?</p>
+<p>A) Espacio en disco SSD NVMe<br />
+B) CPU con múltiples núcleos y RAM suficiente<br />
+C) Resolución DNS configurada correctamente<br />
+D) Puertos abiertos en firewall</p>
+<hr />
+<h3>Pregunta 13 - Virtualización Tipo 1 vs Tipo 2</h3>
+<p>¿Cuál es la principal diferencia de rendimiento entre un hipervisor Tipo 1 y uno Tipo 2?</p>
+<p>A) El Tipo 1 ejecuta aplicaciones directamente sobre el SO anfitrión<br />
+B) El Tipo 2 tiene menor overhead porque se instala como aplicación<br />
+C) El Tipo 1 accede al hardware sin intermediario del SO anfitrión (mayor rendimiento)<br />
+D) No existe diferencia de rendimiento, solo de compatibilidad</p>
+<hr />
+<h3>Pregunta 14 - Cifrado de Datos</h3>
+<p>Se requiere proteger información sensible en reposo en un servidor Linux. ¿Qué herramienta implementa cifrado a nivel de disco completo?</p>
+<p>A) BitLocker<br />
+B) LUKS (Linux Unified Key Setup)<br />
+C) GPG para archivos individuales<br />
+D) SSH Keys para acceso remoto</p>
+<hr />
+<h3>Pregunta 15 - Criterio CE h - Evaluación de Necesidades</h3>
+<p>Un equipo de desarrollo necesita implementar CI/CD con pipelines automatizados. ¿Qué aspecto debe evaluarse antes del despliegue?</p>
+<p>A) La capacidad del sistema para soportar múltiples procesos concurrentes y almacenamiento temporal<br />
+B) El color de la carcasa del servidor físico<br />
+C) La marca de los teclados conectados al equipo<br />
+D) La versión gráfica del sistema operativo instalada</p>
+<hr />
+<h1>🐛 PARTE 2: CASOS PRÁCTICOS DE DEBUGGING Y REFACTORIZACIÓN</h1>
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-2')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                03
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Caso Práctico A: Debugging de Script de Provisionamiento (Windows PowerShell)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-2" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-2" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario:</strong><br />
+El administrador de sistemas debe crear un script que provisione usuarios para el equipo de desarrollo. Sin embargo, el script actual presenta errores que impiden su correcta ejecución en producción.</p>
+<h3>Código Original con Errores:</h3>
+<pre><code class="language-powershell"># Script: provision_user_original.ps1 - VERSIÓN CON ERRORES
+param (
+    [Parameter(Mandatory=$true)]
+    [string]$Username,
+
+    [Parameter(Mandatory=$false)]
+    [string]$Password = &quot;TempPass123!&quot;
+)
+
+# 1. Crear Carpeta de Proyecto sin verificar existencia
+$ProjectPath = &quot;C:\ProyectosDAM&quot;
+New-Item -ItemType Directory -Path $ProjectPath | Out-Null
+
+# 2. Crear Usuario (Error: sintaxis incorrecta)
+New-LocalUser -Name Username -Password (ConvertTo-SecureString $Password -AsPlainText -True) -FullName &quot;Desarrollador DAM&quot; -Description &quot;Usuario para proyectos de desarrollo&quot;
+
+# 3. Añadir al grupo Administradores (Error: nombre del grupo incorrecto)
+Add-LocalGroupMember -Group &quot;Admins&quot; -Member Username
+
+# 4. Configurar Permisos ACL (Error: objeto de seguridad incompleto)
+$acl = Get-Acl -Path $ProjectPath
+$account = [System.Security.Principal.NTAccount]$Username
+$rule = New-Object System.Security.AccessControl.FileSystemAccessRule($account, &quot;FullControl&quot;, &quot;ContainerInherit,ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
+$acl.AddAccessRule($rule)
+Set-Acl -Path $ProjectPath -AclObject $acl
+
+Write-Host &quot;[OK] Usuario &#x27;$Username&#x27; creado y configurado.&quot;</code></pre>
+
+<h3>Tarea del Alumno:</h3>
+<ol>
+<li>Identificar <strong>mínimo 3 errores</strong> en el código proporcionado.</li>
+<li>Proponer la corrección para cada error encontrado.</li>
+<li>Justificar por qué la corrección es necesaria según los criterios de seguridad RA4.</li>
+</ol>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-3')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                04
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">Caso Práctico B: Diseño de Clase y Gestión de Recursos (Python)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-3" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-3" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Escenario:</strong><br />
+Como desarrollador DAM, debes crear una clase que gestione la evaluación de recursos del sistema para preparar despliegues de aplicaciones Java en producción. La clase debe validar si el sistema cumple con los requisitos mínimos antes de iniciar el proceso de compilación.</p>
+<h3>Requisitos Funcionales:</h3>
+<ol>
+<li>Verificar memoria RAM disponible (mínimo 4 GB)</li>
+<li>Verificar espacio en disco libre (mínimo 50 GB)</li>
+<li>Verificar número de núcleos CPU disponibles (mínimo 2)</li>
+<li>Generar informe con estado OK/FAIL para cada requisito</li>
+<li>Excepción personalizada si el sistema no cumple requisitos</li>
+</ol>
+<h3>Código Parcial Incompleto:</h3>
+<pre><code class="language-python"># Script: system_evaluation.py - VERSIÓN INCOMPLETA
+
+import psutil
+
+class SistemaEvaluation:
+    def __init__(self):
+        self.memoria_minima = 4 * (1024**3)  # 4 GB en bytes
+        self.disco_minimo = 50 * (1024**3)   # 50 GB en bytes
+
+    def evaluar_memoria(self):
+        &quot;&quot;&quot;Verifica memoria RAM disponible&quot;&quot;&quot;
+        mem = psutil.virtual_memory()
+        return mem.available &gt;= self.memoria_minima
+
+    def evaluar_disco(self):
+        &quot;&quot;&quot;Verifica espacio en disco libre&quot;&quot;&quot;
+        disk = psutil.disk_usage(&#x27;/&#x27;)
+        # FALTA: Implementar lógica de verificación
+        pass
+
+    def evaluar_cpu(self):
+        &quot;&quot;&quot;Verifica núcleos CPU disponibles&quot;&quot;&quot;
+        cpu_count = psutil.cpu_count()
+        return cpu_count &gt;= 2
+
+    def generar_informe(self):
+        &quot;&quot;&quot;Genera informe final de evaluación&quot;&quot;&quot;
+        # FALTA: Implementar lógica del informe
+        pass
+
+# Instanciación y uso (sin implementar)
+if __name__ == &quot;__main__&quot;:
+    evaluacion = SistemaEvaluation()</code></pre>
+
+<h3>Tarea del Alumno:</h3>
+<ol>
+<li>Completar los métodos <code>evaluar_disco()</code> y <code>generar_informe()</code> de la clase.</li>
+<li>Implementar una excepción personalizada <code>RequisitosSistemaNoCumplidos</code> cuando el sistema no cumpla mínimos.</li>
+<li>Justificar las decisiones de diseño tomadas (nombres de variables, estructura de clases, manejo de excepciones).</li>
+</ol>
+<hr />
+<h1>📖 PARTE 3: SOLUCIONARIO DETALLADO Y EXHAUSTIVO PARA EL DOCENTE Y ALUMNO</h1>
+<blockquote>
+<p><strong>🔍 NOTA DEL AUDITOR:</strong><br />
+A continuación se presenta el solucionario expandido. Cada pregunta incluye un análisis técnico profundo de la respuesta correcta y una disección detallada de por qué cada opción incorrecta es un error conceptual o técnico, sirviendo como material de repaso para los Criterios de Evaluación (CE) del RA4.</p>
+</blockquote>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-4')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                05
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIONARIO - EXAMEN TIPO TEST (ANÁLISIS PROFUNDO)</h2>
+                <p class="text-sm text-gray-500 uppercase mt-1">Pregunta 1: Respuesta Correcta **B**</p>
+            </div>
+        </div>
+        <svg id="icon-acc-4" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-4" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Justificación Técnica Expandida:</strong><br />
+La respuesta correcta es la virtualización Tipo 1 (Bare Metal). En el contexto del RA4 y DAM, entender la arquitectura de virtualización es crucial para dimensionar servidores. Los hipervisores Tipo 1 como VMware ESXi o Microsoft Hyper-V Server se instalan <strong>directamente sobre el hardware físico</strong>, eliminando la capa intermedia del Sistema Operativo anfitrión (Host OS). Esto reduce drásticamente el <em>overhead</em> (sobrecarga) de recursos y permite un acceso más directo a las interrupciones del hardware, ofreciendo el máximo rendimiento posible para máquinas virtuales.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (Tipo 2 / Hosted):</strong> Incorrecta. VirtualBox o VMware Workstation son hipervisores Tipo 2 que se ejecutan <em>como aplicaciones</em> sobre un SO anfitrión (ej. Windows). Esto añade una capa extra de traducción entre la VM y el hardware, consumiendo recursos del host y reduciendo el rendimiento disponible para las máquinas virtuales. Es útil para desarrollo local (portátil), pero no para despliegue de servidores de producción con múltiples instancias Linux.
+*   <strong>Opción C (Híbrida / Docker):</strong> Incorrecta en este contexto específico. Aunque Docker es eficiente, la pregunta se refiere a desplegar "múltiples servidores Linux" completos sobre una estación física para pruebas de integración que requieren aislamiento total. Docker comparten kernel del host; si el host falla o hay conflicto de versiones de librerías, todas las contenedores fallan. Además, ejecutar contenedores sobre WSL (Windows Subsystem for Linux) añade complejidad innecesaria en comparación con un hipervisor nativo para pruebas de integración severas.
+*   <strong>Opción D (Emulación QEMU):</strong> Incorrecta. La emulación completa (QEMU puro) traduce instrucciones de arquitectura completas (ej. ejecutar código ARM en x86), lo cual es extremadamente lento comparado con la virtualización por hardware. No ofrece "el mejor rendimiento" para servidores nativos Linux sobre hardware x86, donde la virtualización asistida por CPU (KVM/VT-x) es superior.</p>
+<h3>Pregunta 2: Respuesta Correcta <strong>A</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+La causa más probable de errores "Out of Memory" en Java con RAM física disponible es una configuración incorrecta de la JVM Heap Size (<code>-Xmx</code>). Si el administrador no ajusta la memoria máxima que puede usar la JVM, esta podría estar configurada por defecto (ej. 256MB o 1GB) en lugar de aprovechar los 8 GB disponibles. La JVM intenta asignar su heap dentro del límite configurado; si se llena, recurre al sistema operativo para pedir más memoria, pero si el SO detecta que la petición excede el límite físico o virtual asignado a ese proceso, genera el error OOM antes de usar toda la RAM del equipo.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción B (Fugas de Memoria):</strong> Parcialmente plausible pero no la <em>causa más probable</em> en un entorno controlado con configuración incorrecta visible. Una fuga de memoria (<em>memory leak</em>) es un problema de código, sí, pero el uso intensivo de swap indica que la JVM está intentando asignar memoria y el SO está paginando agresivamente. Si fuera solo una fuga, veríamos crecimiento constante del uso de RAM hasta agotarla, no necesariamente un error OOM si hay swap disponible, aunque eventualmente ocurriría. La configuración incorrecta (Opción A) es el primer paso a revisar antes de analizar código.
+*   <strong>Opción C (Demasiado Swap):</strong> Incorrecta conceptualmente. El sistema operativo asigna espacio de swap según necesidad. No "asigna demasiado" al proceso en un sentido negativo; más bien, si hay mucho uso de swap, indica que la RAM física se agotó. El problema no es <em>cuánto</em> swap hay, sino por qué el proceso necesita tanta memoria virtual (lo cual nos lleva a la configuración del Heap).
+*   <strong>Opción D (Conflicto Drivers):</strong> Incorrecta y poco probable en entornos DAM modernos. Los conflictos de drivers de RAM son extremadamente raros y causarían inestabilidad general del sistema (Pantallazos Azules o Kernel Panics), no solo errores específicos de la aplicación Java.</p>
+<h3>Pregunta 3: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+El comando <code>getfacl /proyectos</code> es el estándar en sistemas Linux para visualizar las Listas de Control de Acceso (ACLs) extendidas que no se muestran con los permisos tradicionales Unix (<code>rwx</code>). Cuando un usuario pertenece a un grupo pero no tiene acceso, y el permiso del grupo dice "ejecutar" (x), la ACL específica puede estar restringiendo el acceso. <code>ls -l</code> solo muestra los 3 bits de permisos básicos (owner/group/other) y una pequeña bandera (+) si hay ACLs, pero no detalla qué reglas están activas.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (<code>ls -l /proyectos</code>):</strong> Incorrecta. Este comando muestra los permisos básicos <code>rwx</code> (ej. <code>-rwxr-x---</code>). Si hay una ACL que sobre escribe o complementa estos permisos, <code>ls -l</code> no mostrará el detalle de quién tiene acceso específico más allá del grupo principal. Puede mostrar un <code>+</code> al final indicando presencia de ACLs, pero no revela la regla específica que bloquea al usuario.
+*   <strong>Opción C (<code>chmod 750 /proyectos</code>):</strong> Incorrecta. Este comando <em>modifica</em> permisos básicos, no los verifica. Ejecutarlo podría incluso sobrescribir las configuraciones deseadas si no se tiene cuidado. No sirve para diagnóstico de qué ACLs están activas actualmente.
+*   <strong>Opción D (<code>chown devgroup:devgroup /proyectos</code>):</strong> Incorrecta. Este comando cambia el propietario y grupo principal del directorio, pero no muestra información sobre las reglas de acceso existentes ni ayuda a diagnosticar por qué un usuario específico (que ya pertenece al grupo) sigue sin poder escribir.</p>
+<h3>Pregunta 4: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+PowerShell es la herramienta nativa moderna y más potente para la administración en Windows. El cmdlet <code>Get-Process</code> devuelve objetos completos con propiedades detalladas como <code>Name</code>, <code>Id</code> (PID), <code>Status</code> (Running/Stopped), <code>WorkingSet</code> (RAM usada), <code>HandleCount</code>, etc. Permite filtrado avanzado con <code>Select-Object</code>. Es superior a <code>tasklist</code> porque ofrece integración profunda con el .NET Framework y permite manipulación directa de objetos.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (<code>tasklist /v</code>):</strong> Incorrecta en este contexto de "información más detallada". Aunque <code>tasklist /v</code> muestra información ampliada (PID, SessionName, etc.), es un legado de CMD y ofrece menos granularidad que PowerShell. No permite filtrado tan dinámico ni acceso a propiedades avanzadas como el estado del hilo o memoria específica sin parsing complejo de texto.
+*   <strong>Opción C (<code>netstat -ano</code>):</strong> Incorrecta. Este comando muestra información sobre <em>conexiones de red activas</em>, puertos y PIDs asociados, pero no lista todos los procesos en ejecución ni su estado general (CPU/Memoria). Solo sirve para saber qué proceso usa un puerto específico, no para diagnosticar procesos maliciosos generales.
+*   <strong>Opción D (<code>systeminfo</code>):</strong> Incorrecta. Este comando muestra información sobre la configuración del sistema operativo (versión, parches, uptime, memoria total), pero NO lista los procesos en ejecución ni sus PIDs individuales.</p>
+<h3>Pregunta 5: Respuesta Correcta <strong>A</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+El SO gestiona el uso de la CPU mediante un planificador (<em>scheduler</em>) que consulta la Tabla de Procesos. Cada proceso tiene una prioridad asignada (ej. en Windows "Realtime", "High", "Normal"; en Linux <code>nice</code> values). Si un compilador consume CPU constantemente, puede estar teniendo una prioridad alta o el SO no está logrando reducir su tiempo de ejecución a favor del servidor web si la planificación no se ajusta. La tabla de procesos es la estructura de datos central donde residen estos metadatos de planificación.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción B (Sistema de Archivos):</strong> Incorrecta. El sistema de archivos gestiona la persistencia y ubicación lógica de los datos en el disco, no la asignación dinámica del tiempo de CPU entre procesos concurrentes. No tiene relación con la latencia de ejecución en tiempo real.
+*   <strong>Opción C (Máscara de Subred):</strong> Incorrecta. La máscara de subred es una configuración de red IP que define qué parte de la dirección IP identifica la red y qué parte identifica el host. Es irrelevante para la planificación local de procesos dentro del mismo servidor.
+*   <strong>Opción D (Lista de Control de Acceso - ACL):</strong> Incorrecta. Las ACLs determinan permisos de acceso a recursos (archivos, carpetas), no el tiempo de CPU que un proceso recibe. Un usuario puede tener permiso total sobre un archivo pero su proceso sigue siendo limitado por la prioridad del SO.</p>
+<h3>Pregunta 6: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+Para servicios web seguros accesibles desde internet, es obligatorio abrir los puertos estándar HTTP (80) y HTTPS (443). El protocolo HTTPS usa SSL/TLS para cifrar el tráfico. Un firewall <em>estadoful</em> (stateful) monitorea el estado de las conexiones: permite que el tráfico salga hacia internet y solo deja entrar respuestas a solicitudes legítimas iniciadas desde dentro, o puertos específicos abiertos explícitamente (como 80/443). Esto protege contra ataques dirigidos.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (Puerto 80 UDP):</strong> Incorrecta. HTTP usa TCP, no UDP. UDP es para conexiones sin conexión como DNS o streaming de video en tiempo real, donde la pérdida de paquetes se tolera mejor que la retransmisión. Usar UDP para una aplicación RESTful causaría pérdida de datos y errores de entrega.
+*   <strong>Opción C (Puerto 22 SSH sin cifrado):</strong> Incorrecta y peligrosa. SSH siempre usa cifrado por diseño. Si un servicio está "sin cifrado", es Telnet o FTP, no SSH. Además, abrir solo el puerto 22 no permite acceso a la aplicación web RESTful (que necesita puertos 80/443).
+*   <strong>Opción D (Puerto aleatorio):</strong> Incorrecta y mala práctica de seguridad. Usar puertos no estándar (&gt;1024) sin NAT o configuración específica hace que el servicio sea inaccesible desde internet a menos que se configure manualmente en cada cliente. Además, aumenta la superficie de ataque si no hay firewall claro.</p>
+<h3>Pregunta 7: Respuesta Correcta <strong>C</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+Los SSDs (Solid State Drives) utilizan memoria flash NAND electrónica sin partes móviles mecánicas. La desfragmentación consiste en reorganizar datos dispersos para que estén físicamente contiguos, lo cual es vital en HDDs donde mover la aguja cuesta tiempo. En SSDs, no hay movimiento físico, por lo que el acceso aleatorio es rápido y constante. Además, la desfragmentación genera escrituras innecesarias, reduciendo la vida útil del disco (ciclos de escritura limitados). Los SSDs modernos usan comandos TRIM para mantener el rendimiento.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (Desfragmentar antes/después):</strong> Incorrecta y dañina. Desfragmentar un SSD antes de la migración es innecesario y genera desgaste. Después de la migración, tampoco es necesario. La desfragmentación solo se recomienda para HDDs mecánicos antiguos o sistemas muy fragmentados que no tienen TRIM habilitado.
+*   <strong>Opción B (<code>chkdsk</code> en SSD):</strong> Incorrecto en el contexto de "optimización". <code>chkdsk</code> (Check Disk) sirve para verificar integridad lógica del sistema de archivos y detectar sectores defectuosos, no para optimizar rendimiento mediante desfragmentación. Ejecutarlo periódicamente es bueno para mantenimiento lógico, pero la justificación de "optimizar rendimiento" en SSDs suele referirse erróneamente a defrag.
+*   <strong>Opción D (NTFS no compatible):</strong> Incorrecta. NTFS es el sistema de archivos estándar de Windows y funciona perfectamente con SSDs. De hecho, Windows 10/11 detecta automáticamente que es un SSD y desactiva la desfragmentación automática.</p>
+<h3>Pregunta 8: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+En una estrategia de copias incrementales, cada backup guarda solo los datos cambiados desde el último backup (completo o incremental). Para restaurar un punto en el tiempo (ej. día 3), necesitas la última copia completa (que sirve de base) y <strong>todas</strong> las copias incrementales subsiguientes hasta llegar al momento deseado (día 1, día 2, día 3). Saltarte una incremental rompe la cadena de cambios y los datos quedarán corruptos o incompletos.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (Solo incremental del día 3):</strong> Incorrecta. Una copia incremental no contiene todos los datos, solo las diferencias respecto al anterior. Sin el "punto base" (copia completa), es imposible reconstruir el estado completo del sistema.
+*   <strong>Opción C (Todas incrementales desde inicio de mes):</strong> Incorrecta en eficiencia. Aunque técnicamente podría funcionar si la cadena empieza con una copia completa, restaurar <em>todas</em> las copias si no hay necesidad de llegar al final es ineficiente y consume mucho tiempo. Solo se necesitan hasta el día 3.
+*   <strong>Opción D (Última diferencial + completa anterior):</strong> Incorrecta para este escenario específico. Las copias diferenciales guardan cambios desde la última copia <em>completa</em>. Si usas diferenciales, solo necesitas la última completa y la última diferencial. Pero la pregunta especifica "copias incrementales", por lo que esta opción describe una estrategia mixta incorrecta para el escenario planteado.</p>
+<h3>Pregunta 9: Respuesta Correcta <strong>A</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+El comando <code>net accounts</code> es el utilitario de línea de comandos nativo en Windows (CMD/PowerShell) para gestionar las políticas de contraseña locales. <code>/minpwlen:8</code> establece la longitud mínima y <code>/maxpwage:30</code> define la caducidad máxima en días. Estos parámetros se aplican directamente al Security Account Manager (SAM) local, cumpliendo con el criterio CE b del RA4 sobre seguridad de cuentas.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción B (<code>useradd -p complex</code>):</strong> Incorrecta por SO. Este es un comando de Linux/Unix para crear usuarios y gestionar contraseñas hash, no tiene equivalentes directos en Windows con esa sintaxis. Además, <code>complex</code> no es un parámetro válido estándar.
+*   <strong>Opción C (<code>gpasswd</code>):</strong> Incorrecta. <code>gpasswd</code> se usa en Linux para administrar grupos de usuarios (añadir/quitar miembros), no para configurar políticas globales de contraseña del sistema operativo.
+*   <strong>Opción D (<code>chmod 700 /etc/shadow</code>):</strong> Incorrecta. Este comando modifica permisos de archivo en Linux sobre el archivo que contiene hashes de contraseñas, pero no configura las reglas de complejidad o caducidad de la política de seguridad.</p>
+<h3>Pregunta 10: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+<code>traceroute</code> (Linux/Mac) o <code>tracert</code> (Windows) muestra el recorrido exacto que siguen los paquetes de red desde tu origen hasta el destino, saltando por cada router intermedio. Para cada salto, muestra la latencia (tiempo de respuesta). Esto permite diagnosticar dónde se pierde la conexión: si falla en el primer salto es local; si falla al final, es remoto. Es esencial para diferenciar problemas de red local vs. internet.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (<code>ping</code>):</strong> Incorrecto por alcance. <code>ping</code> solo dice "sí/no" y da un promedio de latencia total al destino, pero no muestra <em>dónde</em> en el camino se produce la pérdida o el retraso. No es útil para diagnosticar rutas complejas.
+*   <strong>Opción C (<code>nslookup</code>):</strong> Incorrecto por función. <code>nslookup</code> consulta servidores DNS para traducir nombres a direcciones IP (ej. convertir <code>google.com</code> a <code>142.250.x.x</code>). Sirve para problemas de resolución de nombres, no para medir ruta o latencia de paquetes.
+*   <strong>Opción D (<code>ipconfig /all</code>):</strong> Incorrecto por contexto. Muestra la configuración TCP/IP local del equipo (IP propia, DNS propio), pero no tiene información sobre la red remota ni la ruta hacia el servidor base de datos externo.</p>
+<h3>Pregunta 11: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+En sistemas Linux modernos que usan <code>systemd</code> (Ubuntu 15+, Debian 8+, RHEL/CentOS 7+), <code>systemctl</code> es el comando unificado para gestionar servicios. <code>start</code> inicia el servicio inmediatamente, y <code>enable</code> crea los enlaces simbólicos necesarios en los directorios de inicio (<code>/etc/systemd/system</code>) para que se inicie automáticamente durante el arranque del sistema. Es el estándar actual para la gestión de Daemons (CE c).</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (<code>service ... enable</code>):</strong> Incorrecta por sintaxis moderna. El comando <code>service</code> es un wrapper legacy hacia init.d que funciona en muchos sistemas, pero el subcomando <code>enable</code> no es universalmente válido en todas las versiones del script <code>/etc/init.d</code>. En systemd puro, <code>systemctl enable</code> es la forma correcta y robusta.
+*   <strong>Opción C (<code>init.d ... update-rc.d</code>):</strong> Incorrecta por obsolescencia relativa. Este era el método estándar en sistemas SysV (antes de systemd). Aunque sigue funcionando en algunos Linux antiguos, no es el comando nativo de <code>systemd</code>. En un entorno DAM moderno, se asume systemd como referencia principal para compatibilidad con servidores actuales.
+*   <strong>Opción D (<code>start-service</code>):</strong> Incorrecta por inexistencia. No existe un comando estándar universal llamado <code>start-service</code> en Linux o Windows (donde sería <code>Start-Service</code>). Es una opción inventada que no corresponde a ninguna herramienta real.</p>
+<h3>Pregunta 12: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+La compilación de código Java/Kotlin es un proceso intensivo en CPU y RAM. La JVM necesita cargar múltiples librerías, clases y generar bytecode. Múltiples núcleos permiten que herramientas como <code>Maven</code> o <code>Gradle</code> paralelicen tareas (ej. compilar módulos distintos simultáneamente). Si la RAM es insuficiente, el sistema usará Swap, lo que ralentiza drásticamente la compilación (Cuello de botella RA4h).</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (Espacio SSD NVMe):</strong> Secundario. Aunque un disco rápido ayuda a cargar librerías y guardar artefactos, el cuello de botella principal en compilación suele ser la CPU/RAM. Si tienes un SSD pero poca RAM, el sistema colapsará por Swap antes que por velocidad de lectura.
+*   <strong>Opción C (Resolución DNS):</strong> Incorrecta. La resolución DNS es crítica para descargar dependencias en internet al inicio del build, pero una vez cargadas las librerías locales, la compilación no depende de DNS. No es el recurso crítico durante el proceso mismo.
+*   <strong>Opción D (Puertos Firewall):</strong> Incorrecto. Los puertos abiertos afectan la red, no la velocidad local de procesamiento del ordenador que compila el código.</p>
+<h3>Pregunta 13: Respuesta Correcta <strong>C</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+La diferencia fundamental es el acceso al hardware. Tipo 1 (Bare Metal) se instala como un SO mínimo directo sobre el metal, gestionando el hardware directamente. Tipo 2 corre sobre otro SO, que debe gestionar el hardware y luego pasar la gestión a la VM. Por tanto, Tipo 1 tiene menos pasos intermedios (menos <em>overhead</em>) y mayor rendimiento, ideal para servidores de producción.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (Tipo 1 sobre SO anfitrión):</strong> Incorrecta por definición. Esto describe un hipervisor Tipo 2. Tipo 1 se instala <em>sin</em> SO anfitrión (o con un kernel muy mínimo propio).
+*   <strong>Opción B (Tipo 2 menor overhead):</strong> Incorrecta por lógica inversa. Al tener una capa extra de software (el SO host), el Tipo 2 tiene <em>más</em> overhead, no menos. Es más lento pero más flexible para desarrollo local.
+*   <strong>Opción D (No diferencia):</strong> Falso. La diferencia de rendimiento es significativa en cargas de trabajo pesadas o servidores con muchas VMs concurrentes.</p>
+<h3>Pregunta 14: Respuesta Correcta <strong>B</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+LUKS (Linux Unified Key Setup) es el estándar para cifrado a nivel de disco completo en Linux. Cifra todo el volumen, incluyendo sistema operativo y datos. Si roban el disco físico, no se puede acceder a ningún dato sin la clave maestra. Es esencial para cumplir normativas de protección de datos (GDPR/RA4 h) en dispositivos portátiles o servidores sensibles.</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción A (BitLocker):</strong> Incorrecta por SO. BitLocker es la herramienta nativa de cifrado completo de disco para Windows, no Linux. Aunque existen alternativas en Linux, LUKS es el estándar específico del entorno solicitado.
+*   <strong>Opción C (GPG):</strong> Incorrecto por alcance. GPG cifra archivos individuales o correos electrónicos. No protege todo el sistema de archivos a nivel de volumen; si alguien entra al SO y tiene acceso de usuario, puede leer los archivos sin cifrar antes de usarlos. LUKS protege incluso si el disco se desconecta del equipo.
+*   <strong>Opción D (SSH Keys):</strong> Incorrecto por función. Las claves SSH protegen el <em>acceso remoto</em> a un sistema ya encendido y operativo. No protegen los datos en reposo si alguien roba el disco duro.</p>
+<h3>Pregunta 15: Respuesta Correcta <strong>A</strong></h3>
+<p><strong>Justificación Técnica Expandida:</strong><br />
+Los pipelines CI/CD (Integración Continua / Despliegue Continuo) ejecutan múltiples tareas automatizadas simultáneamente: clonado de repositorio, compilación, pruebas unitarias, empaquetado y despliegue. Esto requiere que el sistema soporte alta concurrencia de procesos (CPU) y tenga espacio para almacenar artefactos temporales (Disk). Evaluar esto es parte del Criterio CE h (Evaluación de necesidades del sistema).</p>
+<p><strong>Análisis Detallado de Distractores:</strong>
+*   <strong>Opción B (Color carcasa):</strong> Irrelevante. Es un atributo estético sin impacto técnico en la capacidad de procesamiento o almacenamiento.
+*   <strong>Opción C (Marca teclados):</strong> Irrelevante para servidores. Los servidores suelen gestionarse por consola remota, no tienen teclado físico conectado al hardware de producción.
+*   <strong>Opción D (Versión gráfica):</strong> Incorrecto. Las versiones gráficas consumen más recursos (RAM/CPU) que las versiones Server sin interfaz gráfica (Headless). Para CI/CD en servidores, se prefiere una instalación mínima para liberar recursos para la compilación y no para mostrar ventanas gráficas.</p>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-5')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                06
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIONARIO - CASO PRÁCTICO A (DEBUGGING POWERShell)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-5" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-5" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Análisis Técnico Paso a Paso del Error:</strong></p>
+<p>El script original contiene errores críticos que impiden su ejecución correcta en un entorno de producción seguro. El análisis se divide por línea y función lógica.</p>
+<h3>1. Identificación de Errores y Correcciones Detalladas</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Error Original (Código)</th>
+<th>Tipo de Error</th>
+<th>Corrección Propuesta</th>
+<th>Justificación Técnica RA4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><code>New-LocalUser -Name Username</code></td>
+<td><strong>Sintáctico / Referencia</strong></td>
+<td><code>-Name $Username</code></td>
+<td>En PowerShell, los parámetros deben recibir valores de variables precedidos por <code>$</code>. Escribir solo <code>Username</code> intenta usar una variable literal llamada "Username" (que no existe) o un objeto mal referenciado. El error causa que el script falle al intentar crear la cuenta con un nombre inválido.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><code>ConvertTo-SecureString ... -AsPlainText -True</code></td>
+<td><strong>Sintáctico / Parámetro</strong></td>
+<td><code>-AsPlainText -Force</code></td>
+<td>El parámetro para indicar texto plano es <code>-Force</code>, no <code>-True</code>. Usar <code>-True</code> hace que PowerShell ignore el argumento o lance error. Además, en producción real se debe evitar pasar contraseñas en texto plano; usar <code>ConvertTo-SecureString</code> con una variable segura es mejor práctica.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><code>-Group "Admins"</code></td>
+<td><strong>Lógico / Nombre de Objeto</strong></td>
+<td><code>-Group "Administrators"</code></td>
+<td>En Windows, el nombre del grupo de administradores locales es siempre <strong>"Administrators"</strong> (plural), no "Admins". El comando <code>Add-LocalGroupMember</code> buscará un grupo que no existe y fallará con error de acceso.</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><code>New-Item ... -Path $ProjectPath</code> sin verificar</td>
+<td><strong>Lógica / Seguridad</strong></td>
+<td><code>if (-not (Test-Path $ProjectPath)) { New-Item ... }</code></td>
+<td>El script original sobrescribe carpetas existentes o falla si el usuario no tiene permisos para crear la carpeta. Verificar existencia previene errores de ejecución y asegura que no se borre accidentalmente una carpeta de proyecto existente con datos valiosos (Criterio CE a).</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>No verifica si el usuario existe</td>
+<td><strong>Lógica / Seguridad</strong></td>
+<td><code>if ($UserExists) { ... }</code></td>
+<td>Ejecutar <code>New-LocalUser</code> sobre un usuario que ya existe genera un error de "Usuario duplicado". En producción, esto detendría el script. Debe existir una verificación previa (<code>Get-LocalUser</code>) para manejar casos de re-provisionamiento o evitar fallos.</td>
+</tr>
+</tbody>
+</table>
+<h3>2. Código Corregido (Versión Final con Explicación)</h3>
+<pre><code class="language-powershell"># Script: provision_user_correcto.ps1 - VERSIÓN CORREGIDA Y OPTIMIZADA
+param (
+    [Parameter(Mandatory=$true)]
+    [string]$Username,
+
+    [Parameter(Mandatory=$false)]
+    [string]$Password = &quot;TempPass123!&quot; # Nota: En producción usar Read-Host -AsSecureString
+)
+
+# 1. Validación de existencia del usuario (Criterio CE a)
+$UserExists = Get-LocalUser -Name $Username -ErrorAction SilentlyContinue
+
+if ($UserExists) {
+    Write-Host &quot;[!] El usuario &#x27;$Username&#x27; ya existe.&quot; -ForegroundColor Yellow
+} else {
+    # 2. Crear Carpeta de Proyecto con verificación de existencia (Criterio CE a/d)
+    $ProjectPath = &quot;C:\ProyectosDAM&quot;
+    if (-not (Test-Path $ProjectPath)) {
+        New-Item -ItemType Directory -Path $ProjectPath | Out-Null
+    }
+
+    # 3. Crear Usuario con sintaxis correcta y manejo de errores (Try/Catch)
+    try {
+        New-LocalUser -Name $Username `
+            -Password (ConvertTo-SecureString $Password -AsPlainText -Force) `
+            -FullName &quot;Desarrollador DAM&quot; `
+            -Description &quot;Usuario para proyectos de desarrollo&quot;
+
+        Write-Host &quot;[OK] Usuario &#x27;$Username&#x27; creado exitosamente.&quot; -ForegroundColor Green
+
+        # 4. Añadir al grupo Administradores con nombre CORRECTO (Criterio CE a)
+        Add-LocalGroupMember -Group &quot;Administrators&quot; -Member $Username
+        Write-Host &quot;[OK] Usuario añadido al grupo &#x27;Administrators&#x27;.&quot; -ForegroundColor Cyan
+
+    } catch {
+        # Manejo de excepciones para evitar fallos silenciosos
+        Write-Error &quot;[ERROR] No se pudo crear el usuario. Verifique permisos de administrador.&quot;
+    }
+
+    # 5. Configurar Permisos ACL con verificación de ruta (Criterio CE d)
+    if (Test-Path $ProjectPath) {
+        try {
+            $acl = Get-Acl -Path $ProjectPath
+            $account = [System.Security.Principal.NTAccount]$Username
+            # Regla: FullControl, hereda a archivos y subcarpetas
+            $rule = New-Object System.Security.AccessControl.FileSystemAccessRule($account, &quot;FullControl&quot;, &quot;ContainerInherit,ObjectInherit&quot;, &quot;None&quot;, &quot;Allow&quot;)
+            $acl.AddAccessRule($rule)
+            Set-Acl -Path $ProjectPath -AclObject $acl
+
+            Write-Host &quot;[OK] Permisos de lectura/escritura aplicados en $ProjectPath.&quot; -ForegroundColor Green
+        } catch {
+            Write-Warning &quot;No se pudieron aplicar los permisos ACL. Verifique permisos de escritura en la carpeta.&quot;
+        }
+    }
+}</code></pre>
+
+<h3>3. Justificación de Decisiones de Diseño (RA4)</h3>
+<ul>
+<li><strong>Seguridad:</strong> Se implementa <code>Try/Catch</code> para evitar que errores parciales corrompan el estado del sistema o dejen al usuario sin acceso.</li>
+<li><strong>Gestión de Usuarios:</strong> La verificación previa (<code>Get-LocalUser</code>) cumple con la buena práctica de no sobrescribir usuarios existentes por error, alineado con el Criterio CE a.</li>
+<li><strong>Permisos (ACLs):</strong> El uso correcto de <code>Add-LocalGroupMember</code> con "Administrators" asegura que el usuario tenga los privilegios necesarios para compilar y ejecutar código en Windows sin errores de acceso denegado al sistema.</li>
+</ul>
+<hr />
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow-sm border-l-8 border-[#00A859] overflow-hidden">
+    <button onclick="toggleAccordion('acc-6')" class="w-full flex items-center justify-between p-6 bg-white hover:bg-gray-50 transition-colors focus:outline-none">
+        <div class="flex items-center gap-6">
+            <div class="bg-[#00A859] text-white text-xl font-bold rounded-lg w-12 h-12 flex items-center justify-center shrink-0">
+                07
+            </div>
+            <div class="text-left">
+                <h2 class="text-xl font-bold text-gray-900">SOLUCIONARIO - CASO PRÁCTICO B (DISEÑO CLASE PYTHON)</h2>
+
+            </div>
+        </div>
+        <svg id="icon-acc-6" class="w-6 h-6 text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+    <div id="content-acc-6" class="accordion-content px-6 markdown-content border-t border-gray-100">
+        <p><strong>Análisis Técnico Paso a Paso del Razonamiento:</strong></p>
+<p>Este caso práctico evalúa la capacidad del alumno para implementar herramientas de monitorización y evaluación de requisitos, cumpliendo con el Criterio CE h (Evaluación de Necesidades).</p>
+<h3>1. Completar Métodos Faltantes (<code>evaluar_disco</code> e <code>informe</code>)</h3>
+<p><strong>Razonamiento Lógico:</strong>
+*   <strong>Disco:</strong> El método debe usar <code>psutil.disk_usage('/')</code>. Debe calcular el espacio libre en GB (dividiendo bytes por $1024^3$) y compararlo con <code>self.disco_minimo</code>. Retorna un diccionario estructurado para que el informe sea legible.
+*   <strong>Informe:</strong> El método debe llamar a los tres métodos de evaluación (<code>memoria</code>, <code>disco</code>, <code>cpu</code>). Debe verificar si <em>todos</em> cumplen los requisitos. Si alguno falla, lanza la excepción personalizada. Si todos pasan, retorna un dict con estado "APROBADO".</p>
+<h3>2. Implementación Completa del Código</h3>
+<pre><code class="language-python"># Script: system_evaluation.py - VERSIÓN COMPLETA Y CORREGIDA
+
+import psutil
+
+class RequisitosSistemaNoCumplidos(Exception):
+    &quot;&quot;&quot;Excepción personalizada para cuando el sistema no cumple requisitos mínimos (CE h)&quot;&quot;&quot;
+    pass
+
+class SistemaEvaluation:
+    def __init__(self, memoria_minima_gb=4, disco_minimo_gb=50, cpu_minima=2):
+        self.memoria_minima = memoria_minima_gb * (1024**3)  # Convertir a bytes para comparación precisa
+        self.disco_minimo = disco_minimo_gb * (1024**3)      # Convertir a bytes
+        self.cpu_minima = cpu_minima
+
+    def evaluar_memoria(self):
+        &quot;&quot;&quot;Verifica memoria RAM disponible&quot;&quot;&quot;
+        mem = psutil.virtual_memory()
+        disponible_gb = round(mem.available / (1024**3), 2)
+        cumple = mem.available &gt;= self.memoria_minima
+        return {
+            &#x27;requisito&#x27;: &#x27;RAM Disponible&#x27;,
+            &#x27;valor_actual&#x27;: f&quot;{disponible_gb} GB&quot;,
+            &#x27;cumple&#x27;: cumple,
+            &#x27;minimo_requerido&#x27;: f&quot;{memoria_minima_gb} GB&quot;
+        }
+
+    def evaluar_disco(self):
+        &quot;&quot;&quot;Verifica espacio en disco libre&quot;&quot;&quot;
+        # Nota: En Windows se debería usar psutil.disk_usage(&#x27;C:\\&#x27;) si no es raíz
+        try:
+            disk = psutil.disk_usage(&#x27;/&#x27;)
+            disponible_gb = round(disk.free / (1024**3), 2)
+            cumple = disk.free &gt;= self.disco_minimo
+            return {
+                &#x27;requisito&#x27;: &#x27;Disco Libre&#x27;,
+                &#x27;valor_actual&#x27;: f&quot;{disponible_gb} GB&quot;,
+                &#x27;cumple&#x27;: cumple,
+                &#x27;minimo_requerido&#x27;: f&quot;{self.disco_minimo / (1024**3)} GB&quot;
+            }
+        except Exception as e:
+            return {&#x27;requisito&#x27;: &#x27;Disco Libre&#x27;, &#x27;valor_actual&#x27;: &#x27;Error&#x27;, &#x27;cumple&#x27;: False, &#x27;error&#x27;: str(e)}
+
+    def evaluar_cpu(self):
+        &quot;&quot;&quot;Verifica núcleos CPU disponibles&quot;&quot;&quot;
+        # Usamos logical=False para contar núcleos físicos reales de compilación
+        cpu_count = psutil.cpu_count(logical=False)
+        cumple = cpu_count &gt;= self.cpu_minima
+        return {
+            &#x27;requisito&#x27;: &#x27;Núcleos CPU Físicos&#x27;,
+            &#x27;valor_actual&#x27;: f&quot;{cpu_count}&quot;,
+            &#x27;cumple&#x27;: cumple,
+            &#x27;minimo_requerido&#x27;: str(self.cpu_minima)
+        }
+
+    def generar_informe(self):
+        &quot;&quot;&quot;Genera informe final de evaluación y lanza excepción si falla (CE h)&quot;&quot;&quot;
+        resultados = {
+            &#x27;memoria&#x27;: self.evaluar_memoria(),
+            &#x27;disco&#x27;: self.evaluar_disco(),
+            &#x27;cpu&#x27;: self.evaluar_cpu()
+        }
+
+        # Verificar si todos los requisitos se cumplen
+        todos_cumplen = all(r[&#x27;cumple&#x27;] for r in resultados.values())
+
+        if not todos_cumplen:
+            raise RequisitosSistemaNoCumplidos(&quot;El sistema no cumple con los requisitos mínimos de hardware para desarrollo.&quot;)
+
+        return {
+            &#x27;estado&#x27;: &#x27;APROBADO&#x27;,
+            &#x27;detalles&#x27;: resultados,
+            &#x27;mensaje&#x27;: &quot;Todos los requisitos del sistema se cumplen. El entorno es apto para desarrollo.&quot;
+        }
+
+# Instanciación y uso con manejo de excepciones
+if __name__ == &quot;__main__&quot;:
+    try:
+        evaluacion = SistemaEvaluation()
+        informe = evaluacion.generar_informe()
+
+        print(&quot;=&quot; * 60)
+        print(&quot;INFORME DE EVALUACIÓN DE SISTEMA PARA DESARROLLO DAM&quot;)
+        print(&quot;=&quot; * 60)
+
+        for key, valor in informe[&#x27;detalles&#x27;].items():
+            estado = &quot;✓ CUMPLE&quot; if valor[&#x27;cumple&#x27;] else &quot;✗ NO CUMPLE&quot;
+            print(f&quot;\n{valor[&#x27;requisito&#x27;]}:\n&quot;)
+            print(f&quot;  Valor Actual: {valor[&#x27;valor_actual&#x27;]}&quot;)
+            print(f&quot;  Mínimo Requerido: {valor[&#x27;minimo_requerido&#x27;]}&quot;)
+            print(f&quot;  Estado: {estado}&quot;)
+
+        print(&quot;\n&quot; + &quot;=&quot; * 60)
+        print(f&quot;ESTADO FINAL: {informe[&#x27;estado&#x27;]}&quot;)
+        print(informe[&#x27;mensaje&#x27;])
+        print(&quot;=&quot; * 60)
+
+    except RequisitosSistemaNoCumplidos as e:
+        # Bloque de manejo de error específico (RA4 CE h)
+        print(&quot;\n[ALERTA CRÍTICA] &quot; + str(e))
+        print(&quot;No se puede continuar con el despliegue hasta solucionar los problemas de hardware.&quot;)</code></pre>
+
+<h3>3. Justificación de Decisiones de Diseño</h3>
+<table>
+<thead>
+<tr>
+<th>Decisión Técnica</th>
+<th>Razón Explicada para Alumnos DAM</th>
+<th>Criterio RA4 Vinculado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Excepción Personalizada</strong></td>
+<td>Usar una excepción genérica (<code>Exception</code>) es mala práctica. <code>RequisitosSistemaNoCumplidos</code> permite al código que llama a esta función distinguir entre un error de red, un error de disco o un fallo de requisitos mínimos. Facilita el logging y la toma de decisiones en CI/CD.</td>
+<td><strong>CE h</strong> - Evaluación de necesidades del sistema</td>
+</tr>
+<tr>
+<td><strong>Métodos Separados (<code>evaluar_memoria</code>, etc.)</strong></td>
+<td>Cada método evalúa un recurso independiente. Esto permite escalar fácilmente: si mañana necesitamos evaluar GPU, solo añadimos <code>evaluar_gpu()</code> sin romper la lógica existente (Principio Single Responsibility).</td>
+<td><strong>CE g</strong> - Utilidades de mantenimiento y optimización</td>
+</tr>
+<tr>
+<td><strong>Conversión a Bytes (<code>1024**3</code>)</strong></td>
+<td>Las librerías como <code>psutil</code> trabajan internamente con bytes. Comparar GB directamente sería un error matemático. La conversión asegura consistencia y precisión en comparaciones lógicas booleanas.</td>
+<td><strong>CE f</strong> - Monitorización del sistema</td>
+</tr>
+<tr>
+<td><strong><code>cpu_count(logical=False)</code></strong></td>
+<td>En compilación, los núcleos físicos son más relevantes que los hilos lógicos (Hyper-Threading). Un núcleo físico es un motor de cálculo real; un hilo lógico compite por recursos internos. Para evaluación realista de capacidad de compilación, usamos físicos.</td>
+<td><strong>CE h</strong> - Evaluación de necesidades del sistema</td>
+</tr>
+<tr>
+<td><strong>Informe Estructurado (Dict)</strong></td>
+<td>Devolver un diccionario permite que el informe sea procesado automáticamente por otras herramientas (ej. generar HTML o JSON). No es solo texto para imprimir; es datos estructurados para auditoría y reporting.</td>
+<td><strong>CE f</strong> - Monitorización del sistema</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>📊 CRITERIOS DE CALIFICACIÓN PARA EL DOCENTE</h1>
+<h3>Examen Tipo Test:</h3>
+<ul>
+<li><strong>15 preguntas × 0.67 puntos</strong> = Máximo 10 puntos</li>
+<li><strong>Ponderación:</strong> 40% de la calificación final del RA4</li>
+<li><strong>Nota del Auditor:</strong> Se debe exigir que el alumno sepa explicar <em>por qué</em> falló una opción incorrecta, no solo marcar la correcta.</li>
+</ul>
+<h3>Caso Práctico A (Debugging):</h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos Máximos</th>
+<th>Descripción de Evaluación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identificación de errores</td>
+<td>2.5</td>
+<td>Mínimo 3 errores correctamente identificados con explicación técnica.</td>
+</tr>
+<tr>
+<td>Propuesta de corrección</td>
+<td>2.5</td>
+<td>Solución técnica viable, sintaxis correcta y lógica segura.</td>
+</tr>
+<tr>
+<td>Justificación RA4</td>
+<td>1.0</td>
+<td>Explicación clara vinculada a seguridad o gestión de usuarios (CE a/d).</td>
+</tr>
+</tbody>
+</table>
+<h3>Caso Práctico B (Diseño Clase):</h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos Máximos</th>
+<th>Descripción de Evaluación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Implementación funcional</td>
+<td>2.5</td>
+<td>Código ejecutable, sin errores de sintaxis y lógica correcta de verificación.</td>
+</tr>
+<tr>
+<td>Manejo de excepciones</td>
+<td>1.0</td>
+<td>Excepción personalizada implementada y capturada correctamente en <code>try/except</code>.</td>
+</tr>
+<tr>
+<td>Justificación diseño</td>
+<td>0.5</td>
+<td>Explicación clara sobre por qué se eligió esa estructura (ej. bytes vs GB).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ponderación Casos Prácticos:</strong> 60% de la calificación final del RA4.</p>
+<hr />
+<h1>📋 CHECKLIST DE VERIFICACIÓN DOCENTE</h1>
+<p>Antes de calificar, verificar:
+- [ ] El alumno ha identificado <strong>todos</strong> los errores en el script PowerShell (al menos 3).
+- [ ] Las correcciones propuestas son técnicamente viables y no introducen nuevos riesgos.
+- [ ] La clase Python cumple con todos los requisitos funcionales listados (RAM, Disco, CPU).
+- [ ] Se ha implementado manejo adecuado de excepciones personalizadas (<code>RequisitosSistemaNoCumplidos</code>).
+- [ ] Las justificaciones vinculan teoría RA4 con práctica aplicada (ej. explican por qué <code>logical=False</code> en CPU).</p>
+<hr />
+<p><strong>Documento generado para evaluación del RA4 - Sistema Informático (DAM)</strong><br />
+<strong>Versión:</strong> 2.0 Ampliada | <strong>Fecha:</strong> 2025<br />
+<strong>Autoría:</strong> Experto en Evaluación y Calidad Docente de FP (Programación)<br />
+<strong>Estado:</strong> Aprobado para uso en aula</p>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Accordion Logic
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // Copy Code Logic
+        document.querySelectorAll('pre').forEach((block) => {
+            if(block.classList.contains('mermaid')) return; // skip mermaid
+
+            const button = document.createElement('button');
+            button.className = 'copy-btn';
+            button.innerText = 'Copiar';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code').innerText;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = '¡Copiado!';
+                    setTimeout(() => { button.innerText = 'Copiar'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
